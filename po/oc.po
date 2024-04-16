@@ -1469,7 +1469,7 @@ msgstr "MATE %s"
 #. hardware section
 #: src/sysinfo.cpp:998
 msgid "Hardware"
-msgstr "Material"
+msgstr "Caferial"
 
 #: src/sysinfo.cpp:1003
 msgid "Memory:"

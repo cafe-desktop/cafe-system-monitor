@@ -350,7 +350,7 @@ msgstr "Monitor do sistema"
 #. (itstool) path: article/indexterm
 #: C/index.docbook:180
 msgid "<primary>cafe-system-monitor</primary>"
-msgstr "Monitor do sistema do Mate"
+msgstr "Monitor do sistema do Cafe"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:183

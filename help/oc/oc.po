@@ -326,7 +326,7 @@ msgstr "Version MATE"
 #. (itstool) path: listitem/para
 #: C/index.docbook:224 C/index.docbook:435
 msgid "Hardware"
-msgstr "Material"
+msgstr "Caferial"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:230

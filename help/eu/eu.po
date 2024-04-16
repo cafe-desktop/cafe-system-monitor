@@ -206,7 +206,7 @@ msgstr ""
 #. (itstool) path: revdescription/para
 #: C/index.docbook:112
 msgid "MATE Documentation Team"
-msgstr "Mate dokumentatzeko taldea"
+msgstr "Cafe dokumentatzeko taldea"
 
 #. (itstool) path: revhistory/revision
 #: C/index.docbook:108
