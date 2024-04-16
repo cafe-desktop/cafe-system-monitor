@@ -27,13 +27,13 @@ requires:
     - libwnck-3-dev
     - libxml2-dev
     - make
-    - cafe-common
     - policykit-1
     - quilt
     - yelp-tools
 
 before_scripts:
   - ./html-cppcheck
+  - ./install-from-git https://github.com/cafe-desktop/cafe-common master
 
 build_scripts:
   - ./before-build
