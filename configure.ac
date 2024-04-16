@@ -2,9 +2,9 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.63])
 
-AC_INIT([mate-system-monitor],
+AC_INIT([cafe-system-monitor],
 	[1.24.1],
-        [https://mate-desktop.org/])
+        [https://cafe-desktop.org/])
 AC_CONFIG_SRCDIR(configure.ac)
 AC_CONFIG_HEADERS(config.h)
 AC_CONFIG_MACRO_DIR([m4])
@@ -72,7 +72,7 @@ GLIB_GSETTINGS
 AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
 
-GETTEXT_PACKAGE=mate-system-monitor
+GETTEXT_PACKAGE=cafe-system-monitor
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",
                    [The gettext catalog name])
@@ -83,12 +83,12 @@ YELP_HELP_INIT
 AC_CONFIG_FILES([
 Makefile
 src/Makefile
-src/org.mate.system-monitor.gschema.xml
+src/org.cafe.system-monitor.gschema.xml
 pixmaps/Makefile
 po/Makefile.in
 help/Makefile
 tools/Makefile
-mate-system-monitor.desktop.in
+cafe-system-monitor.desktop.in
 ])
 
 AC_OUTPUT

@@ -1,12 +1,12 @@
 @YELP_HELP_RULES@
 
-HELP_ID = mate-system-monitor
+HELP_ID = cafe-system-monitor
 HELP_FILES = index.docbook legal.xml
 HELP_MEDIA = figures/addColumn.png \
 	      figures/changePriority.png \
 	      figures/colorPanel.png \
   	      figures/columnContextMenu.png \
-	      figures/mate-system-monitor_window.png \
+	      figures/cafe-system-monitor_window.png \
 	      figures/memoryMaps.png \
 	      figures/moreInfo.png \
 	      figures/processListing.png \

@@ -2,8 +2,8 @@
 Name=MATE System Monitor
 GenericName=System Monitor
 Comment=View current processes and monitor system state
-TryExec=mate-system-monitor
-Exec=mate-system-monitor
+TryExec=cafe-system-monitor
+Exec=cafe-system-monitor
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=utilities-system-monitor
 Terminal=false

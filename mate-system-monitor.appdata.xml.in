@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 MATE team <mate-dev@ml.mate-desktop.org> -->
+<!-- Copyright 2014 MATE team <cafe-dev@ml.cafe-desktop.org> -->
 <component type="desktop">
- <id>mate-system-monitor.desktop</id>
+ <id>cafe-system-monitor.desktop</id>
  <metadata_license>CC0-1.0</metadata_license>
  <project_license>GPL-2.0+</project_license>
  <name>MATE System Monitor</name>
@@ -21,21 +21,21 @@
  <screenshots>
   <screenshot type="default">
    <image width="960" height="540">
-    https://alexpl.fedorapeople.org/AppData/mate-system-monitor/screens/mate-system-monitor_01.png
+    https://alexpl.fedorapeople.org/AppData/cafe-system-monitor/screens/cafe-system-monitor_01.png
    </image>
   </screenshot>
   <screenshot>
    <image width="960" height="540">
-    https://alexpl.fedorapeople.org/AppData/mate-system-monitor/screens/mate-system-monitor_02.png
+    https://alexpl.fedorapeople.org/AppData/cafe-system-monitor/screens/cafe-system-monitor_02.png
    </image>
   </screenshot>
   <screenshot>
    <image width="960" height="540">
-    https://alexpl.fedorapeople.org/AppData/mate-system-monitor/screens/mate-system-monitor_03.png
+    https://alexpl.fedorapeople.org/AppData/cafe-system-monitor/screens/cafe-system-monitor_03.png
    </image>
   </screenshot>
  </screenshots>
- <url type="homepage">https://mate-desktop.org</url>
- <updatecontact>mate-dev@ml.mate-desktop.org</updatecontact>
+ <url type="homepage">https://cafe-desktop.org</url>
+ <updatecontact>cafe-dev@ml.cafe-desktop.org</updatecontact>
  <project_group>MATE</project_group>
 </component>

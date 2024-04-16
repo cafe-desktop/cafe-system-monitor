@@ -12,11 +12,11 @@
 	* sv/sv.po: Updated Swedish translation.
 	* sv/figures: Updated screenshot.
 
-2009-01-24  Mario Blättermann  <mariobl@svn.mate.org>
+2009-01-24  Mario Blättermann  <mariobl@svn.cafe.org>
 
 	* de/de.po: Small fix in German translation.
 
-2009-01-16  Mario Blättermann  <mariobl@svn.mate.org>
+2009-01-16  Mario Blättermann  <mariobl@svn.cafe.org>
 
 	* de/de.po: Added German translation.
 	* Makefile.am: Added de to DOC_LINGUAS.
@@ -28,11 +28,11 @@
 	* Makefile.am: Added ca to DOC_LINGUAS.
 	* ar/figures: Added screenshots directory.
 
-2008-03-09  Jorge Gonzalez  <jorgegonz@svn.mate.org>
+2008-03-09  Jorge Gonzalez  <jorgegonz@svn.cafe.org>
 
 	* es/es.po: Updated Spanish translation.
 
-2008-02-12  Jorge Gonzalez  <jorgegonz@svn.mate.org>
+2008-02-12  Jorge Gonzalez  <jorgegonz@svn.cafe.org>
 
 	* es/es.po: Updated Spanish translation.
 
@@ -52,11 +52,11 @@
 
 	* oc.po: Updated Occitan translation.
 
-2007-12-01  Jorge Gonzalez  <jorgegonz@svn.mate.org>
+2007-12-01  Jorge Gonzalez  <jorgegonz@svn.cafe.org>
 
         * es/es.po: Updated Spanish translation
 
-2007-10-16  Gil Forcada  <gforcada@svn.mate.org>
+2007-10-16  Gil Forcada  <gforcada@svn.cafe.org>
 
 	* ca/ca.po: Some fixes to Catalan translation thanks to Joan Duran.
 
@@ -70,7 +70,7 @@
 
 	* fr/fr.po: Updated French translation.
 
-2007-06-02  Jorge Gonzalez  <jorgegonz@svn.mate.org>
+2007-06-02  Jorge Gonzalez  <jorgegonz@svn.cafe.org>
 
         * es/es.po: Updated Spanish translation
 
@@ -83,7 +83,7 @@
 	* bg/bg.po: Updated Bulgarian translation by
 	Alexander Shopov <ash@contact.bg>
 
-2007-04-21  Jorge Gonzalez  <jorgegonz@svn.mate.org>
+2007-04-21  Jorge Gonzalez  <jorgegonz@svn.cafe.org>
 
 	* es/es.po: Added Spanish translation.
 	* es/figures: Added screenshots directory.

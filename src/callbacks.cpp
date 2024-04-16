@@ -171,7 +171,7 @@ cb_about (GtkAction *action, gpointer data)
         "Kevin Vandersloot",
         "Laurent Napias <tamplan@free.fr>",
         "Marcel Dijkstra <marcel.dykstra@gmail.com>",
-        "Martin Wimpress <martin@mate-desktop.org>",
+        "Martin Wimpress <martin@cafe-desktop.org>",
         "Matias De lellis <mati86dl@gmail.com>",
         "Mike Gabriel <mike.gabriel@das-netzwerkteam.de>",
         "Nelson Marques <nmo.marques@gmail.com>",
@@ -188,7 +188,7 @@ cb_about (GtkAction *action, gpointer data)
         "Steve Zesch <stevezesch2@gmail.com>",
         "Victor Kareh <vkareh@redhat.com>",
         "Vlad Orlov <monsta@inbox.ru>",
-        "Wolfgang Ulbrich <mate@raveit.de>",
+        "Wolfgang Ulbrich <cafe@raveit.de>",
         "Wu Xiaotian <yetist@gmail.com>",
         "Yaakov Selkowitz <yselkowitz@users.sourceforge.net>",
         "Youri Mouton <youri@NetBSD.org>",
@@ -239,7 +239,7 @@ cb_about (GtkAction *action, gpointer data)
         "translator-credits", _("translator-credits"),
         "license",            license_trans,
         "wrap-license",       TRUE,
-        "website",            "https://mate-desktop.org",
+        "website",            "https://cafe-desktop.org",
         NULL
         );
 
@@ -251,7 +251,7 @@ void
 cb_help_contents (GtkAction *action, gpointer data)
 {
     GError* error = 0;
-    if (!g_app_info_launch_default_for_uri("help:mate-system-monitor", NULL, &error)) {
+    if (!g_app_info_launch_default_for_uri("help:cafe-system-monitor", NULL, &error)) {
         g_warning("Could not display help : %s", error->message);
         g_error_free(error);
     }

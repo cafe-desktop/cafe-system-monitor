@@ -41,7 +41,7 @@ struct LoadGraph;
 #include "smooth_refresh.h"
 #include "prettytable.h"
 
-#define GSM_GSETTINGS_SCHEMA "org.mate.system-monitor"
+#define GSM_GSETTINGS_SCHEMA "org.cafe.system-monitor"
 
 enum
 {

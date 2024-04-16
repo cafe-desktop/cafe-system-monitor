@@ -342,7 +342,7 @@ render (GtkWidget * widget)
         case GSMCP_TYPE_NETWORK_IN:
             if (priv->image_buffer == NULL)
                 priv->image_buffer =
-                    fill_image_buffer_from_file (cr, DATADIR "/pixmaps/mate-system-monitor/download.svg");
+                    fill_image_buffer_from_file (cr, DATADIR "/pixmaps/cafe-system-monitor/download.svg");
             gtk_widget_set_size_request (widget, 32, 32);
             cairo_move_to (cr, 8.5, 1.5);
             cairo_line_to (cr, 23.5, 1.5);
@@ -373,7 +373,7 @@ render (GtkWidget * widget)
         case GSMCP_TYPE_NETWORK_OUT:
             if (priv->image_buffer == NULL)
                 priv->image_buffer =
-                fill_image_buffer_from_file (cr, DATADIR "/pixmaps/mate-system-monitor/upload.svg");
+                fill_image_buffer_from_file (cr, DATADIR "/pixmaps/cafe-system-monitor/upload.svg");
             gtk_widget_set_size_request (widget, 32, 32);
             cairo_move_to (cr, 16.5, 1.5);
             cairo_line_to (cr, 29.5, 17.5);

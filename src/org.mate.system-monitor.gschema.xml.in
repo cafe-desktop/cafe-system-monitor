@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.system-monitor" path="/org/mate/system-monitor/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.cafe.system-monitor" path="/org/cafe/system-monitor/">
     <key name="window-state" type="(iiii)">
       <default>(700, 500, 50, 50)</default>
       <summary>Main window size and position in the form (width, height, xpos, ypos)</summary>
@@ -201,12 +201,12 @@
       </default>
       <summary>Show network traffic in bits</summary>
     </key>
-    <child name="proctree" schema="org.mate.system-monitor.proctree"/>
-    <child name="disktreenew" schema="org.mate.system-monitor.disktreenew"/>
-    <child name="memmapstree" schema="org.mate.system-monitor.memmapstree"/>
-    <child name="openfilestree" schema="org.mate.system-monitor.openfilestree" />
+    <child name="proctree" schema="org.cafe.system-monitor.proctree"/>
+    <child name="disktreenew" schema="org.cafe.system-monitor.disktreenew"/>
+    <child name="memmapstree" schema="org.cafe.system-monitor.memmapstree"/>
+    <child name="openfilestree" schema="org.cafe.system-monitor.openfilestree" />
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.system-monitor.proctree" path="/org/mate/system-monitor/proctree/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.cafe.system-monitor.proctree" path="/org/cafe/system-monitor/proctree/">
     <key name="sort-col" type="i">
       <default>0</default>
       <summary>Process view sort column</summary>
@@ -438,7 +438,7 @@
       <summary>Show process “Priority” column on startup</summary>
     </key>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.system-monitor.disktreenew" path="/org/mate/system-monitor/disktreenew/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.cafe.system-monitor.disktreenew" path="/org/cafe/system-monitor/disktreenew/">
     <key name="sort-col" type="i">
       <default>1</default>
       <summary>Disk view sort column</summary>
@@ -508,7 +508,7 @@
       <summary>Show disk view 'Used' column on startup</summary>
     </key>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.system-monitor.memmapstree" path="/org/mate/system-monitor/memmapstree/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.cafe.system-monitor.memmapstree" path="/org/cafe/system-monitor/memmapstree/">
     <key name="sort-col" type="i">
       <default>0</default>
       <summary>Memory map sort column</summary>
@@ -518,7 +518,7 @@
       <summary>Memory map sort order</summary>
     </key>
   </schema>
-  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.system-monitor.openfilestree" path="/org/mate/system-monitor/openfilestree/">
+  <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.cafe.system-monitor.openfilestree" path="/org/cafe/system-monitor/openfilestree/">
     <key name="sort-col" type="i">
       <default>0</default>
       <summary>Open files sort column</summary>

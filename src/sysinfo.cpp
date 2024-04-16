@@ -46,7 +46,7 @@ namespace {
         string distro_name;
         string distro_release;
         string kernel;
-        string mate_version;
+        string cafe_version;
         guint64 memory_bytes;
         guint64 free_space_bytes;
 
@@ -60,7 +60,7 @@ namespace {
             this->load_memory_info();
             this->load_disk_info();
             this->load_uname_info();
-            this->load_mate_version();
+            this->load_cafe_version();
         }
 
         virtual ~SysInfo()
@@ -219,7 +219,7 @@ namespace {
         static char* get_renderer_from_helper (gboolean discrete_gpu)
         {
             int status;
-            const char *argv[] = { LIBEXECDIR "/mate-session-check-accelerated", NULL };
+            const char *argv[] = { LIBEXECDIR "/cafe-session-check-accelerated", NULL };
             g_auto(GStrv) envp = NULL;
             g_autofree char *renderer = NULL;
             g_autoptr(GError) error = NULL;
@@ -410,16 +410,16 @@ namespace {
         }
 
 
-        void load_mate_version()
+        void load_cafe_version()
         {
             xmlDocPtr document;
             xmlXPathContextPtr context;
-            const string nodes[3] = { "string(/mate-version/platform)",
-                                      "string(/mate-version/minor)",
-                                      "string(/mate-version/micro)" };
+            const string nodes[3] = { "string(/cafe-version/platform)",
+                                      "string(/cafe-version/minor)",
+                                      "string(/cafe-version/micro)" };
             string values[3];
 
-            if (not (document = xmlParseFile(DATADIR "/mate-about/mate-version.xml")))
+            if (not (document = xmlParseFile(DATADIR "/cafe-about/cafe-version.xml")))
                 return;
 
             if (not (context = xmlXPathNewContext(document)))
@@ -440,7 +440,7 @@ namespace {
             xmlFreeDoc(document);
 
             if (!values[0].empty() && !values[1].empty() && !values[2].empty())
-                this->mate_version = values[0] + '.' + values[1] + '.' + values[2];
+                this->cafe_version = values[0] + '.' + values[1] + '.' + values[2];
         }
     };
 
@@ -915,11 +915,11 @@ procman_create_sysinfo_view(void)
     gtk_container_set_border_width(GTK_CONTAINER(hbox), 6);
 
     /* left-side logo */
-    if (g_file_test (DATADIR "/pixmaps/mate-system-monitor/distribution/side.png", G_FILE_TEST_EXISTS)) {
-        logo = gtk_image_new_from_file(DATADIR "/pixmaps/mate-system-monitor/distribution/side.png");
+    if (g_file_test (DATADIR "/pixmaps/cafe-system-monitor/distribution/side.png", G_FILE_TEST_EXISTS)) {
+        logo = gtk_image_new_from_file(DATADIR "/pixmaps/cafe-system-monitor/distribution/side.png");
     }
     else {
-        logo = gtk_image_new_from_file(DATADIR "/pixmaps/mate-system-monitor/side.png");
+        logo = gtk_image_new_from_file(DATADIR "/pixmaps/cafe-system-monitor/side.png");
     }
     gtk_widget_set_valign (logo, GTK_ALIGN_START);
     gtk_widget_set_margin_start (logo, 5);
@@ -952,7 +952,7 @@ procman_create_sysinfo_view(void)
     /* distro section */
 
     unsigned table_size = 2;
-    if (data->mate_version != "")
+    if (data->cafe_version != "")
         table_size++;
     distro_table = add_section(GTK_BOX(vbox), "???", table_size, 1, &distro_frame);
 
@@ -979,9 +979,9 @@ procman_create_sysinfo_view(void)
         0, table_count, 1, 1);
     table_count++;
 
-    if (data->mate_version != "")
+    if (data->cafe_version != "")
     {
-        markup = g_strdup_printf(_("MATE %s"), data->mate_version.c_str());
+        markup = g_strdup_printf(_("MATE %s"), data->cafe_version.c_str());
         header = gtk_label_new(markup);
         gtk_label_set_selectable(GTK_LABEL(header), TRUE);
         gtk_widget_set_can_focus(header, FALSE);

@@ -6,7 +6,7 @@
 # Alexei Sorokin, 2020
 # Aleksey Kabanov <ak099@mail.ru>, 2020
 # AlexL <loginov.alex.valer@gmail.com>, 2020
-# Wolfgang Ulbrich <mate@raveit.de>, 2020
+# Wolfgang Ulbrich <cafe@raveit.de>, 2020
 # Михаил Ильинский <mail@milinsky.com>, 2020
 # Olesya Gerasimenko <gammaray@basealt.ru>, 2020
 # Александр Кураченко <alexander@basealt.ru>, 2020
@@ -18,7 +18,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 13:07+0100\n"
 "PO-Revision-Date: 2020-02-16 16:04+0000\n"
 "Last-Translator: Anna Vyalkova <cybertailor@gmail.com>, 2020\n"
-"Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
+"Language-Team: Russian (https://www.transifex.com/cafe/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -318,11 +318,11 @@ msgstr "Обратная связь"
 msgid ""
 "To report a bug or make a suggestion regarding the System Monitor "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 "Чтобы сообщить об ошибке и внести предложение относительно приложения "
 "Системный монитор или этого руководства, следуйте инструкциям на <ulink "
-"url=\"help:mate-user-guide/feedback\" type=\"help\">Странице обратной связи "
+"url=\"help:cafe-user-guide/feedback\" type=\"help\">Странице обратной связи "
 "MATE</ulink>."
 
 #. (itstool) path: abstract/para
@@ -343,8 +343,8 @@ msgstr "<primary>Системный монитор</primary>"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:180
-msgid "<primary>mate-system-monitor</primary>"
-msgstr "<primary>mate-system-monitor</primary>"
+msgid "<primary>cafe-system-monitor</primary>"
+msgstr "<primary>cafe-system-monitor</primary>"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:183
@@ -536,8 +536,8 @@ msgstr "Командная строка"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:323
-msgid "Execute the following command: <command>mate-system-monitor</command>"
-msgstr "Выполните следующую команду: <command>mate-system-monitor</command>"
+msgid "Execute the following command: <command>cafe-system-monitor</command>"
+msgstr "Выполните следующую команду: <command>cafe-system-monitor</command>"
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:331
@@ -566,20 +566,20 @@ msgstr "Окно Системного монитора"
 #: C/index.docbook:340
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-system-monitor_window.png' "
+"external ref='figures/cafe-system-monitor_window.png' "
 "md5='0a938d7d8c6910fdc96cb845f6e2af74'"
 msgstr ""
-"external ref='figures/mate-system-monitor_window.png' "
+"external ref='figures/cafe-system-monitor_window.png' "
 "md5='0a938d7d8c6910fdc96cb845f6e2af74'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:338
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-system-monitor_window.png\" "
+"<imageobject> <imagedata fileref=\"figures/cafe-system-monitor_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows System Monitor "
 "main window.</phrase> </textobject>"
 msgstr ""
-"<imageobject> <imagedata fileref=\"figures/mate-system-monitor_window.png\" "
+"<imageobject> <imagedata fileref=\"figures/cafe-system-monitor_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Показывает главное окно"
 " Системного монитора.</phrase> </textobject>"
 
@@ -803,10 +803,10 @@ msgstr "Приоритет"
 #: C/index.docbook:496
 msgid ""
 "For information about how to change the columns displayed in the process "
-"list, see <xref linkend=\"mate-system-monitor-prefs-proclist\"/>."
+"list, see <xref linkend=\"cafe-system-monitor-prefs-proclist\"/>."
 msgstr ""
 "О том, как изменить отображаемые в таблице столбцы, смотрите в разделе <xref"
-" linkend=\"mate-system-monitor-prefs-proclist\"/>."
+" linkend=\"cafe-system-monitor-prefs-proclist\"/>."
 
 #. (itstool) path: sect3/title
 #: C/index.docbook:501
@@ -820,14 +820,14 @@ msgid ""
 "process is a child process of the original parent process. By default, "
 "<application>System Monitor</application> does not show process "
 "dependencies. For information about how to change the default display "
-"behavior, see <xref linkend=\"mate-system-monitor-modify-processlist-"
+"behavior, see <xref linkend=\"cafe-system-monitor-modify-processlist-"
 "viewdeps\"/>."
 msgstr ""
 "Родительский процесс — это процесс, который порождает другие процессы. "
 "Порождённые процессы являются процессами-потомками их родительского "
 "процесса. По умолчанию <application>Системный монитор</application> не "
 "показывает зависимости процессов. О том, как изменить это поведение по "
-"умолчанию, смотрите в разделе <xref linkend=\"mate-system-monitor-modify-"
+"умолчанию, смотрите в разделе <xref linkend=\"cafe-system-monitor-modify-"
 "processlist-viewdeps\"/>."
 
 #. (itstool) path: sect3/title
@@ -874,10 +874,10 @@ msgstr "Чем ниже значение nice, тем выше приорите�
 #: C/index.docbook:532
 msgid ""
 "For information about how to change the priority of a process, see <xref "
-"linkend=\"mate-system-monitor-change-priority\"/>."
+"linkend=\"cafe-system-monitor-change-priority\"/>."
 msgstr ""
 "О том, как изменить приоритет процесса, смотрите в разделе <xref linkend"
-"=\"mate-system-monitor-change-priority\"/>."
+"=\"cafe-system-monitor-change-priority\"/>."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:540
@@ -1397,11 +1397,11 @@ msgstr ""
 #: C/index.docbook:928 C/index.docbook:963
 msgid ""
 "By default, a confirmation alert is displayed. For information about how to "
-"display or hide the confirmation alert, see <xref linkend=\"mate-system-"
+"display or hide the confirmation alert, see <xref linkend=\"cafe-system-"
 "monitor-prefs-proclist\"/>."
 msgstr ""
 "По умолчанию откроется окно подтверждения. О том, как показать или скрыть "
-"окно подтверждения, смотрите <xref linkend=\"mate-system-monitor-prefs-"
+"окно подтверждения, смотрите <xref linkend=\"cafe-system-monitor-prefs-"
 "proclist\"/>."
 
 #. (itstool) path: listitem/para
@@ -1458,10 +1458,10 @@ msgstr ""
 #: C/index.docbook:973
 msgid ""
 "You usually terminate a process only if you cannot end the process normally "
-"as described in <xref linkend=\"mate-system-monitor-end-process\"/>."
+"as described in <xref linkend=\"cafe-system-monitor-end-process\"/>."
 msgstr ""
 "Обычно снимать процесс следует только в том случае, если не удалось "
-"завершить его нормальным образом, как описано в <xref linkend=\"mate-system-"
+"завершить его нормальным образом, как описано в <xref linkend=\"cafe-system-"
 "monitor-end-process\"/>."
 
 #. (itstool) path: sect2/title
@@ -1622,7 +1622,7 @@ msgstr "Использовано"
 #: C/index.docbook:1065
 msgid ""
 "For information about how to change the columns displayed in the file "
-"systems list, see <xref linkend=\"mate-system-monitor-prefs-fs\"/>."
+"systems list, see <xref linkend=\"cafe-system-monitor-prefs-fs\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title

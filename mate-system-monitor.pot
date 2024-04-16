@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-system-monitor 1.24.0\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"Project-Id-Version: cafe-system-monitor 1.24.0\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
 "POT-Creation-Date: 2020-08-21 16:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: mate-system-monitor.appdata.xml.in:7 mate-system-monitor.desktop.in.in:3
+#: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
 msgid "MATE System Monitor"
 msgstr ""
 
-#: mate-system-monitor.appdata.xml.in:8
+#: cafe-system-monitor.appdata.xml.in:8
 msgid "A Process and resource monitor for MATE Desktop"
 msgstr ""
 
-#: mate-system-monitor.appdata.xml.in:10
+#: cafe-system-monitor.appdata.xml.in:10
 msgid ""
 "MATE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
 "resources, such as CPU and memory."
 msgstr ""
 
-#: mate-system-monitor.appdata.xml.in:15
+#: cafe-system-monitor.appdata.xml.in:15
 msgid ""
 "MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
 "Desktop Environment. If you would like to know more about MATE and System "
 "Monitor, please visit the project's home page."
 msgstr ""
 
-#: mate-system-monitor.desktop.in.in:4 src/callbacks.cpp:228
+#: cafe-system-monitor.desktop.in.in:4 src/callbacks.cpp:228
 #: src/interface.cpp:625 src/procman.cpp:713
 msgid "System Monitor"
 msgstr ""
 
-#: mate-system-monitor.desktop.in.in:5 src/callbacks.cpp:231
+#: cafe-system-monitor.desktop.in.in:5 src/callbacks.cpp:231
 msgid "View current processes and monitor system state"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: mate-system-monitor.desktop.in.in:15
+#: cafe-system-monitor.desktop.in.in:15
 msgid "MATE;system;monitor;process;list;view;current;resources;"
 msgstr ""
 
-#: org.mate.mate-system-monitor.policy.in.in:11
+#: org.cafe.cafe-system-monitor.policy.in.in:11
 msgid "Kill process"
 msgstr ""
 
-#: org.mate.mate-system-monitor.policy.in.in:12
+#: org.cafe.cafe-system-monitor.policy.in.in:12
 msgid "Privileges are required to control other users' processes"
 msgstr ""
 
-#: org.mate.mate-system-monitor.policy.in.in:22
+#: org.cafe.cafe-system-monitor.policy.in.in:22
 msgid "Renice process"
 msgstr ""
 
-#: org.mate.mate-system-monitor.policy.in.in:23
+#: org.cafe.cafe-system-monitor.policy.in.in:23
 msgid "Privileges are required to change the priority of processes"
 msgstr ""
 
@@ -645,445 +645,445 @@ msgstr ""
 msgid "_Files opened by process \"%s\" (PID %u):"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:6
+#: src/org.cafe.system-monitor.gschema.xml.in:6
 msgid "Main window size and position in the form (width, height, xpos, ypos)"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:10
+#: src/org.cafe.system-monitor.gschema.xml.in:10
 msgid ""
 "If TRUE, main window will open maximized, and saved size and position values "
 "are ignored."
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:14
+#: src/org.cafe.system-monitor.gschema.xml.in:14
 msgid "Show process dependencies in tree form"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:18
+#: src/org.cafe.system-monitor.gschema.xml.in:18
 msgid "Solaris mode for CPU percentage"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:19
+#: src/org.cafe.system-monitor.gschema.xml.in:19
 msgid ""
 "If TRUE, system-monitor operates in 'Solaris mode' where a task's CPU usage "
 "is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
 "mode'."
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:23
+#: src/org.cafe.system-monitor.gschema.xml.in:23
 msgid "Enable/Disable smooth refresh"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:27
+#: src/org.cafe.system-monitor.gschema.xml.in:27
 msgid "Show warning dialog when killing processes"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:31
+#: src/org.cafe.system-monitor.gschema.xml.in:31
 msgid "Time in milliseconds between updates of the process view"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:35
+#: src/org.cafe.system-monitor.gschema.xml.in:35
 msgid "Time in milliseconds between updates of the graphs"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:39
+#: src/org.cafe.system-monitor.gschema.xml.in:39
 msgid "Whether information about all file systems should be displayed"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:40
+#: src/org.cafe.system-monitor.gschema.xml.in:40
 msgid ""
 "Whether to display information about all file systems (including types like "
 "'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
 "file systems."
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:44
+#: src/org.cafe.system-monitor.gschema.xml.in:44
 msgid "Time in milliseconds between updates of the devices list"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:48
+#: src/org.cafe.system-monitor.gschema.xml.in:48
 msgid ""
 "Determines which processes to show by default. 0 is All, 1 is user, and 2 is "
 "active"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:52
+#: src/org.cafe.system-monitor.gschema.xml.in:52
 msgid "Saves the currently viewed tab"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:53
+#: src/org.cafe.system-monitor.gschema.xml.in:53
 msgid ""
 "0 for the System Info, 1 for the processes list, 2 for the resources and 3 "
 "for the disks list"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:57
-#: src/org.mate.system-monitor.gschema.xml.in:61
-#: src/org.mate.system-monitor.gschema.xml.in:65
-#: src/org.mate.system-monitor.gschema.xml.in:69
-#: src/org.mate.system-monitor.gschema.xml.in:73
-#: src/org.mate.system-monitor.gschema.xml.in:77
-#: src/org.mate.system-monitor.gschema.xml.in:85
-#: src/org.mate.system-monitor.gschema.xml.in:89
-#: src/org.mate.system-monitor.gschema.xml.in:93
-#: src/org.mate.system-monitor.gschema.xml.in:97
-#: src/org.mate.system-monitor.gschema.xml.in:101
-#: src/org.mate.system-monitor.gschema.xml.in:105
-#: src/org.mate.system-monitor.gschema.xml.in:109
-#: src/org.mate.system-monitor.gschema.xml.in:113
-#: src/org.mate.system-monitor.gschema.xml.in:117
-#: src/org.mate.system-monitor.gschema.xml.in:121
-#: src/org.mate.system-monitor.gschema.xml.in:125
-#: src/org.mate.system-monitor.gschema.xml.in:129
-#: src/org.mate.system-monitor.gschema.xml.in:133
-#: src/org.mate.system-monitor.gschema.xml.in:137
-#: src/org.mate.system-monitor.gschema.xml.in:141
-#: src/org.mate.system-monitor.gschema.xml.in:145
-#: src/org.mate.system-monitor.gschema.xml.in:149
-#: src/org.mate.system-monitor.gschema.xml.in:153
-#: src/org.mate.system-monitor.gschema.xml.in:157
-#: src/org.mate.system-monitor.gschema.xml.in:161
-#: src/org.mate.system-monitor.gschema.xml.in:165
-#: src/org.mate.system-monitor.gschema.xml.in:169
-#: src/org.mate.system-monitor.gschema.xml.in:173
-#: src/org.mate.system-monitor.gschema.xml.in:177
-#: src/org.mate.system-monitor.gschema.xml.in:181
+#: src/org.cafe.system-monitor.gschema.xml.in:57
+#: src/org.cafe.system-monitor.gschema.xml.in:61
+#: src/org.cafe.system-monitor.gschema.xml.in:65
+#: src/org.cafe.system-monitor.gschema.xml.in:69
+#: src/org.cafe.system-monitor.gschema.xml.in:73
+#: src/org.cafe.system-monitor.gschema.xml.in:77
+#: src/org.cafe.system-monitor.gschema.xml.in:85
+#: src/org.cafe.system-monitor.gschema.xml.in:89
+#: src/org.cafe.system-monitor.gschema.xml.in:93
+#: src/org.cafe.system-monitor.gschema.xml.in:97
+#: src/org.cafe.system-monitor.gschema.xml.in:101
+#: src/org.cafe.system-monitor.gschema.xml.in:105
+#: src/org.cafe.system-monitor.gschema.xml.in:109
+#: src/org.cafe.system-monitor.gschema.xml.in:113
+#: src/org.cafe.system-monitor.gschema.xml.in:117
+#: src/org.cafe.system-monitor.gschema.xml.in:121
+#: src/org.cafe.system-monitor.gschema.xml.in:125
+#: src/org.cafe.system-monitor.gschema.xml.in:129
+#: src/org.cafe.system-monitor.gschema.xml.in:133
+#: src/org.cafe.system-monitor.gschema.xml.in:137
+#: src/org.cafe.system-monitor.gschema.xml.in:141
+#: src/org.cafe.system-monitor.gschema.xml.in:145
+#: src/org.cafe.system-monitor.gschema.xml.in:149
+#: src/org.cafe.system-monitor.gschema.xml.in:153
+#: src/org.cafe.system-monitor.gschema.xml.in:157
+#: src/org.cafe.system-monitor.gschema.xml.in:161
+#: src/org.cafe.system-monitor.gschema.xml.in:165
+#: src/org.cafe.system-monitor.gschema.xml.in:169
+#: src/org.cafe.system-monitor.gschema.xml.in:173
+#: src/org.cafe.system-monitor.gschema.xml.in:177
+#: src/org.cafe.system-monitor.gschema.xml.in:181
 msgid "Default graph CPU color"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:81
+#: src/org.cafe.system-monitor.gschema.xml.in:81
 msgid "Default graph cpu color"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:185
+#: src/org.cafe.system-monitor.gschema.xml.in:185
 msgid "Default graph memory color"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:189
+#: src/org.cafe.system-monitor.gschema.xml.in:189
 msgid "Default graph swap color"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:193
+#: src/org.cafe.system-monitor.gschema.xml.in:193
 msgid "Default graph incoming network traffic color"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:197
+#: src/org.cafe.system-monitor.gschema.xml.in:197
 msgid "Default graph outgoing network traffic color"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:202
+#: src/org.cafe.system-monitor.gschema.xml.in:202
 msgid "Show network traffic in bits"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:212
+#: src/org.cafe.system-monitor.gschema.xml.in:212
 msgid "Process view sort column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:216
+#: src/org.cafe.system-monitor.gschema.xml.in:216
 msgid "Process view columns order"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:220
+#: src/org.cafe.system-monitor.gschema.xml.in:220
 msgid "Process view sort order"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:224
+#: src/org.cafe.system-monitor.gschema.xml.in:224
 msgid "Width of process 'Name' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:228
+#: src/org.cafe.system-monitor.gschema.xml.in:228
 msgid "Show process 'Name' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:232
+#: src/org.cafe.system-monitor.gschema.xml.in:232
 msgid "Width of process 'User' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:236
+#: src/org.cafe.system-monitor.gschema.xml.in:236
 msgid "Show process 'User' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:240
+#: src/org.cafe.system-monitor.gschema.xml.in:240
 msgid "Width of process 'Status' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:244
+#: src/org.cafe.system-monitor.gschema.xml.in:244
 msgid "Show process 'Status' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:248
+#: src/org.cafe.system-monitor.gschema.xml.in:248
 msgid "Width of process 'Virtual Memory' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:252
+#: src/org.cafe.system-monitor.gschema.xml.in:252
 msgid "Show process 'Virtual Memory' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:256
+#: src/org.cafe.system-monitor.gschema.xml.in:256
 msgid "Width of process 'Resident Memory' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:260
+#: src/org.cafe.system-monitor.gschema.xml.in:260
 msgid "Show process 'Resident Memory' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:264
+#: src/org.cafe.system-monitor.gschema.xml.in:264
 msgid "Width of process 'Writable Memory' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:268
+#: src/org.cafe.system-monitor.gschema.xml.in:268
 msgid "Show process 'Writable Memory' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:272
+#: src/org.cafe.system-monitor.gschema.xml.in:272
 msgid "Width of process 'Shared Memory' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:276
+#: src/org.cafe.system-monitor.gschema.xml.in:276
 msgid "Show process 'Shared Memory' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:280
+#: src/org.cafe.system-monitor.gschema.xml.in:280
 msgid "Width of process 'X Server Memory' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:284
+#: src/org.cafe.system-monitor.gschema.xml.in:284
 msgid "Show process 'X Server Memory' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:289
+#: src/org.cafe.system-monitor.gschema.xml.in:289
 msgid "Width of process '% CPU' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:294
+#: src/org.cafe.system-monitor.gschema.xml.in:294
 msgid "Show process '% CPU' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:298
+#: src/org.cafe.system-monitor.gschema.xml.in:298
 msgid "Width of process 'CPU Time' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:302
+#: src/org.cafe.system-monitor.gschema.xml.in:302
 msgid "Show process 'CPU Time' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:306
+#: src/org.cafe.system-monitor.gschema.xml.in:306
 msgid "Width of process 'Started' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:310
+#: src/org.cafe.system-monitor.gschema.xml.in:310
 msgid "Show process 'Started' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:314
+#: src/org.cafe.system-monitor.gschema.xml.in:314
 msgid "Width of process 'Nice' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:318
+#: src/org.cafe.system-monitor.gschema.xml.in:318
 msgid "Show process 'Nice' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:322
+#: src/org.cafe.system-monitor.gschema.xml.in:322
 msgid "Width of process 'ID' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:326
+#: src/org.cafe.system-monitor.gschema.xml.in:326
 msgid "Show process 'ID' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:330
+#: src/org.cafe.system-monitor.gschema.xml.in:330
 msgid "Width of process 'Security Context' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:334
+#: src/org.cafe.system-monitor.gschema.xml.in:334
 msgid "Show process 'Security Context' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:338
+#: src/org.cafe.system-monitor.gschema.xml.in:338
 msgid "Width of process 'Command Line' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:342
+#: src/org.cafe.system-monitor.gschema.xml.in:342
 msgid "Show process 'Command Line' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:346
+#: src/org.cafe.system-monitor.gschema.xml.in:346
 msgid "Width of process 'Memory' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:350
+#: src/org.cafe.system-monitor.gschema.xml.in:350
 msgid "Show process 'Memory' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:354
+#: src/org.cafe.system-monitor.gschema.xml.in:354
 msgid "Width of process 'Waiting Channel' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:358
+#: src/org.cafe.system-monitor.gschema.xml.in:358
 msgid "Show process 'Waiting Channel' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:362
+#: src/org.cafe.system-monitor.gschema.xml.in:362
 msgid "Width of process 'Control Group' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:366
+#: src/org.cafe.system-monitor.gschema.xml.in:366
 msgid "Show process 'Control Group' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:370
+#: src/org.cafe.system-monitor.gschema.xml.in:370
 msgid "Width of process 'Unit' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:374
+#: src/org.cafe.system-monitor.gschema.xml.in:374
 msgid "Show process 'Unit' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:378
+#: src/org.cafe.system-monitor.gschema.xml.in:378
 msgid "Width of process 'Session' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:382
+#: src/org.cafe.system-monitor.gschema.xml.in:382
 msgid "Show process 'Session' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:386
+#: src/org.cafe.system-monitor.gschema.xml.in:386
 msgid "Width of process 'Seat' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:390
+#: src/org.cafe.system-monitor.gschema.xml.in:390
 msgid "Show process 'Seat' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:394
+#: src/org.cafe.system-monitor.gschema.xml.in:394
 msgid "Width of process 'Owner' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:398
+#: src/org.cafe.system-monitor.gschema.xml.in:398
 msgid "Show process 'Owner' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:402
+#: src/org.cafe.system-monitor.gschema.xml.in:402
 msgid "Width of process “Disk Write Total” column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:406
+#: src/org.cafe.system-monitor.gschema.xml.in:406
 msgid "Show process “Disk Write Total” column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:410
+#: src/org.cafe.system-monitor.gschema.xml.in:410
 msgid "Width of process “Disk Read Total” column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:414
+#: src/org.cafe.system-monitor.gschema.xml.in:414
 msgid "Show process “Disk Read Total” column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:418
+#: src/org.cafe.system-monitor.gschema.xml.in:418
 msgid "Width of process “Disk Read” column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:422
+#: src/org.cafe.system-monitor.gschema.xml.in:422
 msgid "Show process “Disk Read” column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:426
+#: src/org.cafe.system-monitor.gschema.xml.in:426
 msgid "Width of process “Disk Write” column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:430
+#: src/org.cafe.system-monitor.gschema.xml.in:430
 msgid "Show process “Disk Write” column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:434
+#: src/org.cafe.system-monitor.gschema.xml.in:434
 msgid "Width of process “Priority” column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:438
+#: src/org.cafe.system-monitor.gschema.xml.in:438
 msgid "Show process “Priority” column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:444
+#: src/org.cafe.system-monitor.gschema.xml.in:444
 msgid "Disk view sort column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:448
+#: src/org.cafe.system-monitor.gschema.xml.in:448
 msgid "Disk view sort order"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:452
+#: src/org.cafe.system-monitor.gschema.xml.in:452
 msgid "Disk view columns order"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:456
+#: src/org.cafe.system-monitor.gschema.xml.in:456
 msgid "Width of disk view 'Device' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:460
+#: src/org.cafe.system-monitor.gschema.xml.in:460
 msgid "Show disk view 'Device' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:464
+#: src/org.cafe.system-monitor.gschema.xml.in:464
 msgid "Width of disk view 'Directory' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:468
+#: src/org.cafe.system-monitor.gschema.xml.in:468
 msgid "Show disk view 'Directory' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:472
+#: src/org.cafe.system-monitor.gschema.xml.in:472
 msgid "Width of disk view 'Type' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:476
+#: src/org.cafe.system-monitor.gschema.xml.in:476
 msgid "Show disk view 'Type' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:480
+#: src/org.cafe.system-monitor.gschema.xml.in:480
 msgid "Width of disk view 'Total' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:484
+#: src/org.cafe.system-monitor.gschema.xml.in:484
 msgid "Show disk view 'Total' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:488
+#: src/org.cafe.system-monitor.gschema.xml.in:488
 msgid "Width of disk view 'Free' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:492
+#: src/org.cafe.system-monitor.gschema.xml.in:492
 msgid "Show disk view 'Free' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:496
+#: src/org.cafe.system-monitor.gschema.xml.in:496
 msgid "Width of disk view 'Available' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:500
+#: src/org.cafe.system-monitor.gschema.xml.in:500
 msgid "Show disk view 'Available' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:504
+#: src/org.cafe.system-monitor.gschema.xml.in:504
 msgid "Width of disk view 'Used' column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:508
+#: src/org.cafe.system-monitor.gschema.xml.in:508
 msgid "Show disk view 'Used' column on startup"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:514
+#: src/org.cafe.system-monitor.gschema.xml.in:514
 msgid "Memory map sort column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:518
+#: src/org.cafe.system-monitor.gschema.xml.in:518
 msgid "Memory map sort order"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:524
+#: src/org.cafe.system-monitor.gschema.xml.in:524
 msgid "Open files sort column"
 msgstr ""
 
-#: src/org.mate.system-monitor.gschema.xml.in:528
+#: src/org.cafe.system-monitor.gschema.xml.in:528
 msgid "Open files sort order"
 msgstr ""
 

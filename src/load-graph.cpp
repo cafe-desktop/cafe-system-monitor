@@ -389,7 +389,7 @@ get_memory (LoadGraph *graph)
 }
 
 /* Nice Numbers for Graph Labels after Paul Heckbert
-   nicenum: find a "nice" number approximately equal to x.
+   nicenum: find a "nice" number approxicafely equal to x.
    Round the number if round=1, take ceiling if round=0    */
 
 static double

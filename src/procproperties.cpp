@@ -83,7 +83,7 @@ get_process_memory_info (ProcInfo *info)
     info->memres	= procmem.resident;
     info->memshared	= procmem.share;
 
-    info->memxserver = xresources.total_bytes_estimate;
+    info->memxserver = xresources.total_bytes_esticafe;
 
     get_process_memory_writable(info);
 

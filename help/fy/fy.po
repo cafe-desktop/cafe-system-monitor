@@ -7,7 +7,7 @@ msgstr ""
 "POT-Creation-Date: 2019-02-10 17:51+0100\n"
 "PO-Revision-Date: 2018-10-05 17:10+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
-"Language-Team: Western Frisian (https://www.transifex.com/mate/teams/13566/fy/)\n"
+"Language-Team: Western Frisian (https://www.transifex.com/cafe/teams/13566/fy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -230,7 +230,7 @@ msgstr ""
 msgid ""
 "To report a bug or make a suggestion regarding the System Monitor "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: abstract/para
@@ -248,7 +248,7 @@ msgstr ""
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:180
-msgid "<primary>mate-system-monitor</primary>"
+msgid "<primary>cafe-system-monitor</primary>"
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -425,7 +425,7 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:323
-msgid "Execute the following command: <command>mate-system-monitor</command>"
+msgid "Execute the following command: <command>cafe-system-monitor</command>"
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -453,14 +453,14 @@ msgstr ""
 #: C/index.docbook:340
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-system-monitor_window.png' "
+"external ref='figures/cafe-system-monitor_window.png' "
 "md5='0a938d7d8c6910fdc96cb845f6e2af74'"
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:338
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-system-monitor_window.png\" "
+"<imageobject> <imagedata fileref=\"figures/cafe-system-monitor_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows System Monitor "
 "main window.</phrase> </textobject>"
 msgstr ""
@@ -622,7 +622,7 @@ msgstr ""
 #: C/index.docbook:475
 msgid ""
 "For information about how to change the columns displayed in the process "
-"list, see <xref linkend=\"mate-system-monitor-prefs-proclist\"/>."
+"list, see <xref linkend=\"cafe-system-monitor-prefs-proclist\"/>."
 msgstr ""
 
 #. (itstool) path: sect3/title
@@ -637,7 +637,7 @@ msgid ""
 "process is a child process of the original parent process. By default, "
 "<application>System Monitor</application> does not show process "
 "dependencies. For information about how to change the default display "
-"behavior, see <xref linkend=\"mate-system-monitor-modify-processlist-"
+"behavior, see <xref linkend=\"cafe-system-monitor-modify-processlist-"
 "viewdeps\"/>."
 msgstr ""
 
@@ -680,7 +680,7 @@ msgstr ""
 #: C/index.docbook:511
 msgid ""
 "For information about how to change the priority of a process, see <xref "
-"linkend=\"mate-system-monitor-change-priority\"/>."
+"linkend=\"cafe-system-monitor-change-priority\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -1111,7 +1111,7 @@ msgstr ""
 #: C/index.docbook:875 C/index.docbook:910
 msgid ""
 "By default, a confirmation alert is displayed. For information about how to "
-"display or hide the confirmation alert, see <xref linkend=\"mate-system-"
+"display or hide the confirmation alert, see <xref linkend=\"cafe-system-"
 "monitor-prefs-proclist\"/>."
 msgstr ""
 
@@ -1162,7 +1162,7 @@ msgstr ""
 #: C/index.docbook:920
 msgid ""
 "You usually terminate a process only if you cannot end the process normally "
-"as described in <xref linkend=\"mate-system-monitor-end-process\"/>."
+"as described in <xref linkend=\"cafe-system-monitor-end-process\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -1768,7 +1768,7 @@ msgstr ""
 #: C/index.docbook:1432
 msgid ""
 "Use this button to customize the background color of the <application>System"
-" Monitor</application> graphs, as described in <xref linkend=\"mate-system-"
+" Monitor</application> graphs, as described in <xref linkend=\"cafe-system-"
 "monitor-customize-background\"/>."
 msgstr ""
 
@@ -1781,7 +1781,7 @@ msgstr ""
 #: C/index.docbook:1440
 msgid ""
 "Use this button to customize the grid color of the <application>System "
-"Monitor</application> graphs, as described in <xref linkend=\"mate-system-"
+"Monitor</application> graphs, as described in <xref linkend=\"cafe-system-"
 "monitor-customize-grid\"/>."
 msgstr ""
 

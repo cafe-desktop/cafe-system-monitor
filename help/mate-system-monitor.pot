@@ -169,7 +169,7 @@ msgstr ""
 
 #. (itstool) path: legalnotice/para
 #: C/index.docbook:161
-msgid "To report a bug or make a suggestion regarding the System Monitor application or this manual, follow the directions in the <ulink url=\"help:mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+msgid "To report a bug or make a suggestion regarding the System Monitor application or this manual, follow the directions in the <ulink url=\"help:cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 
 #. (itstool) path: abstract/para
@@ -184,7 +184,7 @@ msgstr ""
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:180
-msgid "<primary>mate-system-monitor</primary>"
+msgid "<primary>cafe-system-monitor</primary>"
 msgstr ""
 
 #. (itstool) path: article/indexterm
@@ -352,7 +352,7 @@ msgstr ""
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:323
-msgid "Execute the following command: <command>mate-system-monitor</command>"
+msgid "Execute the following command: <command>cafe-system-monitor</command>"
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -377,12 +377,12 @@ msgstr ""
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:340
 msgctxt "_"
-msgid "external ref='figures/mate-system-monitor_window.png' md5='0a938d7d8c6910fdc96cb845f6e2af74'"
+msgid "external ref='figures/cafe-system-monitor_window.png' md5='0a938d7d8c6910fdc96cb845f6e2af74'"
 msgstr ""
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:338
-msgid "<imageobject> <imagedata fileref=\"figures/mate-system-monitor_window.png\" format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows System Monitor main window.</phrase> </textobject>"
+msgid "<imageobject> <imagedata fileref=\"figures/cafe-system-monitor_window.png\" format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows System Monitor main window.</phrase> </textobject>"
 msgstr ""
 
 #. (itstool) path: sect2/para
@@ -547,7 +547,7 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:496
-msgid "For information about how to change the columns displayed in the process list, see <xref linkend=\"mate-system-monitor-prefs-proclist\"/>."
+msgid "For information about how to change the columns displayed in the process list, see <xref linkend=\"cafe-system-monitor-prefs-proclist\"/>."
 msgstr ""
 
 #. (itstool) path: sect3/title
@@ -557,7 +557,7 @@ msgstr ""
 
 #. (itstool) path: sect3/para
 #: C/index.docbook:502
-msgid "A parent process is a process that spawns another process. The spawned process is a child process of the original parent process. By default, <application>System Monitor</application> does not show process dependencies. For information about how to change the default display behavior, see <xref linkend=\"mate-system-monitor-modify-processlist-viewdeps\"/>."
+msgid "A parent process is a process that spawns another process. The spawned process is a child process of the original parent process. By default, <application>System Monitor</application> does not show process dependencies. For information about how to change the default display behavior, see <xref linkend=\"cafe-system-monitor-modify-processlist-viewdeps\"/>."
 msgstr ""
 
 #. (itstool) path: sect3/title
@@ -592,7 +592,7 @@ msgstr ""
 
 #. (itstool) path: sect3/para
 #: C/index.docbook:532
-msgid "For information about how to change the priority of a process, see <xref linkend=\"mate-system-monitor-change-priority\"/>."
+msgid "For information about how to change the priority of a process, see <xref linkend=\"cafe-system-monitor-change-priority\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -1003,7 +1003,7 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:928
 #: C/index.docbook:963
-msgid "By default, a confirmation alert is displayed. For information about how to display or hide the confirmation alert, see <xref linkend=\"mate-system-monitor-prefs-proclist\"/>."
+msgid "By default, a confirmation alert is displayed. For information about how to display or hide the confirmation alert, see <xref linkend=\"cafe-system-monitor-prefs-proclist\"/>."
 msgstr ""
 
 #. (itstool) path: listitem/para
@@ -1043,7 +1043,7 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:973
-msgid "You usually terminate a process only if you cannot end the process normally as described in <xref linkend=\"mate-system-monitor-end-process\"/>."
+msgid "You usually terminate a process only if you cannot end the process normally as described in <xref linkend=\"cafe-system-monitor-end-process\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -1163,7 +1163,7 @@ msgstr ""
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:1065
-msgid "For information about how to change the columns displayed in the file systems list, see <xref linkend=\"mate-system-monitor-prefs-fs\"/>."
+msgid "For information about how to change the columns displayed in the file systems list, see <xref linkend=\"cafe-system-monitor-prefs-fs\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title
