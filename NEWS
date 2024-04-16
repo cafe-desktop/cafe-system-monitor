@@ -1,0 +1,192 @@
+### mate-system-monitor 1.24.1
+
+  * Translations update
+  * build: silent build warnings for distcheck
+  * Use user page on github when user email is private
+  * Update authors
+
+### mate-system-monitor 1.24.0
+
+  * filter-out conflictive c-format comments
+  * Fix 'msgstr' is not a valid C format string, unlike 'msgid'
+
+### mate-system-monitor 1.23.1
+
+  * Translations update
+  * Update copyright to 2020
+  * gsm_color_button: avoid redundant redeclarations
+  * Add translator notes for desktop file
+  * migrate from intltool to gettext
+  * Use MATE_DEBUG_CHECK for setting compiler debug flags
+  * Use MATE_COMPILE_WARNINGS and MATE_CXX_WARNINGS macros
+  * require GLib >= 2.56.0
+  * Render icons as cairo surfaces for HiDPI support
+  * Change url project's website
+  * proctable: cppcheck: Local variable 'column' shadows outer variable
+  * add disk I/O info on usage and prefs section
+  * Make SysInfo::get_os_type a static function
+  * msm_execute_helper: fix memory leak
+  * sysinfo: Condition 'markup' is always false
+  * procman: Use G_VARIANT_TYPE ("ai") instead of G_VARIANT_TYPE_ARRAY
+  * smooth_refresh: Assigned value is garbage or undefined
+  * Add disk IO on process info
+
+### mate-system-monitor 1.23.0
+
+  * Translations update
+  * Network History: Fix labels
+  * Show GPU info on the System tab
+  * Use g_format_size or g_format_size_full
+  * support 32 cpus
+  * sysinfo: show debian version
+  * Show available disk space in ZFS
+  * Show 32/64-bit Version intead of release for Arch Linux in System tab
+  * Show OpenIndiana release and kernel info in System tab
+  * Show FreeBSD sysname, release, version in System tab
+  * gtk3: use “program-name” property in gtk_show_about_dialog
+  * update some instructions after review
+  * update help with more information and some corrections
+  * help: update copyright
+  * Fix openSUSE Tumbleweed rolling release info
+
+### mate-system-monitor 1.22.0
+
+  * Translations update
+  * Initialize Travis CI support
+  * Ensure proper translation of the about dialog title
+  * License text in About dialog
+  * Make translatable the copyright in about dialog
+  * Update Catalan screenshot
+  * Help - Priority preset values, including custom value
+  * procman: avoid deprecated 'g_settings_list_keys'
+
+### mate-system-monitor 1.21.1
+
+  * Translations update
+  * disable deprecation warnings for distcheck
+  * move appdata to metainfo directory
+  * interface: avoid deprecated gtk_menu_popup
+  * Avoid compile warning for g_type_class_add_private
+  * Fix grammar mistake & gui label
+  * Use make functions for HELP_LINGUAS
+  * add help to transifex config
+
+### mate-system-monitor 1.21.0
+
+  * Translations update
+  * fix crash on systems with pid 0
+  * Update interval text in resources tab corrected
+  * avoid deprecated GtkStock
+
+### mate-system-monitor 1.20.0
+
+  * Translations update
+  * require GTK+ 3.22 and GLib 2.50
+  * Fix typo in NEWS: alignment instead aligment
+  * update copyright year to 2018
+  * procman.cpp: Fix build warning: argument 1 null where non-null expected
+  * sysinfo.cpp: Fix build warning: this ‘if’ clause does not guard...
+  * proctable.cpp: Fix build warning: this ‘else’ clause does not guard...
+
+### mate-system-monitor 1.19.1
+
+  * Translations update
+  * Fix system logo alignment
+  * WidthOfScreen and HeightOfScreen implementation
+  * process table: make search case-insensitive
+
+### mate-system-monitor 1.19.0
+
+  * Translations update
+  * sysinfo: disable focus in all labels
+  * update copyright year
+  * avoid deprecated gdk_screen_width/height
+  * Restore Polish translation credits from GNOME
+  * sysinfo: avoid deprecated GtkAlignment
+
+### mate-system-monitor 1.18.0
+
+  * NEWS: use consistent, project wide, markdown-like formatting
+    to make generating release announcements easier
+  * Add pkexec support for using kill and renice on other users'
+    processes, and try using it before trying gksu
+  * Fix some GTK+ deprecations
+  * Translations update
+
+### mate-system-monitor 1.16.0
+
+  * Translations update
+
+### mate-system-monitor 1.14.1
+
+  * Fix build with recent gcc and clang
+  * Translations update
+
+### mate-system-monitor 1.14.0
+
+  * Move to GTK+3, drop GTK+2 code and --with-gtk build option
+  * Set minimum required GTK+ version to 3.14, drop some deprecated
+    code
+  * Run gksu binary instead of loading libgksu2.so (which is GTK+2
+    only)
+  * Drop MateConf migration script
+  * Main window: save maximized state in gsettings on exit and load
+    it on startup
+  * Disks: add saving and loading width and visibility of columns
+  * Process properties: show cgroups
+  * Process properties: show N/A when cgroups or selinux isn't set
+  * Process table: show running state when CPU time changes
+  * Change graph grid line colors and pattern
+  * Draw the background of graphs explicitly to avoid issues with
+    GTK+ 3.20
+  * Fix incorrect icons for some known apps like marco or vino
+  * Some more fixes and cleanups
+  * Translations update
+  * Fix Changelog generation
+
+### mate-system-monitor 1.12.2
+
+  * Process table: avoid expanding collapsed nodes on every refresh
+  * Prefs dialog: fix refresh rate not saving in some cases
+  * Memmaps dialog: fix unwanted autoscrolling to the top of list
+  * Fix segfault on view mode change with process properties open
+  * Some more fixes
+
+### mate-system-monitor 1.12.1
+
+  * Process table: delay saving column widths (avoids eating CPU
+    and slowdowns when resizing columns)
+  * Process table: force icon size (fixes huge mate-sensors-applet
+    icon with recent GTK+3 versions)
+  * Disks: set minimum width for device column (fixes crash when
+    resizing it to zero with recent GTK+3 versions)
+  * Some fixes and adjustments
+
+### mate-system-monitor 1.12.0
+
+  * SysInfo: add proper detection for Linux Mint and LMDE
+  * SysInfo: let distributions define custom side image
+  * Interface: add border to notebook
+  * Retrieve strings directly from gschema (requires intltool 0.50.1)
+  * Add support for libsystemd (in addition to libsystemd-login)
+  * Support build with C++11
+  * Drop useless dependency on mate-icon-theme
+  * Drop C89 support
+  * Translations update
+
+### mate-system-monitor 1.10.1
+
+  * Some adjustments for NetBSD
+  * Help fixes
+  * Translations update
+
+### mate-system-monitor 1.10.0
+
+  * Bugfixes
+  * Improvements from GNOME System Monitor
+
+### mate-system-monitor 1.8.0
+
+  * Add GTK3 support
+  * Use libwnck instead of libmatewnck
+  * Use yelp-tools instead of mate-doc-utils

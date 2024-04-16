@@ -1,0 +1,1557 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-system-monitor package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Audrius Meskauskas, 2020
+# brennus <jonas.ska@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Moo, 2020
+# Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2020
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: mate-system-monitor 1.23.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"POT-Creation-Date: 2020-01-13 13:07+0100\n"
+"PO-Revision-Date: 2020-02-16 16:03+0000\n"
+"Last-Translator: Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2020\n"
+"Language-Team: Lithuanian (https://www.transifex.com/mate/teams/13566/lt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
+
+#: mate-system-monitor.appdata.xml.in:7 mate-system-monitor.desktop.in.in:3
+msgid "MATE System Monitor"
+msgstr "MATE sistemos monitorius"
+
+#: mate-system-monitor.appdata.xml.in:8
+msgid "A Process and resource monitor for MATE Desktop"
+msgstr "Procesų ir išteklių monitorius MATE darbalaukiui"
+
+#: mate-system-monitor.appdata.xml.in:10
+msgid ""
+"MATE System Monitor allows to graphically view and manipulate the running "
+"processes on your system. It also provides an overview of available "
+"resources, such as CPU and memory."
+msgstr ""
+"MATE sistemos monitorius leidžia matyti ir valdyti jūsų sistemoje vykdomus "
+"procesus. Jis taip pat pateikia prieinamų išteklių, tokių kaip centrinis "
+"procesorius ir atmintis, apžvalgą. "
+
+#: mate-system-monitor.appdata.xml.in:15
+msgid ""
+"MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
+"Desktop Environment. If you would like to know more about MATE and System "
+"Monitor, please visit the project's home page."
+msgstr ""
+" MATE sistemos monitorius yra GNOME sistemos monitoriaus atšaka ir MATE "
+"dabalaukio aplinkos dalis. Jei norite sužinoti daugiau apie MATE ir MATE "
+"sistemos monitorių, prašom apsilankyti projekto tinklalapyje. "
+
+#: mate-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
+#: src/interface.cpp:625 src/procman.cpp:713
+msgid "System Monitor"
+msgstr "Sistemos monitorius"
+
+#: mate-system-monitor.desktop.in.in:5 src/callbacks.cpp:206
+msgid "View current processes and monitor system state"
+msgstr "Parodo paleistus procesus ir sistemos būklę"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-system-monitor.desktop.in.in:9
+msgid "utilities-system-monitor"
+msgstr "utilities-system-monitor"
+
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: mate-system-monitor.desktop.in.in:15
+msgid "MATE;system;monitor;process;list;view;current;resources;"
+msgstr ""
+"MATE;sistemos;monitorius;sistema;procesai;sąrašas/rodyti;dabar;ištekliai"
+
+#: org.mate.mate-system-monitor.policy.in.in:11
+msgid "Kill process"
+msgstr "Nutraukti procesą"
+
+#: org.mate.mate-system-monitor.policy.in.in:12
+msgid "Privileges are required to control other users' processes"
+msgstr ""
+"Norint valdyti kitų naudotojų procesus, reikia administratoriaus teisių"
+
+#: org.mate.mate-system-monitor.policy.in.in:22
+msgid "Renice process"
+msgstr "Vykdyti procesui \"renice\" komandą"
+
+#: org.mate.mate-system-monitor.policy.in.in:23
+msgid "Privileges are required to change the priority of processes"
+msgstr "Norint keisti proceso prioritetą, reikia administratoriaus teisių"
+
+#: src/argv.cpp:21
+msgid "Show the System tab"
+msgstr "Rodyti Sistemos kortelę"
+
+#: src/argv.cpp:26
+msgid "Show the Processes tab"
+msgstr "Rodyti Procesų kortelę"
+
+#: src/argv.cpp:31
+msgid "Show the Resources tab"
+msgstr "Rodyti Išteklių kortelę"
+
+#: src/argv.cpp:36
+msgid "Show the File Systems tab"
+msgstr "Rodyti Failų Sistemų kortelę"
+
+#: src/callbacks.cpp:185
+msgid ""
+"System Monitor is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"Sistemos monitorius yra laisvoji programinė įranga; galite ją platinti ir/ar"
+" modifikuoti pagal Free Software Foundation paskelbtos GNU Bendrosios "
+"Viešosios Licencijos sąlygas; arba pagal licencijos versiją 2, arba (jūsų "
+"nuožiūra) bet kurią vėlesnę versiją."
+
+#: src/callbacks.cpp:189
+msgid ""
+"System Monitor is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for"
+" more details."
+msgstr ""
+"Sistemos monitorius yra platinamas, tikintis, kad jis bus naudingas, tačiau "
+"BE JOKIOS GARANTIJOS; netgi be numanomos PARDAVIMO ar TINKAMUMO TAM TIKRAM "
+"TIKSLUI garantijos. Išsamesnei informacijai, žiūrėkite GNU Bendrąją Viešąją "
+"Licenciją."
+
+#: src/callbacks.cpp:193
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" System Monitor; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
+msgstr ""
+"Turėjote gauti GNU bendrosios viešosios licencijos kopiją kartu su Sistemos "
+"monitoriumi; jeigu negavote, rašykite Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
+
+#: src/callbacks.cpp:205
+msgid "About System Monitor"
+msgstr "Apie sistemos monitorių"
+
+#: src/callbacks.cpp:207
+msgid ""
+"Copyright © 2001-2004 Kevin Vandersloot\n"
+"Copyright © 2005-2007 Benoît Dejean\n"
+"Copyright © 2011-2020 MATE developers"
+msgstr ""
+"Autorių teisės © 2001-2004 Kevin Vandersloot\n"
+"Autorių teisės © 2005-2007 Benoît Dejean\n"
+"Autorių teisės © 2011-2020 MATE kūrėjai"
+
+#: src/callbacks.cpp:214
+msgid "translator-credits"
+msgstr ""
+"Vertėjai:\n"
+"Algimantas Margevičius <margevicius.algimantas@gmail.com>\n"
+"Aurimas Černius <aurisc4@gmail.com>\n"
+"Rimas Kudelis <rq@akl.lt>\n"
+"Žygimantas Beručka <uid0@akl.lt>\n"
+"Justina Klingaitė <justina.klingaite@gmail.com>\n"
+"Gintautas Miliauskas <gintas@akl.lt>\n"
+"Tomas Kuliavas <tokul@users.sourceforge.net>\n"
+"Gediminas Paulauskas <menesis@chatsubo.lt>\n"
+"Moo"
+
+#: src/disks.cpp:345 src/memmaps.cpp:327
+msgid "Device"
+msgstr "Įrenginys"
+
+#: src/disks.cpp:346
+msgid "Directory"
+msgstr "Katalogas"
+
+#: src/disks.cpp:347 src/gsm_color_button.c:179 src/openfiles.cpp:252
+msgid "Type"
+msgstr "Tipas"
+
+#: src/disks.cpp:348
+msgid "Total"
+msgstr "Iš viso"
+
+#: src/disks.cpp:349
+msgid "Free"
+msgstr "Laisva"
+
+#: src/disks.cpp:350
+msgid "Available"
+msgstr "Prieinama"
+
+#: src/disks.cpp:351
+msgid "Used"
+msgstr "Naudojama"
+
+#: src/gsm_color_button.c:155
+msgid "Fraction"
+msgstr "Trupmena"
+
+#. TRANSLATORS: description of the pie color picker's (mem, swap) filled
+#. percentage property
+#: src/gsm_color_button.c:157
+msgid "Percentage full for pie color pickers"
+msgstr "Skritulinės diagramos spalvos parinkiklio užpildymo procentinė dalis"
+
+#: src/gsm_color_button.c:164
+msgid "Title"
+msgstr "Antraštė"
+
+#: src/gsm_color_button.c:165
+msgid "The title of the color selection dialog"
+msgstr "Spalvų pasirinkimo dialogo antraštė"
+
+#: src/gsm_color_button.c:166 src/gsm_color_button.c:590
+msgid "Pick a Color"
+msgstr "Pasirinkite spalvą"
+
+#: src/gsm_color_button.c:172
+msgid "Current Color"
+msgstr "Esama spalva"
+
+#: src/gsm_color_button.c:173
+msgid "The selected color"
+msgstr "Pasirinkta spalva"
+
+#: src/gsm_color_button.c:180
+msgid "Type of color picker"
+msgstr "Spalvų parinkiklio tipas"
+
+#: src/gsm_color_button.c:504
+msgid "Received invalid color data\n"
+msgstr "Gauti netaisyklingi spalvų duomenys\n"
+
+#: src/gsm_color_button.c:613
+msgid "Click to set graph colors"
+msgstr "Spauskite, jei norite pasirinkti grafiko spalvas"
+
+#. xgettext: noun, top level menu.
+#. "File" did not make sense for system-monitor
+#: src/interface.cpp:51
+msgid "_Monitor"
+msgstr "_Monitorius"
+
+#: src/interface.cpp:52
+msgid "_Edit"
+msgstr "_Taisa"
+
+#: src/interface.cpp:53
+msgid "_View"
+msgstr "_Rodymas"
+
+#: src/interface.cpp:54
+msgid "_Help"
+msgstr "_Žinynas"
+
+#: src/interface.cpp:56
+msgid "Search for _Open Files"
+msgstr "Ieškoti at_vertų failų"
+
+#: src/interface.cpp:57
+msgid "Search for open files"
+msgstr "Ieškoti atvertų failų"
+
+#: src/interface.cpp:58
+msgid "_Quit"
+msgstr "Iš_eiti"
+
+#: src/interface.cpp:59
+msgid "Quit the program"
+msgstr "Išeiti iš programos"
+
+#: src/interface.cpp:62
+msgid "_Stop Process"
+msgstr "_Sustabdyti procesą"
+
+#: src/interface.cpp:63
+msgid "Stop process"
+msgstr "Sustabdyti procesą"
+
+#: src/interface.cpp:64
+msgid "_Continue Process"
+msgstr "_Tęsti procesą"
+
+#: src/interface.cpp:65
+msgid "Continue process if stopped"
+msgstr "Tęsti procesą, jei jis buvo sustabdytas"
+
+#: src/interface.cpp:67 src/procdialogs.cpp:91
+msgid "_End Process"
+msgstr "Užbaigti proc_esą"
+
+#: src/interface.cpp:68
+msgid "Force process to finish normally"
+msgstr "Priversti procesą užbaigti darbą normaliai"
+
+#: src/interface.cpp:69 src/procdialogs.cpp:80
+msgid "_Kill Process"
+msgstr "_Nutraukti procesą"
+
+#: src/interface.cpp:70
+msgid "Force process to finish immediately"
+msgstr "Tuojau pat priverstinai nutraukti proceso darbą"
+
+#: src/interface.cpp:71
+msgid "_Change Priority"
+msgstr "_Keisti prioritetą"
+
+#: src/interface.cpp:72
+msgid "Change the order of priority of process"
+msgstr "Pakeisti proceso prioriteto tvarką"
+
+#: src/interface.cpp:73
+msgid "_Preferences"
+msgstr "_Nustatymai"
+
+#: src/interface.cpp:74
+msgid "Configure the application"
+msgstr "Konfigūruoti programą"
+
+#: src/interface.cpp:76
+msgid "_Refresh"
+msgstr "_Atnaujinti"
+
+#: src/interface.cpp:77
+msgid "Refresh the process list"
+msgstr "Atnaujinti procesų sąrašą"
+
+#: src/interface.cpp:79
+msgid "_Memory Maps"
+msgstr "_Atminties sritys"
+
+#: src/interface.cpp:80
+msgid "Open the memory maps associated with a process"
+msgstr "Atverti atminties sritis, susijusias su procesu"
+
+#. Translators: this means 'Files that are open' (open is no verb here
+#: src/interface.cpp:82
+msgid "Open _Files"
+msgstr "Atverti _failai"
+
+#: src/interface.cpp:83
+msgid "View the files opened by a process"
+msgstr "Rodyti, kokius failus yra atvėręs šis procesas"
+
+#: src/interface.cpp:84
+msgid "_Properties"
+msgstr "_Savybės"
+
+#: src/interface.cpp:85
+msgid "View additional information about a process"
+msgstr "Peržiūrėti papildomą informaciją apie procesą"
+
+#: src/interface.cpp:88
+msgid "_Contents"
+msgstr "_Turinys"
+
+#: src/interface.cpp:89
+msgid "Open the manual"
+msgstr "Atverti žinyną"
+
+#: src/interface.cpp:90
+msgid "_About"
+msgstr "_Apie"
+
+#: src/interface.cpp:91
+msgid "About this application"
+msgstr "Apie šią programą"
+
+#: src/interface.cpp:96
+msgid "_Dependencies"
+msgstr "P_riklausomybės"
+
+#: src/interface.cpp:97
+msgid "Show parent/child relationship between processes"
+msgstr "Rodyti tėvų/vaikų ryšius tarp procesų"
+
+#: src/interface.cpp:104
+msgid "_Active Processes"
+msgstr "_Aktyvūs procesai"
+
+#: src/interface.cpp:105
+msgid "Show active processes"
+msgstr "Rodyti aktyvius procesus"
+
+#: src/interface.cpp:106
+msgid "A_ll Processes"
+msgstr "V_isi procesai"
+
+#: src/interface.cpp:107
+msgid "Show all processes"
+msgstr "Rodyti visus procesus"
+
+#: src/interface.cpp:108
+msgid "M_y Processes"
+msgstr "M_ano procesai"
+
+#: src/interface.cpp:109
+msgid "Show only user-owned processes"
+msgstr "Rodyti tik naudotojui priklausančius procesus"
+
+#: src/interface.cpp:114 src/util.cpp:167
+msgid "Very High"
+msgstr "Labai aukštas"
+
+#: src/interface.cpp:115
+msgid "Set process priority to very high"
+msgstr "Nustatyti labai aukštą proceso prioritetą"
+
+#: src/interface.cpp:116 src/util.cpp:169
+msgid "High"
+msgstr "Aukštas"
+
+#: src/interface.cpp:117
+msgid "Set process priority to high"
+msgstr "Nustatyti aukštą proceso prioritetą"
+
+#: src/interface.cpp:118 src/util.cpp:171
+msgid "Normal"
+msgstr "Normalus"
+
+#: src/interface.cpp:119
+msgid "Set process priority to normal"
+msgstr "Nustatyti normalų proceso prioritetą"
+
+#: src/interface.cpp:120 src/util.cpp:173
+msgid "Low"
+msgstr "Žemas"
+
+#: src/interface.cpp:121
+msgid "Set process priority to low"
+msgstr "Nustatyti žemą proceso prioritetą"
+
+#: src/interface.cpp:122 src/util.cpp:175
+msgid "Very Low"
+msgstr "Labai žemas"
+
+#: src/interface.cpp:123
+msgid "Set process priority to very low"
+msgstr "Nustatyti labai žemą proceso prioritetą"
+
+#: src/interface.cpp:124
+msgid "Custom"
+msgstr "Pasirinktinis"
+
+#: src/interface.cpp:125
+msgid "Set process priority manually"
+msgstr "Rankiniu būdu nustatyti proceso prioritetą"
+
+#: src/interface.cpp:231
+msgid "End _Process"
+msgstr "Už_baigti procesą"
+
+#. Translators: color picker title, %s is CPU, Memory, Swap, Receiving,
+#. Sending
+#: src/interface.cpp:279
+#, c-format
+msgid "Pick a Color for '%s'"
+msgstr "Pasirinkite spalvą elementui '%s'"
+
+#: src/interface.cpp:290
+msgid "CPU History"
+msgstr "CPU retrospektyva"
+
+#: src/interface.cpp:333 src/procproperties.cpp:135
+msgid "CPU"
+msgstr "CPU"
+
+#: src/interface.cpp:335
+#, c-format
+msgid "CPU%d"
+msgstr "CPU%d"
+
+#: src/interface.cpp:357
+msgid "Memory and Swap History"
+msgstr "Atminties ir mainų srities retrospektyva"
+
+#: src/interface.cpp:391 src/proctable.cpp:257 src/procproperties.cpp:127
+msgid "Memory"
+msgstr "Atmintis"
+
+#: src/interface.cpp:415
+msgid "Swap"
+msgstr "Swap"
+
+#: src/interface.cpp:439
+msgid "Network History"
+msgstr "Tinklo retrospektyva"
+
+#: src/interface.cpp:472
+msgid "Receiving"
+msgstr "Gaunama"
+
+#: src/interface.cpp:494
+msgid "Total Received"
+msgstr "Viso gauta"
+
+#: src/interface.cpp:513
+msgid "Sending"
+msgstr "Siunčiama"
+
+#: src/interface.cpp:535
+msgid "Total Sent"
+msgstr "Iš viso išsiųsta"
+
+#. procman_create_sysinfo_view();
+#: src/interface.cpp:705
+msgid "System"
+msgstr "Sistema"
+
+#: src/interface.cpp:709 src/procdialogs.cpp:554
+msgid "Processes"
+msgstr "Procesai"
+
+#: src/interface.cpp:713 src/procdialogs.cpp:667
+msgid "Resources"
+msgstr "Ištekliai"
+
+#: src/interface.cpp:717 src/procdialogs.cpp:732 src/procdialogs.cpp:736
+msgid "File Systems"
+msgstr "Failų sistemos"
+
+#: src/load-graph.cpp:176
+#, c-format
+msgid "%u second"
+msgid_plural "%u seconds"
+msgstr[0] "%u sekundė"
+msgstr[1] "%u sekundės"
+msgstr[2] "%u sekundžių"
+msgstr[3] "%u sekundžių"
+
+#: src/load-graph.cpp:349
+msgid "not available"
+msgstr "neprieinama"
+
+#. xgettext: 540MiB (53 %) of 1.0 GiB
+#: src/load-graph.cpp:352
+#, c-format
+msgid "%s (%.1f%%) of %s"
+msgstr "%s (%.1f%%) iš %s"
+
+#: src/load-graph.cpp:592 src/load-graph.cpp:599 src/util.cpp:485
+#, c-format
+msgid "%s/s"
+msgstr "%s/s"
+
+#: src/lsof.cpp:123
+msgid "Error"
+msgstr "Klaida"
+
+#: src/lsof.cpp:124
+#, c-format
+msgid "'%s' is not a valid Perl regular expression."
+msgstr "'%s' nėra teisingas Perl reguliarusis reiškinys."
+
+#: src/lsof.cpp:270
+msgid "Process"
+msgstr "Procesas"
+
+#: src/lsof.cpp:282
+msgid "PID"
+msgstr "PID"
+
+#: src/lsof.cpp:292 src/memmaps.cpp:305
+msgid "Filename"
+msgstr "Failo pavadinimas"
+
+#. gtk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#: src/lsof.cpp:309
+msgid "Search for Open Files"
+msgstr "Ieškoti atvertų failų"
+
+#: src/lsof.cpp:336
+msgid "_Name contains:"
+msgstr "_Pavadinime yra:"
+
+#. The default accelerator collides with the default close accelerator.
+#: src/lsof.cpp:357
+msgid "C_lear"
+msgstr "Išva_lyti"
+
+#: src/lsof.cpp:361
+msgid "Case insensitive matching"
+msgstr "Raidžių registro atitikimas nesvarbus"
+
+#: src/lsof.cpp:369
+msgid "S_earch results:"
+msgstr "Pai_eškos rezultatai:"
+
+#. xgettext: virtual memory start
+#: src/memmaps.cpp:307
+msgid "VM Start"
+msgstr "VM pradžia"
+
+#. xgettext: virtual memory end
+#: src/memmaps.cpp:309
+msgid "VM End"
+msgstr "VM pabaiga"
+
+#. xgettext: virtual memory syze
+#: src/memmaps.cpp:311
+msgid "VM Size"
+msgstr "VM dydis"
+
+#: src/memmaps.cpp:312
+msgid "Flags"
+msgstr "Parametrai"
+
+#. xgettext: virtual memory offset
+#: src/memmaps.cpp:314
+msgid "VM Offset"
+msgstr "VM poslinkis"
+
+#. xgettext: memory that has not been modified since
+#. it has been allocated
+#: src/memmaps.cpp:317
+msgid "Private clean"
+msgstr "Privati švari"
+
+#. xgettext: memory that has been modified since it
+#. has been allocated
+#: src/memmaps.cpp:320
+msgid "Private dirty"
+msgstr "Privati nešvari"
+
+#. xgettext: shared memory that has not been modified
+#. since it has been allocated
+#: src/memmaps.cpp:323
+msgid "Shared clean"
+msgstr "Bendra švari"
+
+#. xgettext: shared memory that has been modified
+#. since it has been allocated
+#: src/memmaps.cpp:326
+msgid "Shared dirty"
+msgstr "Bendra nešvari"
+
+#: src/memmaps.cpp:328
+msgid "Inode"
+msgstr "Inodas"
+
+#: src/memmaps.cpp:432
+msgid "Memory Maps"
+msgstr "Atminties sritys"
+
+#: src/memmaps.cpp:444
+#, c-format
+msgid "_Memory maps for process \"%s\" (PID %u):"
+msgstr "Proceso „%s“ (PID %u) _atminties sritys:"
+
+#: src/openfiles.cpp:38
+msgid "file"
+msgstr "failas"
+
+#: src/openfiles.cpp:40
+msgid "pipe"
+msgstr "konvejeris"
+
+#: src/openfiles.cpp:42
+msgid "IPv6 network connection"
+msgstr "IPv6 tinklo prisijungimas"
+
+#: src/openfiles.cpp:44
+msgid "IPv4 network connection"
+msgstr "IPv4 tinklo prisijungimas"
+
+#: src/openfiles.cpp:46
+msgid "local socket"
+msgstr "vietinis lizdas"
+
+#: src/openfiles.cpp:48
+msgid "unknown type"
+msgstr "nežinomas tipas"
+
+#. Translators: "FD" here means "File Descriptor". Please use
+#. a very short translation if possible, and at most
+#. 2-3 characters for it to be able to fit in the UI.
+#: src/openfiles.cpp:251
+msgid "FD"
+msgstr "FA"
+
+#: src/openfiles.cpp:253
+msgid "Object"
+msgstr "Objektas"
+
+#: src/openfiles.cpp:324
+msgid "Open Files"
+msgstr "Atverti failai"
+
+#: src/openfiles.cpp:345
+#, c-format
+msgid "_Files opened by process \"%s\" (PID %u):"
+msgstr "Proceso „%s“ (PID %u) atverti _failai:"
+
+#: src/org.mate.system-monitor.gschema.xml.in:6
+msgid "Main window size and position in the form (width, height, xpos, ypos)"
+msgstr ""
+"Pagrindinio lango dydis ir pozicija formoje (plotis, aukštis, xpoz, ypoz)"
+
+#: src/org.mate.system-monitor.gschema.xml.in:10
+msgid ""
+"If TRUE, main window will open maximized, and saved size and position values"
+" are ignored."
+msgstr ""
+"Jei TEISINGA, pagrindinis langas bus išskleistas, o įrašytų dydžio ir "
+"padėties reikšmių bus nepaisoma."
+
+#: src/org.mate.system-monitor.gschema.xml.in:14
+msgid "Show process dependencies in tree form"
+msgstr "Rodyti proceso priklausomybes medžio forma"
+
+#: src/org.mate.system-monitor.gschema.xml.in:18
+msgid "Solaris mode for CPU percentage"
+msgstr "CPU procentų Solaris veiksena"
+
+#: src/org.mate.system-monitor.gschema.xml.in:19
+msgid ""
+"If TRUE, system-monitor operates in 'Solaris mode' where a task's CPU usage "
+"is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
+"mode'."
+msgstr ""
+"Jeigu TEIGIAMA, system-monitor veikia „Solaris veiksenoje“, kur užduoties "
+"CPU naudojimas yra padalintas iš viso CPU skaičiaus. Priešingu atveju ji "
+"veikia „Irix veiksenoje“."
+
+#: src/org.mate.system-monitor.gschema.xml.in:23
+msgid "Enable/Disable smooth refresh"
+msgstr "Įjungti/išjungti tolygų atnaujinimą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:27
+msgid "Show warning dialog when killing processes"
+msgstr "Nutraukiant procesus rodyti įspėjimo dialogą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:31
+msgid "Time in milliseconds between updates of the process view"
+msgstr "Laikas milisekundėmis tarp procesų vaizdo atnaujinimų"
+
+#: src/org.mate.system-monitor.gschema.xml.in:35
+msgid "Time in milliseconds between updates of the graphs"
+msgstr "Laikas milisekundėmis tarp grafikų atnaujinimų"
+
+#: src/org.mate.system-monitor.gschema.xml.in:39
+msgid "Whether information about all file systems should be displayed"
+msgstr "Ar informacija apie visas failų sistemas turėtų būti rodoma"
+
+#: src/org.mate.system-monitor.gschema.xml.in:40
+msgid ""
+"Whether to display information about all file systems (including types like "
+"'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
+"file systems."
+msgstr ""
+"Ar informacija apie visas failų sistemas turėtų būti rodoma (įskaitant tokių"
+" tipų kaip „autofs“ ir „procfs“). Tai naudinga norint gauti šiuo metu "
+"prijungtų failų sistemų sąrašą."
+
+#: src/org.mate.system-monitor.gschema.xml.in:44
+msgid "Time in milliseconds between updates of the devices list"
+msgstr "Laikas milisekundėmis tarp įrenginių sąrašo atnaujinimų"
+
+#: src/org.mate.system-monitor.gschema.xml.in:48
+msgid ""
+"Determines which processes to show by default. 0 is All, 1 is user, and 2 is"
+" active"
+msgstr "Nurodo rodomus procesus. 0 – visus, 1 – naudotojo, 2 – aktyvius"
+
+#: src/org.mate.system-monitor.gschema.xml.in:52
+msgid "Saves the currently viewed tab"
+msgstr "Įrašo šiuo metu peržiūrimą kortelę"
+
+#: src/org.mate.system-monitor.gschema.xml.in:53
+msgid ""
+"0 for the System Info, 1 for the processes list, 2 for the resources and 3 "
+"for the disks list"
+msgstr ""
+"0 - Sistemos informacija, 1 - procesų sąrašas, 2 - resursai, 3 - diskų "
+"sąrašas"
+
+#: src/org.mate.system-monitor.gschema.xml.in:57
+#: src/org.mate.system-monitor.gschema.xml.in:61
+#: src/org.mate.system-monitor.gschema.xml.in:65
+#: src/org.mate.system-monitor.gschema.xml.in:69
+#: src/org.mate.system-monitor.gschema.xml.in:73
+#: src/org.mate.system-monitor.gschema.xml.in:77
+#: src/org.mate.system-monitor.gschema.xml.in:85
+#: src/org.mate.system-monitor.gschema.xml.in:89
+#: src/org.mate.system-monitor.gschema.xml.in:93
+#: src/org.mate.system-monitor.gschema.xml.in:97
+#: src/org.mate.system-monitor.gschema.xml.in:101
+#: src/org.mate.system-monitor.gschema.xml.in:105
+#: src/org.mate.system-monitor.gschema.xml.in:109
+#: src/org.mate.system-monitor.gschema.xml.in:113
+#: src/org.mate.system-monitor.gschema.xml.in:117
+#: src/org.mate.system-monitor.gschema.xml.in:121
+#: src/org.mate.system-monitor.gschema.xml.in:125
+#: src/org.mate.system-monitor.gschema.xml.in:129
+#: src/org.mate.system-monitor.gschema.xml.in:133
+#: src/org.mate.system-monitor.gschema.xml.in:137
+#: src/org.mate.system-monitor.gschema.xml.in:141
+#: src/org.mate.system-monitor.gschema.xml.in:145
+#: src/org.mate.system-monitor.gschema.xml.in:149
+#: src/org.mate.system-monitor.gschema.xml.in:153
+#: src/org.mate.system-monitor.gschema.xml.in:157
+#: src/org.mate.system-monitor.gschema.xml.in:161
+#: src/org.mate.system-monitor.gschema.xml.in:165
+#: src/org.mate.system-monitor.gschema.xml.in:169
+#: src/org.mate.system-monitor.gschema.xml.in:173
+#: src/org.mate.system-monitor.gschema.xml.in:177
+#: src/org.mate.system-monitor.gschema.xml.in:181
+msgid "Default graph CPU color"
+msgstr "Numatytoji CPU grafiko spalva"
+
+#: src/org.mate.system-monitor.gschema.xml.in:81
+msgid "Default graph cpu color"
+msgstr "Numatytoji cpu grafiko spalva"
+
+#: src/org.mate.system-monitor.gschema.xml.in:185
+msgid "Default graph memory color"
+msgstr "Numatytoji atminties grafiko spalva"
+
+#: src/org.mate.system-monitor.gschema.xml.in:189
+msgid "Default graph swap color"
+msgstr "Numatytoji mainų srities grafiko spalva"
+
+#: src/org.mate.system-monitor.gschema.xml.in:193
+msgid "Default graph incoming network traffic color"
+msgstr "Numatytoji gaunamo tinklo srauto grafiko spalva "
+
+#: src/org.mate.system-monitor.gschema.xml.in:197
+msgid "Default graph outgoing network traffic color"
+msgstr "Numatytoji perduodamo tinklo srauto grafiko spalva"
+
+#: src/org.mate.system-monitor.gschema.xml.in:202
+msgid "Show network traffic in bits"
+msgstr "Rodyti tinklo duomenų srautą bitais"
+
+#: src/org.mate.system-monitor.gschema.xml.in:212
+msgid "Process view sort column"
+msgstr "Procesų rodinio rikiavimo stulpelis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:216
+msgid "Process view columns order"
+msgstr "Procesų rodinio stulpelių tvarka"
+
+#: src/org.mate.system-monitor.gschema.xml.in:220
+msgid "Process view sort order"
+msgstr "Procesų rodinio rikiavimo tvarka"
+
+#: src/org.mate.system-monitor.gschema.xml.in:224
+msgid "Width of process 'Name' column"
+msgstr "Proceso \"Pavadinimas\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:228
+msgid "Show process 'Name' column on startup"
+msgstr "Rodyti proceso \"Pavadinimas\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:232
+msgid "Width of process 'User' column"
+msgstr "Proceso \"Naudotojas\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:236
+msgid "Show process 'User' column on startup"
+msgstr "Rodyti proceso \"Naudotojas\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:240
+msgid "Width of process 'Status' column"
+msgstr "Proceso \"Būsena\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:244
+msgid "Show process 'Status' column on startup"
+msgstr "Rodyti proceso \"Būsena\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:248
+msgid "Width of process 'Virtual Memory' column"
+msgstr "Proceso \"Virtuali atmintis\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:252
+msgid "Show process 'Virtual Memory' column on startup"
+msgstr "Rodyti proceso \"Virtuali atmintis\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:256
+msgid "Width of process 'Resident Memory' column"
+msgstr "Proceso \"Rezidentinė atmintis\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:260
+msgid "Show process 'Resident Memory' column on startup"
+msgstr "Rodyti proceso \"Rezidentinė atmintis\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:264
+msgid "Width of process 'Writable Memory' column"
+msgstr "Proceso \"Rašoma atmintis\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:268
+msgid "Show process 'Writable Memory' column on startup"
+msgstr "Rodyti proceso \"Rašoma atmintis\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:272
+msgid "Width of process 'Shared Memory' column"
+msgstr "Proceso \"Bendra atmintis\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:276
+msgid "Show process 'Shared Memory' column on startup"
+msgstr "Rodyti proceso \"Bendra atmintis\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:280
+msgid "Width of process 'X Server Memory' column"
+msgstr "Proceso \"X serverio atmintis\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:284
+msgid "Show process 'X Server Memory' column on startup"
+msgstr "Rodyti proceso \"X serverio atmintis\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:288
+msgid "Width of process '% CPU' column"
+msgstr "Proceso \"% CPU\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:292
+msgid "Show process '% CPU' column on startup"
+msgstr "Rodyti proceso \"% CPU\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:296
+msgid "Width of process 'CPU Time' column"
+msgstr "Proceso \"CPU laikas\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:300
+msgid "Show process 'CPU Time' column on startup"
+msgstr "Rodyti proceso \"CPU laikas\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:304
+msgid "Width of process 'Started' column"
+msgstr "Proceso \"Paleista“ stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:308
+msgid "Show process 'Started' column on startup"
+msgstr "Rodyti proceso \"Paleista“ stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:312
+msgid "Width of process 'Nice' column"
+msgstr "Proceso \"Nice\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:316
+msgid "Show process 'Nice' column on startup"
+msgstr "Rodyti proceso \"Nice\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:320
+msgid "Width of process 'ID' column"
+msgstr "Proceso \"ID\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:324
+msgid "Show process 'ID' column on startup"
+msgstr "Rodyti proceso \"ID\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:328
+msgid "Width of process 'Security Context' column"
+msgstr "Proceso \"Saugumo kontekstas“ stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:332
+msgid "Show process 'Security Context' column on startup"
+msgstr "Rodyti proceso \"Saugumo kontekstas“ stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:336
+msgid "Width of process 'Command Line' column"
+msgstr "Proceso \"Komandų eilutė\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:340
+msgid "Show process 'Command Line' column on startup"
+msgstr "Rodyti proceso \"Komandų eilutė\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:344
+msgid "Width of process 'Memory' column"
+msgstr "Proceso \"Atmintis\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:348
+msgid "Show process 'Memory' column on startup"
+msgstr "Rodyti proceso \"Atmintis\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:352
+msgid "Width of process 'Waiting Channel' column"
+msgstr "Proceso \"Laukimo kanalas\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:356
+msgid "Show process 'Waiting Channel' column on startup"
+msgstr "Rodyti proceso \"Laukimo kanalo\" stulpelį paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:360
+msgid "Width of process 'Control Group' column"
+msgstr "Proceso \"Valdymo grupė\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:364
+msgid "Show process 'Control Group' column on startup"
+msgstr "Rodyti proceso „Valdymo grupė“ stulpelį paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:368
+msgid "Width of process 'Unit' column"
+msgstr "Proceso \"Įtaisas\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:372
+msgid "Show process 'Unit' column on startup"
+msgstr "Rodyti proceso \"Įtaisas\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:376
+msgid "Width of process 'Session' column"
+msgstr "Proceso \"Seansas\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:380
+msgid "Show process 'Session' column on startup"
+msgstr "Rodyti proceso \"Seansas\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:384
+msgid "Width of process 'Seat' column"
+msgstr "Proceso \"Darbo vieta\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:388
+msgid "Show process 'Seat' column on startup"
+msgstr "Rodyti proceso \"Darbo vieta\" stulpelį, paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:392
+msgid "Width of process 'Owner' column"
+msgstr "Proceso \"Savininkas\" stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:396
+msgid "Show process 'Owner' column on startup"
+msgstr "Rodyti proceso \"Savininkas“ stulpelį paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:400
+msgid "Width of process “Disk Write Total” column"
+msgstr "Proceso „Visas disko įrašymas“ plotis "
+
+#: src/org.mate.system-monitor.gschema.xml.in:404
+msgid "Show process “Disk Write Total” column on startup"
+msgstr "Rodyti proceso „Visas disko įrašymas“ stulpelį įjungiant"
+
+#: src/org.mate.system-monitor.gschema.xml.in:408
+msgid "Width of process “Disk Read Total” column"
+msgstr "Proceso „Visas disko skaitymas“ plotis "
+
+#: src/org.mate.system-monitor.gschema.xml.in:412
+msgid "Show process “Disk Read Total” column on startup"
+msgstr "Rodyti proceso „Visas disko skaitymas“ stulpelį įjungiant"
+
+#: src/org.mate.system-monitor.gschema.xml.in:416
+msgid "Width of process “Disk Read” column"
+msgstr "Proceso „Disko skaitymas“ plotis "
+
+#: src/org.mate.system-monitor.gschema.xml.in:420
+msgid "Show process “Disk Read” column on startup"
+msgstr "Rodyti proceso „disko skaitymas“ stulpelį įjungiant"
+
+#: src/org.mate.system-monitor.gschema.xml.in:424
+msgid "Width of process “Disk Write” column"
+msgstr "Proceso „Disko įrašymas“ plotis "
+
+#: src/org.mate.system-monitor.gschema.xml.in:428
+msgid "Show process “Disk Write” column on startup"
+msgstr "Rodyti proceso „Disko įrašymas“ stulpelį įjungiant"
+
+#: src/org.mate.system-monitor.gschema.xml.in:432
+msgid "Width of process “Priority” column"
+msgstr "Proceso „Prioritetas“ stulpelio plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:436
+msgid "Show process “Priority” column on startup"
+msgstr "Rodyti proceso „Prioritetas“ stulpelį paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:442
+msgid "Disk view sort column"
+msgstr "Diskų rodinio rikiavimo stulpelis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:446
+msgid "Disk view sort order"
+msgstr "Diskų rodinio rikiavimo tvarka"
+
+#: src/org.mate.system-monitor.gschema.xml.in:450
+msgid "Disk view columns order"
+msgstr "Diskų rodinio stulpelių tvarka"
+
+#: src/org.mate.system-monitor.gschema.xml.in:454
+msgid "Width of disk view 'Device' column"
+msgstr "Diskų rodinio stulpelio \"Įrenginys\" plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:458
+msgid "Show disk view 'Device' column on startup"
+msgstr "Rodyti diskų rodinio stulpelį \"Įrenginys\", paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:462
+msgid "Width of disk view 'Directory' column"
+msgstr "Diskų rodinio stulpelio \"Katalogas\" plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:466
+msgid "Show disk view 'Directory' column on startup"
+msgstr "Rodyti diskų rodinio stulpelį \"Katalogas\", paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:470
+msgid "Width of disk view 'Type' column"
+msgstr "Diskų rodinio stulpelio \"Tipas\" plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:474
+msgid "Show disk view 'Type' column on startup"
+msgstr "Rodyti diskų rodinio stulpelį \"Tipas\", paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:478
+msgid "Width of disk view 'Total' column"
+msgstr "Diskų rodinio stulpelio \"Iš viso\" plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:482
+msgid "Show disk view 'Total' column on startup"
+msgstr "Rodyti diskų rodinio stulpelį \"Iš viso\", paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:486
+msgid "Width of disk view 'Free' column"
+msgstr "Diskų rodinio stulpelio \"Laisva\" plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:490
+msgid "Show disk view 'Free' column on startup"
+msgstr "Rodyti diskų rodinio stulpelį \"Laisva\", paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:494
+msgid "Width of disk view 'Available' column"
+msgstr "Diskų rodinio stulpelio \"Prieinama\" plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:498
+msgid "Show disk view 'Available' column on startup"
+msgstr "Rodyti diskų rodinio stulpelį \"Prieinama\", paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:502
+msgid "Width of disk view 'Used' column"
+msgstr "Diskų rodinio stulpelio \"Naudojama\" plotis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:506
+msgid "Show disk view 'Used' column on startup"
+msgstr "Rodyti diskų rodinio stulpelį \"Naudojama\", paleidus programą"
+
+#: src/org.mate.system-monitor.gschema.xml.in:512
+msgid "Memory map sort column"
+msgstr "Atminties sričių rikiavimo stulpelis"
+
+#: src/org.mate.system-monitor.gschema.xml.in:516
+msgid "Memory map sort order"
+msgstr "Atminties sričių rikiavimo tvarka"
+
+#: src/org.mate.system-monitor.gschema.xml.in:522
+msgid "Open files sort column"
+msgstr "Atverti failų rikiavimo stulpelį"
+
+#: src/org.mate.system-monitor.gschema.xml.in:526
+msgid "Open files sort order"
+msgstr "Atvertų failų rikiavimo tvarka"
+
+#: src/procactions.cpp:76
+#, c-format
+msgid ""
+"Cannot change the priority of process with PID %d to %d.\n"
+"%s"
+msgstr ""
+"Negalima pakeisti proceso su PID %d prioriteto į %d.\n"
+"%s"
+
+#: src/procactions.cpp:156
+#, c-format
+msgid ""
+"Cannot kill process with PID %d with signal %d.\n"
+"%s"
+msgstr ""
+"Negalima nutraukti proceso su PID %d su signalu %d.\n"
+"%s"
+
+#. xgettext: primary alert message
+#: src/procdialogs.cpp:73
+#, c-format
+msgid "Kill the selected process “%s” (PID: %u)?"
+msgstr "Nutraukti pasirinktą procesą “%s” (PID: %u)?"
+
+#. xgettext: secondary alert message
+#: src/procdialogs.cpp:77
+msgid ""
+"Killing a process may destroy data, break the session or introduce a "
+"security risk. Only unresponsive processes should be killed."
+msgstr ""
+"Priverstinai nutraukdami proceso darbą, galite prarasti savo duomenis, "
+"sugadinti šiuo metu veikiantį seansą arba sukelti pavojų savo sistemos "
+"saugumui. Priverstinai nutraukiami turėtų būti tik procesai, kurių darbas "
+"sutriko."
+
+#. xgettext: primary alert message
+#: src/procdialogs.cpp:84
+#, c-format
+msgid "End the selected process “%s” (PID: %u)?"
+msgstr "Užbaigti pasirinktą procesą “%s” (PID: %u)?"
+
+#. xgettext: secondary alert message
+#: src/procdialogs.cpp:88
+msgid ""
+"Ending a process may destroy data, break the session or introduce a security"
+" risk. Only unresponsive processes should be ended."
+msgstr ""
+"Užbaigdami proceso darbą, galite prarasti savo duomenis, sugadinti šiuo metu"
+" veikiantį seansą arba sukelti pavojų savo sistemos saugumui. Užbaigiami "
+"turėtų būti tie procesai, kurių darbas sutriko."
+
+#: src/procdialogs.cpp:126 src/procdialogs.cpp:215
+#, c-format
+msgid "(%s Priority)"
+msgstr "(%s prioritetas)"
+
+#: src/procdialogs.cpp:170
+#, c-format
+msgid "Change Priority of Process “%s” (PID: %u)"
+msgstr "Keisti proceso “%s” (PID: %u) prioritetą"
+
+#: src/procdialogs.cpp:182
+msgid "Change _Priority"
+msgstr "Keisti _prioritetą"
+
+#: src/procdialogs.cpp:205
+msgid "_Nice value:"
+msgstr "_Nice reikšmė:"
+
+#: src/procdialogs.cpp:220
+msgid "Note:"
+msgstr "Pastaba:"
+
+#: src/procdialogs.cpp:221
+msgid ""
+"The priority of a process is given by its nice value. A lower nice value "
+"corresponds to a higher priority."
+msgstr ""
+"Proceso prioritetas yra nustatomas pagal jam suteiktą nice reikšmė. Žemesnė "
+"nice reikšmė reiškia aukštesnį prioritetą."
+
+#: src/procdialogs.cpp:472
+msgid "Icon"
+msgstr "Piktograma"
+
+#: src/procdialogs.cpp:531
+msgid "System Monitor Preferences"
+msgstr "Sistemos monitoriaus nustatymai"
+
+#: src/procdialogs.cpp:561
+msgid "Behavior"
+msgstr "Veikimas"
+
+#: src/procdialogs.cpp:580 src/procdialogs.cpp:755
+msgid "_Update interval in seconds:"
+msgstr "_Atnaujinimo intervalas sekundėmis:"
+
+#: src/procdialogs.cpp:605
+msgid "Enable _smooth refresh"
+msgstr "Įjungti _tolygų atnaujinimą"
+
+#: src/procdialogs.cpp:618
+msgid "Alert before ending or _killing processes"
+msgstr "Įspėti prieš užbaigiant arba nutrau_kiant procesus"
+
+#: src/procdialogs.cpp:631
+msgid "Divide CPU usage by CPU count"
+msgstr "Dalinti CPU naudojimą iš CPU skaičiaus"
+
+#: src/procdialogs.cpp:632
+msgid "Solaris mode"
+msgstr "Solaris veiksena"
+
+#: src/procdialogs.cpp:649 src/procdialogs.cpp:789
+msgid "Information Fields"
+msgstr "Informacijos laukeliai"
+
+#: src/procdialogs.cpp:662
+msgid "Process i_nformation shown in list:"
+msgstr "Sąraše rodoma proceso i_nformacija:"
+
+#: src/procdialogs.cpp:674
+msgid "Graphs"
+msgstr "Diagramos"
+
+#: src/procdialogs.cpp:693
+msgid "_Update interval in 1/10 sec:"
+msgstr "_Atnaujinimo intervalas (1/10 sekundės dalimis):"
+
+#: src/procdialogs.cpp:713
+msgid "Show network speed in bits"
+msgstr "Rodyti tinklo spartą bitais"
+
+#: src/procdialogs.cpp:775
+msgid "Show _all file systems"
+msgstr "Rodyti _visas failų sistemas"
+
+#: src/procdialogs.cpp:802
+msgid "File system i_nformation shown in list:"
+msgstr "Sąraše rodoma failų sistemos i_nformacija:"
+
+#: src/procman.cpp:662
+msgid "A simple process and system monitor."
+msgstr "Paprastas procesų ir sistemos monitorius."
+
+#: src/proctable.cpp:242 src/procproperties.cpp:124
+msgid "Process Name"
+msgstr "Proceso pavadinimas"
+
+#: src/proctable.cpp:243 src/procproperties.cpp:125
+msgid "User"
+msgstr "Naudotojas"
+
+#: src/proctable.cpp:244 src/procproperties.cpp:126
+msgid "Status"
+msgstr "Būsena"
+
+#: src/proctable.cpp:245 src/procproperties.cpp:128
+msgid "Virtual Memory"
+msgstr "Virtuali atmintis"
+
+#: src/proctable.cpp:246 src/procproperties.cpp:129
+msgid "Resident Memory"
+msgstr "Rezidentinė atmintis"
+
+#: src/proctable.cpp:247 src/procproperties.cpp:130
+msgid "Writable Memory"
+msgstr "Rašoma atmintis"
+
+#: src/proctable.cpp:248 src/procproperties.cpp:131
+msgid "Shared Memory"
+msgstr "Bendra atmintis"
+
+#: src/proctable.cpp:249 src/procproperties.cpp:132
+msgid "X Server Memory"
+msgstr "X serverio atmintis"
+
+#: src/proctable.cpp:250
+#, no-c-format
+msgid "% CPU"
+msgstr "% CPU"
+
+#: src/proctable.cpp:251 src/procproperties.cpp:136
+msgid "CPU Time"
+msgstr "CPU laikas"
+
+#: src/proctable.cpp:252 src/procproperties.cpp:137
+msgid "Started"
+msgstr "Paleista"
+
+#: src/proctable.cpp:253 src/procproperties.cpp:138
+msgid "Nice"
+msgstr "Nice"
+
+#: src/proctable.cpp:254 src/procproperties.cpp:140
+msgid "ID"
+msgstr "ID"
+
+#: src/proctable.cpp:255 src/procproperties.cpp:141
+msgid "Security Context"
+msgstr "Saugumo kontekstas"
+
+#: src/proctable.cpp:256 src/procproperties.cpp:142
+msgid "Command Line"
+msgstr "Komandų eilutė"
+
+#. xgettext: combined noun, the function the process is waiting in, see wchan
+#. ps(1)
+#: src/proctable.cpp:259 src/procproperties.cpp:143
+msgid "Waiting Channel"
+msgstr "Laukimo kanalas"
+
+#: src/proctable.cpp:260 src/procproperties.cpp:144
+msgid "Control Group"
+msgstr "Valdymo grupė"
+
+#: src/proctable.cpp:261
+msgid "Unit"
+msgstr "Įtaisas"
+
+#: src/proctable.cpp:262
+msgid "Session"
+msgstr "Seansas"
+
+#. TRANSLATORS: Seat = i.e. the physical seat the session of the process
+#. belongs to, only
+#. for multi-seat environments. See
+#. http://en.wikipedia.org/wiki/Multiseat_configuration
+#: src/proctable.cpp:265
+msgid "Seat"
+msgstr "Darbo vieta"
+
+#: src/proctable.cpp:266
+msgid "Owner"
+msgstr "Savininkas"
+
+#: src/proctable.cpp:267 src/procproperties.cpp:133
+msgid "Disk Read Total"
+msgstr "Visas disko skaitymas"
+
+#: src/proctable.cpp:268 src/procproperties.cpp:134
+msgid "Disk Write Total"
+msgstr "Visas disko įrašymas"
+
+#: src/proctable.cpp:269
+msgid "Disk Read"
+msgstr "Disko skaitymas"
+
+#: src/proctable.cpp:270
+msgid "Disk Write"
+msgstr "Disko įrašymas"
+
+#: src/proctable.cpp:271 src/procproperties.cpp:139
+msgid "Priority"
+msgstr "Prioritetas"
+
+#: src/proctable.cpp:1153
+#, c-format
+msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
+msgstr ""
+"Paskutiniųjų 1, 5 ir 15 minučių apkrovos vidurkiai: %0.2f, %0.2f, %0.2f"
+
+#: src/procproperties.cpp:98 src/procproperties.cpp:107
+#: src/procproperties.cpp:141 src/procproperties.cpp:144 src/util.cpp:369
+#: src/util.cpp:441 src/util.cpp:479
+msgid "N/A"
+msgstr "Nepasiekiama"
+
+#: src/procproperties.cpp:252
+msgid "Process Properties"
+msgstr "Proceso savybės"
+
+#: src/procproperties.cpp:272
+#, c-format
+msgid "Properties of process \"%s\" (PID %u):"
+msgstr "Proceso \"%s\" (PID %u) savybės:"
+
+#. Translators: The first string parameter is release version (codename),
+#. * the second one is the architecture, 32 or 64-bit
+#: src/sysinfo.cpp:82
+#, c-format
+msgid "Release %s %s"
+msgstr "%s %s laida"
+
+#. Translators: The string parameter is the architecture, 32 or 64-bit
+#: src/sysinfo.cpp:89
+#, c-format
+msgid "%s Version"
+msgstr "%s versija"
+
+#. Translators: The string parameter is release version (codename)
+#: src/sysinfo.cpp:94
+#, c-format
+msgid "Release %s"
+msgstr "Leidimas %s"
+
+#. translators: This is the type of architecture, for example:
+#. * "64-bit" or "32-bit"
+#: src/sysinfo.cpp:137
+#, c-format
+msgid "%d-bit"
+msgstr "%d-bitų"
+
+#: src/sysinfo.cpp:298
+msgid "Unknown"
+msgstr "Nežinoma"
+
+#: src/sysinfo.cpp:971
+#, c-format
+msgid "Kernel %s"
+msgstr "Branduolys %s"
+
+#: src/sysinfo.cpp:984
+#, c-format
+msgid "MATE %s"
+msgstr "MATE %s"
+
+#. hardware section
+#: src/sysinfo.cpp:998
+msgid "Hardware"
+msgstr "Aparatinė įranga"
+
+#: src/sysinfo.cpp:1003
+msgid "Memory:"
+msgstr "Atmintis:"
+
+#: src/sysinfo.cpp:1006
+msgid "Processor:"
+msgstr "Procesorius:"
+
+#: src/sysinfo.cpp:1008
+msgid "Graphics:"
+msgstr "Grafika:"
+
+#. disk space section
+#: src/sysinfo.cpp:1013
+msgid "System Status"
+msgstr "Sistemos būsena"
+
+#: src/sysinfo.cpp:1018
+msgid "Available disk space:"
+msgstr "Laisva vieta diske:"
+
+#: src/util.cpp:31
+msgid "Today %l:%M %p"
+msgstr "Šiandien %k:%M"
+
+#: src/util.cpp:33
+msgid "Yesterday %l:%M %p"
+msgstr "Vakar %k:%M"
+
+#: src/util.cpp:35
+msgid "%a %l:%M %p"
+msgstr "%a %l:%M %p"
+
+#: src/util.cpp:37
+msgid "%b %d %l:%M %p"
+msgstr "%b %d %l:%M %p"
+
+#: src/util.cpp:39
+msgid "%b %d %Y"
+msgstr "%b %d %Y"
+
+#: src/util.cpp:57
+msgid "Running"
+msgstr "Paleista"
+
+#: src/util.cpp:61
+msgid "Stopped"
+msgstr "Sustabdyta"
+
+#: src/util.cpp:65
+msgid "Zombie"
+msgstr "Zombis"
+
+#: src/util.cpp:69
+msgid "Uninterruptible"
+msgstr "Nepertraukiamas"
+
+#: src/util.cpp:73
+msgid "Sleeping"
+msgstr "Miega"
+
+#. xgettext: weeks, days
+#: src/util.cpp:128
+#, c-format
+msgid "%uw%ud"
+msgstr "%uw%ud"
+
+#. xgettext: days, hours (0 -> 23)
+#: src/util.cpp:132
+#, c-format
+msgid "%ud%02uh"
+msgstr "%ud%02uh"
+
+#. xgettext: hours (0 -> 23), minutes, seconds
+#: src/util.cpp:136
+#, c-format
+msgid "%u:%02u:%02u"
+msgstr "%u:%02u:%02u"
+
+#. xgettext: minutes, seconds, centiseconds
+#: src/util.cpp:139
+#, c-format
+msgid "%u:%02u.%02u"
+msgstr "%u:%02u.%02u"

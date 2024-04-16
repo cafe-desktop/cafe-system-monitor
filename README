@@ -1,0 +1,10 @@
+mate-system-monitor
+=============
+
+mate-system-monitor is a fork of gnome-system-monitor
+
+Optional dependencies :
+- pkexec - recommended
+- libselinux
+- lsb_release in PATH - recommended on linux
+

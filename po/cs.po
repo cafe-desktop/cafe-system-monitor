@@ -1,0 +1,1559 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the mate-system-monitor package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Lucas Lommer <drom@kdyne.net>, 2020
+# huskyviking <husky.viking@seznam.cz>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# ToMáš Marný, 2020
+# Michal <sinope@seznam.cz>, 2020
+# 1e6459e9b1241af8afa03d508d281c17_dbe0d8b, 2020
+# Jaroslav Lichtblau <jlichtblau@seznam.cz>, 2020
+# Radek kohout <radekpv@seznam.cz>, 2020
+# LiberteCzech <liberte.czech@gmail.com>, 2020
+# Roman Horník <roman.hornik@debian-linux.cz>, 2020
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: mate-system-monitor 1.23.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"POT-Creation-Date: 2020-01-13 13:07+0100\n"
+"PO-Revision-Date: 2020-02-16 16:03+0000\n"
+"Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2020\n"
+"Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: mate-system-monitor.appdata.xml.in:7 mate-system-monitor.desktop.in.in:3
+msgid "MATE System Monitor"
+msgstr "Sledování systému MATE"
+
+#: mate-system-monitor.appdata.xml.in:8
+msgid "A Process and resource monitor for MATE Desktop"
+msgstr "Sledování procesů a systémových prostředků pro MATE"
+
+#: mate-system-monitor.appdata.xml.in:10
+msgid ""
+"MATE System Monitor allows to graphically view and manipulate the running "
+"processes on your system. It also provides an overview of available "
+"resources, such as CPU and memory."
+msgstr ""
+"Sledování systému MATE umožňuje graficky prohlížet a manipulovat se "
+"spuštěnými procesy ve vašem systému. Poskytuje také přehled o dostupných "
+"systémových prostředcích, jako jsou např. procesor a paměť."
+
+#: mate-system-monitor.appdata.xml.in:15
+msgid ""
+"MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
+"Desktop Environment. If you would like to know more about MATE and System "
+"Monitor, please visit the project's home page."
+msgstr ""
+"Aplikace Sledování systému MATE je forkem aplikace GNOME System Monitor a je"
+" součástí prostředí MATE. Pokud se chcete dozvědět více o MATE a Sledování "
+"systému, navštivte domovskou stránku projektu."
+
+#: mate-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
+#: src/interface.cpp:625 src/procman.cpp:713
+msgid "System Monitor"
+msgstr "Sledování systému"
+
+#: mate-system-monitor.desktop.in.in:5 src/callbacks.cpp:206
+msgid "View current processes and monitor system state"
+msgstr "Zobrazit aktuální procesy a sledovat stav systému"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: mate-system-monitor.desktop.in.in:9
+msgid "utilities-system-monitor"
+msgstr "utilities-system-monitor"
+
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: mate-system-monitor.desktop.in.in:15
+msgid "MATE;system;monitor;process;list;view;current;resources;"
+msgstr ""
+"MATE;systém;sytému;monitor;sledování;proces;seznam;pohled;zobrazení;zobrazit;aktuální;systémové;zdroje;prostředky;"
+
+#: org.mate.mate-system-monitor.policy.in.in:11
+msgid "Kill process"
+msgstr "Zabít proces"
+
+#: org.mate.mate-system-monitor.policy.in.in:12
+msgid "Privileges are required to control other users' processes"
+msgstr "K ovládání procesů jiného uživatele je nutné oprávnění"
+
+#: org.mate.mate-system-monitor.policy.in.in:22
+msgid "Renice process"
+msgstr "Změnit prioritu procesu"
+
+#: org.mate.mate-system-monitor.policy.in.in:23
+msgid "Privileges are required to change the priority of processes"
+msgstr "Ke změně priority procesu je nutné oprávnění"
+
+#: src/argv.cpp:21
+msgid "Show the System tab"
+msgstr "Zobrazit kartu Systém"
+
+#: src/argv.cpp:26
+msgid "Show the Processes tab"
+msgstr "Zobrazit kartu Procesy"
+
+#: src/argv.cpp:31
+msgid "Show the Resources tab"
+msgstr "Zobrazit kartu Prostředky"
+
+#: src/argv.cpp:36
+msgid "Show the File Systems tab"
+msgstr "Zobrazit kartu Souborové systémy"
+
+#: src/callbacks.cpp:185
+msgid ""
+"System Monitor is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"Aplikace Sledování systému je svobodný software; můžete jej šířit a/nebo "
+"upravovat podle podmínek GNU General Public License, kterou vydává Free "
+"Software Foundation; buď verze 2 této licence, nebo (podle vašeho uvážení) "
+"jakékoli pozdější verze."
+
+#: src/callbacks.cpp:189
+msgid ""
+"System Monitor is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for"
+" more details."
+msgstr ""
+"Aplikace Sledování systému je rozšiřována v naději, že bude užitečná, avšak "
+"BEZ JAKÉKOLIV ZÁRUKY; neposkytují se ani odvozené záruky PRODEJNOSTI anebo "
+"VHODNOSTI PRO URČITÝ ÚČEL.  Další podrobnosti hledejte v GNU General Public "
+"License."
+
+#: src/callbacks.cpp:193
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" System Monitor; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
+msgstr ""
+"Kopii GNU General Public License byste měli obdržet spolu s tímto programem;"
+" pokud se tak nestalo, napište si o ni Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
+
+#: src/callbacks.cpp:205
+msgid "About System Monitor"
+msgstr "O aplikaci Sledování systému"
+
+#: src/callbacks.cpp:207
+msgid ""
+"Copyright © 2001-2004 Kevin Vandersloot\n"
+"Copyright © 2005-2007 Benoît Dejean\n"
+"Copyright © 2011-2020 MATE developers"
+msgstr ""
+"Copyright © 2001-2004 Kevin Vandersloot\n"
+"Copyright © 2005-2007 Benoît Dejean\n"
+"Copyright © 2011-2020 Vývojáři MATE"
+
+#: src/callbacks.cpp:214
+msgid "translator-credits"
+msgstr ""
+"Stanislav Brabec <utx@penguin.cz>\n"
+"Michal Bukovjan <bukm@centrum.cz>\n"
+"Miloslav Trmač <mitr@volny.cz>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Jakub Friedl <jfriedl@suse.cz>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Lukáš Novotný <lukasnov@cvs.gnome.org>\n"
+"Kamil Páral <ripper42@gmail.com>\n"
+"Petr Kovář <pknbe@volny.cz>\n"
+"Lucas Lommer <drom@kdyne.net>\n"
+"Tomas Bzatek <tbzatek@redhat.com>\n"
+"Roman Horník <roman.hornik@debian-linux.cz>"
+
+#: src/disks.cpp:345 src/memmaps.cpp:327
+msgid "Device"
+msgstr "Zařízení"
+
+#: src/disks.cpp:346
+msgid "Directory"
+msgstr "Adresář"
+
+#: src/disks.cpp:347 src/gsm_color_button.c:179 src/openfiles.cpp:252
+msgid "Type"
+msgstr "Typ"
+
+#: src/disks.cpp:348
+msgid "Total"
+msgstr "Celkem"
+
+#: src/disks.cpp:349
+msgid "Free"
+msgstr "Volné"
+
+#: src/disks.cpp:350
+msgid "Available"
+msgstr "K dispozici"
+
+#: src/disks.cpp:351
+msgid "Used"
+msgstr "Použito"
+
+#: src/gsm_color_button.c:155
+msgid "Fraction"
+msgstr "Podíl"
+
+#. TRANSLATORS: description of the pie color picker's (mem, swap) filled
+#. percentage property
+#: src/gsm_color_button.c:157
+msgid "Percentage full for pie color pickers"
+msgstr "Plný procentuální podíl výběrů barvy výsečového grafu"
+
+#: src/gsm_color_button.c:164
+msgid "Title"
+msgstr "Nadpis"
+
+#: src/gsm_color_button.c:165
+msgid "The title of the color selection dialog"
+msgstr "Nadpis dialogu výběru barvy"
+
+#: src/gsm_color_button.c:166 src/gsm_color_button.c:590
+msgid "Pick a Color"
+msgstr "Vybrat barvu"
+
+#: src/gsm_color_button.c:172
+msgid "Current Color"
+msgstr "Aktuální barva"
+
+#: src/gsm_color_button.c:173
+msgid "The selected color"
+msgstr "Vybraná barva"
+
+#: src/gsm_color_button.c:180
+msgid "Type of color picker"
+msgstr "Typ výběru barvy"
+
+#: src/gsm_color_button.c:504
+msgid "Received invalid color data\n"
+msgstr "Byly zadány neplatné hodnoty pro barvu\n"
+
+#: src/gsm_color_button.c:613
+msgid "Click to set graph colors"
+msgstr "Kliknutím nastavíte barvy grafu"
+
+#. xgettext: noun, top level menu.
+#. "File" did not make sense for system-monitor
+#: src/interface.cpp:51
+msgid "_Monitor"
+msgstr "_Sledování"
+
+#: src/interface.cpp:52
+msgid "_Edit"
+msgstr "_Upravit"
+
+#: src/interface.cpp:53
+msgid "_View"
+msgstr "_Zobrazit"
+
+#: src/interface.cpp:54
+msgid "_Help"
+msgstr "_Nápověda"
+
+#: src/interface.cpp:56
+msgid "Search for _Open Files"
+msgstr "Hledat _otevřené soubory"
+
+#: src/interface.cpp:57
+msgid "Search for open files"
+msgstr "Hledat otevřené soubory"
+
+#: src/interface.cpp:58
+msgid "_Quit"
+msgstr "U_končit"
+
+#: src/interface.cpp:59
+msgid "Quit the program"
+msgstr "Ukončit program"
+
+#: src/interface.cpp:62
+msgid "_Stop Process"
+msgstr "Za_stavit proces"
+
+#: src/interface.cpp:63
+msgid "Stop process"
+msgstr "Zastavit proces"
+
+#: src/interface.cpp:64
+msgid "_Continue Process"
+msgstr "_Pokračovat v procesu"
+
+#: src/interface.cpp:65
+msgid "Continue process if stopped"
+msgstr "Pokračovat v procesu, je-li zastaven"
+
+#: src/interface.cpp:67 src/procdialogs.cpp:91
+msgid "_End Process"
+msgstr "U_končit proces"
+
+#: src/interface.cpp:68
+msgid "Force process to finish normally"
+msgstr "Vynutit běžné ukončení procesu"
+
+#: src/interface.cpp:69 src/procdialogs.cpp:80
+msgid "_Kill Process"
+msgstr "_Zabít proces"
+
+#: src/interface.cpp:70
+msgid "Force process to finish immediately"
+msgstr "Vynutit okamžité ukončení procesu"
+
+#: src/interface.cpp:71
+msgid "_Change Priority"
+msgstr "_Změnit prioritu"
+
+#: src/interface.cpp:72
+msgid "Change the order of priority of process"
+msgstr "Změnit pořadí priority procesu"
+
+#: src/interface.cpp:73
+msgid "_Preferences"
+msgstr "_Předvolby"
+
+#: src/interface.cpp:74
+msgid "Configure the application"
+msgstr "Nastavit aplikaci"
+
+#: src/interface.cpp:76
+msgid "_Refresh"
+msgstr "O_bnovit"
+
+#: src/interface.cpp:77
+msgid "Refresh the process list"
+msgstr "Obnovit seznam procesů"
+
+#: src/interface.cpp:79
+msgid "_Memory Maps"
+msgstr "_Mapy paměti"
+
+#: src/interface.cpp:80
+msgid "Open the memory maps associated with a process"
+msgstr "Otevřít mapy paměti asociované s procesem"
+
+#. Translators: this means 'Files that are open' (open is no verb here
+#: src/interface.cpp:82
+msgid "Open _Files"
+msgstr "Otevřené _soubory"
+
+#: src/interface.cpp:83
+msgid "View the files opened by a process"
+msgstr "Zobrazit soubory otevřené procesem"
+
+#: src/interface.cpp:84
+msgid "_Properties"
+msgstr "_Vlastnosti"
+
+#: src/interface.cpp:85
+msgid "View additional information about a process"
+msgstr "Zobrazit další informace o procesu"
+
+#: src/interface.cpp:88
+msgid "_Contents"
+msgstr "_Obsah"
+
+#: src/interface.cpp:89
+msgid "Open the manual"
+msgstr "Otevřít manuál"
+
+#: src/interface.cpp:90
+msgid "_About"
+msgstr "O _aplikaci"
+
+#: src/interface.cpp:91
+msgid "About this application"
+msgstr "O této aplikaci"
+
+#: src/interface.cpp:96
+msgid "_Dependencies"
+msgstr "Zá_vislosti"
+
+#: src/interface.cpp:97
+msgid "Show parent/child relationship between processes"
+msgstr "Zobrazovat vztahy rodič/potomek mezi procesy"
+
+#: src/interface.cpp:104
+msgid "_Active Processes"
+msgstr "_Aktivní procesy"
+
+#: src/interface.cpp:105
+msgid "Show active processes"
+msgstr "Zobrazit aktivní procesy"
+
+#: src/interface.cpp:106
+msgid "A_ll Processes"
+msgstr "_Všechny procesy"
+
+#: src/interface.cpp:107
+msgid "Show all processes"
+msgstr "Zobrazit všechny procesy"
+
+#: src/interface.cpp:108
+msgid "M_y Processes"
+msgstr "_Moje procesy"
+
+#: src/interface.cpp:109
+msgid "Show only user-owned processes"
+msgstr "Zobrazit pouze procesy vlastněné uživatelem"
+
+#: src/interface.cpp:114 src/util.cpp:167
+msgid "Very High"
+msgstr "Velmi vysoká"
+
+#: src/interface.cpp:115
+msgid "Set process priority to very high"
+msgstr "Nastavit prioritu procesu na velmi vysokou"
+
+#: src/interface.cpp:116 src/util.cpp:169
+msgid "High"
+msgstr "Vysoká"
+
+#: src/interface.cpp:117
+msgid "Set process priority to high"
+msgstr "Nastavit prioritu procesu na vysokou"
+
+#: src/interface.cpp:118 src/util.cpp:171
+msgid "Normal"
+msgstr "Normální"
+
+#: src/interface.cpp:119
+msgid "Set process priority to normal"
+msgstr "Nastavit prioritu procesu na normální"
+
+#: src/interface.cpp:120 src/util.cpp:173
+msgid "Low"
+msgstr "Nízká"
+
+#: src/interface.cpp:121
+msgid "Set process priority to low"
+msgstr "Nastavit prioritu procesu na nízkou"
+
+#: src/interface.cpp:122 src/util.cpp:175
+msgid "Very Low"
+msgstr "Velmi nízká"
+
+#: src/interface.cpp:123
+msgid "Set process priority to very low"
+msgstr "Nastavit prioritu procesu na velmi nízkou"
+
+#: src/interface.cpp:124
+msgid "Custom"
+msgstr "Vlastní"
+
+#: src/interface.cpp:125
+msgid "Set process priority manually"
+msgstr "Nastavit prioritu procesu ručně"
+
+#: src/interface.cpp:231
+msgid "End _Process"
+msgstr "U_končit proces"
+
+#. Translators: color picker title, %s is CPU, Memory, Swap, Receiving,
+#. Sending
+#: src/interface.cpp:279
+#, c-format
+msgid "Pick a Color for '%s'"
+msgstr "Vyberte si barvu pro '%s'"
+
+#: src/interface.cpp:290
+msgid "CPU History"
+msgstr "Historie CPU"
+
+#: src/interface.cpp:333 src/procproperties.cpp:135
+msgid "CPU"
+msgstr "CPU"
+
+#: src/interface.cpp:335
+#, c-format
+msgid "CPU%d"
+msgstr "CPU%d"
+
+#: src/interface.cpp:357
+msgid "Memory and Swap History"
+msgstr "Historie použití paměti a odkládacího prostoru"
+
+#: src/interface.cpp:391 src/proctable.cpp:257 src/procproperties.cpp:127
+msgid "Memory"
+msgstr "Paměť"
+
+#: src/interface.cpp:415
+msgid "Swap"
+msgstr "Odkládací prostor"
+
+#: src/interface.cpp:439
+msgid "Network History"
+msgstr "Historie sítě"
+
+#: src/interface.cpp:472
+msgid "Receiving"
+msgstr "Příjem"
+
+#: src/interface.cpp:494
+msgid "Total Received"
+msgstr "Celkem přijato"
+
+#: src/interface.cpp:513
+msgid "Sending"
+msgstr "Odesílání"
+
+#: src/interface.cpp:535
+msgid "Total Sent"
+msgstr "Celkem odesláno"
+
+#. procman_create_sysinfo_view();
+#: src/interface.cpp:705
+msgid "System"
+msgstr "Systém"
+
+#: src/interface.cpp:709 src/procdialogs.cpp:554
+msgid "Processes"
+msgstr "Procesy"
+
+#: src/interface.cpp:713 src/procdialogs.cpp:667
+msgid "Resources"
+msgstr "Prostředky"
+
+#: src/interface.cpp:717 src/procdialogs.cpp:732 src/procdialogs.cpp:736
+msgid "File Systems"
+msgstr "Souborové systémy"
+
+#: src/load-graph.cpp:176
+#, c-format
+msgid "%u second"
+msgid_plural "%u seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: src/load-graph.cpp:349
+msgid "not available"
+msgstr "nedostupné"
+
+#. xgettext: 540MiB (53 %) of 1.0 GiB
+#: src/load-graph.cpp:352
+#, c-format
+msgid "%s (%.1f%%) of %s"
+msgstr "%s (%.1f%%) z %s"
+
+#: src/load-graph.cpp:592 src/load-graph.cpp:599 src/util.cpp:485
+#, c-format
+msgid "%s/s"
+msgstr "%s/s"
+
+#: src/lsof.cpp:123
+msgid "Error"
+msgstr "Chyba"
+
+#: src/lsof.cpp:124
+#, c-format
+msgid "'%s' is not a valid Perl regular expression."
+msgstr "'%s' není platným regulárním Perl výrazem."
+
+#: src/lsof.cpp:270
+msgid "Process"
+msgstr "Proces"
+
+#: src/lsof.cpp:282
+msgid "PID"
+msgstr "PID"
+
+#: src/lsof.cpp:292 src/memmaps.cpp:305
+msgid "Filename"
+msgstr "Název souboru"
+
+#. gtk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#: src/lsof.cpp:309
+msgid "Search for Open Files"
+msgstr "Hledat otevřené soubory"
+
+#: src/lsof.cpp:336
+msgid "_Name contains:"
+msgstr "_Název obsahuje:"
+
+#. The default accelerator collides with the default close accelerator.
+#: src/lsof.cpp:357
+msgid "C_lear"
+msgstr "S_mazat"
+
+#: src/lsof.cpp:361
+msgid "Case insensitive matching"
+msgstr "Shoda s rozlišením velikosti písmen"
+
+#: src/lsof.cpp:369
+msgid "S_earch results:"
+msgstr "Výsledky hl_edání:"
+
+#. xgettext: virtual memory start
+#: src/memmaps.cpp:307
+msgid "VM Start"
+msgstr "Start VM"
+
+#. xgettext: virtual memory end
+#: src/memmaps.cpp:309
+msgid "VM End"
+msgstr "Konec VM"
+
+#. xgettext: virtual memory syze
+#: src/memmaps.cpp:311
+msgid "VM Size"
+msgstr "Velikost VM"
+
+#: src/memmaps.cpp:312
+msgid "Flags"
+msgstr "Příznaky"
+
+#. xgettext: virtual memory offset
+#: src/memmaps.cpp:314
+msgid "VM Offset"
+msgstr "Posun VM"
+
+#. xgettext: memory that has not been modified since
+#. it has been allocated
+#: src/memmaps.cpp:317
+msgid "Private clean"
+msgstr "Soukromá clean"
+
+#. xgettext: memory that has been modified since it
+#. has been allocated
+#: src/memmaps.cpp:320
+msgid "Private dirty"
+msgstr "Soukromá dirty"
+
+#. xgettext: shared memory that has not been modified
+#. since it has been allocated
+#: src/memmaps.cpp:323
+msgid "Shared clean"
+msgstr "Sdílená clean"
+
+#. xgettext: shared memory that has been modified
+#. since it has been allocated
+#: src/memmaps.cpp:326
+msgid "Shared dirty"
+msgstr "Sdílená dirty"
+
+#: src/memmaps.cpp:328
+msgid "Inode"
+msgstr "I-uzel"
+
+#: src/memmaps.cpp:432
+msgid "Memory Maps"
+msgstr "Mapy paměti"
+
+#: src/memmaps.cpp:444
+#, c-format
+msgid "_Memory maps for process \"%s\" (PID %u):"
+msgstr "_Mapy paměti procesu \"%s\" (PID %u):"
+
+#: src/openfiles.cpp:38
+msgid "file"
+msgstr "soubor"
+
+#: src/openfiles.cpp:40
+msgid "pipe"
+msgstr "roura"
+
+#: src/openfiles.cpp:42
+msgid "IPv6 network connection"
+msgstr "Připojení k síti IPv6"
+
+#: src/openfiles.cpp:44
+msgid "IPv4 network connection"
+msgstr "Připojení k síti IPv4"
+
+#: src/openfiles.cpp:46
+msgid "local socket"
+msgstr "místní socket"
+
+#: src/openfiles.cpp:48
+msgid "unknown type"
+msgstr "neznámý typ"
+
+#. Translators: "FD" here means "File Descriptor". Please use
+#. a very short translation if possible, and at most
+#. 2-3 characters for it to be able to fit in the UI.
+#: src/openfiles.cpp:251
+msgid "FD"
+msgstr "FD"
+
+#: src/openfiles.cpp:253
+msgid "Object"
+msgstr "Objekt"
+
+#: src/openfiles.cpp:324
+msgid "Open Files"
+msgstr "Otevřené soubory"
+
+#: src/openfiles.cpp:345
+#, c-format
+msgid "_Files opened by process \"%s\" (PID %u):"
+msgstr "_Soubory otevřené procesem \"%s\" (PID %u):"
+
+#: src/org.mate.system-monitor.gschema.xml.in:6
+msgid "Main window size and position in the form (width, height, xpos, ypos)"
+msgstr "Hlavní velikost okna a pozice formou (šířka, výška, xpozice, ypozice)"
+
+#: src/org.mate.system-monitor.gschema.xml.in:10
+msgid ""
+"If TRUE, main window will open maximized, and saved size and position values"
+" are ignored."
+msgstr ""
+"Je-li POVOLENO, hlavní okno bude otevřeno maximalizované, čili uložené "
+"rozměry a pozice okna budou ignorovány."
+
+#: src/org.mate.system-monitor.gschema.xml.in:14
+msgid "Show process dependencies in tree form"
+msgstr "Zobrazovat závislosti procesů ve formě stromu"
+
+#: src/org.mate.system-monitor.gschema.xml.in:18
+msgid "Solaris mode for CPU percentage"
+msgstr "Režim Solaris CPU"
+
+#: src/org.mate.system-monitor.gschema.xml.in:19
+msgid ""
+"If TRUE, system-monitor operates in 'Solaris mode' where a task's CPU usage "
+"is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
+"mode'."
+msgstr ""
+"Je-li \"true\", system-monitor pracuje v \"režimu Solaris\", ve kterém je "
+"využití CPU u úlohy děleno celkovým počtem CPU. Jinak pracuje v \"režimu "
+"Irix\"."
+
+#: src/org.mate.system-monitor.gschema.xml.in:23
+msgid "Enable/Disable smooth refresh"
+msgstr "Povolit/zakázat plynulé aktualizování"
+
+#: src/org.mate.system-monitor.gschema.xml.in:27
+msgid "Show warning dialog when killing processes"
+msgstr "Zobrazit varovný dialog při zabíjení procesů"
+
+#: src/org.mate.system-monitor.gschema.xml.in:31
+msgid "Time in milliseconds between updates of the process view"
+msgstr "Čas v milisekundách mezi aktualizacemi zobrazení procesů"
+
+#: src/org.mate.system-monitor.gschema.xml.in:35
+msgid "Time in milliseconds between updates of the graphs"
+msgstr "Čas v milisekundách mezi aktualizacemi grafů"
+
+#: src/org.mate.system-monitor.gschema.xml.in:39
+msgid "Whether information about all file systems should be displayed"
+msgstr "Jestli se má zobrazovat informace o všech souborových systémech"
+
+#: src/org.mate.system-monitor.gschema.xml.in:40
+msgid ""
+"Whether to display information about all file systems (including types like "
+"'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
+"file systems."
+msgstr ""
+"Jestli se má zobrazovat informace o všech souborových systémech (včetně typů"
+" jako „autofs“ a „procfs“). Užitečné pro získání seznamu všech připojených "
+"souborových systémech."
+
+#: src/org.mate.system-monitor.gschema.xml.in:44
+msgid "Time in milliseconds between updates of the devices list"
+msgstr "Čas v milisekundách mezi aktualizacemi seznamu zařízení"
+
+#: src/org.mate.system-monitor.gschema.xml.in:48
+msgid ""
+"Determines which processes to show by default. 0 is All, 1 is user, and 2 is"
+" active"
+msgstr ""
+"Určuje, které procesy zobrazovat jako výchozí. 0 znamená všechny, 1 znamená "
+"uživatele a 2 znamená aktivní"
+
+#: src/org.mate.system-monitor.gschema.xml.in:52
+msgid "Saves the currently viewed tab"
+msgstr "Uloží aktuálně zobrazovanou kartu"
+
+#: src/org.mate.system-monitor.gschema.xml.in:53
+msgid ""
+"0 for the System Info, 1 for the processes list, 2 for the resources and 3 "
+"for the disks list"
+msgstr ""
+"0 značí informace o systému, 1 značí seznam procesů, 2 značí prostředky a 3 "
+"značí seznam disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:57
+#: src/org.mate.system-monitor.gschema.xml.in:61
+#: src/org.mate.system-monitor.gschema.xml.in:65
+#: src/org.mate.system-monitor.gschema.xml.in:69
+#: src/org.mate.system-monitor.gschema.xml.in:73
+#: src/org.mate.system-monitor.gschema.xml.in:77
+#: src/org.mate.system-monitor.gschema.xml.in:85
+#: src/org.mate.system-monitor.gschema.xml.in:89
+#: src/org.mate.system-monitor.gschema.xml.in:93
+#: src/org.mate.system-monitor.gschema.xml.in:97
+#: src/org.mate.system-monitor.gschema.xml.in:101
+#: src/org.mate.system-monitor.gschema.xml.in:105
+#: src/org.mate.system-monitor.gschema.xml.in:109
+#: src/org.mate.system-monitor.gschema.xml.in:113
+#: src/org.mate.system-monitor.gschema.xml.in:117
+#: src/org.mate.system-monitor.gschema.xml.in:121
+#: src/org.mate.system-monitor.gschema.xml.in:125
+#: src/org.mate.system-monitor.gschema.xml.in:129
+#: src/org.mate.system-monitor.gschema.xml.in:133
+#: src/org.mate.system-monitor.gschema.xml.in:137
+#: src/org.mate.system-monitor.gschema.xml.in:141
+#: src/org.mate.system-monitor.gschema.xml.in:145
+#: src/org.mate.system-monitor.gschema.xml.in:149
+#: src/org.mate.system-monitor.gschema.xml.in:153
+#: src/org.mate.system-monitor.gschema.xml.in:157
+#: src/org.mate.system-monitor.gschema.xml.in:161
+#: src/org.mate.system-monitor.gschema.xml.in:165
+#: src/org.mate.system-monitor.gschema.xml.in:169
+#: src/org.mate.system-monitor.gschema.xml.in:173
+#: src/org.mate.system-monitor.gschema.xml.in:177
+#: src/org.mate.system-monitor.gschema.xml.in:181
+msgid "Default graph CPU color"
+msgstr "Výchozí barva grafu CPU"
+
+#: src/org.mate.system-monitor.gschema.xml.in:81
+msgid "Default graph cpu color"
+msgstr "Výchozí barva grafu CPU"
+
+#: src/org.mate.system-monitor.gschema.xml.in:185
+msgid "Default graph memory color"
+msgstr "Výchozí barva grafu paměti"
+
+#: src/org.mate.system-monitor.gschema.xml.in:189
+msgid "Default graph swap color"
+msgstr "Výchozí barva grafu odkládacího prostoru"
+
+#: src/org.mate.system-monitor.gschema.xml.in:193
+msgid "Default graph incoming network traffic color"
+msgstr "Výchozí barva grafu příchozího síťového provozu"
+
+#: src/org.mate.system-monitor.gschema.xml.in:197
+msgid "Default graph outgoing network traffic color"
+msgstr "Výchozí barva grafu odchozího síťového provozu"
+
+#: src/org.mate.system-monitor.gschema.xml.in:202
+msgid "Show network traffic in bits"
+msgstr "Zobrazovat síťový provoz v bitech"
+
+#: src/org.mate.system-monitor.gschema.xml.in:212
+msgid "Process view sort column"
+msgstr "Sloupec řazení zobrazení procesů"
+
+#: src/org.mate.system-monitor.gschema.xml.in:216
+msgid "Process view columns order"
+msgstr "Pořadí sloupců zobrazení procesů"
+
+#: src/org.mate.system-monitor.gschema.xml.in:220
+msgid "Process view sort order"
+msgstr "Pořadí řazení zobrazení procesů"
+
+#: src/org.mate.system-monitor.gschema.xml.in:224
+msgid "Width of process 'Name' column"
+msgstr "Šířka sloupce 'Název'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:228
+msgid "Show process 'Name' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Název'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:232
+msgid "Width of process 'User' column"
+msgstr "Šířka sloupce 'Uživatel'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:236
+msgid "Show process 'User' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Uživatel'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:240
+msgid "Width of process 'Status' column"
+msgstr "Šířka sloupce 'Stav'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:244
+msgid "Show process 'Status' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Stav'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:248
+msgid "Width of process 'Virtual Memory' column"
+msgstr "Šířka sloupce 'Virtuální paměť'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:252
+msgid "Show process 'Virtual Memory' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Virtuální paměť'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:256
+msgid "Width of process 'Resident Memory' column"
+msgstr "Šířka sloupce 'Rezidentní pamět'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:260
+msgid "Show process 'Resident Memory' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Rezidentní paměť'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:264
+msgid "Width of process 'Writable Memory' column"
+msgstr "Šířka sloupce 'Zapisovatelná paměť'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:268
+msgid "Show process 'Writable Memory' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Zapisovatelná paměť'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:272
+msgid "Width of process 'Shared Memory' column"
+msgstr "Šířka sloupce 'Sdílená paměť'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:276
+msgid "Show process 'Shared Memory' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Sdílená paměť'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:280
+msgid "Width of process 'X Server Memory' column"
+msgstr "Šířka sloupce 'Paměť severu X'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:284
+msgid "Show process 'X Server Memory' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Paměť severu X'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:288
+msgid "Width of process '% CPU' column"
+msgstr "Šířka sloupce '% CPU'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:292
+msgid "Show process '% CPU' column on startup"
+msgstr "Zobrazovat po spuštění sloupec '% CPU'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:296
+msgid "Width of process 'CPU Time' column"
+msgstr "Šířka sloupce 'Čas CPU'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:300
+msgid "Show process 'CPU Time' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Čas CPU %'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:304
+msgid "Width of process 'Started' column"
+msgstr "Šířka sloupce 'Spuštěn'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:308
+msgid "Show process 'Started' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Spuštěn'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:312
+msgid "Width of process 'Nice' column"
+msgstr "Šířka sloupce 'Nice'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:316
+msgid "Show process 'Nice' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Nice'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:320
+msgid "Width of process 'ID' column"
+msgstr "Šířka sloupce 'ID'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:324
+msgid "Show process 'ID' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'ID'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:328
+msgid "Width of process 'Security Context' column"
+msgstr "Šířka sloupce 'Kontext zabezpečení SELinux'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:332
+msgid "Show process 'Security Context' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Kontext zabezpečení'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:336
+msgid "Width of process 'Command Line' column"
+msgstr "Šířka sloupce 'Příkazová řádka'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:340
+msgid "Show process 'Command Line' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Příkazová řádka'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:344
+msgid "Width of process 'Memory' column"
+msgstr "Šířka sloupce 'Paměť'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:348
+msgid "Show process 'Memory' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Paměť'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:352
+msgid "Width of process 'Waiting Channel' column"
+msgstr "Šířka sloupce „Kanál čekání“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:356
+msgid "Show process 'Waiting Channel' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Kanál čekání'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:360
+msgid "Width of process 'Control Group' column"
+msgstr "Šířka sloupce „Skupina vlastníků“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:364
+msgid "Show process 'Control Group' column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Skupina vlastníků“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:368
+msgid "Width of process 'Unit' column"
+msgstr "Šířka sloupce „Součást“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:372
+msgid "Show process 'Unit' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Součást'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:376
+msgid "Width of process 'Session' column"
+msgstr "Šířka sloupce 'Relace'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:380
+msgid "Show process 'Session' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Relace'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:384
+msgid "Width of process 'Seat' column"
+msgstr "Šířka sloupce 'Seat'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:388
+msgid "Show process 'Seat' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Seat'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:392
+msgid "Width of process 'Owner' column"
+msgstr "Šířka sloupce 'Vlastník'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:396
+msgid "Show process 'Owner' column on startup"
+msgstr "Zobrazovat po spuštění sloupec 'Vlastník'"
+
+#: src/org.mate.system-monitor.gschema.xml.in:400
+msgid "Width of process “Disk Write Total” column"
+msgstr "Šířka sloupce „Zápis na disk celkem“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:404
+msgid "Show process “Disk Write Total” column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Zápis na disk celkem“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:408
+msgid "Width of process “Disk Read Total” column"
+msgstr "Šířka sloupce „Čtení disku celkem“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:412
+msgid "Show process “Disk Read Total” column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Čtení disku celkem“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:416
+msgid "Width of process “Disk Read” column"
+msgstr "Šířka sloupce „Čtení disku“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:420
+msgid "Show process “Disk Read” column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Čtení disku“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:424
+msgid "Width of process “Disk Write” column"
+msgstr "Šířka sloupce „Zápis na disk“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:428
+msgid "Show process “Disk Write” column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Zápis na disk“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:432
+msgid "Width of process “Priority” column"
+msgstr "Šířka sloupce „Priorita“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:436
+msgid "Show process “Priority” column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Priorita“"
+
+#: src/org.mate.system-monitor.gschema.xml.in:442
+msgid "Disk view sort column"
+msgstr "Sloupec řazení zobrazení disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:446
+msgid "Disk view sort order"
+msgstr "Pořadí řazení zobrazení disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:450
+msgid "Disk view columns order"
+msgstr "Pořadí sloupců zobrazení disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:454
+msgid "Width of disk view 'Device' column"
+msgstr "Šířka sloupce „Zařízení“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:458
+msgid "Show disk view 'Device' column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Zařízení“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:462
+msgid "Width of disk view 'Directory' column"
+msgstr "Šířka sloupce „Adresář“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:466
+msgid "Show disk view 'Directory' column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Adresář“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:470
+msgid "Width of disk view 'Type' column"
+msgstr "Šířka sloupce „Typ“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:474
+msgid "Show disk view 'Type' column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Typ“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:478
+msgid "Width of disk view 'Total' column"
+msgstr "Šířka sloupce „Celkem“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:482
+msgid "Show disk view 'Total' column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Celkem“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:486
+msgid "Width of disk view 'Free' column"
+msgstr "Šířka sloupce „Volné“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:490
+msgid "Show disk view 'Free' column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Volné“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:494
+msgid "Width of disk view 'Available' column"
+msgstr "Šířka sloupce „K dispozici“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:498
+msgid "Show disk view 'Available' column on startup"
+msgstr "Zobrazovat po spuštění sloupec „K dispozici“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:502
+msgid "Width of disk view 'Used' column"
+msgstr "Šířka sloupce „Použito“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:506
+msgid "Show disk view 'Used' column on startup"
+msgstr "Zobrazovat po spuštění sloupec „Použito“ v seznamu disků"
+
+#: src/org.mate.system-monitor.gschema.xml.in:512
+msgid "Memory map sort column"
+msgstr "Sloupec řazení paměťových map"
+
+#: src/org.mate.system-monitor.gschema.xml.in:516
+msgid "Memory map sort order"
+msgstr "Pořadí řazení paměťových map"
+
+#: src/org.mate.system-monitor.gschema.xml.in:522
+msgid "Open files sort column"
+msgstr "Sloupec řazení otevřených souborů"
+
+#: src/org.mate.system-monitor.gschema.xml.in:526
+msgid "Open files sort order"
+msgstr "Pořadí řazení otevřených souborů"
+
+#: src/procactions.cpp:76
+#, c-format
+msgid ""
+"Cannot change the priority of process with PID %d to %d.\n"
+"%s"
+msgstr ""
+"Nelze změnit prioritu procesu s PID %d na %d.\n"
+" %s"
+
+#: src/procactions.cpp:156
+#, c-format
+msgid ""
+"Cannot kill process with PID %d with signal %d.\n"
+"%s"
+msgstr ""
+"Nelze zabít proces s PID %d se signálem %d.\n"
+"%s"
+
+#. xgettext: primary alert message
+#: src/procdialogs.cpp:73
+#, c-format
+msgid "Kill the selected process “%s” (PID: %u)?"
+msgstr "Zabít vybraný proces “%s” (PID: %u)?"
+
+#. xgettext: secondary alert message
+#: src/procdialogs.cpp:77
+msgid ""
+"Killing a process may destroy data, break the session or introduce a "
+"security risk. Only unresponsive processes should be killed."
+msgstr ""
+"Zabití procesu může zničit data, přerušit sezení, nebo způsobit bezpečnostní"
+" riziko. Zabíjet by se měly jen procesy, které nereagují."
+
+#. xgettext: primary alert message
+#: src/procdialogs.cpp:84
+#, c-format
+msgid "End the selected process “%s” (PID: %u)?"
+msgstr "Ukončit vybraný proces “%s” (PID: %u)?"
+
+#. xgettext: secondary alert message
+#: src/procdialogs.cpp:88
+msgid ""
+"Ending a process may destroy data, break the session or introduce a security"
+" risk. Only unresponsive processes should be ended."
+msgstr ""
+"Ukončení procesu může zničit data, přerušit sezení, nebo způsobit "
+"bezpečnostní riziko. Ukončovat by se měly jen procesy, které nereagují."
+
+#: src/procdialogs.cpp:126 src/procdialogs.cpp:215
+#, c-format
+msgid "(%s Priority)"
+msgstr "(%s priorita)"
+
+#: src/procdialogs.cpp:170
+#, c-format
+msgid "Change Priority of Process “%s” (PID: %u)"
+msgstr "Změnit prioritu procesu “%s” (PID: %u)"
+
+#: src/procdialogs.cpp:182
+msgid "Change _Priority"
+msgstr "Změnit _prioritu"
+
+#: src/procdialogs.cpp:205
+msgid "_Nice value:"
+msgstr "Hodnota _nice:"
+
+#: src/procdialogs.cpp:220
+msgid "Note:"
+msgstr "Poznámka:"
+
+#: src/procdialogs.cpp:221
+msgid ""
+"The priority of a process is given by its nice value. A lower nice value "
+"corresponds to a higher priority."
+msgstr ""
+"Priorita procesu je dána jeho hodnotou nice. Nižší hodnota nice odpovídá "
+"vyšší prioritě."
+
+#: src/procdialogs.cpp:472
+msgid "Icon"
+msgstr "Ikona"
+
+#: src/procdialogs.cpp:531
+msgid "System Monitor Preferences"
+msgstr "Předvolby sledování systému"
+
+#: src/procdialogs.cpp:561
+msgid "Behavior"
+msgstr "Chování"
+
+#: src/procdialogs.cpp:580 src/procdialogs.cpp:755
+msgid "_Update interval in seconds:"
+msgstr "Interval _aktualizace v sekundách:"
+
+#: src/procdialogs.cpp:605
+msgid "Enable _smooth refresh"
+msgstr "Povolit _plynulé aktualizování"
+
+#: src/procdialogs.cpp:618
+msgid "Alert before ending or _killing processes"
+msgstr "Upozornit před ukončením nebo za_bitím procesů"
+
+#: src/procdialogs.cpp:631
+msgid "Divide CPU usage by CPU count"
+msgstr "Rozdělit využití procesoru podle počtu CPU"
+
+#: src/procdialogs.cpp:632
+msgid "Solaris mode"
+msgstr "Režim Solaris"
+
+#: src/procdialogs.cpp:649 src/procdialogs.cpp:789
+msgid "Information Fields"
+msgstr "Informační pole"
+
+#: src/procdialogs.cpp:662
+msgid "Process i_nformation shown in list:"
+msgstr "_Informace o procesech zobrazované v seznamu:"
+
+#: src/procdialogs.cpp:674
+msgid "Graphs"
+msgstr "Grafy"
+
+#: src/procdialogs.cpp:693
+msgid "_Update interval in 1/10 sec:"
+msgstr "_Interval aktualizace v 1/10 s:"
+
+#: src/procdialogs.cpp:713
+msgid "Show network speed in bits"
+msgstr "Zobrazovat rychlost sítě v bitech"
+
+#: src/procdialogs.cpp:775
+msgid "Show _all file systems"
+msgstr "Zobrazovat _všechny souborové systémy"
+
+#: src/procdialogs.cpp:802
+msgid "File system i_nformation shown in list:"
+msgstr "I_nformace o souborových systémech zobrazené v seznamu:"
+
+#: src/procman.cpp:662
+msgid "A simple process and system monitor."
+msgstr "Jednoduché sledování procesů a systému."
+
+#: src/proctable.cpp:242 src/procproperties.cpp:124
+msgid "Process Name"
+msgstr "Název procesu"
+
+#: src/proctable.cpp:243 src/procproperties.cpp:125
+msgid "User"
+msgstr "Uživatel"
+
+#: src/proctable.cpp:244 src/procproperties.cpp:126
+msgid "Status"
+msgstr "Stav"
+
+#: src/proctable.cpp:245 src/procproperties.cpp:128
+msgid "Virtual Memory"
+msgstr "Virtuální paměť"
+
+#: src/proctable.cpp:246 src/procproperties.cpp:129
+msgid "Resident Memory"
+msgstr "Rezidentní paměť"
+
+#: src/proctable.cpp:247 src/procproperties.cpp:130
+msgid "Writable Memory"
+msgstr "Zapisovatelná paměť"
+
+#: src/proctable.cpp:248 src/procproperties.cpp:131
+msgid "Shared Memory"
+msgstr "Sdílená paměť"
+
+#: src/proctable.cpp:249 src/procproperties.cpp:132
+msgid "X Server Memory"
+msgstr "Paměť serveru X"
+
+#: src/proctable.cpp:250
+#, no-c-format
+msgid "% CPU"
+msgstr "% CPU"
+
+#: src/proctable.cpp:251 src/procproperties.cpp:136
+msgid "CPU Time"
+msgstr "Čas CPU"
+
+#: src/proctable.cpp:252 src/procproperties.cpp:137
+msgid "Started"
+msgstr "Spuštěn"
+
+#: src/proctable.cpp:253 src/procproperties.cpp:138
+msgid "Nice"
+msgstr "Nice"
+
+#: src/proctable.cpp:254 src/procproperties.cpp:140
+msgid "ID"
+msgstr "ID"
+
+#: src/proctable.cpp:255 src/procproperties.cpp:141
+msgid "Security Context"
+msgstr "Kontext zabezpečení"
+
+#: src/proctable.cpp:256 src/procproperties.cpp:142
+msgid "Command Line"
+msgstr "Příkazová řádka"
+
+#. xgettext: combined noun, the function the process is waiting in, see wchan
+#. ps(1)
+#: src/proctable.cpp:259 src/procproperties.cpp:143
+msgid "Waiting Channel"
+msgstr "Kanál čekání"
+
+#: src/proctable.cpp:260 src/procproperties.cpp:144
+msgid "Control Group"
+msgstr "Skupina vlastníků"
+
+#: src/proctable.cpp:261
+msgid "Unit"
+msgstr "Součást"
+
+#: src/proctable.cpp:262
+msgid "Session"
+msgstr "Relace"
+
+#. TRANSLATORS: Seat = i.e. the physical seat the session of the process
+#. belongs to, only
+#. for multi-seat environments. See
+#. http://en.wikipedia.org/wiki/Multiseat_configuration
+#: src/proctable.cpp:265
+msgid "Seat"
+msgstr "Seat"
+
+#: src/proctable.cpp:266
+msgid "Owner"
+msgstr "Vlastník"
+
+#: src/proctable.cpp:267 src/procproperties.cpp:133
+msgid "Disk Read Total"
+msgstr "Čtení disku celkem"
+
+#: src/proctable.cpp:268 src/procproperties.cpp:134
+msgid "Disk Write Total"
+msgstr "Zápis na disk celkem"
+
+#: src/proctable.cpp:269
+msgid "Disk Read"
+msgstr "Čtení disku"
+
+#: src/proctable.cpp:270
+msgid "Disk Write"
+msgstr "Zápis na disk"
+
+#: src/proctable.cpp:271 src/procproperties.cpp:139
+msgid "Priority"
+msgstr "Priorita"
+
+#: src/proctable.cpp:1153
+#, c-format
+msgid "Load averages for the last 1, 5, 15 minutes: %0.2f, %0.2f, %0.2f"
+msgstr "Průměry zátěže za posledních 1, 5, 15 minut: %0.2f, %0.2f, %0.2f"
+
+#: src/procproperties.cpp:98 src/procproperties.cpp:107
+#: src/procproperties.cpp:141 src/procproperties.cpp:144 src/util.cpp:369
+#: src/util.cpp:441 src/util.cpp:479
+msgid "N/A"
+msgstr "Nic"
+
+#: src/procproperties.cpp:252
+msgid "Process Properties"
+msgstr "Vlastnosti procesů"
+
+#: src/procproperties.cpp:272
+#, c-format
+msgid "Properties of process \"%s\" (PID %u):"
+msgstr "Vlastnosti procesů \"%s\" (PID %u):"
+
+#. Translators: The first string parameter is release version (codename),
+#. * the second one is the architecture, 32 or 64-bit
+#: src/sysinfo.cpp:82
+#, c-format
+msgid "Release %s %s"
+msgstr "Vydání %s %s"
+
+#. Translators: The string parameter is the architecture, 32 or 64-bit
+#: src/sysinfo.cpp:89
+#, c-format
+msgid "%s Version"
+msgstr "Verze %s"
+
+#. Translators: The string parameter is release version (codename)
+#: src/sysinfo.cpp:94
+#, c-format
+msgid "Release %s"
+msgstr "Vydání %s"
+
+#. translators: This is the type of architecture, for example:
+#. * "64-bit" or "32-bit"
+#: src/sysinfo.cpp:137
+#, c-format
+msgid "%d-bit"
+msgstr "%d-bit"
+
+#: src/sysinfo.cpp:298
+msgid "Unknown"
+msgstr "Neznámo"
+
+#: src/sysinfo.cpp:971
+#, c-format
+msgid "Kernel %s"
+msgstr "Jádro %s"
+
+#: src/sysinfo.cpp:984
+#, c-format
+msgid "MATE %s"
+msgstr "MATE %s"
+
+#. hardware section
+#: src/sysinfo.cpp:998
+msgid "Hardware"
+msgstr "Hardware"
+
+#: src/sysinfo.cpp:1003
+msgid "Memory:"
+msgstr "Paměť:"
+
+#: src/sysinfo.cpp:1006
+msgid "Processor:"
+msgstr "Procesor:"
+
+#: src/sysinfo.cpp:1008
+msgid "Graphics:"
+msgstr "Grafika:"
+
+#. disk space section
+#: src/sysinfo.cpp:1013
+msgid "System Status"
+msgstr "Stav systému"
+
+#: src/sysinfo.cpp:1018
+msgid "Available disk space:"
+msgstr "Dostupné místo na disku:"
+
+#: src/util.cpp:31
+msgid "Today %l:%M %p"
+msgstr "Dnes v %H:%M"
+
+#: src/util.cpp:33
+msgid "Yesterday %l:%M %p"
+msgstr "Včera v %H:%M"
+
+#: src/util.cpp:35
+msgid "%a %l:%M %p"
+msgstr "%a %l:%M %p"
+
+#: src/util.cpp:37
+msgid "%b %d %l:%M %p"
+msgstr "%b %d %l:%M %p"
+
+#: src/util.cpp:39
+msgid "%b %d %Y"
+msgstr "%b %d %Y"
+
+#: src/util.cpp:57
+msgid "Running"
+msgstr "Běží"
+
+#: src/util.cpp:61
+msgid "Stopped"
+msgstr "Zastaven"
+
+#: src/util.cpp:65
+msgid "Zombie"
+msgstr "Zombie"
+
+#: src/util.cpp:69
+msgid "Uninterruptible"
+msgstr "Nepřerušitelný"
+
+#: src/util.cpp:73
+msgid "Sleeping"
+msgstr "Spí"
+
+#. xgettext: weeks, days
+#: src/util.cpp:128
+#, c-format
+msgid "%uw%ud"
+msgstr "%uw%ud"
+
+#. xgettext: days, hours (0 -> 23)
+#: src/util.cpp:132
+#, c-format
+msgid "%ud%02uh"
+msgstr "%ud%02uh"
+
+#. xgettext: hours (0 -> 23), minutes, seconds
+#: src/util.cpp:136
+#, c-format
+msgid "%u:%02u:%02u"
+msgstr "%u:%02u:%02u"
+
+#. xgettext: minutes, seconds, centiseconds
+#: src/util.cpp:139
+#, c-format
+msgid "%u:%02u.%02u"
+msgstr "%u:%02u.%02u"
