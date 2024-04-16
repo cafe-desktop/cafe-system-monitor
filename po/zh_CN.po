@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -16,34 +16,34 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-system-monitor 1.23.0\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"Project-Id-Version: cafe-system-monitor 1.23.0\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
 "POT-Creation-Date: 2020-01-13 13:07+0100\n"
 "PO-Revision-Date: 2020-02-16 16:03+0000\n"
 "Last-Translator: liulitchi <xingzuo88@qq.com>, 2020\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/cafe/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: mate-system-monitor.appdata.xml.in:7 mate-system-monitor.desktop.in.in:3
+#: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
 msgid "MATE System Monitor"
 msgstr "MATE 系统监视器"
 
-#: mate-system-monitor.appdata.xml.in:8
+#: cafe-system-monitor.appdata.xml.in:8
 msgid "A Process and resource monitor for MATE Desktop"
 msgstr "用于 MATE 桌面的进程与资源监视器"
 
-#: mate-system-monitor.appdata.xml.in:10
+#: cafe-system-monitor.appdata.xml.in:10
 msgid ""
 "MATE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
 "resources, such as CPU and memory."
 msgstr " MATE 系统监视器，以图形化的方式来让用户浏览或操作当前进程。还提供了可用资源的概览, 如 CPU 和 内存状况。"
 
-#: mate-system-monitor.appdata.xml.in:15
+#: cafe-system-monitor.appdata.xml.in:15
 msgid ""
 "MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
 "Desktop Environment. If you would like to know more about MATE and System "
@@ -52,40 +52,40 @@ msgstr ""
 "MATE 系统监视器是 MATE 桌面环境的一部分，为 GNOME 系统监视器的复刻。想了解更多有关 MATE 及 MATE "
 "系统监视器的信息，可访问项目主页。"
 
-#: mate-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
+#: cafe-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
 #: src/interface.cpp:625 src/procman.cpp:713
 msgid "System Monitor"
 msgstr "系统监视器"
 
-#: mate-system-monitor.desktop.in.in:5 src/callbacks.cpp:206
+#: cafe-system-monitor.desktop.in.in:5 src/callbacks.cpp:206
 msgid "View current processes and monitor system state"
 msgstr "查看当前进程及监视系统状态"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: mate-system-monitor.desktop.in.in:9
+#: cafe-system-monitor.desktop.in.in:9
 msgid "utilities-system-monitor"
 msgstr "utilities-system-monitor"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: mate-system-monitor.desktop.in.in:15
+#: cafe-system-monitor.desktop.in.in:15
 msgid "MATE;system;monitor;process;list;view;current;resources;"
 msgstr ""
 
-#: org.mate.mate-system-monitor.policy.in.in:11
+#: org.cafe.cafe-system-monitor.policy.in.in:11
 msgid "Kill process"
 msgstr "杀死进程"
 
-#: org.mate.mate-system-monitor.policy.in.in:12
+#: org.cafe.cafe-system-monitor.policy.in.in:12
 msgid "Privileges are required to control other users' processes"
 msgstr "控制其他用户的进程需要特权"
 
-#: org.mate.mate-system-monitor.policy.in.in:22
+#: org.cafe.cafe-system-monitor.policy.in.in:22
 msgid "Renice process"
 msgstr "调整进程优先级"
 
-#: org.mate.mate-system-monitor.policy.in.in:23
+#: org.cafe.cafe-system-monitor.policy.in.in:23
 msgid "Privileges are required to change the priority of processes"
 msgstr "调整进程优先级需要特权"
 
@@ -681,25 +681,25 @@ msgstr "打开的文件"
 msgid "_Files opened by process \"%s\" (PID %u):"
 msgstr "进程“%s” (PID %u) 所打开的文件(_F)："
 
-#: src/org.mate.system-monitor.gschema.xml.in:6
+#: src/org.cafe.system-monitor.gschema.xml.in:6
 msgid "Main window size and position in the form (width, height, xpos, ypos)"
 msgstr "主窗体大小和位置，格式为 (宽度, 高度, X 座标, Y 座标)"
 
-#: src/org.mate.system-monitor.gschema.xml.in:10
+#: src/org.cafe.system-monitor.gschema.xml.in:10
 msgid ""
 "If TRUE, main window will open maximized, and saved size and position values"
 " are ignored."
 msgstr "如果设为 True，将以最大化模式打开主窗口，并忽略之前保存的窗口大小和位置值。"
 
-#: src/org.mate.system-monitor.gschema.xml.in:14
+#: src/org.cafe.system-monitor.gschema.xml.in:14
 msgid "Show process dependencies in tree form"
 msgstr "以树型显示进程依赖关系"
 
-#: src/org.mate.system-monitor.gschema.xml.in:18
+#: src/org.cafe.system-monitor.gschema.xml.in:18
 msgid "Solaris mode for CPU percentage"
 msgstr "使用 Solaris 模式显示 CPU 占用"
 
-#: src/org.mate.system-monitor.gschema.xml.in:19
+#: src/org.cafe.system-monitor.gschema.xml.in:19
 msgid ""
 "If TRUE, system-monitor operates in 'Solaris mode' where a task's CPU usage "
 "is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
@@ -708,420 +708,420 @@ msgstr ""
 "如果为 True，系统监视器将以 \"Solaris 模式\" 工作，任务的 CPU 使用量将被除以总的 CPU 数目。否则它将以 \"Irix "
 "模式\" 工作。"
 
-#: src/org.mate.system-monitor.gschema.xml.in:23
+#: src/org.cafe.system-monitor.gschema.xml.in:23
 msgid "Enable/Disable smooth refresh"
 msgstr "启用/禁用平滑刷新"
 
-#: src/org.mate.system-monitor.gschema.xml.in:27
+#: src/org.cafe.system-monitor.gschema.xml.in:27
 msgid "Show warning dialog when killing processes"
 msgstr "杀死进程时显示警告对话框"
 
-#: src/org.mate.system-monitor.gschema.xml.in:31
+#: src/org.cafe.system-monitor.gschema.xml.in:31
 msgid "Time in milliseconds between updates of the process view"
 msgstr "更新进程视图的时间间隔，以毫秒计"
 
-#: src/org.mate.system-monitor.gschema.xml.in:35
+#: src/org.cafe.system-monitor.gschema.xml.in:35
 msgid "Time in milliseconds between updates of the graphs"
 msgstr "更新图形的时间间隔，以毫秒计"
 
-#: src/org.mate.system-monitor.gschema.xml.in:39
+#: src/org.cafe.system-monitor.gschema.xml.in:39
 msgid "Whether information about all file systems should be displayed"
 msgstr "是否显示关于全部文件系统的信息"
 
-#: src/org.mate.system-monitor.gschema.xml.in:40
+#: src/org.cafe.system-monitor.gschema.xml.in:40
 msgid ""
 "Whether to display information about all file systems (including types like "
 "'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
 "file systems."
 msgstr "是否显示关于所有文件系统的信息（包含 \"autofs\" 和 \"procfs\" 此类的文件系统）。您可以通过此功能获得全部目前已挂载的文件系统。"
 
-#: src/org.mate.system-monitor.gschema.xml.in:44
+#: src/org.cafe.system-monitor.gschema.xml.in:44
 msgid "Time in milliseconds between updates of the devices list"
 msgstr "更新设备列表的时间间隔，以毫秒计"
 
-#: src/org.mate.system-monitor.gschema.xml.in:48
+#: src/org.cafe.system-monitor.gschema.xml.in:48
 msgid ""
 "Determines which processes to show by default. 0 is All, 1 is user, and 2 is"
 " active"
 msgstr "确定默认情况下要显示哪些进程。0 代表全部，1 代表用户，2 代表活动"
 
-#: src/org.mate.system-monitor.gschema.xml.in:52
+#: src/org.cafe.system-monitor.gschema.xml.in:52
 msgid "Saves the currently viewed tab"
 msgstr "保存目前查看的标签"
 
-#: src/org.mate.system-monitor.gschema.xml.in:53
+#: src/org.cafe.system-monitor.gschema.xml.in:53
 msgid ""
 "0 for the System Info, 1 for the processes list, 2 for the resources and 3 "
 "for the disks list"
 msgstr "0 代表系统信息，1 代表进程列表，2 代表资源，3 代表磁盘列表"
 
-#: src/org.mate.system-monitor.gschema.xml.in:57
-#: src/org.mate.system-monitor.gschema.xml.in:61
-#: src/org.mate.system-monitor.gschema.xml.in:65
-#: src/org.mate.system-monitor.gschema.xml.in:69
-#: src/org.mate.system-monitor.gschema.xml.in:73
-#: src/org.mate.system-monitor.gschema.xml.in:77
-#: src/org.mate.system-monitor.gschema.xml.in:85
-#: src/org.mate.system-monitor.gschema.xml.in:89
-#: src/org.mate.system-monitor.gschema.xml.in:93
-#: src/org.mate.system-monitor.gschema.xml.in:97
-#: src/org.mate.system-monitor.gschema.xml.in:101
-#: src/org.mate.system-monitor.gschema.xml.in:105
-#: src/org.mate.system-monitor.gschema.xml.in:109
-#: src/org.mate.system-monitor.gschema.xml.in:113
-#: src/org.mate.system-monitor.gschema.xml.in:117
-#: src/org.mate.system-monitor.gschema.xml.in:121
-#: src/org.mate.system-monitor.gschema.xml.in:125
-#: src/org.mate.system-monitor.gschema.xml.in:129
-#: src/org.mate.system-monitor.gschema.xml.in:133
-#: src/org.mate.system-monitor.gschema.xml.in:137
-#: src/org.mate.system-monitor.gschema.xml.in:141
-#: src/org.mate.system-monitor.gschema.xml.in:145
-#: src/org.mate.system-monitor.gschema.xml.in:149
-#: src/org.mate.system-monitor.gschema.xml.in:153
-#: src/org.mate.system-monitor.gschema.xml.in:157
-#: src/org.mate.system-monitor.gschema.xml.in:161
-#: src/org.mate.system-monitor.gschema.xml.in:165
-#: src/org.mate.system-monitor.gschema.xml.in:169
-#: src/org.mate.system-monitor.gschema.xml.in:173
-#: src/org.mate.system-monitor.gschema.xml.in:177
-#: src/org.mate.system-monitor.gschema.xml.in:181
+#: src/org.cafe.system-monitor.gschema.xml.in:57
+#: src/org.cafe.system-monitor.gschema.xml.in:61
+#: src/org.cafe.system-monitor.gschema.xml.in:65
+#: src/org.cafe.system-monitor.gschema.xml.in:69
+#: src/org.cafe.system-monitor.gschema.xml.in:73
+#: src/org.cafe.system-monitor.gschema.xml.in:77
+#: src/org.cafe.system-monitor.gschema.xml.in:85
+#: src/org.cafe.system-monitor.gschema.xml.in:89
+#: src/org.cafe.system-monitor.gschema.xml.in:93
+#: src/org.cafe.system-monitor.gschema.xml.in:97
+#: src/org.cafe.system-monitor.gschema.xml.in:101
+#: src/org.cafe.system-monitor.gschema.xml.in:105
+#: src/org.cafe.system-monitor.gschema.xml.in:109
+#: src/org.cafe.system-monitor.gschema.xml.in:113
+#: src/org.cafe.system-monitor.gschema.xml.in:117
+#: src/org.cafe.system-monitor.gschema.xml.in:121
+#: src/org.cafe.system-monitor.gschema.xml.in:125
+#: src/org.cafe.system-monitor.gschema.xml.in:129
+#: src/org.cafe.system-monitor.gschema.xml.in:133
+#: src/org.cafe.system-monitor.gschema.xml.in:137
+#: src/org.cafe.system-monitor.gschema.xml.in:141
+#: src/org.cafe.system-monitor.gschema.xml.in:145
+#: src/org.cafe.system-monitor.gschema.xml.in:149
+#: src/org.cafe.system-monitor.gschema.xml.in:153
+#: src/org.cafe.system-monitor.gschema.xml.in:157
+#: src/org.cafe.system-monitor.gschema.xml.in:161
+#: src/org.cafe.system-monitor.gschema.xml.in:165
+#: src/org.cafe.system-monitor.gschema.xml.in:169
+#: src/org.cafe.system-monitor.gschema.xml.in:173
+#: src/org.cafe.system-monitor.gschema.xml.in:177
+#: src/org.cafe.system-monitor.gschema.xml.in:181
 msgid "Default graph CPU color"
 msgstr "默认的 CPU 图表颜色"
 
-#: src/org.mate.system-monitor.gschema.xml.in:81
+#: src/org.cafe.system-monitor.gschema.xml.in:81
 msgid "Default graph cpu color"
 msgstr "默认的 CPU 图表颜色"
 
-#: src/org.mate.system-monitor.gschema.xml.in:185
+#: src/org.cafe.system-monitor.gschema.xml.in:185
 msgid "Default graph memory color"
 msgstr "默认的内存图表颜色"
 
-#: src/org.mate.system-monitor.gschema.xml.in:189
+#: src/org.cafe.system-monitor.gschema.xml.in:189
 msgid "Default graph swap color"
 msgstr "默认的交换区域图表颜色"
 
-#: src/org.mate.system-monitor.gschema.xml.in:193
+#: src/org.cafe.system-monitor.gschema.xml.in:193
 msgid "Default graph incoming network traffic color"
 msgstr "默认的网络入口流量图表颜色"
 
-#: src/org.mate.system-monitor.gschema.xml.in:197
+#: src/org.cafe.system-monitor.gschema.xml.in:197
 msgid "Default graph outgoing network traffic color"
 msgstr "默认的网络出口流量图表颜色"
 
-#: src/org.mate.system-monitor.gschema.xml.in:202
+#: src/org.cafe.system-monitor.gschema.xml.in:202
 msgid "Show network traffic in bits"
 msgstr "使用字节显示网络通讯量"
 
-#: src/org.mate.system-monitor.gschema.xml.in:212
+#: src/org.cafe.system-monitor.gschema.xml.in:212
 msgid "Process view sort column"
 msgstr "进程视图排序列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:216
+#: src/org.cafe.system-monitor.gschema.xml.in:216
 msgid "Process view columns order"
 msgstr "进程视图列顺序"
 
-#: src/org.mate.system-monitor.gschema.xml.in:220
+#: src/org.cafe.system-monitor.gschema.xml.in:220
 msgid "Process view sort order"
 msgstr "进程视图排序顺序"
 
-#: src/org.mate.system-monitor.gschema.xml.in:224
+#: src/org.cafe.system-monitor.gschema.xml.in:224
 msgid "Width of process 'Name' column"
 msgstr "进程“名称”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:228
+#: src/org.cafe.system-monitor.gschema.xml.in:228
 msgid "Show process 'Name' column on startup"
 msgstr "启动时显示进程“名称”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:232
+#: src/org.cafe.system-monitor.gschema.xml.in:232
 msgid "Width of process 'User' column"
 msgstr "进程“用户”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:236
+#: src/org.cafe.system-monitor.gschema.xml.in:236
 msgid "Show process 'User' column on startup"
 msgstr "启动时显示进程“用户”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:240
+#: src/org.cafe.system-monitor.gschema.xml.in:240
 msgid "Width of process 'Status' column"
 msgstr "进程“状态”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:244
+#: src/org.cafe.system-monitor.gschema.xml.in:244
 msgid "Show process 'Status' column on startup"
 msgstr "启动时显示进程“状态”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:248
+#: src/org.cafe.system-monitor.gschema.xml.in:248
 msgid "Width of process 'Virtual Memory' column"
 msgstr "进程“虚拟内存”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:252
+#: src/org.cafe.system-monitor.gschema.xml.in:252
 msgid "Show process 'Virtual Memory' column on startup"
 msgstr "启动时显示进程“虚拟内存”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:256
+#: src/org.cafe.system-monitor.gschema.xml.in:256
 msgid "Width of process 'Resident Memory' column"
 msgstr "进程“常驻内存”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:260
+#: src/org.cafe.system-monitor.gschema.xml.in:260
 msgid "Show process 'Resident Memory' column on startup"
 msgstr "启动时显示进程“常驻内存”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:264
+#: src/org.cafe.system-monitor.gschema.xml.in:264
 msgid "Width of process 'Writable Memory' column"
 msgstr "进程“可写内存”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:268
+#: src/org.cafe.system-monitor.gschema.xml.in:268
 msgid "Show process 'Writable Memory' column on startup"
 msgstr "启动时显示进程“可写内存”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:272
+#: src/org.cafe.system-monitor.gschema.xml.in:272
 msgid "Width of process 'Shared Memory' column"
 msgstr "进程“共享内存”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:276
+#: src/org.cafe.system-monitor.gschema.xml.in:276
 msgid "Show process 'Shared Memory' column on startup"
 msgstr "启动时显示进程“共享内存”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:280
+#: src/org.cafe.system-monitor.gschema.xml.in:280
 msgid "Width of process 'X Server Memory' column"
 msgstr "进程“X 服务器内存”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:284
+#: src/org.cafe.system-monitor.gschema.xml.in:284
 msgid "Show process 'X Server Memory' column on startup"
 msgstr "启动时显示进程“X 服务器内存”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:288
+#: src/org.cafe.system-monitor.gschema.xml.in:288
 msgid "Width of process '% CPU' column"
 msgstr "进程“CPU 百分比”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:292
+#: src/org.cafe.system-monitor.gschema.xml.in:292
 msgid "Show process '% CPU' column on startup"
 msgstr "启动时显示进程“CPU 百分比”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:296
+#: src/org.cafe.system-monitor.gschema.xml.in:296
 msgid "Width of process 'CPU Time' column"
 msgstr "进程“CPU 时间”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:300
+#: src/org.cafe.system-monitor.gschema.xml.in:300
 msgid "Show process 'CPU Time' column on startup"
 msgstr "启动时显示进程“CPU 时间”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:304
+#: src/org.cafe.system-monitor.gschema.xml.in:304
 msgid "Width of process 'Started' column"
 msgstr "进程“启动时间”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:308
+#: src/org.cafe.system-monitor.gschema.xml.in:308
 msgid "Show process 'Started' column on startup"
 msgstr "启动时显示进程“启动时间”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:312
+#: src/org.cafe.system-monitor.gschema.xml.in:312
 msgid "Width of process 'Nice' column"
 msgstr "进程“Nice 值”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:316
+#: src/org.cafe.system-monitor.gschema.xml.in:316
 msgid "Show process 'Nice' column on startup"
 msgstr "启动时显示进程“Nice 值”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:320
+#: src/org.cafe.system-monitor.gschema.xml.in:320
 msgid "Width of process 'ID' column"
 msgstr "进程“ID”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:324
+#: src/org.cafe.system-monitor.gschema.xml.in:324
 msgid "Show process 'ID' column on startup"
 msgstr "启动时显示进程“ID”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:328
+#: src/org.cafe.system-monitor.gschema.xml.in:328
 msgid "Width of process 'Security Context' column"
 msgstr "进程“安全上下文”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:332
+#: src/org.cafe.system-monitor.gschema.xml.in:332
 msgid "Show process 'Security Context' column on startup"
 msgstr "启动时显示进程“安全上下文”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:336
+#: src/org.cafe.system-monitor.gschema.xml.in:336
 msgid "Width of process 'Command Line' column"
 msgstr "进程“命令行”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:340
+#: src/org.cafe.system-monitor.gschema.xml.in:340
 msgid "Show process 'Command Line' column on startup"
 msgstr "启动时显示进程“命令行”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:344
+#: src/org.cafe.system-monitor.gschema.xml.in:344
 msgid "Width of process 'Memory' column"
 msgstr "进程“内存”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:348
+#: src/org.cafe.system-monitor.gschema.xml.in:348
 msgid "Show process 'Memory' column on startup"
 msgstr "启动时显示进程“内存”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:352
+#: src/org.cafe.system-monitor.gschema.xml.in:352
 msgid "Width of process 'Waiting Channel' column"
 msgstr "等候频道列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:356
+#: src/org.cafe.system-monitor.gschema.xml.in:356
 msgid "Show process 'Waiting Channel' column on startup"
 msgstr "启动时显示进程“等候频道”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:360
+#: src/org.cafe.system-monitor.gschema.xml.in:360
 msgid "Width of process 'Control Group' column"
 msgstr "进程“控制组”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:364
+#: src/org.cafe.system-monitor.gschema.xml.in:364
 msgid "Show process 'Control Group' column on startup"
 msgstr "启动时显示进程“控制组”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:368
+#: src/org.cafe.system-monitor.gschema.xml.in:368
 msgid "Width of process 'Unit' column"
 msgstr "进程“单元”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:372
+#: src/org.cafe.system-monitor.gschema.xml.in:372
 msgid "Show process 'Unit' column on startup"
 msgstr "启动时显示进程“单元”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:376
+#: src/org.cafe.system-monitor.gschema.xml.in:376
 msgid "Width of process 'Session' column"
 msgstr "进程“会话”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:380
+#: src/org.cafe.system-monitor.gschema.xml.in:380
 msgid "Show process 'Session' column on startup"
 msgstr "启动时显示进程“会话”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:384
+#: src/org.cafe.system-monitor.gschema.xml.in:384
 msgid "Width of process 'Seat' column"
 msgstr "进程“座位”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:388
+#: src/org.cafe.system-monitor.gschema.xml.in:388
 msgid "Show process 'Seat' column on startup"
 msgstr "启动时显示进程“座位”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:392
+#: src/org.cafe.system-monitor.gschema.xml.in:392
 msgid "Width of process 'Owner' column"
 msgstr "进程“所有者”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:396
+#: src/org.cafe.system-monitor.gschema.xml.in:396
 msgid "Show process 'Owner' column on startup"
 msgstr "启动时显示进程“所有者”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:400
+#: src/org.cafe.system-monitor.gschema.xml.in:400
 msgid "Width of process “Disk Write Total” column"
 msgstr "“磁盘总写入”卷的进程宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:404
+#: src/org.cafe.system-monitor.gschema.xml.in:404
 msgid "Show process “Disk Write Total” column on startup"
 msgstr "启动时显示“磁盘总写入”卷进程"
 
-#: src/org.mate.system-monitor.gschema.xml.in:408
+#: src/org.cafe.system-monitor.gschema.xml.in:408
 msgid "Width of process “Disk Read Total” column"
 msgstr "“磁盘总读取”卷的进程宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:412
+#: src/org.cafe.system-monitor.gschema.xml.in:412
 msgid "Show process “Disk Read Total” column on startup"
 msgstr "启动时显示“磁盘总读取”卷进程"
 
-#: src/org.mate.system-monitor.gschema.xml.in:416
+#: src/org.cafe.system-monitor.gschema.xml.in:416
 msgid "Width of process “Disk Read” column"
 msgstr "“磁盘读取”卷的进程宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:420
+#: src/org.cafe.system-monitor.gschema.xml.in:420
 msgid "Show process “Disk Read” column on startup"
 msgstr "启动时显示“磁盘读取”卷进程"
 
-#: src/org.mate.system-monitor.gschema.xml.in:424
+#: src/org.cafe.system-monitor.gschema.xml.in:424
 msgid "Width of process “Disk Write” column"
 msgstr "“磁盘写入”卷的进程宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:428
+#: src/org.cafe.system-monitor.gschema.xml.in:428
 msgid "Show process “Disk Write” column on startup"
 msgstr "启动时显示“磁盘写入”卷进程"
 
-#: src/org.mate.system-monitor.gschema.xml.in:432
+#: src/org.cafe.system-monitor.gschema.xml.in:432
 msgid "Width of process “Priority” column"
 msgstr "”优先“磁盘卷的进程宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:436
+#: src/org.cafe.system-monitor.gschema.xml.in:436
 msgid "Show process “Priority” column on startup"
 msgstr "启动时显示“优先级”进程"
 
-#: src/org.mate.system-monitor.gschema.xml.in:442
+#: src/org.cafe.system-monitor.gschema.xml.in:442
 msgid "Disk view sort column"
 msgstr "磁盘视图列排序"
 
-#: src/org.mate.system-monitor.gschema.xml.in:446
+#: src/org.cafe.system-monitor.gschema.xml.in:446
 msgid "Disk view sort order"
 msgstr "磁盘视图排序"
 
-#: src/org.mate.system-monitor.gschema.xml.in:450
+#: src/org.cafe.system-monitor.gschema.xml.in:450
 msgid "Disk view columns order"
 msgstr "磁盘视图列顺序"
 
-#: src/org.mate.system-monitor.gschema.xml.in:454
+#: src/org.cafe.system-monitor.gschema.xml.in:454
 msgid "Width of disk view 'Device' column"
 msgstr "磁盘“设备”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:458
+#: src/org.cafe.system-monitor.gschema.xml.in:458
 msgid "Show disk view 'Device' column on startup"
 msgstr "启动时显示磁盘“设备”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:462
+#: src/org.cafe.system-monitor.gschema.xml.in:462
 msgid "Width of disk view 'Directory' column"
 msgstr "磁盘“目录”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:466
+#: src/org.cafe.system-monitor.gschema.xml.in:466
 msgid "Show disk view 'Directory' column on startup"
 msgstr "启动时显示磁盘“目录”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:470
+#: src/org.cafe.system-monitor.gschema.xml.in:470
 msgid "Width of disk view 'Type' column"
 msgstr "磁盘“类别”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:474
+#: src/org.cafe.system-monitor.gschema.xml.in:474
 msgid "Show disk view 'Type' column on startup"
 msgstr "启动时显示磁盘“类别”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:478
+#: src/org.cafe.system-monitor.gschema.xml.in:478
 msgid "Width of disk view 'Total' column"
 msgstr "磁盘“总量”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:482
+#: src/org.cafe.system-monitor.gschema.xml.in:482
 msgid "Show disk view 'Total' column on startup"
 msgstr "启动时显示磁盘“总量”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:486
+#: src/org.cafe.system-monitor.gschema.xml.in:486
 msgid "Width of disk view 'Free' column"
 msgstr "磁盘“空闲”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:490
+#: src/org.cafe.system-monitor.gschema.xml.in:490
 msgid "Show disk view 'Free' column on startup"
 msgstr "启动时显示磁盘“空闲”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:494
+#: src/org.cafe.system-monitor.gschema.xml.in:494
 msgid "Width of disk view 'Available' column"
 msgstr "磁盘“可用”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:498
+#: src/org.cafe.system-monitor.gschema.xml.in:498
 msgid "Show disk view 'Available' column on startup"
 msgstr "启动时显示磁盘“可用”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:502
+#: src/org.cafe.system-monitor.gschema.xml.in:502
 msgid "Width of disk view 'Used' column"
 msgstr "磁盘“已用”列的宽度"
 
-#: src/org.mate.system-monitor.gschema.xml.in:506
+#: src/org.cafe.system-monitor.gschema.xml.in:506
 msgid "Show disk view 'Used' column on startup"
 msgstr "启动时显示磁盘“已用”列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:512
+#: src/org.cafe.system-monitor.gschema.xml.in:512
 msgid "Memory map sort column"
 msgstr "内存映射列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:516
+#: src/org.cafe.system-monitor.gschema.xml.in:516
 msgid "Memory map sort order"
 msgstr "内存映射列顺序"
 
-#: src/org.mate.system-monitor.gschema.xml.in:522
+#: src/org.cafe.system-monitor.gschema.xml.in:522
 msgid "Open files sort column"
 msgstr "开启文件列"
 
-#: src/org.mate.system-monitor.gschema.xml.in:526
+#: src/org.cafe.system-monitor.gschema.xml.in:526
 msgid "Open files sort order"
 msgstr "开启文件列顺序"
 

@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -17,27 +17,27 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-system-monitor 1.23.0\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"Project-Id-Version: cafe-system-monitor 1.23.0\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
 "POT-Creation-Date: 2020-01-13 13:07+0100\n"
 "PO-Revision-Date: 2020-02-16 16:03+0000\n"
 "Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2020\n"
-"Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
+"Language-Team: Czech (https://www.transifex.com/cafe/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
-#: mate-system-monitor.appdata.xml.in:7 mate-system-monitor.desktop.in.in:3
+#: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
 msgid "MATE System Monitor"
 msgstr "Sledování systému MATE"
 
-#: mate-system-monitor.appdata.xml.in:8
+#: cafe-system-monitor.appdata.xml.in:8
 msgid "A Process and resource monitor for MATE Desktop"
 msgstr "Sledování procesů a systémových prostředků pro MATE"
 
-#: mate-system-monitor.appdata.xml.in:10
+#: cafe-system-monitor.appdata.xml.in:10
 msgid ""
 "MATE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
@@ -47,7 +47,7 @@ msgstr ""
 "spuštěnými procesy ve vašem systému. Poskytuje také přehled o dostupných "
 "systémových prostředcích, jako jsou např. procesor a paměť."
 
-#: mate-system-monitor.appdata.xml.in:15
+#: cafe-system-monitor.appdata.xml.in:15
 msgid ""
 "MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
 "Desktop Environment. If you would like to know more about MATE and System "
@@ -57,41 +57,41 @@ msgstr ""
 " součástí prostředí MATE. Pokud se chcete dozvědět více o MATE a Sledování "
 "systému, navštivte domovskou stránku projektu."
 
-#: mate-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
+#: cafe-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
 #: src/interface.cpp:625 src/procman.cpp:713
 msgid "System Monitor"
 msgstr "Sledování systému"
 
-#: mate-system-monitor.desktop.in.in:5 src/callbacks.cpp:206
+#: cafe-system-monitor.desktop.in.in:5 src/callbacks.cpp:206
 msgid "View current processes and monitor system state"
 msgstr "Zobrazit aktuální procesy a sledovat stav systému"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: mate-system-monitor.desktop.in.in:9
+#: cafe-system-monitor.desktop.in.in:9
 msgid "utilities-system-monitor"
 msgstr "utilities-system-monitor"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: mate-system-monitor.desktop.in.in:15
+#: cafe-system-monitor.desktop.in.in:15
 msgid "MATE;system;monitor;process;list;view;current;resources;"
 msgstr ""
 "MATE;systém;sytému;monitor;sledování;proces;seznam;pohled;zobrazení;zobrazit;aktuální;systémové;zdroje;prostředky;"
 
-#: org.mate.mate-system-monitor.policy.in.in:11
+#: org.cafe.cafe-system-monitor.policy.in.in:11
 msgid "Kill process"
 msgstr "Zabít proces"
 
-#: org.mate.mate-system-monitor.policy.in.in:12
+#: org.cafe.cafe-system-monitor.policy.in.in:12
 msgid "Privileges are required to control other users' processes"
 msgstr "K ovládání procesů jiného uživatele je nutné oprávnění"
 
-#: org.mate.mate-system-monitor.policy.in.in:22
+#: org.cafe.cafe-system-monitor.policy.in.in:22
 msgid "Renice process"
 msgstr "Změnit prioritu procesu"
 
-#: org.mate.mate-system-monitor.policy.in.in:23
+#: org.cafe.cafe-system-monitor.policy.in.in:23
 msgid "Privileges are required to change the priority of processes"
 msgstr "Ke změně priority procesu je nutné oprávnění"
 
@@ -701,11 +701,11 @@ msgstr "Otevřené soubory"
 msgid "_Files opened by process \"%s\" (PID %u):"
 msgstr "_Soubory otevřené procesem \"%s\" (PID %u):"
 
-#: src/org.mate.system-monitor.gschema.xml.in:6
+#: src/org.cafe.system-monitor.gschema.xml.in:6
 msgid "Main window size and position in the form (width, height, xpos, ypos)"
 msgstr "Hlavní velikost okna a pozice formou (šířka, výška, xpozice, ypozice)"
 
-#: src/org.mate.system-monitor.gschema.xml.in:10
+#: src/org.cafe.system-monitor.gschema.xml.in:10
 msgid ""
 "If TRUE, main window will open maximized, and saved size and position values"
 " are ignored."
@@ -713,15 +713,15 @@ msgstr ""
 "Je-li POVOLENO, hlavní okno bude otevřeno maximalizované, čili uložené "
 "rozměry a pozice okna budou ignorovány."
 
-#: src/org.mate.system-monitor.gschema.xml.in:14
+#: src/org.cafe.system-monitor.gschema.xml.in:14
 msgid "Show process dependencies in tree form"
 msgstr "Zobrazovat závislosti procesů ve formě stromu"
 
-#: src/org.mate.system-monitor.gschema.xml.in:18
+#: src/org.cafe.system-monitor.gschema.xml.in:18
 msgid "Solaris mode for CPU percentage"
 msgstr "Režim Solaris CPU"
 
-#: src/org.mate.system-monitor.gschema.xml.in:19
+#: src/org.cafe.system-monitor.gschema.xml.in:19
 msgid ""
 "If TRUE, system-monitor operates in 'Solaris mode' where a task's CPU usage "
 "is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
@@ -731,27 +731,27 @@ msgstr ""
 "využití CPU u úlohy děleno celkovým počtem CPU. Jinak pracuje v \"režimu "
 "Irix\"."
 
-#: src/org.mate.system-monitor.gschema.xml.in:23
+#: src/org.cafe.system-monitor.gschema.xml.in:23
 msgid "Enable/Disable smooth refresh"
 msgstr "Povolit/zakázat plynulé aktualizování"
 
-#: src/org.mate.system-monitor.gschema.xml.in:27
+#: src/org.cafe.system-monitor.gschema.xml.in:27
 msgid "Show warning dialog when killing processes"
 msgstr "Zobrazit varovný dialog při zabíjení procesů"
 
-#: src/org.mate.system-monitor.gschema.xml.in:31
+#: src/org.cafe.system-monitor.gschema.xml.in:31
 msgid "Time in milliseconds between updates of the process view"
 msgstr "Čas v milisekundách mezi aktualizacemi zobrazení procesů"
 
-#: src/org.mate.system-monitor.gschema.xml.in:35
+#: src/org.cafe.system-monitor.gschema.xml.in:35
 msgid "Time in milliseconds between updates of the graphs"
 msgstr "Čas v milisekundách mezi aktualizacemi grafů"
 
-#: src/org.mate.system-monitor.gschema.xml.in:39
+#: src/org.cafe.system-monitor.gschema.xml.in:39
 msgid "Whether information about all file systems should be displayed"
 msgstr "Jestli se má zobrazovat informace o všech souborových systémech"
 
-#: src/org.mate.system-monitor.gschema.xml.in:40
+#: src/org.cafe.system-monitor.gschema.xml.in:40
 msgid ""
 "Whether to display information about all file systems (including types like "
 "'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
@@ -761,11 +761,11 @@ msgstr ""
 " jako „autofs“ a „procfs“). Užitečné pro získání seznamu všech připojených "
 "souborových systémech."
 
-#: src/org.mate.system-monitor.gschema.xml.in:44
+#: src/org.cafe.system-monitor.gschema.xml.in:44
 msgid "Time in milliseconds between updates of the devices list"
 msgstr "Čas v milisekundách mezi aktualizacemi seznamu zařízení"
 
-#: src/org.mate.system-monitor.gschema.xml.in:48
+#: src/org.cafe.system-monitor.gschema.xml.in:48
 msgid ""
 "Determines which processes to show by default. 0 is All, 1 is user, and 2 is"
 " active"
@@ -773,11 +773,11 @@ msgstr ""
 "Určuje, které procesy zobrazovat jako výchozí. 0 znamená všechny, 1 znamená "
 "uživatele a 2 znamená aktivní"
 
-#: src/org.mate.system-monitor.gschema.xml.in:52
+#: src/org.cafe.system-monitor.gschema.xml.in:52
 msgid "Saves the currently viewed tab"
 msgstr "Uloží aktuálně zobrazovanou kartu"
 
-#: src/org.mate.system-monitor.gschema.xml.in:53
+#: src/org.cafe.system-monitor.gschema.xml.in:53
 msgid ""
 "0 for the System Info, 1 for the processes list, 2 for the resources and 3 "
 "for the disks list"
@@ -785,373 +785,373 @@ msgstr ""
 "0 značí informace o systému, 1 značí seznam procesů, 2 značí prostředky a 3 "
 "značí seznam disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:57
-#: src/org.mate.system-monitor.gschema.xml.in:61
-#: src/org.mate.system-monitor.gschema.xml.in:65
-#: src/org.mate.system-monitor.gschema.xml.in:69
-#: src/org.mate.system-monitor.gschema.xml.in:73
-#: src/org.mate.system-monitor.gschema.xml.in:77
-#: src/org.mate.system-monitor.gschema.xml.in:85
-#: src/org.mate.system-monitor.gschema.xml.in:89
-#: src/org.mate.system-monitor.gschema.xml.in:93
-#: src/org.mate.system-monitor.gschema.xml.in:97
-#: src/org.mate.system-monitor.gschema.xml.in:101
-#: src/org.mate.system-monitor.gschema.xml.in:105
-#: src/org.mate.system-monitor.gschema.xml.in:109
-#: src/org.mate.system-monitor.gschema.xml.in:113
-#: src/org.mate.system-monitor.gschema.xml.in:117
-#: src/org.mate.system-monitor.gschema.xml.in:121
-#: src/org.mate.system-monitor.gschema.xml.in:125
-#: src/org.mate.system-monitor.gschema.xml.in:129
-#: src/org.mate.system-monitor.gschema.xml.in:133
-#: src/org.mate.system-monitor.gschema.xml.in:137
-#: src/org.mate.system-monitor.gschema.xml.in:141
-#: src/org.mate.system-monitor.gschema.xml.in:145
-#: src/org.mate.system-monitor.gschema.xml.in:149
-#: src/org.mate.system-monitor.gschema.xml.in:153
-#: src/org.mate.system-monitor.gschema.xml.in:157
-#: src/org.mate.system-monitor.gschema.xml.in:161
-#: src/org.mate.system-monitor.gschema.xml.in:165
-#: src/org.mate.system-monitor.gschema.xml.in:169
-#: src/org.mate.system-monitor.gschema.xml.in:173
-#: src/org.mate.system-monitor.gschema.xml.in:177
-#: src/org.mate.system-monitor.gschema.xml.in:181
+#: src/org.cafe.system-monitor.gschema.xml.in:57
+#: src/org.cafe.system-monitor.gschema.xml.in:61
+#: src/org.cafe.system-monitor.gschema.xml.in:65
+#: src/org.cafe.system-monitor.gschema.xml.in:69
+#: src/org.cafe.system-monitor.gschema.xml.in:73
+#: src/org.cafe.system-monitor.gschema.xml.in:77
+#: src/org.cafe.system-monitor.gschema.xml.in:85
+#: src/org.cafe.system-monitor.gschema.xml.in:89
+#: src/org.cafe.system-monitor.gschema.xml.in:93
+#: src/org.cafe.system-monitor.gschema.xml.in:97
+#: src/org.cafe.system-monitor.gschema.xml.in:101
+#: src/org.cafe.system-monitor.gschema.xml.in:105
+#: src/org.cafe.system-monitor.gschema.xml.in:109
+#: src/org.cafe.system-monitor.gschema.xml.in:113
+#: src/org.cafe.system-monitor.gschema.xml.in:117
+#: src/org.cafe.system-monitor.gschema.xml.in:121
+#: src/org.cafe.system-monitor.gschema.xml.in:125
+#: src/org.cafe.system-monitor.gschema.xml.in:129
+#: src/org.cafe.system-monitor.gschema.xml.in:133
+#: src/org.cafe.system-monitor.gschema.xml.in:137
+#: src/org.cafe.system-monitor.gschema.xml.in:141
+#: src/org.cafe.system-monitor.gschema.xml.in:145
+#: src/org.cafe.system-monitor.gschema.xml.in:149
+#: src/org.cafe.system-monitor.gschema.xml.in:153
+#: src/org.cafe.system-monitor.gschema.xml.in:157
+#: src/org.cafe.system-monitor.gschema.xml.in:161
+#: src/org.cafe.system-monitor.gschema.xml.in:165
+#: src/org.cafe.system-monitor.gschema.xml.in:169
+#: src/org.cafe.system-monitor.gschema.xml.in:173
+#: src/org.cafe.system-monitor.gschema.xml.in:177
+#: src/org.cafe.system-monitor.gschema.xml.in:181
 msgid "Default graph CPU color"
 msgstr "Výchozí barva grafu CPU"
 
-#: src/org.mate.system-monitor.gschema.xml.in:81
+#: src/org.cafe.system-monitor.gschema.xml.in:81
 msgid "Default graph cpu color"
 msgstr "Výchozí barva grafu CPU"
 
-#: src/org.mate.system-monitor.gschema.xml.in:185
+#: src/org.cafe.system-monitor.gschema.xml.in:185
 msgid "Default graph memory color"
 msgstr "Výchozí barva grafu paměti"
 
-#: src/org.mate.system-monitor.gschema.xml.in:189
+#: src/org.cafe.system-monitor.gschema.xml.in:189
 msgid "Default graph swap color"
 msgstr "Výchozí barva grafu odkládacího prostoru"
 
-#: src/org.mate.system-monitor.gschema.xml.in:193
+#: src/org.cafe.system-monitor.gschema.xml.in:193
 msgid "Default graph incoming network traffic color"
 msgstr "Výchozí barva grafu příchozího síťového provozu"
 
-#: src/org.mate.system-monitor.gschema.xml.in:197
+#: src/org.cafe.system-monitor.gschema.xml.in:197
 msgid "Default graph outgoing network traffic color"
 msgstr "Výchozí barva grafu odchozího síťového provozu"
 
-#: src/org.mate.system-monitor.gschema.xml.in:202
+#: src/org.cafe.system-monitor.gschema.xml.in:202
 msgid "Show network traffic in bits"
 msgstr "Zobrazovat síťový provoz v bitech"
 
-#: src/org.mate.system-monitor.gschema.xml.in:212
+#: src/org.cafe.system-monitor.gschema.xml.in:212
 msgid "Process view sort column"
 msgstr "Sloupec řazení zobrazení procesů"
 
-#: src/org.mate.system-monitor.gschema.xml.in:216
+#: src/org.cafe.system-monitor.gschema.xml.in:216
 msgid "Process view columns order"
 msgstr "Pořadí sloupců zobrazení procesů"
 
-#: src/org.mate.system-monitor.gschema.xml.in:220
+#: src/org.cafe.system-monitor.gschema.xml.in:220
 msgid "Process view sort order"
 msgstr "Pořadí řazení zobrazení procesů"
 
-#: src/org.mate.system-monitor.gschema.xml.in:224
+#: src/org.cafe.system-monitor.gschema.xml.in:224
 msgid "Width of process 'Name' column"
 msgstr "Šířka sloupce 'Název'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:228
+#: src/org.cafe.system-monitor.gschema.xml.in:228
 msgid "Show process 'Name' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Název'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:232
+#: src/org.cafe.system-monitor.gschema.xml.in:232
 msgid "Width of process 'User' column"
 msgstr "Šířka sloupce 'Uživatel'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:236
+#: src/org.cafe.system-monitor.gschema.xml.in:236
 msgid "Show process 'User' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Uživatel'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:240
+#: src/org.cafe.system-monitor.gschema.xml.in:240
 msgid "Width of process 'Status' column"
 msgstr "Šířka sloupce 'Stav'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:244
+#: src/org.cafe.system-monitor.gschema.xml.in:244
 msgid "Show process 'Status' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Stav'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:248
+#: src/org.cafe.system-monitor.gschema.xml.in:248
 msgid "Width of process 'Virtual Memory' column"
 msgstr "Šířka sloupce 'Virtuální paměť'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:252
+#: src/org.cafe.system-monitor.gschema.xml.in:252
 msgid "Show process 'Virtual Memory' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Virtuální paměť'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:256
+#: src/org.cafe.system-monitor.gschema.xml.in:256
 msgid "Width of process 'Resident Memory' column"
 msgstr "Šířka sloupce 'Rezidentní pamět'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:260
+#: src/org.cafe.system-monitor.gschema.xml.in:260
 msgid "Show process 'Resident Memory' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Rezidentní paměť'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:264
+#: src/org.cafe.system-monitor.gschema.xml.in:264
 msgid "Width of process 'Writable Memory' column"
 msgstr "Šířka sloupce 'Zapisovatelná paměť'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:268
+#: src/org.cafe.system-monitor.gschema.xml.in:268
 msgid "Show process 'Writable Memory' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Zapisovatelná paměť'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:272
+#: src/org.cafe.system-monitor.gschema.xml.in:272
 msgid "Width of process 'Shared Memory' column"
 msgstr "Šířka sloupce 'Sdílená paměť'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:276
+#: src/org.cafe.system-monitor.gschema.xml.in:276
 msgid "Show process 'Shared Memory' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Sdílená paměť'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:280
+#: src/org.cafe.system-monitor.gschema.xml.in:280
 msgid "Width of process 'X Server Memory' column"
 msgstr "Šířka sloupce 'Paměť severu X'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:284
+#: src/org.cafe.system-monitor.gschema.xml.in:284
 msgid "Show process 'X Server Memory' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Paměť severu X'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:288
+#: src/org.cafe.system-monitor.gschema.xml.in:288
 msgid "Width of process '% CPU' column"
 msgstr "Šířka sloupce '% CPU'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:292
+#: src/org.cafe.system-monitor.gschema.xml.in:292
 msgid "Show process '% CPU' column on startup"
 msgstr "Zobrazovat po spuštění sloupec '% CPU'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:296
+#: src/org.cafe.system-monitor.gschema.xml.in:296
 msgid "Width of process 'CPU Time' column"
 msgstr "Šířka sloupce 'Čas CPU'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:300
+#: src/org.cafe.system-monitor.gschema.xml.in:300
 msgid "Show process 'CPU Time' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Čas CPU %'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:304
+#: src/org.cafe.system-monitor.gschema.xml.in:304
 msgid "Width of process 'Started' column"
 msgstr "Šířka sloupce 'Spuštěn'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:308
+#: src/org.cafe.system-monitor.gschema.xml.in:308
 msgid "Show process 'Started' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Spuštěn'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:312
+#: src/org.cafe.system-monitor.gschema.xml.in:312
 msgid "Width of process 'Nice' column"
 msgstr "Šířka sloupce 'Nice'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:316
+#: src/org.cafe.system-monitor.gschema.xml.in:316
 msgid "Show process 'Nice' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Nice'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:320
+#: src/org.cafe.system-monitor.gschema.xml.in:320
 msgid "Width of process 'ID' column"
 msgstr "Šířka sloupce 'ID'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:324
+#: src/org.cafe.system-monitor.gschema.xml.in:324
 msgid "Show process 'ID' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'ID'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:328
+#: src/org.cafe.system-monitor.gschema.xml.in:328
 msgid "Width of process 'Security Context' column"
 msgstr "Šířka sloupce 'Kontext zabezpečení SELinux'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:332
+#: src/org.cafe.system-monitor.gschema.xml.in:332
 msgid "Show process 'Security Context' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Kontext zabezpečení'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:336
+#: src/org.cafe.system-monitor.gschema.xml.in:336
 msgid "Width of process 'Command Line' column"
 msgstr "Šířka sloupce 'Příkazová řádka'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:340
+#: src/org.cafe.system-monitor.gschema.xml.in:340
 msgid "Show process 'Command Line' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Příkazová řádka'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:344
+#: src/org.cafe.system-monitor.gschema.xml.in:344
 msgid "Width of process 'Memory' column"
 msgstr "Šířka sloupce 'Paměť'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:348
+#: src/org.cafe.system-monitor.gschema.xml.in:348
 msgid "Show process 'Memory' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Paměť'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:352
+#: src/org.cafe.system-monitor.gschema.xml.in:352
 msgid "Width of process 'Waiting Channel' column"
 msgstr "Šířka sloupce „Kanál čekání“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:356
+#: src/org.cafe.system-monitor.gschema.xml.in:356
 msgid "Show process 'Waiting Channel' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Kanál čekání'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:360
+#: src/org.cafe.system-monitor.gschema.xml.in:360
 msgid "Width of process 'Control Group' column"
 msgstr "Šířka sloupce „Skupina vlastníků“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:364
+#: src/org.cafe.system-monitor.gschema.xml.in:364
 msgid "Show process 'Control Group' column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Skupina vlastníků“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:368
+#: src/org.cafe.system-monitor.gschema.xml.in:368
 msgid "Width of process 'Unit' column"
 msgstr "Šířka sloupce „Součást“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:372
+#: src/org.cafe.system-monitor.gschema.xml.in:372
 msgid "Show process 'Unit' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Součást'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:376
+#: src/org.cafe.system-monitor.gschema.xml.in:376
 msgid "Width of process 'Session' column"
 msgstr "Šířka sloupce 'Relace'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:380
+#: src/org.cafe.system-monitor.gschema.xml.in:380
 msgid "Show process 'Session' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Relace'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:384
+#: src/org.cafe.system-monitor.gschema.xml.in:384
 msgid "Width of process 'Seat' column"
 msgstr "Šířka sloupce 'Seat'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:388
+#: src/org.cafe.system-monitor.gschema.xml.in:388
 msgid "Show process 'Seat' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Seat'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:392
+#: src/org.cafe.system-monitor.gschema.xml.in:392
 msgid "Width of process 'Owner' column"
 msgstr "Šířka sloupce 'Vlastník'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:396
+#: src/org.cafe.system-monitor.gschema.xml.in:396
 msgid "Show process 'Owner' column on startup"
 msgstr "Zobrazovat po spuštění sloupec 'Vlastník'"
 
-#: src/org.mate.system-monitor.gschema.xml.in:400
+#: src/org.cafe.system-monitor.gschema.xml.in:400
 msgid "Width of process “Disk Write Total” column"
 msgstr "Šířka sloupce „Zápis na disk celkem“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:404
+#: src/org.cafe.system-monitor.gschema.xml.in:404
 msgid "Show process “Disk Write Total” column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Zápis na disk celkem“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:408
+#: src/org.cafe.system-monitor.gschema.xml.in:408
 msgid "Width of process “Disk Read Total” column"
 msgstr "Šířka sloupce „Čtení disku celkem“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:412
+#: src/org.cafe.system-monitor.gschema.xml.in:412
 msgid "Show process “Disk Read Total” column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Čtení disku celkem“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:416
+#: src/org.cafe.system-monitor.gschema.xml.in:416
 msgid "Width of process “Disk Read” column"
 msgstr "Šířka sloupce „Čtení disku“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:420
+#: src/org.cafe.system-monitor.gschema.xml.in:420
 msgid "Show process “Disk Read” column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Čtení disku“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:424
+#: src/org.cafe.system-monitor.gschema.xml.in:424
 msgid "Width of process “Disk Write” column"
 msgstr "Šířka sloupce „Zápis na disk“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:428
+#: src/org.cafe.system-monitor.gschema.xml.in:428
 msgid "Show process “Disk Write” column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Zápis na disk“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:432
+#: src/org.cafe.system-monitor.gschema.xml.in:432
 msgid "Width of process “Priority” column"
 msgstr "Šířka sloupce „Priorita“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:436
+#: src/org.cafe.system-monitor.gschema.xml.in:436
 msgid "Show process “Priority” column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Priorita“"
 
-#: src/org.mate.system-monitor.gschema.xml.in:442
+#: src/org.cafe.system-monitor.gschema.xml.in:442
 msgid "Disk view sort column"
 msgstr "Sloupec řazení zobrazení disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:446
+#: src/org.cafe.system-monitor.gschema.xml.in:446
 msgid "Disk view sort order"
 msgstr "Pořadí řazení zobrazení disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:450
+#: src/org.cafe.system-monitor.gschema.xml.in:450
 msgid "Disk view columns order"
 msgstr "Pořadí sloupců zobrazení disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:454
+#: src/org.cafe.system-monitor.gschema.xml.in:454
 msgid "Width of disk view 'Device' column"
 msgstr "Šířka sloupce „Zařízení“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:458
+#: src/org.cafe.system-monitor.gschema.xml.in:458
 msgid "Show disk view 'Device' column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Zařízení“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:462
+#: src/org.cafe.system-monitor.gschema.xml.in:462
 msgid "Width of disk view 'Directory' column"
 msgstr "Šířka sloupce „Adresář“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:466
+#: src/org.cafe.system-monitor.gschema.xml.in:466
 msgid "Show disk view 'Directory' column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Adresář“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:470
+#: src/org.cafe.system-monitor.gschema.xml.in:470
 msgid "Width of disk view 'Type' column"
 msgstr "Šířka sloupce „Typ“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:474
+#: src/org.cafe.system-monitor.gschema.xml.in:474
 msgid "Show disk view 'Type' column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Typ“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:478
+#: src/org.cafe.system-monitor.gschema.xml.in:478
 msgid "Width of disk view 'Total' column"
 msgstr "Šířka sloupce „Celkem“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:482
+#: src/org.cafe.system-monitor.gschema.xml.in:482
 msgid "Show disk view 'Total' column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Celkem“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:486
+#: src/org.cafe.system-monitor.gschema.xml.in:486
 msgid "Width of disk view 'Free' column"
 msgstr "Šířka sloupce „Volné“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:490
+#: src/org.cafe.system-monitor.gschema.xml.in:490
 msgid "Show disk view 'Free' column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Volné“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:494
+#: src/org.cafe.system-monitor.gschema.xml.in:494
 msgid "Width of disk view 'Available' column"
 msgstr "Šířka sloupce „K dispozici“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:498
+#: src/org.cafe.system-monitor.gschema.xml.in:498
 msgid "Show disk view 'Available' column on startup"
 msgstr "Zobrazovat po spuštění sloupec „K dispozici“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:502
+#: src/org.cafe.system-monitor.gschema.xml.in:502
 msgid "Width of disk view 'Used' column"
 msgstr "Šířka sloupce „Použito“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:506
+#: src/org.cafe.system-monitor.gschema.xml.in:506
 msgid "Show disk view 'Used' column on startup"
 msgstr "Zobrazovat po spuštění sloupec „Použito“ v seznamu disků"
 
-#: src/org.mate.system-monitor.gschema.xml.in:512
+#: src/org.cafe.system-monitor.gschema.xml.in:512
 msgid "Memory map sort column"
 msgstr "Sloupec řazení paměťových map"
 
-#: src/org.mate.system-monitor.gschema.xml.in:516
+#: src/org.cafe.system-monitor.gschema.xml.in:516
 msgid "Memory map sort order"
 msgstr "Pořadí řazení paměťových map"
 
-#: src/org.mate.system-monitor.gschema.xml.in:522
+#: src/org.cafe.system-monitor.gschema.xml.in:522
 msgid "Open files sort column"
 msgstr "Sloupec řazení otevřených souborů"
 
-#: src/org.mate.system-monitor.gschema.xml.in:526
+#: src/org.cafe.system-monitor.gschema.xml.in:526
 msgid "Open files sort order"
 msgstr "Pořadí řazení otevřených souborů"
 

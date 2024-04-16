@@ -41,7 +41,7 @@ enum
 
 namespace
 {
-    class OffsetFormater
+    class OffsetForcafer
     {
         string format;
 
@@ -124,7 +124,7 @@ namespace
         GtkWidget *tree;
         GSettings *settings;
         ProcInfo *info;
-        OffsetFormater format;
+        OffsetForcafer format;
         mutable InodeDevices devices;
         const char * const schema;
 

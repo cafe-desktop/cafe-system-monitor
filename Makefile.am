@@ -4,16 +4,16 @@ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 SUBDIRS = po pixmaps src tools help
 
-man_MANS = mate-system-monitor.1
+man_MANS = cafe-system-monitor.1
 
 appdatadir = $(datadir)/metainfo
-appdata_in_files = mate-system-monitor.appdata.xml.in
+appdata_in_files = cafe-system-monitor.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 
 $(appdata_DATA): $(appdata_in_files)
 	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
-org.mate.mate-system-monitor.policy.in: org.mate.mate-system-monitor.policy.in.in Makefile
+org.cafe.cafe-system-monitor.policy.in: org.cafe.cafe-system-monitor.policy.in.in Makefile
 	$(AM_V_GEN) sed -e "s|\@pkglibexecdir\@|$(pkglibexecdir)|" $< > $@
 
 DISTCHECK_CONFIGURE_FLAGS = \
@@ -24,20 +24,20 @@ EXTRA_DIST = \
 	autogen.sh \
 	$(man_MANS) \
 	$(appdata_in_files) \
-	org.mate.mate-system-monitor.policy.in.in \
-	mate-system-monitor.desktop.in \
+	org.cafe.cafe-system-monitor.policy.in.in \
+	cafe-system-monitor.desktop.in \
 	omf.make \
 	xmldocs.make
 
 polkit_policydir = $(datadir)/polkit-1/actions
-polkit_policy_in_files = org.mate.mate-system-monitor.policy.in
+polkit_policy_in_files = org.cafe.cafe-system-monitor.policy.in
 polkit_policy_DATA = $(polkit_policy_in_files:.policy.in=.policy)
 
 $(polkit_policy_DATA): $(polkit_policy_in_files)
 	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
 Applicationsdir = $(datadir)/applications
-Applications_in_files = mate-system-monitor.desktop.in
+Applications_in_files = cafe-system-monitor.desktop.in
 Applications_DATA = $(Applications_in_files:.desktop.in=.desktop)
 
 $(Applications_DATA): $(Applications_in_files)
@@ -45,12 +45,12 @@ $(Applications_DATA): $(Applications_in_files)
 
 distuninstallcheck_listfiles = find . -type f -print
 
-CLEANFILES = mate-system-monitor.appdata.xml
+CLEANFILES = cafe-system-monitor.appdata.xml
 
 DISTCLEANFILES = \
-  mate-system-monitor.desktop \
-  org.mate.mate-system-monitor.policy \
-  org.mate.mate-system-monitor.policy.in
+  cafe-system-monitor.desktop \
+  org.cafe.cafe-system-monitor.policy \
+  org.cafe.cafe-system-monitor.policy.in
 
 # Build ChangeLog from GIT  history
 ChangeLog:

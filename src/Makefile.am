@@ -9,9 +9,9 @@ AM_CPPFLAGS = \
 	@PROCMAN_CFLAGS@ \
 	@SYSTEMD_CFLAGS@
 
-bin_PROGRAMS = mate-system-monitor
+bin_PROGRAMS = cafe-system-monitor
 
-mate_system_monitor_cpp_files = \
+cafe_system_monitor_cpp_files = \
 	argv.cpp \
 	procman.cpp \
 	interface.cpp \
@@ -37,26 +37,26 @@ mate_system_monitor_cpp_files = \
 	settings-keys.cpp \
 	iconthemewrapper.cpp
 
-mate_system_monitor_c_files = \
+cafe_system_monitor_c_files = \
 	gsm_color_button.c
 
-mate_system_monitor_h_files = \
-	$(mate_system_monitor_cpp_files:.cpp=.h) \
-	$(mate_system_monitor_c_files:.c=.h) \
+cafe_system_monitor_h_files = \
+	$(cafe_system_monitor_cpp_files:.cpp=.h) \
+	$(cafe_system_monitor_c_files:.c=.h) \
 	defaulttable.h
 
-mate_system_monitor_SOURCES = \
-	$(mate_system_monitor_h_files) \
-	$(mate_system_monitor_cpp_files) \
-	$(mate_system_monitor_c_files)
+cafe_system_monitor_SOURCES = \
+	$(cafe_system_monitor_h_files) \
+	$(cafe_system_monitor_cpp_files) \
+	$(cafe_system_monitor_c_files)
 
-mate_system_monitor_CXXFLAGS = \
+cafe_system_monitor_CXXFLAGS = \
 	$(WARN_CXXFLAGS)
 
-mate_system_monitor_CFLAGS = \
+cafe_system_monitor_CFLAGS = \
 	$(WARN_CFLAGS)
 
-mate_system_monitor_LDADD = @PROCMAN_LIBS@ @SYSTEMD_LIBS@ libbacon.la
+cafe_system_monitor_LDADD = @PROCMAN_LIBS@ @SYSTEMD_LIBS@ libbacon.la
 
 
 noinst_LTLIBRARIES = libbacon.la
@@ -69,10 +69,10 @@ libbacon_la_CFLAGS = \
 specdir = $(datadir)/procman
 
 
-gsettings_ENUM_NAMESPACE = org.mate.system-monitor
+gsettings_ENUM_NAMESPACE = org.cafe.system-monitor
 gsettings_ENUM_FILES = $(top_srcdir)/src/*.h
 
-gsettingsschema_in_files = org.mate.system-monitor.gschema.xml.in
+gsettingsschema_in_files = org.cafe.system-monitor.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 
 @GSETTINGS_RULES@

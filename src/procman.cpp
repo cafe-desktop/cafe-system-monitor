@@ -674,8 +674,8 @@ main (int argc, char *argv[])
     Gtk::Main kit(&argc, &argv);
     procman_debug("post gtk_init");
 
-    conn = bacon_message_connection_new ("mate-system-monitor");
-    if (!conn) g_error("Couldn't connect to mate-system-monitor");
+    conn = bacon_message_connection_new ("cafe-system-monitor");
+    if (!conn) g_error("Couldn't connect to cafe-system-monitor");
 
     if (bacon_message_connection_get_is_server (conn))
     {
@@ -745,7 +745,7 @@ main (int argc, char *argv[])
         set_tab(GTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_DISKS, procdata);
     }
 
-    gtk_widget_set_name(procdata->app, "mate-system-monitor");
+    gtk_widget_set_name(procdata->app, "cafe-system-monitor");
     gtk_widget_show(procdata->app);
 
     procman_debug("begin gtk_main");

@@ -6,7 +6,7 @@
 # Aldo Oliveira <america103@gmail.com>, 2020
 # Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2020
 # Victor Gonçalves <hotcyv@gmail.com>, 2020
-# Wolfgang Ulbrich <mate@raveit.de>, 2020
+# Wolfgang Ulbrich <cafe@raveit.de>, 2020
 # 18ab4449a00621534598e84a949423ea, 2020
 # Italo Penaforte <italo.penaforte@gmail.com>, 2020
 # b36c7cf4cf669a51ae00d04c19629819, 2020
@@ -20,7 +20,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-13 13:07+0100\n"
 "PO-Revision-Date: 2020-02-16 16:04+0000\n"
 "Last-Translator: gustavo s, 2020\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/cafe/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -326,7 +326,7 @@ msgstr "Retorno"
 msgid ""
 "To report a bug or make a suggestion regarding the System Monitor "
 "application or this manual, follow the directions in the <ulink url=\"help"
-":mate-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
+":cafe-user-guide/feedback\" type=\"help\">MATE Feedback Page</ulink>."
 msgstr ""
 "Para relatar um erro ou fazer uma sugestão sobre o Monitor do sistema ou "
 "este manual, siga as instruções no  MATE Feedback Page."
@@ -349,7 +349,7 @@ msgstr "Monitor do sistema"
 
 #. (itstool) path: article/indexterm
 #: C/index.docbook:180
-msgid "<primary>mate-system-monitor</primary>"
+msgid "<primary>cafe-system-monitor</primary>"
 msgstr "Monitor do sistema do Mate"
 
 #. (itstool) path: article/indexterm
@@ -534,7 +534,7 @@ msgstr "Linha de comando"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:323
-msgid "Execute the following command: <command>mate-system-monitor</command>"
+msgid "Execute the following command: <command>cafe-system-monitor</command>"
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -562,16 +562,16 @@ msgstr "Janela do Monitor do Sistema"
 #: C/index.docbook:340
 msgctxt "_"
 msgid ""
-"external ref='figures/mate-system-monitor_window.png' "
+"external ref='figures/cafe-system-monitor_window.png' "
 "md5='0a938d7d8c6910fdc96cb845f6e2af74'"
 msgstr ""
-"external ref='figures/mate-system-monitor_window.png' "
+"external ref='figures/cafe-system-monitor_window.png' "
 "md5='0a938d7d8c6910fdc96cb845f6e2af74'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:338
 msgid ""
-"<imageobject> <imagedata fileref=\"figures/mate-system-monitor_window.png\" "
+"<imageobject> <imagedata fileref=\"figures/cafe-system-monitor_window.png\" "
 "format=\"PNG\"/> </imageobject> <textobject> <phrase>Shows System Monitor "
 "main window.</phrase> </textobject>"
 msgstr ""
@@ -773,7 +773,7 @@ msgstr "Prioridade"
 #: C/index.docbook:496
 msgid ""
 "For information about how to change the columns displayed in the process "
-"list, see <xref linkend=\"mate-system-monitor-prefs-proclist\"/>."
+"list, see <xref linkend=\"cafe-system-monitor-prefs-proclist\"/>."
 msgstr ""
 
 #. (itstool) path: sect3/title
@@ -788,7 +788,7 @@ msgid ""
 "process is a child process of the original parent process. By default, "
 "<application>System Monitor</application> does not show process "
 "dependencies. For information about how to change the default display "
-"behavior, see <xref linkend=\"mate-system-monitor-modify-processlist-"
+"behavior, see <xref linkend=\"cafe-system-monitor-modify-processlist-"
 "viewdeps\"/>."
 msgstr ""
 
@@ -831,7 +831,7 @@ msgstr ""
 #: C/index.docbook:532
 msgid ""
 "For information about how to change the priority of a process, see <xref "
-"linkend=\"mate-system-monitor-change-priority\"/>."
+"linkend=\"cafe-system-monitor-change-priority\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -1310,7 +1310,7 @@ msgstr ""
 #: C/index.docbook:928 C/index.docbook:963
 msgid ""
 "By default, a confirmation alert is displayed. For information about how to "
-"display or hide the confirmation alert, see <xref linkend=\"mate-system-"
+"display or hide the confirmation alert, see <xref linkend=\"cafe-system-"
 "monitor-prefs-proclist\"/>."
 msgstr ""
 
@@ -1362,7 +1362,7 @@ msgstr ""
 #: C/index.docbook:973
 msgid ""
 "You usually terminate a process only if you cannot end the process normally "
-"as described in <xref linkend=\"mate-system-monitor-end-process\"/>."
+"as described in <xref linkend=\"cafe-system-monitor-end-process\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title
@@ -1501,7 +1501,7 @@ msgstr "Em uso"
 #: C/index.docbook:1065
 msgid ""
 "For information about how to change the columns displayed in the file "
-"systems list, see <xref linkend=\"mate-system-monitor-prefs-fs\"/>."
+"systems list, see <xref linkend=\"cafe-system-monitor-prefs-fs\"/>."
 msgstr ""
 
 #. (itstool) path: sect2/title

@@ -1,7 +1,7 @@
-mate-system-monitor
+cafe-system-monitor
 =============
 
-mate-system-monitor is a fork of gnome-system-monitor
+cafe-system-monitor is a fork of gnome-system-monitor
 
 Optional dependencies :
 - pkexec - recommended

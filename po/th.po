@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -11,27 +11,27 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: mate-system-monitor 1.23.0\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org/\n"
+"Project-Id-Version: cafe-system-monitor 1.23.0\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org/\n"
 "POT-Creation-Date: 2020-01-13 13:07+0100\n"
 "PO-Revision-Date: 2020-02-16 16:03+0000\n"
 "Last-Translator: Akom <knight2000@gmail.com>, 2020\n"
-"Language-Team: Thai (https://www.transifex.com/mate/teams/13566/th/)\n"
+"Language-Team: Thai (https://www.transifex.com/cafe/teams/13566/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: th\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: mate-system-monitor.appdata.xml.in:7 mate-system-monitor.desktop.in.in:3
+#: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
 msgid "MATE System Monitor"
 msgstr "เครื่องมือเฝ้าสังเกตระบบของ MATE"
 
-#: mate-system-monitor.appdata.xml.in:8
+#: cafe-system-monitor.appdata.xml.in:8
 msgid "A Process and resource monitor for MATE Desktop"
 msgstr "เฝ้าสังเกตโพรเซสและทรัพยากรสำหรับเดสก์ท็อป MATE"
 
-#: mate-system-monitor.appdata.xml.in:10
+#: cafe-system-monitor.appdata.xml.in:10
 msgid ""
 "MATE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
@@ -41,7 +41,7 @@ msgstr ""
 "อนุญาตให้ดูแบบกราฟิกและจัดการโพรเซสที่กำลังทำงานในระบบของคุณ "
 "ยังให้ภาพรวมของทรัพยากรที่ใช้ได้ เช่น ซีพียูและหน่วยความจำ"
 
-#: mate-system-monitor.appdata.xml.in:15
+#: cafe-system-monitor.appdata.xml.in:15
 msgid ""
 "MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
 "Desktop Environment. If you would like to know more about MATE and System "
@@ -52,40 +52,40 @@ msgstr ""
 "ถ้าคุณต้องการทราบข้อมูลเพิ่มเติมเกี่ยวกับ MATE และเครื่องมือเฝ้าสังเกตระบบ "
 "กรุณาเยี่ยมชมโฮมเพจของโครงการ"
 
-#: mate-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
+#: cafe-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
 #: src/interface.cpp:625 src/procman.cpp:713
 msgid "System Monitor"
 msgstr "เครื่องมือเฝ้าสังเกตระบบ"
 
-#: mate-system-monitor.desktop.in.in:5 src/callbacks.cpp:206
+#: cafe-system-monitor.desktop.in.in:5 src/callbacks.cpp:206
 msgid "View current processes and monitor system state"
 msgstr "แสดงโพรเซสปัจจุบันและเฝ้าสังเกตสถานะของระบบ"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon
 #. file name)!
-#: mate-system-monitor.desktop.in.in:9
+#: cafe-system-monitor.desktop.in.in:9
 msgid "utilities-system-monitor"
 msgstr "utilities-system-monitor"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
-#: mate-system-monitor.desktop.in.in:15
+#: cafe-system-monitor.desktop.in.in:15
 msgid "MATE;system;monitor;process;list;view;current;resources;"
 msgstr "MATE;ระบบ;เฝ้าสังเกต;โพรเซส;รายการ;มุมมอง;ปัจจุบัน;ทรัพยากร;"
 
-#: org.mate.mate-system-monitor.policy.in.in:11
+#: org.cafe.cafe-system-monitor.policy.in.in:11
 msgid "Kill process"
 msgstr "ฆ่าโพรเซส"
 
-#: org.mate.mate-system-monitor.policy.in.in:12
+#: org.cafe.cafe-system-monitor.policy.in.in:12
 msgid "Privileges are required to control other users' processes"
 msgstr "ต้องใช้สิทธิพิเศษในการควบคุมโพรเซสของผู้ใช้อื่น"
 
-#: org.mate.mate-system-monitor.policy.in.in:22
+#: org.cafe.cafe-system-monitor.policy.in.in:22
 msgid "Renice process"
 msgstr "เปลี่ยนค่า nice ของโพรเซส"
 
-#: org.mate.mate-system-monitor.policy.in.in:23
+#: org.cafe.cafe-system-monitor.policy.in.in:23
 msgid "Privileges are required to change the priority of processes"
 msgstr "ต้องใช้สิทธิพิเศษในการเปลี่ยนลำดับความสำคัญของโพรเซส"
 
@@ -680,27 +680,27 @@ msgstr "แฟ้มที่เปิด"
 msgid "_Files opened by process \"%s\" (PID %u):"
 msgstr "แ_ฟ้มที่โพรเซส “%s” (PID %u) เปิด:"
 
-#: src/org.mate.system-monitor.gschema.xml.in:6
+#: src/org.cafe.system-monitor.gschema.xml.in:6
 msgid "Main window size and position in the form (width, height, xpos, ypos)"
 msgstr ""
 "ขนาดและตำแหน่งของหน้าต่างหลักในรูปแบบ (ความกว้าง, ความสูง, ตำแหน่ง x, "
 "ตำแหน่ง y)"
 
-#: src/org.mate.system-monitor.gschema.xml.in:10
+#: src/org.cafe.system-monitor.gschema.xml.in:10
 msgid ""
 "If TRUE, main window will open maximized, and saved size and position values"
 " are ignored."
 msgstr "ถ้าเป็นค่าจริง หน้าจะเปิดขยายแผ่และไม่สนใจขนาดและตำแหน่งที่บันทึกไว้"
 
-#: src/org.mate.system-monitor.gschema.xml.in:14
+#: src/org.cafe.system-monitor.gschema.xml.in:14
 msgid "Show process dependencies in tree form"
 msgstr "แสดงความขึ้นต่อกันของโพรเซสแบบต้นไม้"
 
-#: src/org.mate.system-monitor.gschema.xml.in:18
+#: src/org.cafe.system-monitor.gschema.xml.in:18
 msgid "Solaris mode for CPU percentage"
 msgstr "เปอร์เซ็นต์ซีพียูแบบ Solaris"
 
-#: src/org.mate.system-monitor.gschema.xml.in:19
+#: src/org.cafe.system-monitor.gschema.xml.in:19
 msgid ""
 "If TRUE, system-monitor operates in 'Solaris mode' where a task's CPU usage "
 "is divided by the total number of CPUs. Otherwise, it operates in 'Irix "
@@ -710,27 +710,27 @@ msgstr ""
 "ซึ่งการใช้ซีพียูของงานหนึ่งๆ จะถูกหารด้วยจำนวนซีพียูทั้งหมด มิฉะนั้น "
 "ก็จะทำงานในแบบ Irix"
 
-#: src/org.mate.system-monitor.gschema.xml.in:23
+#: src/org.cafe.system-monitor.gschema.xml.in:23
 msgid "Enable/Disable smooth refresh"
 msgstr "เปิดใช้/ปิดใช้การอ่านข้อมูลแบบยืดหยุ่น"
 
-#: src/org.mate.system-monitor.gschema.xml.in:27
+#: src/org.cafe.system-monitor.gschema.xml.in:27
 msgid "Show warning dialog when killing processes"
 msgstr "เตือนก่อนฆ่าโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:31
+#: src/org.cafe.system-monitor.gschema.xml.in:31
 msgid "Time in milliseconds between updates of the process view"
 msgstr "ช่วงเวลาระหว่างการปรับข้อมูลรายการโพรเซส เป็นมิลลิวินาที"
 
-#: src/org.mate.system-monitor.gschema.xml.in:35
+#: src/org.cafe.system-monitor.gschema.xml.in:35
 msgid "Time in milliseconds between updates of the graphs"
 msgstr "ช่วงเวลาระหว่างการปรับข้อมูลกราฟ เป็นมิลลิวินาที"
 
-#: src/org.mate.system-monitor.gschema.xml.in:39
+#: src/org.cafe.system-monitor.gschema.xml.in:39
 msgid "Whether information about all file systems should be displayed"
 msgstr "จะแสดงข้อมูลของทุกระบบแฟ้มหรือไม่"
 
-#: src/org.mate.system-monitor.gschema.xml.in:40
+#: src/org.cafe.system-monitor.gschema.xml.in:40
 msgid ""
 "Whether to display information about all file systems (including types like "
 "'autofs' and 'procfs'). Useful for getting a list of all currently mounted "
@@ -739,11 +739,11 @@ msgstr ""
 "จะแสดงข้อมูลเกี่ยวกับระบบแฟ้มทั้งหมด (รวมถึงชนิดอย่าง “autofs” และ “procfs”)"
 " หรือไม่ ซึ่งจะมีประโยชน์ในการดูรายการระบบแฟ้มที่เมานท์อยู่ทั้งหมด"
 
-#: src/org.mate.system-monitor.gschema.xml.in:44
+#: src/org.cafe.system-monitor.gschema.xml.in:44
 msgid "Time in milliseconds between updates of the devices list"
 msgstr "ช่วงเวลาระหว่างการปรับข้อมูลรายการอุปกรณ์ เป็นมิลลิวินาที"
 
-#: src/org.mate.system-monitor.gschema.xml.in:48
+#: src/org.cafe.system-monitor.gschema.xml.in:48
 msgid ""
 "Determines which processes to show by default. 0 is All, 1 is user, and 2 is"
 " active"
@@ -751,11 +751,11 @@ msgstr ""
 "กำหนดชุดโพรเซสที่จะแสดงโดยปริยาย ค่า 0 หมายถึงทุกโพรเซส, 1 "
 "หมายถึงโพรเซสของผู้ใช้ และ 2 หมายถึงโพรเซสที่กำลังทำงาน"
 
-#: src/org.mate.system-monitor.gschema.xml.in:52
+#: src/org.cafe.system-monitor.gschema.xml.in:52
 msgid "Saves the currently viewed tab"
 msgstr "เก็บแท็บที่ดู"
 
-#: src/org.mate.system-monitor.gschema.xml.in:53
+#: src/org.cafe.system-monitor.gschema.xml.in:53
 msgid ""
 "0 for the System Info, 1 for the processes list, 2 for the resources and 3 "
 "for the disks list"
@@ -763,373 +763,373 @@ msgstr ""
 "0 สำหรับข้อมูลระบบ, 1 สำหรับรายการโพรเซส, 2 สำหรับทรัพยากร และ 3 "
 "สำหรับรายการดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:57
-#: src/org.mate.system-monitor.gschema.xml.in:61
-#: src/org.mate.system-monitor.gschema.xml.in:65
-#: src/org.mate.system-monitor.gschema.xml.in:69
-#: src/org.mate.system-monitor.gschema.xml.in:73
-#: src/org.mate.system-monitor.gschema.xml.in:77
-#: src/org.mate.system-monitor.gschema.xml.in:85
-#: src/org.mate.system-monitor.gschema.xml.in:89
-#: src/org.mate.system-monitor.gschema.xml.in:93
-#: src/org.mate.system-monitor.gschema.xml.in:97
-#: src/org.mate.system-monitor.gschema.xml.in:101
-#: src/org.mate.system-monitor.gschema.xml.in:105
-#: src/org.mate.system-monitor.gschema.xml.in:109
-#: src/org.mate.system-monitor.gschema.xml.in:113
-#: src/org.mate.system-monitor.gschema.xml.in:117
-#: src/org.mate.system-monitor.gschema.xml.in:121
-#: src/org.mate.system-monitor.gschema.xml.in:125
-#: src/org.mate.system-monitor.gschema.xml.in:129
-#: src/org.mate.system-monitor.gschema.xml.in:133
-#: src/org.mate.system-monitor.gschema.xml.in:137
-#: src/org.mate.system-monitor.gschema.xml.in:141
-#: src/org.mate.system-monitor.gschema.xml.in:145
-#: src/org.mate.system-monitor.gschema.xml.in:149
-#: src/org.mate.system-monitor.gschema.xml.in:153
-#: src/org.mate.system-monitor.gschema.xml.in:157
-#: src/org.mate.system-monitor.gschema.xml.in:161
-#: src/org.mate.system-monitor.gschema.xml.in:165
-#: src/org.mate.system-monitor.gschema.xml.in:169
-#: src/org.mate.system-monitor.gschema.xml.in:173
-#: src/org.mate.system-monitor.gschema.xml.in:177
-#: src/org.mate.system-monitor.gschema.xml.in:181
+#: src/org.cafe.system-monitor.gschema.xml.in:57
+#: src/org.cafe.system-monitor.gschema.xml.in:61
+#: src/org.cafe.system-monitor.gschema.xml.in:65
+#: src/org.cafe.system-monitor.gschema.xml.in:69
+#: src/org.cafe.system-monitor.gschema.xml.in:73
+#: src/org.cafe.system-monitor.gschema.xml.in:77
+#: src/org.cafe.system-monitor.gschema.xml.in:85
+#: src/org.cafe.system-monitor.gschema.xml.in:89
+#: src/org.cafe.system-monitor.gschema.xml.in:93
+#: src/org.cafe.system-monitor.gschema.xml.in:97
+#: src/org.cafe.system-monitor.gschema.xml.in:101
+#: src/org.cafe.system-monitor.gschema.xml.in:105
+#: src/org.cafe.system-monitor.gschema.xml.in:109
+#: src/org.cafe.system-monitor.gschema.xml.in:113
+#: src/org.cafe.system-monitor.gschema.xml.in:117
+#: src/org.cafe.system-monitor.gschema.xml.in:121
+#: src/org.cafe.system-monitor.gschema.xml.in:125
+#: src/org.cafe.system-monitor.gschema.xml.in:129
+#: src/org.cafe.system-monitor.gschema.xml.in:133
+#: src/org.cafe.system-monitor.gschema.xml.in:137
+#: src/org.cafe.system-monitor.gschema.xml.in:141
+#: src/org.cafe.system-monitor.gschema.xml.in:145
+#: src/org.cafe.system-monitor.gschema.xml.in:149
+#: src/org.cafe.system-monitor.gschema.xml.in:153
+#: src/org.cafe.system-monitor.gschema.xml.in:157
+#: src/org.cafe.system-monitor.gschema.xml.in:161
+#: src/org.cafe.system-monitor.gschema.xml.in:165
+#: src/org.cafe.system-monitor.gschema.xml.in:169
+#: src/org.cafe.system-monitor.gschema.xml.in:173
+#: src/org.cafe.system-monitor.gschema.xml.in:177
+#: src/org.cafe.system-monitor.gschema.xml.in:181
 msgid "Default graph CPU color"
 msgstr "สีกราฟซีพียูโดยปริยาย"
 
-#: src/org.mate.system-monitor.gschema.xml.in:81
+#: src/org.cafe.system-monitor.gschema.xml.in:81
 msgid "Default graph cpu color"
 msgstr "สีกราฟซีพียูโดยปริยาย"
 
-#: src/org.mate.system-monitor.gschema.xml.in:185
+#: src/org.cafe.system-monitor.gschema.xml.in:185
 msgid "Default graph memory color"
 msgstr "สีกราฟหน่วยความจำโดยปริยาย"
 
-#: src/org.mate.system-monitor.gschema.xml.in:189
+#: src/org.cafe.system-monitor.gschema.xml.in:189
 msgid "Default graph swap color"
 msgstr "สีกราฟพื้นที่สลับโดยปริยาย"
 
-#: src/org.mate.system-monitor.gschema.xml.in:193
+#: src/org.cafe.system-monitor.gschema.xml.in:193
 msgid "Default graph incoming network traffic color"
 msgstr "สีกราฟเน็ตขาเข้าโดยปริยาย"
 
-#: src/org.mate.system-monitor.gschema.xml.in:197
+#: src/org.cafe.system-monitor.gschema.xml.in:197
 msgid "Default graph outgoing network traffic color"
 msgstr "สีกราฟเน็ตขาออกโดยปริยาย"
 
-#: src/org.mate.system-monitor.gschema.xml.in:202
+#: src/org.cafe.system-monitor.gschema.xml.in:202
 msgid "Show network traffic in bits"
 msgstr "แสดงการจราจรเครือข่ายในหน่วยบิต"
 
-#: src/org.mate.system-monitor.gschema.xml.in:212
+#: src/org.cafe.system-monitor.gschema.xml.in:212
 msgid "Process view sort column"
 msgstr "คอลัมน์ที่ใช้เรียงลำดับรายการในหน้าแสดงโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:216
+#: src/org.cafe.system-monitor.gschema.xml.in:216
 msgid "Process view columns order"
 msgstr "ลำดับการเรียงคอลัมน์ในหน้าแสดงโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:220
+#: src/org.cafe.system-monitor.gschema.xml.in:220
 msgid "Process view sort order"
 msgstr "ลำดับการเรียงในหน้าแสดงโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:224
+#: src/org.cafe.system-monitor.gschema.xml.in:224
 msgid "Width of process 'Name' column"
 msgstr "ความกว้างของคอลัมน์ “ชื่อ” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:228
+#: src/org.cafe.system-monitor.gschema.xml.in:228
 msgid "Show process 'Name' column on startup"
 msgstr "แสดงคอลัมน์ “ชื่อ” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:232
+#: src/org.cafe.system-monitor.gschema.xml.in:232
 msgid "Width of process 'User' column"
 msgstr "ความกว้างของคอลัมน์ “ผู้ใช้” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:236
+#: src/org.cafe.system-monitor.gschema.xml.in:236
 msgid "Show process 'User' column on startup"
 msgstr "แสดงคอลัมน์ “ผู้ใช้” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:240
+#: src/org.cafe.system-monitor.gschema.xml.in:240
 msgid "Width of process 'Status' column"
 msgstr "ความกว้างของคอลัมน์ “สถานะ” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:244
+#: src/org.cafe.system-monitor.gschema.xml.in:244
 msgid "Show process 'Status' column on startup"
 msgstr "แสดงคอลัมน์ “สถานะ” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:248
+#: src/org.cafe.system-monitor.gschema.xml.in:248
 msgid "Width of process 'Virtual Memory' column"
 msgstr "ความกว้างของคอลัมน์ “หน่วยความจำเสมือน” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:252
+#: src/org.cafe.system-monitor.gschema.xml.in:252
 msgid "Show process 'Virtual Memory' column on startup"
 msgstr "แสดงคอลัมน์ “หน่วยความจำเสมือน” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:256
+#: src/org.cafe.system-monitor.gschema.xml.in:256
 msgid "Width of process 'Resident Memory' column"
 msgstr "ความกว้างของคอลัมน์ “หน่วยความจำ resident” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:260
+#: src/org.cafe.system-monitor.gschema.xml.in:260
 msgid "Show process 'Resident Memory' column on startup"
 msgstr "แสดงคอลัมน์ “หน่วยความจำ resident” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:264
+#: src/org.cafe.system-monitor.gschema.xml.in:264
 msgid "Width of process 'Writable Memory' column"
 msgstr "ความกว้างของคอลัมน์ “หน่วยความจำที่เขียนได้” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:268
+#: src/org.cafe.system-monitor.gschema.xml.in:268
 msgid "Show process 'Writable Memory' column on startup"
 msgstr "แสดงคอลัมน์ “หน่วยความจำที่เขียนได้” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:272
+#: src/org.cafe.system-monitor.gschema.xml.in:272
 msgid "Width of process 'Shared Memory' column"
 msgstr "ความกว้างของคอลัมน์ “หน่วยความจำใช้ร่วม” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:276
+#: src/org.cafe.system-monitor.gschema.xml.in:276
 msgid "Show process 'Shared Memory' column on startup"
 msgstr "แสดงคอลัมน์ “หน่วยความจำใช้ร่วม” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:280
+#: src/org.cafe.system-monitor.gschema.xml.in:280
 msgid "Width of process 'X Server Memory' column"
 msgstr "ความกว้างของคอลัมน์ “หน่วยความจำ X server” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:284
+#: src/org.cafe.system-monitor.gschema.xml.in:284
 msgid "Show process 'X Server Memory' column on startup"
 msgstr "แสดงคอลัมน์ “หน่วยความจำ X server” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:288
+#: src/org.cafe.system-monitor.gschema.xml.in:288
 msgid "Width of process '% CPU' column"
 msgstr "ความกว้างของคอลัมน์ “% ซีพียู” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:292
+#: src/org.cafe.system-monitor.gschema.xml.in:292
 msgid "Show process '% CPU' column on startup"
 msgstr "แสดงคอลัมน์ “% ซีพียู” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:296
+#: src/org.cafe.system-monitor.gschema.xml.in:296
 msgid "Width of process 'CPU Time' column"
 msgstr "ความกว้างของคอลัมน์ “เวลาซีพียู” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:300
+#: src/org.cafe.system-monitor.gschema.xml.in:300
 msgid "Show process 'CPU Time' column on startup"
 msgstr "แสดงคอลัมน์ “เวลาซีพียู” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:304
+#: src/org.cafe.system-monitor.gschema.xml.in:304
 msgid "Width of process 'Started' column"
 msgstr "ความกว้างของคอลัมน์ “เริ่ม” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:308
+#: src/org.cafe.system-monitor.gschema.xml.in:308
 msgid "Show process 'Started' column on startup"
 msgstr "แสดงคอลัมน์ “เริ่ม” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:312
+#: src/org.cafe.system-monitor.gschema.xml.in:312
 msgid "Width of process 'Nice' column"
 msgstr "ความกว้างของคอลัมน์ “ไนซ์” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:316
+#: src/org.cafe.system-monitor.gschema.xml.in:316
 msgid "Show process 'Nice' column on startup"
 msgstr "แสดงคอลัมน์ “ไนซ์” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:320
+#: src/org.cafe.system-monitor.gschema.xml.in:320
 msgid "Width of process 'ID' column"
 msgstr "ความกว้างของคอลัมน์ “ID” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:324
+#: src/org.cafe.system-monitor.gschema.xml.in:324
 msgid "Show process 'ID' column on startup"
 msgstr "แสดงคอลัมน์ “ID” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:328
+#: src/org.cafe.system-monitor.gschema.xml.in:328
 msgid "Width of process 'Security Context' column"
 msgstr "ความกว้างของคอลัมน์ “Security Context” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:332
+#: src/org.cafe.system-monitor.gschema.xml.in:332
 msgid "Show process 'Security Context' column on startup"
 msgstr "แสดงคอลัมน์ “Security Context” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:336
+#: src/org.cafe.system-monitor.gschema.xml.in:336
 msgid "Width of process 'Command Line' column"
 msgstr "ความกว้างของคอลัมน์ “บรรทัดคำสั่ง” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:340
+#: src/org.cafe.system-monitor.gschema.xml.in:340
 msgid "Show process 'Command Line' column on startup"
 msgstr "แสดงคอลัมน์ “บรรทัดคำสั่ง” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:344
+#: src/org.cafe.system-monitor.gschema.xml.in:344
 msgid "Width of process 'Memory' column"
 msgstr "ความกว้างของคอลัมน์ “หน่วยความจำ” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:348
+#: src/org.cafe.system-monitor.gschema.xml.in:348
 msgid "Show process 'Memory' column on startup"
 msgstr "แสดงคอลัมน์ “หน่วยความจำ” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:352
+#: src/org.cafe.system-monitor.gschema.xml.in:352
 msgid "Width of process 'Waiting Channel' column"
 msgstr "ความกว้างของคอลัมน์ “ช่องที่คอย” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:356
+#: src/org.cafe.system-monitor.gschema.xml.in:356
 msgid "Show process 'Waiting Channel' column on startup"
 msgstr "แสดงคอลัมน์ “ช่องที่คอย” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:360
+#: src/org.cafe.system-monitor.gschema.xml.in:360
 msgid "Width of process 'Control Group' column"
 msgstr "ความกว้างของคอลัมน์ “กลุ่มที่ควบคุม” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:364
+#: src/org.cafe.system-monitor.gschema.xml.in:364
 msgid "Show process 'Control Group' column on startup"
 msgstr "แสดงคอลัมน์ “กลุ่มที่ควบคุม” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:368
+#: src/org.cafe.system-monitor.gschema.xml.in:368
 msgid "Width of process 'Unit' column"
 msgstr "ความกว้างของคอลัมน์ “ยูนิต” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:372
+#: src/org.cafe.system-monitor.gschema.xml.in:372
 msgid "Show process 'Unit' column on startup"
 msgstr "แสดงคอลัมน์ “ยูนิต” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:376
+#: src/org.cafe.system-monitor.gschema.xml.in:376
 msgid "Width of process 'Session' column"
 msgstr "ความกว้างของคอลัมน์ “วาระ” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:380
+#: src/org.cafe.system-monitor.gschema.xml.in:380
 msgid "Show process 'Session' column on startup"
 msgstr "แสดงคอลัมน์ “วาระ” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:384
+#: src/org.cafe.system-monitor.gschema.xml.in:384
 msgid "Width of process 'Seat' column"
 msgstr "ความกว้างของคอลัมน์ “ที่นั่ง” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:388
+#: src/org.cafe.system-monitor.gschema.xml.in:388
 msgid "Show process 'Seat' column on startup"
 msgstr "แสดงคอลัมน์ “ที่นั่ง” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:392
+#: src/org.cafe.system-monitor.gschema.xml.in:392
 msgid "Width of process 'Owner' column"
 msgstr "ความกว้างของคอลัมน์ “เจ้าของ” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:396
+#: src/org.cafe.system-monitor.gschema.xml.in:396
 msgid "Show process 'Owner' column on startup"
 msgstr "แสดงคอลัมน์ “เจ้าของ” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:400
+#: src/org.cafe.system-monitor.gschema.xml.in:400
 msgid "Width of process “Disk Write Total” column"
 msgstr "ความกว้างของคอลัมน์ “เขียนดิสก์ทั้งหมด” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:404
+#: src/org.cafe.system-monitor.gschema.xml.in:404
 msgid "Show process “Disk Write Total” column on startup"
 msgstr "แสดงคอลัมน์ “เขียนดิสก์ทั้งหมด” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:408
+#: src/org.cafe.system-monitor.gschema.xml.in:408
 msgid "Width of process “Disk Read Total” column"
 msgstr "ความกว้างของคอลัมน์ “อ่านดิสก์ทั้งหมด” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:412
+#: src/org.cafe.system-monitor.gschema.xml.in:412
 msgid "Show process “Disk Read Total” column on startup"
 msgstr "แสดงคอลัมน์ “อ่านดิสก์ทั้งหมด” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:416
+#: src/org.cafe.system-monitor.gschema.xml.in:416
 msgid "Width of process “Disk Read” column"
 msgstr "ความกว้างของคอลัมน์ “อ่านดิสก์” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:420
+#: src/org.cafe.system-monitor.gschema.xml.in:420
 msgid "Show process “Disk Read” column on startup"
 msgstr "แสดงคอลัมน์ “อ่านดิสก์” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:424
+#: src/org.cafe.system-monitor.gschema.xml.in:424
 msgid "Width of process “Disk Write” column"
 msgstr "ความกว้างของคอลัมน์ “เขียนดิสก์” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:428
+#: src/org.cafe.system-monitor.gschema.xml.in:428
 msgid "Show process “Disk Write” column on startup"
 msgstr "แสดงคอลัมน์ “เขียนดิสก์” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:432
+#: src/org.cafe.system-monitor.gschema.xml.in:432
 msgid "Width of process “Priority” column"
 msgstr "ความกว้างของคอลัมน์ “ลำดับความสำคัญ” ของโพรเซส"
 
-#: src/org.mate.system-monitor.gschema.xml.in:436
+#: src/org.cafe.system-monitor.gschema.xml.in:436
 msgid "Show process “Priority” column on startup"
 msgstr "แสดงคอลัมน์ “ลำดับความสำคัญ” ของโพรเซสเมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:442
+#: src/org.cafe.system-monitor.gschema.xml.in:442
 msgid "Disk view sort column"
 msgstr "คอลัมน์ที่ใช้เรียงลำดับรายการในหน้าแสดงการใช้ดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:446
+#: src/org.cafe.system-monitor.gschema.xml.in:446
 msgid "Disk view sort order"
 msgstr "ลำดับการเรียงในหน้าแสดงการใช้ดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:450
+#: src/org.cafe.system-monitor.gschema.xml.in:450
 msgid "Disk view columns order"
 msgstr "ลำดับการเรียงคอลัมน์ในหน้าแสดงการใช้ดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:454
+#: src/org.cafe.system-monitor.gschema.xml.in:454
 msgid "Width of disk view 'Device' column"
 msgstr "ความกว้างของคอลัมน์ “อุปกรณ์” ในมุมมองดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:458
+#: src/org.cafe.system-monitor.gschema.xml.in:458
 msgid "Show disk view 'Device' column on startup"
 msgstr "แสดงคอลัมน์ “อุปกรณ์” ในมุมมองดิสก์เมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:462
+#: src/org.cafe.system-monitor.gschema.xml.in:462
 msgid "Width of disk view 'Directory' column"
 msgstr "ความกว้างของคอลัมน์ “ไดเรกทอรี” ในมุมมองดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:466
+#: src/org.cafe.system-monitor.gschema.xml.in:466
 msgid "Show disk view 'Directory' column on startup"
 msgstr "แสดงคอลัมน์ “ไดเรกทอรี” ในมุมมองดิสก์เมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:470
+#: src/org.cafe.system-monitor.gschema.xml.in:470
 msgid "Width of disk view 'Type' column"
 msgstr "ความกว้างของคอลัมน์ “ชนิด” ในมุมมองดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:474
+#: src/org.cafe.system-monitor.gschema.xml.in:474
 msgid "Show disk view 'Type' column on startup"
 msgstr "แสดงคอลัมน์ “ชนิด” ในมุมมองดิสก์เมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:478
+#: src/org.cafe.system-monitor.gschema.xml.in:478
 msgid "Width of disk view 'Total' column"
 msgstr "ความกว้างของคอลัมน์ “รวม” ในมุมมองดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:482
+#: src/org.cafe.system-monitor.gschema.xml.in:482
 msgid "Show disk view 'Total' column on startup"
 msgstr "แสดงคอลัมน์ “รวม” ในมุมมองดิสก์เมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:486
+#: src/org.cafe.system-monitor.gschema.xml.in:486
 msgid "Width of disk view 'Free' column"
 msgstr "ความกว้างของคอลัมน์ “ว่าง” ในมุมมองดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:490
+#: src/org.cafe.system-monitor.gschema.xml.in:490
 msgid "Show disk view 'Free' column on startup"
 msgstr "แสดงคอลัมน์ “ว่าง” ในมุมมองดิสก์เมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:494
+#: src/org.cafe.system-monitor.gschema.xml.in:494
 msgid "Width of disk view 'Available' column"
 msgstr "ความกว้างของคอลัมน์ “ใช้ได้” ในมุมมองดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:498
+#: src/org.cafe.system-monitor.gschema.xml.in:498
 msgid "Show disk view 'Available' column on startup"
 msgstr "แสดงคอลัมน์ “ใช้ได้” ในมุมมองดิสก์เมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:502
+#: src/org.cafe.system-monitor.gschema.xml.in:502
 msgid "Width of disk view 'Used' column"
 msgstr "ความกว้างของคอลัมน์ “ใช้ไป” ในมุมมองดิสก์"
 
-#: src/org.mate.system-monitor.gschema.xml.in:506
+#: src/org.cafe.system-monitor.gschema.xml.in:506
 msgid "Show disk view 'Used' column on startup"
 msgstr "แสดงคอลัมน์ “ใช้ไป” ในมุมมองดิสก์เมื่อเริ่มโปรแกรม"
 
-#: src/org.mate.system-monitor.gschema.xml.in:512
+#: src/org.cafe.system-monitor.gschema.xml.in:512
 msgid "Memory map sort column"
 msgstr "คอลัมน์ที่ใช้เรียงลำดับรายการในหน้าแสดงผังหน่วยความจำ"
 
-#: src/org.mate.system-monitor.gschema.xml.in:516
+#: src/org.cafe.system-monitor.gschema.xml.in:516
 msgid "Memory map sort order"
 msgstr "ลำดับการเรียงคอลัมน์ในหน้าแสดงผังหน่วยความจำ"
 
-#: src/org.mate.system-monitor.gschema.xml.in:522
+#: src/org.cafe.system-monitor.gschema.xml.in:522
 msgid "Open files sort column"
 msgstr "คอลัมน์ที่ใช้เรียงลำดับรายการในหน้าแสดงแฟ้มที่เปิด"
 
-#: src/org.mate.system-monitor.gschema.xml.in:526
+#: src/org.cafe.system-monitor.gschema.xml.in:526
 msgid "Open files sort order"
 msgstr "ลำดับการเรียงในหน้าแสดงแฟ้มที่เปิด"
 

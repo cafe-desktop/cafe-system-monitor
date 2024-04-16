@@ -1,8 +1,8 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-mate-system-monitor.appdata.xml.in
-mate-system-monitor.desktop.in.in
-org.mate.mate-system-monitor.policy.in.in
+cafe-system-monitor.appdata.xml.in
+cafe-system-monitor.desktop.in.in
+org.cafe.cafe-system-monitor.policy.in.in
 src/argv.cpp
 src/argv.h
 src/callbacks.cpp
@@ -14,7 +14,7 @@ src/load-graph.cpp
 src/lsof.cpp
 src/memmaps.cpp
 src/openfiles.cpp
-src/org.mate.system-monitor.gschema.xml.in
+src/org.cafe.system-monitor.gschema.xml.in
 src/procactions.cpp
 src/procdialogs.cpp
 src/procman.cpp

@@ -11,7 +11,7 @@
 <!-- 
       (Do not remove this comment block.)
   Maintained by the MATE Documentation Project
-  http://wiki.mate-desktop.org/dev-doc:doc-team-guide
+  http://wiki.cafe-desktop.org/dev-doc:doc-team-guide
   Template version: 2.0 beta
   Template last modified Apr 11, 2002
 -->
@@ -159,7 +159,7 @@
     <legalnotice>
       <title>Feedback</title>
       <para>
-        To report a bug or make a suggestion regarding the &app; application or this manual, follow the directions in the <ulink url="help:mate-user-guide/feedback" type="help">MATE Feedback Page</ulink>.
+        To report a bug or make a suggestion regarding the &app; application or this manual, follow the directions in the <ulink url="help:cafe-user-guide/feedback" type="help">MATE Feedback Page</ulink>.
       </para>
 
 <!-- Translators may also add here feedback address for translations -->
@@ -178,7 +178,7 @@
     <primary>System Monitor</primary> 
   </indexterm> 
   <indexterm zone="index"> 
-    <primary>mate-system-monitor</primary> 
+    <primary>cafe-system-monitor</primary> 
   </indexterm>
   <indexterm zone="index"> 
     <primary>procman</primary> 
@@ -186,7 +186,7 @@
 
 <!-- ============= Document Body ============================= -->
  <!-- ============= Introduction ============================== -->
-  <sect1 id="mate-system-monitor-intro">
+  <sect1 id="cafe-system-monitor-intro">
     <title>Introduction</title>
     <para>
       The <application>&app;</application> application enables you to display basic system information and monitor system processes, usage of system resources, and file systems. You can also use <application>&app;</application> to modify the behavior of your system.
@@ -301,11 +301,11 @@
   </sect1>
 
 <!-- ============= Getting Started =========================== -->
-  <sect1 id="mate-system-monitor-getting-started">
+  <sect1 id="cafe-system-monitor-getting-started">
     <title>Getting Started</title>
                                                                                 
 <!-- ============= To Start System Monitor ============================ -->
-    <sect2 id="mate-system-monitor-to-start">
+    <sect2 id="cafe-system-monitor-to-start">
       <title>To Start &app;</title>
       <para>You can start <application>&app;</application> in the following ways:</para>
       <variablelist>
@@ -321,23 +321,23 @@
           <term>Command line</term>
           <listitem>
             <para>
-              Execute the following command: <command>mate-system-monitor</command></para>
+              Execute the following command: <command>cafe-system-monitor</command></para>
           </listitem>
         </varlistentry>
       </variablelist>
     </sect2>
 	
-    <sect2 id="mate-system-monitor-when-you-start">
+    <sect2 id="cafe-system-monitor-when-you-start">
       <title>When You Start &app;</title>	
       <para>
         When you start <application>&app;</application>, the following window is displayed:
       </para>
-      <figure id="mate-system-monitor-window"> 
+      <figure id="cafe-system-monitor-window"> 
         <title>&app; Window</title>
         <screenshot> 
           <mediaobject> 
             <imageobject> 
-              <imagedata fileref="figures/mate-system-monitor_window.png" format="PNG"/>
+              <imagedata fileref="figures/cafe-system-monitor_window.png" format="PNG"/>
             </imageobject>
             <textobject> <phrase>Shows System Monitor main window.</phrase>
             </textobject> 
@@ -414,10 +414,10 @@
  <!-- ================ Usage ================================ -->
  <!-- This section should describe basic usage of the application. -->
 
-  <sect1 id="mate-system-monitor-usage">
+  <sect1 id="cafe-system-monitor-usage">
     <title>Usage</title>
 
-    <sect2 id="mate-system-monitor-display-basic-info">
+    <sect2 id="cafe-system-monitor-display-basic-info">
       <title>To Display Basic System Information</title>
       <para>
         To display basic system information, select the <guilabel>System</guilabel> tab.
@@ -444,7 +444,7 @@
       </itemizedlist>
     </sect2>
 
-    <sect2 id="mate-system-monitor-display-processlist">
+    <sect2 id="cafe-system-monitor-display-processlist">
       <title>To Display the Process List</title>
       <para>
         To display the process list, select the <guilabel>Processes</guilabel> tab.
@@ -494,17 +494,17 @@
           </listitem>
       </itemizedlist>
         <para>
-          For information about how to change the columns displayed in the process list, see <xref linkend="mate-system-monitor-prefs-proclist"/>.
+          For information about how to change the columns displayed in the process list, see <xref linkend="cafe-system-monitor-prefs-proclist"/>.
         </para>
 
-      <sect3 id="mate-system-monitor-display-processlist-child">
+      <sect3 id="cafe-system-monitor-display-processlist-child">
         <title>Parent Processes and Child Processes</title>
         <para>
-          A parent process is a process that spawns another process. The spawned process is a child process of the original parent process. By default, <application>&app;</application> does not show process dependencies. For information about how to change the default display behavior, see <xref linkend="mate-system-monitor-modify-processlist-viewdeps"/>.
+          A parent process is a process that spawns another process. The spawned process is a child process of the original parent process. By default, <application>&app;</application> does not show process dependencies. For information about how to change the default display behavior, see <xref linkend="cafe-system-monitor-modify-processlist-viewdeps"/>.
         </para>
       </sect3>
 
-      <sect3 id="mate-system-monitor-display-processlist-priority">
+      <sect3 id="cafe-system-monitor-display-processlist-priority">
         <title>Process Priority and Nice Values</title>
       <para>
         Processes run in order of priority: high-priority processes run before low-priority processes. Child processes generally inherit their priority from their parent process.
@@ -530,13 +530,13 @@
         </listitem>
       </itemizedlist>
       <para>
-        For information about how to change the priority of a process, see <xref linkend="mate-system-monitor-change-priority"/>.
+        For information about how to change the priority of a process, see <xref linkend="cafe-system-monitor-change-priority"/>.
       </para>
       </sect3>
 
     </sect2>
 
-    <sect2 id="mate-system-monitor-sort-processlist">
+    <sect2 id="cafe-system-monitor-sort-processlist">
       <title>To Sort the Process List</title>
       <para>
         To sort the process list, perform the following steps:
@@ -565,13 +565,13 @@
       </orderedlist>
     </sect2>
 
-    <sect2 id="mate-system-monitor-modify-processlist">
+    <sect2 id="cafe-system-monitor-modify-processlist">
       <title>To Modify the Contents of the Process List</title>
       <para>
         You can modify the contents of the process list in several ways.
       </para>
 
-      <sect3 id="mate-system-monitor-modify-processlist-all">
+      <sect3 id="cafe-system-monitor-modify-processlist-all">
         <title>To Show All Processes</title>
         <para>
           To show all processes in the process list, perform the following steps:
@@ -594,7 +594,7 @@
         </orderedlist>
       </sect3>
 
-      <sect3 id="mate-system-monitor-modify-processlist-my">
+      <sect3 id="cafe-system-monitor-modify-processlist-my">
         <title>To Show Only Processes Owned by the Current User</title>
         <para>
           To show only the processes that are owned by the current user, perform the following steps:
@@ -617,7 +617,7 @@
         </orderedlist>
       </sect3>
 
-      <sect3 id="mate-system-monitor-modify-processlist-active">
+      <sect3 id="cafe-system-monitor-modify-processlist-active">
         <title>To Show Only Active Processes</title>
         <para>
           To show only the active processes in the process list, perform the following steps:
@@ -640,7 +640,7 @@
         </orderedlist>
       </sect3>
 
-      <sect3 id="mate-system-monitor-modify-processlist-viewdeps">
+      <sect3 id="cafe-system-monitor-modify-processlist-viewdeps">
         <title>To Show Dependencies</title>
         <para>
           To show process dependencies in the process list, perform the following steps:
@@ -691,7 +691,7 @@
 
     </sect2>
 
-    <sect2 id="mate-system-monitor-memory-map">
+    <sect2 id="cafe-system-monitor-memory-map">
       <title>To Display Memory Maps for a Process</title>
       <para>
         To display memory maps for a process, perform the following steps:
@@ -864,7 +864,7 @@
       </para>
     </sect2>
 
-    <sect2 id="mate-system-monitor-change-priority">
+    <sect2 id="cafe-system-monitor-change-priority">
       <title>To Change the Priority of a Process</title>
       <para>
         To change the priority of a process, perform the following steps:
@@ -905,7 +905,7 @@
     </sect2>
 
 
-    <sect2 id="mate-system-monitor-end-process">
+    <sect2 id="cafe-system-monitor-end-process">
       <title>To End a Process</title>
       <para>
         To end a process, perform the following steps:
@@ -926,7 +926,7 @@
             Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>End Process</guimenuitem></menuchoice>, or perform a right-click and choose <menuchoice><guimenu>End Process</guimenu></menuchoice>, or click on the <guibutton>End Process</guibutton> button.
           </para>
           <para>
-            By default, a confirmation alert is displayed. For information about how to display or hide the confirmation alert, see <xref linkend="mate-system-monitor-prefs-proclist"/>.
+            By default, a confirmation alert is displayed. For information about how to display or hide the confirmation alert, see <xref linkend="cafe-system-monitor-prefs-proclist"/>.
           </para>
         </listitem>
         <listitem>
@@ -940,7 +940,7 @@
       </para>
     </sect2>
 
-    <sect2 id="mate-system-monitor-terminate-process">
+    <sect2 id="cafe-system-monitor-terminate-process">
       <title>To Terminate a Process</title>
       <para>
         To terminate a process, perform the following steps:
@@ -961,7 +961,7 @@
             Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Kill Process</guimenuitem></menuchoice>, or perform a right-click and choose <menuchoice><guimenu>Kill Process</guimenu></menuchoice>.
           </para>
           <para>
-            By default, a confirmation alert is displayed. For information about how to display or hide the confirmation alert, see <xref linkend="mate-system-monitor-prefs-proclist"/>.
+            By default, a confirmation alert is displayed. For information about how to display or hide the confirmation alert, see <xref linkend="cafe-system-monitor-prefs-proclist"/>.
           </para>
         </listitem>
         <listitem>
@@ -971,11 +971,11 @@
         </listitem>
       </orderedlist>
       <para>
-        You usually terminate a process only if you cannot end the process normally as described in <xref linkend="mate-system-monitor-end-process"/>.
+        You usually terminate a process only if you cannot end the process normally as described in <xref linkend="cafe-system-monitor-end-process"/>.
       </para>
     </sect2>
 
-    <sect2 id="mate-system-monitor-cpu">
+    <sect2 id="cafe-system-monitor-cpu">
       <title>To Monitor CPU Usage</title>
       <para>
         To monitor CPU usage, select the <guilabel>Resources</guilabel> tab.
@@ -986,7 +986,7 @@
     </sect2>
 
 
-    <sect2 id="mate-system-monitor-memory">
+    <sect2 id="cafe-system-monitor-memory">
       <title>To Monitor Memory and Swap Usage</title>
       <para>
         To monitor memory and swap usage, select the <guilabel>Resources</guilabel> tab.
@@ -1009,7 +1009,7 @@
 
     </sect2>
     
-    <sect2 id="mate-system-monitor-network">
+    <sect2 id="cafe-system-monitor-network">
       <title>To Monitor Network Activity</title>
       <para>
         To monitor network activity, select the <guilabel>Resources</guilabel> tab.
@@ -1031,7 +1031,7 @@
       </itemizedlist>
     </sect2>
 
-    <sect2 id="mate-system-monitor-disk">
+    <sect2 id="cafe-system-monitor-disk">
       <title>To Monitor File Systems</title>
       <para>
         To monitor file systems, select the <guilabel>File Systems</guilabel> tab.
@@ -1063,31 +1063,31 @@
         </listitem>
       </itemizedlist>
       <para>
-        For information about how to change the columns displayed in the file systems list, see <xref linkend="mate-system-monitor-prefs-fs"/>.
+        For information about how to change the columns displayed in the file systems list, see <xref linkend="cafe-system-monitor-prefs-fs"/>.
       </para>
     </sect2>
 
-    <sect2 id="mate-system-monitor-customize">
+    <sect2 id="cafe-system-monitor-customize">
       <title>To Customize the Resources Tabbed Section</title>
       <para>
         You can customize the <guilabel>Resources</guilabel> tabbed section in the following ways:
       </para>
       <itemizedlist>
         <listitem>
-          <para><xref linkend="mate-system-monitor-customize-cpu"/>
+          <para><xref linkend="cafe-system-monitor-customize-cpu"/>
           </para>
         </listitem>
         <listitem>
-          <para><xref linkend="mate-system-monitor-customize-mem"/>
+          <para><xref linkend="cafe-system-monitor-customize-mem"/>
           </para>
         </listitem>
         <listitem>
-          <para><xref linkend="mate-system-monitor-customize-network"/>
+          <para><xref linkend="cafe-system-monitor-customize-network"/>
           </para>
         </listitem>
       </itemizedlist>
 
-      <sect3 id="mate-system-monitor-customize-cpu">
+      <sect3 id="cafe-system-monitor-customize-cpu">
         <title>To Change the Line Colors of the CPU Graph</title>
         <para>
           To change the color of the lines that represents CPU usage in the <guilabel>CPU History</guilabel> graph, perform the following steps:
@@ -1116,7 +1116,7 @@
         </orderedlist>
       </sect3>
 
-      <sect3 id="mate-system-monitor-customize-mem">
+      <sect3 id="cafe-system-monitor-customize-mem">
         <title>To Change the Line Colors of the Memory and Swap Graph</title>
         <para>
           To change the color of the lines that represent memory and swap usage in the <guilabel>Memory and Swap History</guilabel> graph, perform the following steps:
@@ -1145,7 +1145,7 @@
         </orderedlist>
       </sect3>
 
-      <sect3 id="mate-system-monitor-customize-network">
+      <sect3 id="cafe-system-monitor-customize-network">
         <title>To Change the Line Colors of the Network Graph</title>
         <para>
           To change the color of the lines that represent network usage in the <guilabel>Network History</guilabel> graph, perform the following steps:
@@ -1178,23 +1178,23 @@
 
   </sect1>
 
-  <sect1 id="mate-system-monitor-prefs">
+  <sect1 id="cafe-system-monitor-prefs">
     <title>Preferences</title>
     <para>To configure <application>&app;</application>, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. The <guilabel>Preferences</guilabel> dialog contains the following tabbed sections:
     </para>
     <itemizedlist>
       <listitem>
-        <para><xref linkend="mate-system-monitor-prefs-proclist"/></para>
+        <para><xref linkend="cafe-system-monitor-prefs-proclist"/></para>
       </listitem>
       <listitem>
-        <para><xref linkend="mate-system-monitor-prefs-resmon"/></para>
+        <para><xref linkend="cafe-system-monitor-prefs-resmon"/></para>
       </listitem>
       <listitem>
-        <para><xref linkend="mate-system-monitor-prefs-fs"/></para>
+        <para><xref linkend="cafe-system-monitor-prefs-fs"/></para>
       </listitem>
     </itemizedlist>
 
-    <sect2 id="mate-system-monitor-prefs-proclist">
+    <sect2 id="cafe-system-monitor-prefs-proclist">
       <title>Processes</title>
         <variablelist>
           <varlistentry>
@@ -1469,7 +1469,7 @@
         </variablelist>
     </sect2>
 
-    <sect2 id="mate-system-monitor-prefs-resmon">
+    <sect2 id="cafe-system-monitor-prefs-resmon">
       <title>Resources</title>
         <variablelist>
           <varlistentry>
@@ -1498,7 +1498,7 @@
         </variablelist>
     </sect2>
     
-    <sect2 id="mate-system-monitor-prefs-fs">
+    <sect2 id="cafe-system-monitor-prefs-fs">
       <title>File Systems</title>
         <variablelist>
           <varlistentry>

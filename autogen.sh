@@ -4,7 +4,7 @@
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-PKG_NAME="mate-system-monitor"
+PKG_NAME="cafe-system-monitor"
 
 (test -f $srcdir/configure.ac) || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
@@ -12,8 +12,8 @@ PKG_NAME="mate-system-monitor"
     exit 1
 }
 
-which mate-autogen || {
-    echo "You need to install mate-common"
+which cafe-autogen || {
+    echo "You need to install cafe-common"
     exit 1
 }
 
@@ -24,5 +24,5 @@ which yelp-build || {
 
 USE_COMMON_DOC_BUILD=yes
 
-. mate-autogen
+. cafe-autogen
 

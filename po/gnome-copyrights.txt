@@ -10,7 +10,7 @@
 
 
 ========== ar.po ==========
-# translation of mate-system-monitor.HEAD.po to Arabic
+# translation of cafe-system-monitor.HEAD.po to Arabic
 # translation of procman.HEAD.ar.po to
 # translation of procman.HEAD.ar.po to
 # Arabic translation of procman.
@@ -36,10 +36,10 @@
 
 
 ========== ast.po ==========
-# translation of mate-system-monitor.po to Asturian
-# Asturian translation for mate-system-monitor
+# translation of cafe-system-monitor.po to Asturian
+# Asturian translation for cafe-system-monitor
 # Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
 # Xose S. Puente <xspuente@gmail.com>, 2007.
@@ -67,9 +67,9 @@
 
 
 ========== be@latin.po ==========
-# Biełaruski pierakład mate-system-monitor.
+# Biełaruski pierakład cafe-system-monitor.
 # Copyright (C) Ihar Hrachyshka, 2008.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # Ihar Hrachyshka <booxter@lacinka.org>, 2008.
 #
 
@@ -77,7 +77,7 @@
 
 
 ========== bg.po ==========
-# Bulgarian translation for mate-system-monitor po-file.
+# Bulgarian translation for cafe-system-monitor po-file.
 # Copyright (C) 2002, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 # Borislav Aleksandrov <B.Aleksandrov@cnsys.bg>, 2002.
 # Vladimir Petkov <vpetkov@i-space.org>, 2004, 2005.
@@ -89,9 +89,9 @@
 
 
 ========== bn.po ==========
-# Bengali Translation of mate-system-monitor
+# Bengali Translation of cafe-system-monitor
 # Copyright (C)  2003, 2006, 2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 #
 # Sayamindu Dasgupta <unmadindu@Softhome.net>, 2003.
 # Mahay Alam Khan <makl10n@yahoo.com>, 2005.
@@ -105,9 +105,9 @@
 
 ========== bn_IN.po ==========
 # translation of bn_IN.po to Bengali INDIA
-# Bengali Translation of mate-system-monitor
+# Bengali Translation of cafe-system-monitor
 # Copyright (C)  2003, 2006, 2009, 2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 #
 # Sayamindu Dasgupta <unmadindu@Softhome.net>, 2003.
 # Mahay Alam Khan <makl10n@yahoo.com>, 2005.
@@ -164,10 +164,10 @@
 
 
 ========== cs.po ==========
-# Czech translation of mate-system-monitor.
-# Copyright (C) 2008, 2009 the author(s) of mate-system-monitor.
+# Czech translation of cafe-system-monitor.
+# Copyright (C) 2008, 2009 the author(s) of cafe-system-monitor.
 # Copyright (C) 2004, 2005, 2006 Miloslav Trmac <mitr@volny.cz>.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # Miloslav Trmac <mitr@volny.cz>, 2002, 2003, 2004, 2005, 2006.
 # Petr Tomeš <ptomes@gmail.com>, 2006.
 # Jakub Friedl <jfriedl@suse.cz>, 2006.
@@ -195,9 +195,9 @@
 
 
 ========== da.po ==========
-# Danish translation of mate-system-monitor.
+# Danish translation of cafe-system-monitor.
 # Copyright (C) 2001-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # Ole Laursen <olau@hardworking.dk>, 2001-2005.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004-2005.
 # Lasse Bang Mikkelsen <lbm@fatalerror.dk>, 2006.
@@ -225,11 +225,11 @@
 # German MATE System Monitor translation.
 # Copyright (C) 2001-2003 Free Software Foundation, Inc.
 # Christian Meyer <chrisime@gnome.org>, 2001, 2002.
-# Christian Neumair <chris@mate-de.org>, 2003, 2004.
+# Christian Neumair <chris@cafe-de.org>, 2003, 2004.
 # Hendrik Richter <hendrikr@gnome.org>, 2005, 2006, 2007, 2008.
 # Frank Arnold <frank@scirocco-5v-turbo.de>, 2005, 2006.
 # Andre Klapper <ak-47@gmx.net>, 2007.
-# Hendrik Brandt <heb@mate-de.org>, 2008.
+# Hendrik Brandt <heb@cafe-de.org>, 2008.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009.
 #
 
@@ -237,7 +237,7 @@
 
 
 ========== dz.po ==========
-# Dzongkha translation of mate-system-monitor
+# Dzongkha translation of cafe-system-monitor
 # Copyright @ 2006, Free Software Foundation, Inc.
 # Mindu Dorji
 #
@@ -247,7 +247,7 @@
 
 ========== el.po ==========
 # translation of el.po to Greek
-# Greek translation of mate-system-monitor.
+# Greek translation of cafe-system-monitor.
 # Copyright (C) 2002,2003 Simos Xenitellis.
 #
 # kostas: 30Oct2003, updated translation for Mate 2.6
@@ -265,7 +265,7 @@
 
 
 ========== en@shaw.po ==========
-# Shavian translation for mate-system-monitor.
+# Shavian translation for cafe-system-monitor.
 # Copyright (C) 2009 The Mate Foundation.
 # Thomas Thurman <tthurman@gnome.org>, 2009.
 
@@ -295,9 +295,9 @@
 
 
 ========== eo.po ==========
-# Esperanto translation for mate-system-monitor
+# Esperanto translation for cafe-system-monitor
 # Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # Fabio SANTOS <fabiosantos.gyn@gmail.com>, 2010.
 # Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2010.
 #
@@ -306,16 +306,16 @@
 
 
 ========== es.po ==========
-# translation of mate-system-monitor.HEAD.po to Español
-# translation of mate-system-monitor to Spanish
+# translation of cafe-system-monitor.HEAD.po to Español
+# translation of cafe-system-monitor to Spanish
 # Copyright © 2001,2002,2003, 2006, 2007, 2008 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 #
-# Carlos Perelló Marín <carlos@mate-db.org>, 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org>, 2001.
 # Héctor García Álvarez <hector@scouts-es.org>, 2002.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com>,2002, 2003.
-# Francisco Javier F. Serrador <serrador@cvs.mate.org>, 2004, 2005, 2006.
-# Jorge González <jorgegonz@svn.mate.org>, 2007, 2009, 2010.
+# Francisco Javier F. Serrador <serrador@cvs.cafe.org>, 2004, 2005, 2006.
+# Jorge González <jorgegonz@svn.cafe.org>, 2007, 2009, 2010.
 
 
 
@@ -326,7 +326,7 @@
 #
 # Copyright (C) 2005, 2006 Free Software Foundation, Inc.
 # Copyright (C) 2007-2009 The MATE Project
-# This file is distributed under the same license as the mate-system-monitor
+# This file is distributed under the same license as the cafe-system-monitor
 # package.
 #
 # Ivar Smolin <okul@linux.ee>, 2005-2009.
@@ -358,7 +358,7 @@
 
 ========== fi.po ==========
 # procman Finnish Translation
-# Suomennos: http://mate.fi/
+# Suomennos: http://cafe.fi/
 # Copyright (C) 2003-2009 Free Software Foundation, Inc.
 # Tarmo Toikkanen <tarmo@iki.fi>, 2002.
 # Lauri Nurmi <lanurmi@iki.fi>, 2003.
@@ -372,9 +372,9 @@
 
 
 ========== fr.po ==========
-# French translation of mate-system-monitor.
+# French translation of cafe-system-monitor.
 # Copyright (C) 2002-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 #
 # Mathieu Gauthier-Pilote <mathieu.g.p@videotron.ca>, 2002.
 # Christophe Merlet <redfox@redfoxcenter.org>, 2002-2006.
@@ -388,7 +388,7 @@
 
 
 ========== ga.po ==========
-# Irish translations for mate-system-monitor package.
+# Irish translations for cafe-system-monitor package.
 # Copyright (C) 2003-2008 Free Software Foundation, Inc.
 # Paul Duffy <dubhthach@frink.nuigalway.ie>, 2003.
 # Alastair McKinstry <mckinstry@computer.org>, 2004.
@@ -399,14 +399,14 @@
 
 
 ========== gl.po ==========
-# translation of mate-system-monitor-master-po-gl.po to Galician
+# translation of cafe-system-monitor-master-po-gl.po to Galician
 # Galician translation of Procman System Monitor for MATE.
 # Copyright (C) 2001-2002, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 #
 #
 # Manuel A. Fernández Montecelo <manuel@sindominio.net>, 2001-2002.
 # Ignacio Casal Quinteiro <nacho.resa@gmail.com>, 2005, 2006.
-# Ignacio Casal Quinteiro <icq@svn.mate.org>, 2008.
+# Ignacio Casal Quinteiro <icq@svn.cafe.org>, 2008.
 # Mancomún - Centro de Referencia e Servizos de Software Libre <g11n@mancomun.org>, 2009.
 # Suso Baleato <suso.baleato@xunta.es>, 2009.
 # Fran Dieguez <fran.dieguez@glug.es>, 2009.
@@ -418,7 +418,7 @@
 
 
 ========== gu.po ==========
-# translation of mate-system-monitor.master.gu.po to Gujarati
+# translation of cafe-system-monitor.master.gu.po to Gujarati
 # Ankit Patel <ankit644@yahoo.com>, 2005, 2006.
 # Ankit Patel <ankit@redhat.com>, 2006, 2007.
 # Sweta Kothari <sweta2782@yahoo.co.in>, 2008.
@@ -440,7 +440,7 @@
 
 
 ========== hi.po ==========
-# translation of mate-system-monitor.master.po to Hindi
+# translation of cafe-system-monitor.master.po to Hindi
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -461,21 +461,21 @@
 
 
 ========== hu.po ==========
-# Hungarian translation of mate-system-monitor.
+# Hungarian translation of cafe-system-monitor.
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 #
 # Robert Vanyi <robi at mora.u-szeged dot hu>, 2002.
-# Andras Timar <timar at mate dot hu>, 2002, 2003.
-# Laszlo Dvornik <dvornik at mate dot hu>, 2004.
-# Gabor Kelemen <kelemeng at mate dot hu>, 2005, 2006, 2007, 2008, 2009, 2010.
-# Mate ORY <orymate at gmail d0t com>, 2006.
+# Andras Timar <timar at cafe dot hu>, 2002, 2003.
+# Laszlo Dvornik <dvornik at cafe dot hu>, 2004.
+# Gabor Kelemen <kelemeng at cafe dot hu>, 2005, 2006, 2007, 2008, 2009, 2010.
+# Mate ORY <orycafe at gmail d0t com>, 2006.
 
 
 
 
 ========== id.po ==========
-# translation of mate-system-monitor.master.po to Bahasa Indonesia
+# translation of cafe-system-monitor.master.po to Bahasa Indonesia
 # Indonesia translation of procman.
 # Copyright (C) 2005 THE procman'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the procman package.
@@ -489,9 +489,9 @@
 
 
 ========== it.po ==========
-# Italian messages for mate-system-monitor
+# Italian messages for cafe-system-monitor
 # Copyright (C) 2001-2009 Free Software Foundation, Inc.
-# This package is distributed under the same license as the mate-system-monitor package.
+# This package is distributed under the same license as the cafe-system-monitor package.
 # Luca Ferretti <elle.uca@libero.it> 2006, 2007, 2008.
 # Alessio Frusciante <algol@firenze.linux.it>, 2001, 2002, 2003, 2004, 2005, 2006, 2007.
 # Davide Falanga <davide.falanga@alice.it>, 2009.
@@ -501,7 +501,7 @@
 
 
 ========== ja.po ==========
-# mate-system-monitor (procman) ja.po.
+# cafe-system-monitor (procman) ja.po.
 # Copyright (C) 2001-2010 Free Software Foundation, Inc.
 # Takeshi Aihana <takeshi.aihana@gmail.com>, 2001-2009.
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
@@ -524,7 +524,7 @@
 
 
 ========== kn.po ==========
-# translation of mate-system-monitor.master.kn.po to Kannada
+# translation of cafe-system-monitor.master.kn.po to Kannada
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -534,8 +534,8 @@
 
 
 ========== ko.po ==========
-# mate-system-monitor Korean translation
-# This file is distributed under the same license as the mate-system-monitor package.
+# cafe-system-monitor Korean translation
+# This file is distributed under the same license as the cafe-system-monitor package.
 #
 # Young-Ho, Cha <ganadist@chollian.net> 2002, 2006, 2007
 # Changwoo Ryu <cwryu@debian.org> 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
@@ -547,9 +547,9 @@
 
 
 ========== ku.po ==========
-# Kurdish translation for mate-system-monitor
+# Kurdish translation for cafe-system-monitor
 # Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # Erdal Ronahi <erdal.ronahi@gmail.com>, 2006.
 # 
 # 
@@ -591,7 +591,7 @@
 
 
 ========== mai.po ==========
-# translation of mate-system-monitor.master.po to Maithili
+# translation of cafe-system-monitor.master.po to Maithili
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -610,7 +610,7 @@
 
 
 ========== mk.po ==========
-# translation of mate-system-monitor.HEAD.po to Macedonian
+# translation of cafe-system-monitor.HEAD.po to Macedonian
 # translation of procman.HEAD.mk.po to
 # translation of procman.HEAD.mk.po to
 # Procman translated on Macedonian
@@ -630,9 +630,9 @@
 
 
 ========== ml.po ==========
-# translation of mate-system-monitor.master.ml.po to
-# This file is distributed under the same license as the mate-system-monitor package.
-# Copyright (C) 2003-2008 mate-system-monitor'S COPYRIGHT HOLDER.
+# translation of cafe-system-monitor.master.ml.po to
+# This file is distributed under the same license as the cafe-system-monitor package.
+# Copyright (C) 2003-2008 cafe-system-monitor'S COPYRIGHT HOLDER.
 # FSF-India <locale@gnu.org.in>, 2003.
 # Ani Peter <apeter@redhat.com>, 2006.
 # Hari Vishnu <harivishnu@gmail.com>, 2008
@@ -641,7 +641,7 @@
 
 
 ========== mn.po ==========
-# translation of procman.mate-2-4.mn.po to Mongolian
+# translation of procman.cafe-2-4.mn.po to Mongolian
 # translation of procman.HEAD.mn.po to Mongolian
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
@@ -653,7 +653,7 @@
 
 
 ========== mr.po ==========
-# translation of mate-system-monitor.master.po to Marathi
+# translation of cafe-system-monitor.master.po to Marathi
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -682,9 +682,9 @@
 
 
 ========== nds.po ==========
-# Low German translation for mate-system-monitor.
-# Copyright (C) 2009 mate-system-monitor's COPYRIGHT HOLDER
-# This file is distributed under the same license as the mate-system-monitor package.
+# Low German translation for cafe-system-monitor.
+# Copyright (C) 2009 cafe-system-monitor's COPYRIGHT HOLDER
+# This file is distributed under the same license as the cafe-system-monitor package.
 # Nils-Christoph Fiedler <fiedler@medienkompanie.de>, 2009.
 #
 
@@ -692,7 +692,7 @@
 
 
 ========== ne.po ==========
-# translation of mate-system-monitor.HEAD.ne.po to Nepali
+# translation of cafe-system-monitor.HEAD.ne.po to Nepali
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -706,14 +706,14 @@
 ========== nl.po ==========
 # Dutch translation for Mate System Monitor
 #
-# This file is distributed under the same license as the mate-system-monitor
+# This file is distributed under the same license as the cafe-system-monitor
 # package.
 #
 # Almer S. Tigelaar <almer1@dds.nl>, 2000.
 # A.J. van der Vegt <jeroen@dirck.mine.nu>, 2004
 # Tino Meinen <a.t.meinen@chello.nl>, 2005, 2006.
 # Reinout van Schouwen <reinouts@gnome.org>, 2007
-# Daniel van Eeden <matenl@myname.nl>, 2008
+# Daniel van Eeden <cafenl@myname.nl>, 2008
 # Wouter Bolsterlee <wbolster@gnome.org>, 2008–2010.
 #
 
@@ -722,7 +722,7 @@
 
 ========== nn.po ==========
 # translation of nome-system-monitor.po to Norwegian Nynorsk
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # Copyright (C) Free Software Foundation, Inc.
 # Åsmund Skjæveland <aasmunds@fys.uio.no>, 2006.
 # Eskild Hustvedt <eskildh@gnome.org>, 2008
@@ -732,7 +732,7 @@
 
 ========== oc.po ==========
 # Translation of oc.po to Occitan
-# Occitan translation of mate-system-monitor
+# Occitan translation of cafe-system-monitor
 # Copyright (C) 2002-2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the procman package.
 #
@@ -742,7 +742,7 @@
 
 
 ========== or.po ==========
-# translation of mate-system-manager.master.or.po to Oriya
+# translation of cafe-system-manager.master.or.po to Oriya
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -754,7 +754,7 @@
 
 
 ========== pa.po ==========
-# translation of mate-system-monitor.HEAD.po to Punjabi
+# translation of cafe-system-monitor.HEAD.po to Punjabi
 # Punjabi translation of procman.HEAD.
 # Copyright (C) 2004 THE procman.HEAD'S COPYRIGHT HOLDER
 #
@@ -792,9 +792,9 @@
 
 
 ========== pt.po ==========
-# mate-system-monitor's Portuguese Translation
-# Copyright © 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 mate-system-monitor
-# Distributed under the same licence as the mate-system-monitor package
+# cafe-system-monitor's Portuguese Translation
+# Copyright © 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 cafe-system-monitor
+# Distributed under the same licence as the cafe-system-monitor package
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009.
 #
 
@@ -802,9 +802,9 @@
 
 
 ========== pt_BR.po ==========
-# Brazilian Portuguese translation of mate-system-monitor.
+# Brazilian Portuguese translation of cafe-system-monitor.
 # Copyright (C) 2002-2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # Francisco Petrúcio Cavalcante Junior <fpcj@impa.br>, 2002.
 # Evandro Fernandes Giovanini <evandrofg@ig.com.br>, 2002, 2006.
 # Afonso Celso Medina <medina@maua.br>, 2004.
@@ -823,18 +823,18 @@
 
 
 ========== ro.po ==========
-# Romanian translation for mate-system-monitor (procman)
+# Romanian translation for cafe-system-monitor (procman)
 # Copyright (C) 2003-2008 Free Software Foundation, Inc.
-# Mugurel Tudor <mugurelu@mate.ro>, 2002, 2003.
-# Dan Damian <dand@mate.ro>, 2005.
-# Mișu Moldovan <dumol@mate.ro>, 2005-2009.
+# Mugurel Tudor <mugurelu@cafe.ro>, 2002, 2003.
+# Dan Damian <dand@cafe.ro>, 2005.
+# Mișu Moldovan <dumol@cafe.ro>, 2005-2009.
 #
 
 
 
 
 ========== ru.po ==========
-# translation of mate-system-monitor to Russian
+# translation of cafe-system-monitor to Russian
 # Copyright (C) 2001-2009 Free Software Foundation, Inc.
 #
 # Sergey Volozhanin <svo@asplinux.ru>, 2001.
@@ -876,9 +876,9 @@
 
 
 ========== sk.po ==========
-# Slovak translation for mate-system-monitor.
+# Slovak translation for cafe-system-monitor.
 # Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 # Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2001, 2002.
 # Stanislav Visnovsky <visnovsky@kde.org>, 2003.
 # Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2004.
@@ -890,20 +890,20 @@
 
 
 ========== sl.po ==========
-# Slovenian translations for mate-system-monitor.
+# Slovenian translations for cafe-system-monitor.
 # Copyright (C) 2002-2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 #
 # Andraž Tori <andraz.tori1@guest.arnes.si>, 2002.
 # Matic Žgur <mr.zgur@gmail.com>, 2006 - 2007.
-# Matej Urbančič <mateju@svn.mate.org>, 2007 - 2010.
+# Matej Urbančič <cafeju@svn.cafe.org>, 2007 - 2010.
 #
 
 
 
 
 ========== sq.po ==========
-# Përkthimi i mesazheve të mate-system-monitor në shqip
+# Përkthimi i mesazheve të cafe-system-monitor në shqip
 # Albanian translation of procman
 # Copyright (C) 2006 Free Software Foundation, Inc.
 #
@@ -939,7 +939,7 @@
 
 
 ========== sv.po ==========
-# Swedish messages for mate-system-monitor.
+# Swedish messages for cafe-system-monitor.
 # Copyright (C) 2001-2009 Free Software Foundation, Inc.
 # Christian Rose <menthos@menthos.com>, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009.
@@ -949,7 +949,7 @@
 
 
 ========== ta.po ==========
-# translation of mate-system-monitor.HEAD.ta.po to Tamil
+# translation of cafe-system-monitor.HEAD.ta.po to Tamil
 # Tamil translation of Tamil Procman 2.4.
 # Copyright (C) 2003, 2004, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
@@ -964,10 +964,10 @@
 
 
 ========== te.po ==========
-# translation of mate-system-monitor.master.te.po to Telugu
-# Telugu translation of mate-system-monitor.
+# translation of cafe-system-monitor.master.te.po to Telugu
+# Telugu translation of cafe-system-monitor.
 # Copyright (C) 2007 Swecha Telugu Localisation Team <localisation@swecha.org>.
-# This file is distributed under the same license as the mate-system-monitor package.
+# This file is distributed under the same license as the cafe-system-monitor package.
 #
 # Pramod <pramod@swecha.net>, 2007.
 # Krishna Babu K <kkrothap@redhat.com>, 2009.
@@ -987,7 +987,7 @@
 
 
 ========== tr.po ==========
-# translation of mate-system-monitor to Turkish
+# translation of cafe-system-monitor to Turkish
 # Nilgün Belma Bugüner <nilgun@fide.org>, 2001.
 # Ömer Fadıl USTA <omer_fad@hotmai.com>,2002.
 # Davut Topcan <davut@aysis.com.tr>, 2004, 2005.
@@ -1039,7 +1039,7 @@
 
 
 ========== zh_HK.po ==========
-# Chinese (Hong Kong) translation for mate-system-monitor(procman).
+# Chinese (Hong Kong) translation for cafe-system-monitor(procman).
 # Copyright (C) 2001-07 Free Software Foundation, Inc.
 # Abel Cheung <abel@oaka.org>, 2001-03, 05.
 # Woodman Tuen <wmtuen@gmail.com>, 2004-07.
@@ -1050,7 +1050,7 @@
 
 
 ========== zh_TW.po ==========
-# Chinese (Taiwan) translation for mate-system-monitor(procman).
+# Chinese (Taiwan) translation for cafe-system-monitor(procman).
 # Copyright (C) 2001-07 Free Software Foundation, Inc.
 # Abel Cheung <abel@oaka.org>, 2001-03, 05.
 # Woodman Tuen <wmtuen@gmail.com>, 2004-07.
