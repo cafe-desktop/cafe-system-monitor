@@ -129,7 +129,7 @@
     code
   * Run gksu binary instead of loading libgksu2.so (which is GTK+2
     only)
-  * Drop MateConf migration script
+  * Drop CafeConf migration script
   * Main window: save maximized state in gsettings on exit and load
     it on startup
   * Disks: add saving and loading width and visibility of columns

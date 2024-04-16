@@ -1,5 +1,5 @@
 /*
- * Mate system monitor color pickers
+ * Cafe system monitor color pickers
  * Copyright (C) 2007 Karl Lattimer <karl@qdh.org.uk>
  * All rights reserved.
  *

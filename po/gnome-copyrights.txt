@@ -250,7 +250,7 @@
 # Greek translation of cafe-system-monitor.
 # Copyright (C) 2002,2003 Simos Xenitellis.
 #
-# kostas: 30Oct2003, updated translation for Mate 2.6
+# kostas: 30Oct2003, updated translation for Cafe 2.6
 # kostas: 03Feb2004, one more update
 # Nikos: 21Feb2004, add plurals, small fixes.
 #
@@ -266,7 +266,7 @@
 
 ========== en@shaw.po ==========
 # Shavian translation for cafe-system-monitor.
-# Copyright (C) 2009 The Mate Foundation.
+# Copyright (C) 2009 The Cafe Foundation.
 # Thomas Thurman <tthurman@gnome.org>, 2009.
 
 
@@ -469,7 +469,7 @@
 # Andras Timar <timar at cafe dot hu>, 2002, 2003.
 # Laszlo Dvornik <dvornik at cafe dot hu>, 2004.
 # Gabor Kelemen <kelemeng at cafe dot hu>, 2005, 2006, 2007, 2008, 2009, 2010.
-# Mate ORY <orycafe at gmail d0t com>, 2006.
+# Cafe ORY <orycafe at gmail d0t com>, 2006.
 
 
 
@@ -704,7 +704,7 @@
 
 
 ========== nl.po ==========
-# Dutch translation for Mate System Monitor
+# Dutch translation for Cafe System Monitor
 #
 # This file is distributed under the same license as the cafe-system-monitor
 # package.
@@ -896,7 +896,7 @@
 #
 # Andraž Tori <andraz.tori1@guest.arnes.si>, 2002.
 # Matic Žgur <mr.zgur@gmail.com>, 2006 - 2007.
-# Matej Urbančič <cafeju@svn.cafe.org>, 2007 - 2010.
+# Cafej Urbančič <cafeju@svn.cafe.org>, 2007 - 2010.
 #
 
 
