@@ -232,7 +232,7 @@ is_debug_enabled(void)
     static gboolean enabled;
 
     if (!init) {
-        enabled = g_getenv("MATE_SYSTEM_MONITOR_DEBUG") != NULL;
+        enabled = g_getenv("CAFE_SYSTEM_MONITOR_DEBUG") != NULL;
         init = TRUE;
     }
 

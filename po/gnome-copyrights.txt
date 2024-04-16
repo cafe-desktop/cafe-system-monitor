@@ -222,7 +222,7 @@
 
 
 ========== de.po ==========
-# German MATE System Monitor translation.
+# German CAFE System Monitor translation.
 # Copyright (C) 2001-2003 Free Software Foundation, Inc.
 # Christian Meyer <chrisime@gnome.org>, 2001, 2002.
 # Christian Neumair <chris@cafe-de.org>, 2003, 2004.
@@ -274,7 +274,7 @@
 
 ========== en_CA.po ==========
 # English/Canada translation of procman.
-# Copyright (C) 2004-2006 Adam Weinberger and the MATE Foundation
+# Copyright (C) 2004-2006 Adam Weinberger and the CAFE Foundation
 # This file is distributed under the same licence as the procman package.
 # Adam Weinberger <adamw@gnome.org>, 2004, 2005, 2006.
 # 
@@ -321,11 +321,11 @@
 
 
 ========== et.po ==========
-# MATE süsteemijälgija eesti keele tõlge.
-# Estonian translation of MATE System Monitor.
+# CAFE süsteemijälgija eesti keele tõlge.
+# Estonian translation of CAFE System Monitor.
 #
 # Copyright (C) 2005, 2006 Free Software Foundation, Inc.
-# Copyright (C) 2007-2009 The MATE Project
+# Copyright (C) 2007-2009 The CAFE Project
 # This file is distributed under the same license as the cafe-system-monitor
 # package.
 #
@@ -400,7 +400,7 @@
 
 ========== gl.po ==========
 # translation of cafe-system-monitor-master-po-gl.po to Galician
-# Galician translation of Procman System Monitor for MATE.
+# Galician translation of Procman System Monitor for CAFE.
 # Copyright (C) 2001-2002, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 #
 #
@@ -601,7 +601,7 @@
 
 
 ========== mg.po ==========
-# MALAGASY TRANSLATION OF MATE-SYSTEM-MONITOR.
+# MALAGASY TRANSLATION OF CAFE-SYSTEM-MONITOR.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Thierry Randrianiriana <randrianiriana@gmail.com>, 2006.
@@ -1019,8 +1019,8 @@
 
 
 ========== vi.po ==========
-# Vietnamese translation for MATE System Monitor.
-# Copyright © 2009 MATE i18n Project for Vietnamese.
+# Vietnamese translation for CAFE System Monitor.
+# Copyright © 2009 CAFE i18n Project for Vietnamese.
 # Nguyễn Thái Ngọc Duy <pclouds@gmx.net>, 2002.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
 #

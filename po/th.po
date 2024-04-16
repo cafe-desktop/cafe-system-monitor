@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -24,32 +24,32 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
-msgid "MATE System Monitor"
-msgstr "เครื่องมือเฝ้าสังเกตระบบของ MATE"
+msgid "CAFE System Monitor"
+msgstr "เครื่องมือเฝ้าสังเกตระบบของ CAFE"
 
 #: cafe-system-monitor.appdata.xml.in:8
-msgid "A Process and resource monitor for MATE Desktop"
-msgstr "เฝ้าสังเกตโพรเซสและทรัพยากรสำหรับเดสก์ท็อป MATE"
+msgid "A Process and resource monitor for CAFE Desktop"
+msgstr "เฝ้าสังเกตโพรเซสและทรัพยากรสำหรับเดสก์ท็อป CAFE"
 
 #: cafe-system-monitor.appdata.xml.in:10
 msgid ""
-"MATE System Monitor allows to graphically view and manipulate the running "
+"CAFE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
 "resources, such as CPU and memory."
 msgstr ""
-"เครื่องมือเฝ้าสังเกตระบบของ MATE "
+"เครื่องมือเฝ้าสังเกตระบบของ CAFE "
 "อนุญาตให้ดูแบบกราฟิกและจัดการโพรเซสที่กำลังทำงานในระบบของคุณ "
 "ยังให้ภาพรวมของทรัพยากรที่ใช้ได้ เช่น ซีพียูและหน่วยความจำ"
 
 #: cafe-system-monitor.appdata.xml.in:15
 msgid ""
-"MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
-"Desktop Environment. If you would like to know more about MATE and System "
+"CAFE System Monitor is a fork of GNOME System Monitor and part of the CAFE "
+"Desktop Environment. If you would like to know more about CAFE and System "
 "Monitor, please visit the project's home page."
 msgstr ""
-"เครื่องมือเฝ้าสังเกตระบบของ MATE แตกแขนงมาจากเครื่องมือเฝ้าสังเกตระบบของ "
-"GNOME และเป็นส่วนหนึ่งของสภาพแวดล้อมเดสก์ท็อป MATE "
-"ถ้าคุณต้องการทราบข้อมูลเพิ่มเติมเกี่ยวกับ MATE และเครื่องมือเฝ้าสังเกตระบบ "
+"เครื่องมือเฝ้าสังเกตระบบของ CAFE แตกแขนงมาจากเครื่องมือเฝ้าสังเกตระบบของ "
+"GNOME และเป็นส่วนหนึ่งของสภาพแวดล้อมเดสก์ท็อป CAFE "
+"ถ้าคุณต้องการทราบข้อมูลเพิ่มเติมเกี่ยวกับ CAFE และเครื่องมือเฝ้าสังเกตระบบ "
 "กรุณาเยี่ยมชมโฮมเพจของโครงการ"
 
 #: cafe-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
@@ -70,8 +70,8 @@ msgstr "utilities-system-monitor"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-system-monitor.desktop.in.in:15
-msgid "MATE;system;monitor;process;list;view;current;resources;"
-msgstr "MATE;ระบบ;เฝ้าสังเกต;โพรเซส;รายการ;มุมมอง;ปัจจุบัน;ทรัพยากร;"
+msgid "CAFE;system;monitor;process;list;view;current;resources;"
+msgstr "CAFE;ระบบ;เฝ้าสังเกต;โพรเซส;รายการ;มุมมอง;ปัจจุบัน;ทรัพยากร;"
 
 #: org.cafe.cafe-system-monitor.policy.in.in:11
 msgid "Kill process"
@@ -147,11 +147,11 @@ msgstr "เกี่ยวกับเครื่องมือเฝ้าส
 msgid ""
 "Copyright © 2001-2004 Kevin Vandersloot\n"
 "Copyright © 2005-2007 Benoît Dejean\n"
-"Copyright © 2011-2020 MATE developers"
+"Copyright © 2011-2020 CAFE developers"
 msgstr ""
 "Copyright © 2001-2004 Kevin Vandersloot\n"
 "Copyright © 2005-2007 Benoît Dejean\n"
-"Copyright © 2011-2020 นักพัฒนา MATE"
+"Copyright © 2011-2020 นักพัฒนา CAFE"
 
 #: src/callbacks.cpp:214
 msgid "translator-credits"
@@ -1444,8 +1444,8 @@ msgstr "เคอร์เนล %s"
 
 #: src/sysinfo.cpp:984
 #, c-format
-msgid "MATE %s"
-msgstr "MATE %s"
+msgid "CAFE %s"
+msgstr "CAFE %s"
 
 #. hardware section
 #: src/sysinfo.cpp:998

@@ -3,7 +3,7 @@
  "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
  "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
 <policyconfig>
-  <vendor>MATE Desktop</vendor>
+  <vendor>CAFE Desktop</vendor>
   <vendor_url>https://cafe-desktop.org/</vendor_url>
   <icon_name>utilities-system-monitor</icon_name>
 

@@ -1,7 +1,7 @@
 // -*- mode: c++ -*-
 
-#ifndef H_MATE_SYSTEM_MONITOR_UTIL_1123178725
-#define H_MATE_SYSTEM_MONITOR_UTIL_1123178725
+#ifndef H_CAFE_SYSTEM_MONITOR_UTIL_1123178725
+#define H_CAFE_SYSTEM_MONITOR_UTIL_1123178725
 
 #include <glib.h>
 #include <gtk/gtk.h>
@@ -133,4 +133,4 @@ namespace procman
 }
 
 
-#endif /* H_MATE_SYSTEM_MONITOR_UTIL_1123178725 */
+#endif /* H_CAFE_SYSTEM_MONITOR_UTIL_1123178725 */

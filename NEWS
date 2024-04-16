@@ -17,8 +17,8 @@
   * gsm_color_button: avoid redundant redeclarations
   * Add translator notes for desktop file
   * migrate from intltool to gettext
-  * Use MATE_DEBUG_CHECK for setting compiler debug flags
-  * Use MATE_COMPILE_WARNINGS and MATE_CXX_WARNINGS macros
+  * Use CAFE_DEBUG_CHECK for setting compiler debug flags
+  * Use CAFE_COMPILE_WARNINGS and CAFE_CXX_WARNINGS macros
   * require GLib >= 2.56.0
   * Render icons as cairo surfaces for HiDPI support
   * Change url project's website

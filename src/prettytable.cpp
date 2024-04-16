@@ -83,7 +83,7 @@ PrettyTable::register_application(pid_t pid, Glib::RefPtr<Gdk::Pixbuf> icon)
       info->set_icon(icon);
       // move the ref to the map
       this->apps[pid] = icon;
-      procman_debug("MATEWNCK OK for %u", unsigned(pid));
+      procman_debug("CAFEWNCK OK for %u", unsigned(pid));
     }
 }
 

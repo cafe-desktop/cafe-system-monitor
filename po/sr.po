@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -22,16 +22,16 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
-msgid "MATE System Monitor"
+msgid "CAFE System Monitor"
 msgstr "Мејтов пратилац система"
 
 #: cafe-system-monitor.appdata.xml.in:8
-msgid "A Process and resource monitor for MATE Desktop"
+msgid "A Process and resource monitor for CAFE Desktop"
 msgstr "Пратилац процеса и ресурса за Мејтову радну површ"
 
 #: cafe-system-monitor.appdata.xml.in:10
 msgid ""
-"MATE System Monitor allows to graphically view and manipulate the running "
+"CAFE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
 "resources, such as CPU and memory."
 msgstr ""
@@ -41,8 +41,8 @@ msgstr ""
 
 #: cafe-system-monitor.appdata.xml.in:15
 msgid ""
-"MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
-"Desktop Environment. If you would like to know more about MATE and System "
+"CAFE System Monitor is a fork of GNOME System Monitor and part of the CAFE "
+"Desktop Environment. If you would like to know more about CAFE and System "
 "Monitor, please visit the project's home page."
 msgstr ""
 "Мејтов пратилац система је исцепак Гномовог пратиоца система и део Мејтовог "
@@ -67,7 +67,7 @@ msgstr "utilities-system-monitor"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-system-monitor.desktop.in.in:15
-msgid "MATE;system;monitor;process;list;view;current;resources;"
+msgid "CAFE;system;monitor;process;list;view;current;resources;"
 msgstr "Мејт;систем;прати;процес;списак;преглед;текући;ресурси;"
 
 #: org.cafe.cafe-system-monitor.policy.in.in:11
@@ -145,7 +145,7 @@ msgstr "О праћењу система"
 msgid ""
 "Copyright © 2001-2004 Kevin Vandersloot\n"
 "Copyright © 2005-2007 Benoît Dejean\n"
-"Copyright © 2011-2020 MATE developers"
+"Copyright © 2011-2020 CAFE developers"
 msgstr ""
 "Ауторска права © 2001-2004 Кевин Вандерслот\n"
 "Ауторска права © 2005-2007 Бенуа Дејан\n"
@@ -1446,7 +1446,7 @@ msgstr "Кернел %s"
 
 #: src/sysinfo.cpp:984
 #, c-format
-msgid "MATE %s"
+msgid "CAFE %s"
 msgstr "Мејт %s"
 
 #. hardware section
