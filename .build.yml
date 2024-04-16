@@ -24,6 +24,7 @@ requires:
     - libpolkit-gobject-1-dev
     - librsvg2-dev
     - libsystemd-dev
+    - libtool
     - libwnck-3-dev
     - libxml2-dev
     - make
