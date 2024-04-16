@@ -1,0 +1,4 @@
+ci: add libpolkit-gobject-1-dev and appstream
+
+based in mate-system-monitor commit:
+https://github.com/mate-desktop/mate-system-monitor/commit/71c61020bc596cccfb7582a14856cceab996a319
