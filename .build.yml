@@ -2,21 +2,6 @@
 # THE FOLLOWING LINES IS USED BY docker-build
 ##########################################################
 requires:
-  archlinux:
-    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/mate-system-monitor
-    - autoconf-archive
-    - clang
-    - gcc
-    - git
-    - gtkmm3
-    - libgtop
-    - libwnck3
-    - make
-    - mate-common
-    - mate-desktop
-    - which
-    - yelp-tools
-
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/mate-system-monitor
@@ -26,50 +11,6 @@ requires:
     - clang-tools
     - cppcheck
     - gcc
-    - g++
-    - git
-    - libglib2.0-dev
-    - libglibmm-2.4-dev
-    - libgtk-3-dev
-    - libgtkmm-3.0-dev
-    - libgtop2-dev
-    - librsvg2-dev
-    - libsystemd-dev
-    - libwnck-3-dev
-    - libxml2-dev
-    - make
-    - mate-common
-    - policykit-1
-    - quilt
-    - yelp-tools
-
-  fedora:
-    # Useful URL: https://src.fedoraproject.org/cgit/rpms/mate-system-monitor.git
-    - autoconf-archive
-    - clang
-    - clang-analyzer
-    - gcc
-    - gcc-c++
-    - dbus-glib-devel
-    - desktop-file-utils
-    - git
-    - gtk3-devel
-    - gtkmm30-devel
-    - libgtop2-devel
-    - librsvg2-devel
-    - libwnck3-devel
-    - libxml2-devel
-    - make
-    - mate-common
-    - polkit-devel
-    - redhat-rpm-config
-    - systemd-devel
-
-  ubuntu:
-    - autopoint
-    - autoconf-archive
-    - clang
-    - clang-tools
     - g++
     - git
     - libglib2.0-dev
