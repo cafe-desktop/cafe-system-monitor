@@ -13,8 +13,8 @@ AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign check-news])
 AM_SILENT_RULES([yes])
 
 AM_MAINTAINER_MODE([enable])
-MATE_MAINTAINER_MODE_DEFINES
-MATE_DEBUG_CHECK([no])
+CAFE_MAINTAINER_MODE_DEFINES
+CAFE_DEBUG_CHECK([no])
 
 # Check For programs
 AC_PROG_CC
@@ -61,8 +61,8 @@ fi
 AM_CONDITIONAL(HAVE_SYSTEMD, [test "$have_systemd" = "yes"])
 
 # Compiler warnings
-MATE_COMPILE_WARNINGS([yes])
-MATE_CXX_WARNINGS([yes])
+CAFE_COMPILE_WARNINGS([yes])
+CAFE_CXX_WARNINGS([yes])
 
 dnl CXXFLAGS="-fvisibility=hidden -fvisibility-inlines-hidden $CXXFLAGS"
 dnl CXXFLAGS="-fvisibility-inlines-hidden $CXXFLAGS"

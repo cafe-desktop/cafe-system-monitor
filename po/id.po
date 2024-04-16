@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -30,33 +30,33 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
-msgid "MATE System Monitor"
-msgstr "MATE System Monitor"
+msgid "CAFE System Monitor"
+msgstr "CAFE System Monitor"
 
 #: cafe-system-monitor.appdata.xml.in:8
-msgid "A Process and resource monitor for MATE Desktop"
-msgstr "Monitor proses dan sumber daya untuk Desktop MATE"
+msgid "A Process and resource monitor for CAFE Desktop"
+msgstr "Monitor proses dan sumber daya untuk Desktop CAFE"
 
 #: cafe-system-monitor.appdata.xml.in:10
 msgid ""
-"MATE System Monitor allows to graphically view and manipulate the running "
+"CAFE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
 "resources, such as CPU and memory."
 msgstr ""
-"Pemantau Sistem MATE memiliki kemampuan untuk melihat dan memanipulasi "
+"Pemantau Sistem CAFE memiliki kemampuan untuk melihat dan memanipulasi "
 "proses yang berjalan pada sistem Anda secara visual. Aplikasi ini juga "
 "menyediakan gambaran tentang sumber daya yang tersedia, seperti CPU dan "
 "memori."
 
 #: cafe-system-monitor.appdata.xml.in:15
 msgid ""
-"MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
-"Desktop Environment. If you would like to know more about MATE and System "
+"CAFE System Monitor is a fork of GNOME System Monitor and part of the CAFE "
+"Desktop Environment. If you would like to know more about CAFE and System "
 "Monitor, please visit the project's home page."
 msgstr ""
-"Pemantau Sistem MATE adalah fork dari GNOME System Monitor dan merupakan "
-"bagian dari Lingkungan Desktop MATE. Jika Anda hendak mengetahui lebih "
-"lanjut tentang MATE dan System Monitor, harap mengunjungi halaman home page "
+"Pemantau Sistem CAFE adalah fork dari GNOME System Monitor dan merupakan "
+"bagian dari Lingkungan Desktop CAFE. Jika Anda hendak mengetahui lebih "
+"lanjut tentang CAFE dan System Monitor, harap mengunjungi halaman home page "
 "proyek."
 
 #: cafe-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
@@ -77,8 +77,8 @@ msgstr "utilities-system-monitor"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-system-monitor.desktop.in.in:15
-msgid "MATE;system;monitor;process;list;view;current;resources;"
-msgstr "MATE;sistem;pemantau;proses;daftar;tilikan;saat ini;sumber daya;"
+msgid "CAFE;system;monitor;process;list;view;current;resources;"
+msgstr "CAFE;sistem;pemantau;proses;daftar;tilikan;saat ini;sumber daya;"
 
 #: org.cafe.cafe-system-monitor.policy.in.in:11
 msgid "Kill process"
@@ -154,11 +154,11 @@ msgstr "Tentang Pemantau Sistem"
 msgid ""
 "Copyright © 2001-2004 Kevin Vandersloot\n"
 "Copyright © 2005-2007 Benoît Dejean\n"
-"Copyright © 2011-2020 MATE developers"
+"Copyright © 2011-2020 CAFE developers"
 msgstr ""
 "Hak Cipta © 2001-2004 Kevin Vandersloot\n"
 "Hak Cipta © 2005-2007 Benoît Dejean\n"
-"Hak Cipta © 2011-2020 pengembang MATE"
+"Hak Cipta © 2011-2020 pengembang CAFE"
 
 #: src/callbacks.cpp:214
 msgid "translator-credits"
@@ -166,7 +166,7 @@ msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
 "Ahmad Riza H Nst  <ari@160c.afraid.org>\n"
 "Dirgita <dirgita@gmail.com>\n"
-"Tim MATE Indonesia <http://id.cafe.org>\n"
+"Tim CAFE Indonesia <http://id.cafe.org>\n"
 "Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
 "Andika Triwidada <andika@gmail.com>, 2020."
 
@@ -1460,8 +1460,8 @@ msgstr "Kernel %s"
 
 #: src/sysinfo.cpp:984
 #, c-format
-msgid "MATE %s"
-msgstr "MATE %s"
+msgid "CAFE %s"
+msgstr "CAFE %s"
 
 #. hardware section
 #: src/sysinfo.cpp:998

@@ -10,7 +10,7 @@
 
 <!-- 
       (Do not remove this comment block.)
-  Maintained by the MATE Documentation Project
+  Maintained by the CAFE Documentation Project
   http://wiki.cafe-desktop.org/dev-doc:doc-team-guide
   Template version: 2.0 beta
   Template last modified Apr 11, 2002
@@ -24,7 +24,7 @@
 
 	 <copyright>
 		<year>2015-2020</year>
-		<holder>MATE Documentation Project</holder> </copyright>
+		<holder>CAFE Documentation Project</holder> </copyright>
     <copyright>
       <year>2009</year>
       <holder>Paul Cutler</holder>
@@ -48,7 +48,7 @@
    -->
 
     <publisher role="maintainer">
-      <publishername> MATE Documentation Project </publishername> 
+      <publishername> CAFE Documentation Project </publishername> 
     </publisher>
     <publisher>
       <publishername> GNOME Documentation Project </publishername>
@@ -61,10 +61,10 @@
 
   <authorgroup> 
 	<author>
-	  <firstname>MATE Documentation Project</firstname>
+	  <firstname>CAFE Documentation Project</firstname>
 	  <surname></surname>
 	  <affiliation>
-		 <orgname>MATE Desktop</orgname>
+		 <orgname>CAFE Desktop</orgname>
 	  </affiliation>
 	</author>
     <author>
@@ -109,8 +109,8 @@
 	<revnumber>System Monitor Manual V&manrevision;</revnumber> 
 	<date>July 2015</date>
 	<revdescription>
-	  <para role="author">MATE Documentation Team</para>
-	  <para role="publisher">MATE Documentation Project</para>
+	  <para role="author">CAFE Documentation Team</para>
+	  <para role="publisher">CAFE Documentation Project</para>
 	</revdescription>
       </revision>
       <revision>
@@ -159,7 +159,7 @@
     <legalnotice>
       <title>Feedback</title>
       <para>
-        To report a bug or make a suggestion regarding the &app; application or this manual, follow the directions in the <ulink url="help:cafe-user-guide/feedback" type="help">MATE Feedback Page</ulink>.
+        To report a bug or make a suggestion regarding the &app; application or this manual, follow the directions in the <ulink url="help:cafe-user-guide/feedback" type="help">CAFE Feedback Page</ulink>.
       </para>
 
 <!-- Translators may also add here feedback address for translations -->
@@ -215,7 +215,7 @@
                     <para>Linux Kernel version</para>
                   </listitem>
                   <listitem>
-                    <para>MATE version</para>
+                    <para>CAFE version</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -313,7 +313,7 @@
           <term><guimenu>Applications</guimenu> menu</term>
           <listitem>
             <para>
-              Choose <menuchoice><guimenu>System Tools</guimenu> <guimenuitem>MATE System Monitor</guimenuitem></menuchoice>.
+              Choose <menuchoice><guimenu>System Tools</guimenu> <guimenuitem>CAFE System Monitor</guimenuitem></menuchoice>.
             </para>
           </listitem>
         </varlistentry>

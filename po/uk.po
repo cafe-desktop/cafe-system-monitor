@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -27,24 +27,24 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
-msgid "MATE System Monitor"
-msgstr "Системний монітор MATE"
+msgid "CAFE System Monitor"
+msgstr "Системний монітор CAFE"
 
 #: cafe-system-monitor.appdata.xml.in:8
-msgid "A Process and resource monitor for MATE Desktop"
-msgstr "Монітор процесів та ресурсів середовища MATE"
+msgid "A Process and resource monitor for CAFE Desktop"
+msgstr "Монітор процесів та ресурсів середовища CAFE"
 
 #: cafe-system-monitor.appdata.xml.in:10
 msgid ""
-"MATE System Monitor allows to graphically view and manipulate the running "
+"CAFE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
 "resources, such as CPU and memory."
 msgstr ""
 
 #: cafe-system-monitor.appdata.xml.in:15
 msgid ""
-"MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
-"Desktop Environment. If you would like to know more about MATE and System "
+"CAFE System Monitor is a fork of GNOME System Monitor and part of the CAFE "
+"Desktop Environment. If you would like to know more about CAFE and System "
 "Monitor, please visit the project's home page."
 msgstr ""
 
@@ -66,7 +66,7 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-system-monitor.desktop.in.in:15
-msgid "MATE;system;monitor;process;list;view;current;resources;"
+msgid "CAFE;system;monitor;process;list;view;current;resources;"
 msgstr ""
 
 #: org.cafe.cafe-system-monitor.policy.in.in:11
@@ -141,11 +141,11 @@ msgstr "Про системний монітор"
 msgid ""
 "Copyright © 2001-2004 Kevin Vandersloot\n"
 "Copyright © 2005-2007 Benoît Dejean\n"
-"Copyright © 2011-2020 MATE developers"
+"Copyright © 2011-2020 CAFE developers"
 msgstr ""
 "Авторське право © 2001-2004 Кевін Вандерслут\n"
 "Авторське право © 2005-2007 Бенуа Дежан\n"
-"Авторське право © 2011-2020 Розробники MATE"
+"Авторське право © 2011-2020 Розробники CAFE"
 
 #: src/callbacks.cpp:214
 msgid "translator-credits"
@@ -1447,8 +1447,8 @@ msgstr "Ядро %s"
 
 #: src/sysinfo.cpp:984
 #, c-format
-msgid "MATE %s"
-msgstr "MATE %s"
+msgid "CAFE %s"
+msgstr "CAFE %s"
 
 #. hardware section
 #: src/sysinfo.cpp:998

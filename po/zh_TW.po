@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -24,27 +24,27 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
-msgid "MATE System Monitor"
-msgstr "MATE 系統監控程式"
+msgid "CAFE System Monitor"
+msgstr "CAFE 系統監控程式"
 
 #: cafe-system-monitor.appdata.xml.in:8
-msgid "A Process and resource monitor for MATE Desktop"
-msgstr "適用於 MATE 桌面環境的處理程序及資源監視器"
+msgid "A Process and resource monitor for CAFE Desktop"
+msgstr "適用於 CAFE 桌面環境的處理程序及資源監視器"
 
 #: cafe-system-monitor.appdata.xml.in:10
 msgid ""
-"MATE System Monitor allows to graphically view and manipulate the running "
+"CAFE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
 "resources, such as CPU and memory."
-msgstr "MATE 系統監控程式讓您可以圖形化檢視及管理執行中在您的系統上的處理程序。它也提供了可用資源的概覽，像是 CPU 及記憶體。"
+msgstr "CAFE 系統監控程式讓您可以圖形化檢視及管理執行中在您的系統上的處理程序。它也提供了可用資源的概覽，像是 CPU 及記憶體。"
 
 #: cafe-system-monitor.appdata.xml.in:15
 msgid ""
-"MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
-"Desktop Environment. If you would like to know more about MATE and System "
+"CAFE System Monitor is a fork of GNOME System Monitor and part of the CAFE "
+"Desktop Environment. If you would like to know more about CAFE and System "
 "Monitor, please visit the project's home page."
 msgstr ""
-"MATE 系統監控程式是一個 GNOME 系統監控程式的分支，且為 MATE 桌面環境的一部份。如果您想要知道更多關於 MATE "
+"CAFE 系統監控程式是一個 GNOME 系統監控程式的分支，且為 CAFE 桌面環境的一部份。如果您想要知道更多關於 CAFE "
 "及系統監控程式的詳細資訊，請參觀專案首頁。 "
 
 #: cafe-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
@@ -65,8 +65,8 @@ msgstr "utilities-system-monitor"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-system-monitor.desktop.in.in:15
-msgid "MATE;system;monitor;process;list;view;current;resources;"
-msgstr "MATE;system;monitor;process;list;view;current;resources;"
+msgid "CAFE;system;monitor;process;list;view;current;resources;"
+msgstr "CAFE;system;monitor;process;list;view;current;resources;"
 
 #: org.cafe.cafe-system-monitor.policy.in.in:11
 msgid "Kill process"
@@ -135,11 +135,11 @@ msgstr "關於系統監控程式"
 msgid ""
 "Copyright © 2001-2004 Kevin Vandersloot\n"
 "Copyright © 2005-2007 Benoît Dejean\n"
-"Copyright © 2011-2020 MATE developers"
+"Copyright © 2011-2020 CAFE developers"
 msgstr ""
 "Copyright © 2001-2004 Kevin Vandersloot\n"
 "Copyright © 2005-2007 Benoît Dejean\n"
-"Copyright © 2011-2020 MATE 開發者"
+"Copyright © 2011-2020 CAFE 開發者"
 
 #: src/callbacks.cpp:214
 msgid "translator-credits"
@@ -1423,8 +1423,8 @@ msgstr "核心 %s"
 
 #: src/sysinfo.cpp:984
 #, c-format
-msgid "MATE %s"
-msgstr "MATE %s"
+msgid "CAFE %s"
+msgstr "CAFE %s"
 
 #. hardware section
 #: src/sysinfo.cpp:998

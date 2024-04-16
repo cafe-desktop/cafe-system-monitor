@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -34,24 +34,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
-msgid "MATE System Monitor"
-msgstr "Monitor do Sistema MATE"
+msgid "CAFE System Monitor"
+msgstr "Monitor do Sistema CAFE"
 
 #: cafe-system-monitor.appdata.xml.in:8
-msgid "A Process and resource monitor for MATE Desktop"
-msgstr "Um processo e monitor de recursos do Ambiente de Trabalho MATE"
+msgid "A Process and resource monitor for CAFE Desktop"
+msgstr "Um processo e monitor de recursos do Ambiente de Trabalho CAFE"
 
 #: cafe-system-monitor.appdata.xml.in:10
 msgid ""
-"MATE System Monitor allows to graphically view and manipulate the running "
+"CAFE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
 "resources, such as CPU and memory."
 msgstr ""
 
 #: cafe-system-monitor.appdata.xml.in:15
 msgid ""
-"MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
-"Desktop Environment. If you would like to know more about MATE and System "
+"CAFE System Monitor is a fork of GNOME System Monitor and part of the CAFE "
+"Desktop Environment. If you would like to know more about CAFE and System "
 "Monitor, please visit the project's home page."
 msgstr ""
 
@@ -73,7 +73,7 @@ msgstr "utilities-system-monitor"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-system-monitor.desktop.in.in:15
-msgid "MATE;system;monitor;process;list;view;current;resources;"
+msgid "CAFE;system;monitor;process;list;view;current;resources;"
 msgstr ""
 
 #: org.cafe.cafe-system-monitor.policy.in.in:11
@@ -140,7 +140,7 @@ msgid ""
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
 msgstr ""
 "Deve ter recebido uma cópia da Licença Pública Genérica GNU juntamente com a"
-" Consola MATE; caso contrário, escreva para a Free Software Foundation, "
+" Consola CAFE; caso contrário, escreva para a Free Software Foundation, "
 "Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: src/callbacks.cpp:205
@@ -151,11 +151,11 @@ msgstr "Sobre o Monitor do Sistema"
 msgid ""
 "Copyright © 2001-2004 Kevin Vandersloot\n"
 "Copyright © 2005-2007 Benoît Dejean\n"
-"Copyright © 2011-2020 MATE developers"
+"Copyright © 2011-2020 CAFE developers"
 msgstr ""
 "Direitos de Autor © 2001-2004 Kevin Vandersloot\n"
 "Direitos de Autor © 2005-2007 Benoît Dejean\n"
-"Direitos de Autor © 2011-2020 Desenvolvedores do MATE"
+"Direitos de Autor © 2011-2020 Desenvolvedores do CAFE"
 
 #: src/callbacks.cpp:214
 msgid "translator-credits"
@@ -1451,8 +1451,8 @@ msgstr "Kernel %s"
 
 #: src/sysinfo.cpp:984
 #, c-format
-msgid "MATE %s"
-msgstr "MATE %s"
+msgid "CAFE %s"
+msgstr "CAFE %s"
 
 #. hardware section
 #: src/sysinfo.cpp:998

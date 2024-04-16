@@ -2,7 +2,7 @@
 
 AM_CPPFLAGS = \
 	-DPROCMAN_DATADIR=\""$(datadir)/procman/"\" \
-	-DMATELOCALEDIR=\""$(datadir)/locale"\" \
+	-DCAFELOCALEDIR=\""$(datadir)/locale"\" \
 	-DDATADIR=\""$(datadir)"\" \
 	-DPKGLIBEXECDIR=\""$(pkglibexecdir)"\" \
 	-DLIBEXECDIR=\""$(libexecdir)"\" \

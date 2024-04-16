@@ -981,7 +981,7 @@ procman_create_sysinfo_view(void)
 
     if (data->cafe_version != "")
     {
-        markup = g_strdup_printf(_("MATE %s"), data->cafe_version.c_str());
+        markup = g_strdup_printf(_("CAFE %s"), data->cafe_version.c_str());
         header = gtk_label_new(markup);
         gtk_label_set_selectable(GTK_LABEL(header), TRUE);
         gtk_widget_set_can_focus(header, FALSE);

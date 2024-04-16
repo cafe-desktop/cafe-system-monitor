@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the cafe-system-monitor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -32,31 +32,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: cafe-system-monitor.appdata.xml.in:7 cafe-system-monitor.desktop.in.in:3
-msgid "MATE System Monitor"
-msgstr "Monitor di Sistema MATE"
+msgid "CAFE System Monitor"
+msgstr "Monitor di Sistema CAFE"
 
 #: cafe-system-monitor.appdata.xml.in:8
-msgid "A Process and resource monitor for MATE Desktop"
-msgstr "Un monitor di processi e risorse per l'ambiente desktop MATE"
+msgid "A Process and resource monitor for CAFE Desktop"
+msgstr "Un monitor di processi e risorse per l'ambiente desktop CAFE"
 
 #: cafe-system-monitor.appdata.xml.in:10
 msgid ""
-"MATE System Monitor allows to graphically view and manipulate the running "
+"CAFE System Monitor allows to graphically view and manipulate the running "
 "processes on your system. It also provides an overview of available "
 "resources, such as CPU and memory."
 msgstr ""
-"Il Monitor di Sistema MATE permette di visualizzare graficamente e agire sui"
+"Il Monitor di Sistema CAFE permette di visualizzare graficamente e agire sui"
 " processi in esecuzione nel sistema. Fornisce inoltre una panoramica delle "
 "risorse disponibili, come CPU e memoria."
 
 #: cafe-system-monitor.appdata.xml.in:15
 msgid ""
-"MATE System Monitor is a fork of GNOME System Monitor and part of the MATE "
-"Desktop Environment. If you would like to know more about MATE and System "
+"CAFE System Monitor is a fork of GNOME System Monitor and part of the CAFE "
+"Desktop Environment. If you would like to know more about CAFE and System "
 "Monitor, please visit the project's home page."
 msgstr ""
-"l Monitor di Sistema MATE è un fork del Monitor di Sistema GNOME ed è parte "
-"dell'ambiente desktop MATE. Se vuoi conoscere di più su MATE e Monitor di "
+"l Monitor di Sistema CAFE è un fork del Monitor di Sistema GNOME ed è parte "
+"dell'ambiente desktop CAFE. Se vuoi conoscere di più su CAFE e Monitor di "
 "Sistema, visita l'home page del progetto."
 
 #: cafe-system-monitor.desktop.in.in:4 src/callbacks.cpp:203
@@ -77,8 +77,8 @@ msgstr "utilities-system-monitor"
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: cafe-system-monitor.desktop.in.in:15
-msgid "MATE;system;monitor;process;list;view;current;resources;"
-msgstr "MATE;sistema;monitor;processi;lista;visualizza;attuale;risorse;"
+msgid "CAFE;system;monitor;process;list;view;current;resources;"
+msgstr "CAFE;sistema;monitor;processi;lista;visualizza;attuale;risorse;"
 
 #: org.cafe.cafe-system-monitor.policy.in.in:11
 msgid "Kill process"
@@ -155,11 +155,11 @@ msgstr "Info su Monitor di Sistema"
 msgid ""
 "Copyright © 2001-2004 Kevin Vandersloot\n"
 "Copyright © 2005-2007 Benoît Dejean\n"
-"Copyright © 2011-2020 MATE developers"
+"Copyright © 2011-2020 CAFE developers"
 msgstr ""
 "Copyright © 2001-2004 Kevin Vandersloot\n"
 "Copyright © 2005-2007 Benoît Dejean\n"
-"Copyright © 2011-2020 Gli sviluppatori di MATE"
+"Copyright © 2011-2020 Gli sviluppatori di CAFE"
 
 #: src/callbacks.cpp:214
 msgid "translator-credits"
@@ -1458,8 +1458,8 @@ msgstr "Kernel %s"
 
 #: src/sysinfo.cpp:984
 #, c-format
-msgid "MATE %s"
-msgstr "MATE %s"
+msgid "CAFE %s"
+msgstr "CAFE %s"
 
 #. hardware section
 #: src/sysinfo.cpp:998
