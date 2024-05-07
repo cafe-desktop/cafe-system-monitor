@@ -1,6 +1,6 @@
 #include <config.h>
 
-#include <gdkmm/pixbuf.h>
+#include <cdkmm/pixbuf.h>
 
 #include <stdio.h>
 #include <sys/stat.h>
@@ -83,7 +83,7 @@ static void draw_background(LoadGraph *graph) {
     graph->graph_buffer_offset = (int) (1.5 * graph->graph_delx) + FRAME_WIDTH ;
 
     ctk_widget_get_allocation (graph->disp, &allocation);
-    surface = gdk_window_create_similar_surface (ctk_widget_get_window (graph->disp), CAIRO_CONTENT_COLOR_ALPHA, allocation.width, allocation.height);
+    surface = cdk_window_create_similar_surface (ctk_widget_get_window (graph->disp), CAIRO_CONTENT_COLOR_ALPHA, allocation.width, allocation.height);
     cr = cairo_create (surface);
 
     CtkStyleContext *context = ctk_widget_get_style_context (ProcData::get_instance()->notebook);
@@ -94,7 +94,7 @@ static void draw_background(LoadGraph *graph) {
     ctk_style_context_restore (context);
 
     // set the background color
-    gdk_cairo_set_source_rgba (cr, &bg);
+    cdk_cairo_set_source_rgba (cr, &bg);
     cairo_paint (cr);
 
     layout = pango_cairo_create_layout (cr);
@@ -132,7 +132,7 @@ static void draw_background(LoadGraph *graph) {
         else
             y = i * graph->graph_dely + graph->fontsize / 2.0;
 
-        gdk_cairo_set_source_rgba (cr, &fg);
+        cdk_cairo_set_source_rgba (cr, &fg);
         if (graph->type == LOAD_GRAPH_NET) {
             // operation orders matters so it's 0 if i == num_bars
             guint64 rate = graph->net.max - (i * graph->net.max / num_bars);
@@ -180,7 +180,7 @@ static void draw_background(LoadGraph *graph) {
         pango_layout_set_text (layout, caption, -1);
         pango_layout_get_extents (layout, NULL, &extents);
         cairo_move_to (cr, ((ceil(x) + 0.5) + graph->rmargin + graph->indent) - (1.0 * extents.width / PANGO_SCALE/2), graph->draw_height - 1.0 * extents.height / PANGO_SCALE);
-        gdk_cairo_set_source_rgba (cr, &fg);
+        cdk_cairo_set_source_rgba (cr, &fg);
         pango_cairo_show_layout (cr, layout);
     }
     g_object_unref(layout);
@@ -240,7 +240,7 @@ static gboolean load_graph_draw (CtkWidget *widget, cairo_t *context, gpointer d
     /* draw the graph */
     cairo_t* cr;
 
-    cr = gdk_cairo_create (window);
+    cr = cdk_cairo_create (window);
 
     if (graph->background == NULL) {
         draw_background(graph);
@@ -257,7 +257,7 @@ static gboolean load_graph_draw (CtkWidget *widget, cairo_t *context, gpointer d
 
     for (j = 0; j < graph->n; ++j) {
         cairo_move_to (cr, x_offset, (1.0f - graph->data[0][j]) * graph->real_draw_height);
-        gdk_cairo_set_source_rgba (cr, &(graph->colors [j]));
+        cdk_cairo_set_source_rgba (cr, &(graph->colors [j]));
 
         for (i = 1; i < LoadGraph::NUM_POINTS; ++i) {
             if (graph->data[i][j] == -1.0f)

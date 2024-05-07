@@ -100,7 +100,7 @@
   * Translations update
   * sysinfo: disable focus in all labels
   * update copyright year
-  * avoid deprecated gdk_screen_width/height
+  * avoid deprecated cdk_screen_width/height
   * Restore Polish translation credits from GNOME
   * sysinfo: avoid deprecated CtkAlignment
 

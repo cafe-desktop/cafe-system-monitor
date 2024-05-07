@@ -802,7 +802,7 @@ static gboolean sysinfo_logo_draw (CtkWidget *widget, cairo_t *context, gpointer
     cairo_t *cr;
     cairo_pattern_t *cp;
 
-    cr = gdk_cairo_create(ctk_widget_get_window(widget));
+    cr = cdk_cairo_create(ctk_widget_get_window(widget));
 
     ctk_widget_get_allocation (widget, &allocation);
     cairo_translate(cr, allocation.x, allocation.y);

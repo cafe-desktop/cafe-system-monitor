@@ -73,7 +73,7 @@ get_process_memory_info (ProcInfo *info)
     glibtop_proc_mem procmem;
     WnckResourceUsage xresources;
 
-    wnck_pid_read_resource_usage (gdk_screen_get_display (gdk_screen_get_default ()),
+    wnck_pid_read_resource_usage (cdk_screen_get_display (cdk_screen_get_default ()),
                                   info->pid,
                                   &xresources);
 

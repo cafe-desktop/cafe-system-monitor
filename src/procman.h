@@ -22,7 +22,7 @@
 
 #include <glibmm/refptr.h>
 #include <cairo-gobject.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <cdk-pixbuf/cdk-pixbuf.h>
 #include <glib.h>
 #include <gio/gio.h>
 #include <ctk/ctk.h>

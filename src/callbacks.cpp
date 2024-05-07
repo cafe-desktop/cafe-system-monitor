@@ -299,7 +299,7 @@ static void change_settings_color(GSettings *settings, const char *key,
     char *color;
 
     gsm_color_button_get_color(cp, &c);
-    color = gdk_rgba_to_string (&c);
+    color = cdk_rgba_to_string (&c);
     g_settings_set_string (settings, key, color);
     g_free (color);
 }

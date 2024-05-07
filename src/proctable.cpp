@@ -642,7 +642,7 @@ get_process_memory_info(ProcInfo *info)
     glibtop_proc_mem procmem;
     WnckResourceUsage xresources;
 
-    wnck_pid_read_resource_usage (gdk_screen_get_display (gdk_screen_get_default ()),
+    wnck_pid_read_resource_usage (cdk_screen_get_display (cdk_screen_get_default ()),
                                   info->pid,
                                   &xresources);
 
@@ -1162,7 +1162,7 @@ make_loadavg_string(void)
 void
 ProcInfo::set_icon(Glib::RefPtr<Gdk::Pixbuf> icon)
 {
-  this->surface = gdk_cairo_surface_create_from_pixbuf (icon->gobj(), 0, NULL);
+  this->surface = cdk_cairo_surface_create_from_pixbuf (icon->gobj(), 0, NULL);
 
   CtkTreeModel *model;
   model = ctk_tree_view_get_model(CTK_TREE_VIEW(ProcData::get_instance()->tree));

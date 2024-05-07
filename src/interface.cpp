@@ -27,7 +27,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <signal.h>
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkkeysyms.h>
 #include <math.h>
 
 #include "procman.h"
@@ -626,7 +626,7 @@ create_main_window (ProcData *procdata)
 
     GdkScreen* screen = ctk_widget_get_screen(app);
     /* use visual, if available */
-    GdkVisual* visual = gdk_screen_get_rgba_visual(screen);
+    GdkVisual* visual = cdk_screen_get_rgba_visual(screen);
     if (visual)
         ctk_widget_set_visual(app, visual);
 

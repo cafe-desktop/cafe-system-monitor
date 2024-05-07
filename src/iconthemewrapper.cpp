@@ -9,7 +9,7 @@
 Glib::RefPtr<Gdk::Pixbuf>
 procman::IconThemeWrapper::load_icon(const Glib::ustring& icon_name, int size) const
 {
-    gint scale = gdk_window_get_scale_factor (gdk_get_default_root_window ());
+    gint scale = cdk_window_get_scale_factor (cdk_get_default_root_window ());
     try
     {
       return Ctk::IconTheme::get_default()->load_icon(icon_name, size, scale, Ctk::ICON_LOOKUP_USE_BUILTIN | Ctk::ICON_LOOKUP_FORCE_SIZE);

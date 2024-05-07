@@ -198,7 +198,7 @@ add_disk(CtkListStore *list, const glibtop_mountentry *entry, bool show_all_fs)
 
     fsusage_stats(&usage, &bused, &bfree, &bavail, &btotal, &percentage);
     pixbuf = get_icon_for_device(entry->mountdir);
-    surface = gdk_cairo_surface_create_from_pixbuf (pixbuf->gobj(), 0, NULL);
+    surface = cdk_cairo_surface_create_from_pixbuf (pixbuf->gobj(), 0, NULL);
 
     /* if we can find a row with the same mountpoint, we get it but we
        still need to update all the fields.

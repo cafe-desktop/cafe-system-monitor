@@ -5,7 +5,7 @@
 #include <sys/stat.h>
 #include <stdio.h>
 #include <string.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <cdk-pixbuf/cdk-pixbuf.h>
 #include <glibtop/procstate.h>
 
 #include <vector>

@@ -4,9 +4,9 @@
 #define _PROCMAN_PRETTYTABLE_H_
 
 #include <glib.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <cdk-pixbuf/cdk-pixbuf.h>
 #include <glibmm/refptr.h>
-#include <gdkmm/pixbuf.h>
+#include <cdkmm/pixbuf.h>
 
 #include <map>
 #include <string>

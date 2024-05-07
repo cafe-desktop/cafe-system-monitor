@@ -28,7 +28,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <signal.h>
-#include <gdk/gdkkeysyms.h>
+#include <cdk/cdkkeysyms.h>
 #include <math.h>
 #include <cairo.h>
 #include <librsvg/rsvg.h>
@@ -233,7 +233,7 @@ render (CtkWidget * widget)
     GdkRGBA *color;
     GdkRGBA tmp_color = priv->color;
     color = &tmp_color;
-    cairo_t *cr = gdk_cairo_create (ctk_widget_get_window (widget));
+    cairo_t *cr = cdk_cairo_create (ctk_widget_get_window (widget));
     cairo_path_t *path = NULL;
     gint width, height;
     gdouble radius, arc_start, arc_end;
@@ -257,10 +257,10 @@ render (CtkWidget * widget)
     else
         color->green = color->green + highlight_factor;
     }
-    gdk_cairo_set_source_rgba (cr, color);
+    cdk_cairo_set_source_rgba (cr, color);
 
-    width = gdk_window_get_width(ctk_widget_get_window(widget));
-    height = gdk_window_get_height(ctk_widget_get_window(widget));
+    width = cdk_window_get_width(ctk_widget_get_window(widget));
+    height = cdk_window_get_height(ctk_widget_get_window(widget));
 
     switch (priv->type)
         {
@@ -448,7 +448,7 @@ gsm_color_button_size_allocate (CtkWidget * widget,
 
     if (ctk_widget_get_realized (widget))
     {
-        gdk_window_move_resize (ctk_widget_get_window (widget), allocation->x, allocation->y,
+        cdk_window_move_resize (ctk_widget_get_window (widget), allocation->x, allocation->y,
                                 allocation->width, allocation->height);
     }
 }
@@ -528,13 +528,13 @@ set_color_icon (GdkDragContext * context, GdkRGBA * color)
     GdkPixbuf *pixbuf;
     guint32 pixel;
 
-    pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, 48, 32);
+    pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, 48, 32);
 
     pixel = ((guint32)(color->red * 0xff) << 24) |
             ((guint32)(color->green * 0xff) << 16) |
             ((guint32)(color->blue * 0xff) << 8);
 
-    gdk_pixbuf_fill (pixbuf, pixel);
+    cdk_pixbuf_fill (pixbuf, pixel);
 
     ctk_drag_set_icon_pixbuf (context, pixbuf, -2, -2);
     g_object_unref (pixbuf);

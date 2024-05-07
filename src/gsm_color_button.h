@@ -23,7 +23,7 @@
 #define __GSM_COLOR_BUTTON_H__
 
 #include <glib.h>
-#include <gdk/gdk.h>
+#include <cdk/cdk.h>
 #include <ctk/ctk.h>
 
 G_BEGIN_DECLS

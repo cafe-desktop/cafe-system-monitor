@@ -29,7 +29,7 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <ctk/ctk.h>
-#include <gdk/gdkx.h>
+#include <cdk/cdkx.h>
 #include <bacon-message-connection.h>
 #include <glibtop.h>
 #include <glibtop/close.h>
@@ -197,26 +197,26 @@ color_changed_cb (GSettings *settings, const gchar *key, gpointer data)
         for (int i = 0; i < procdata->config.num_cpus; i++) {
             string cpu_key = make_string(g_strdup_printf("cpu-color%d", i));
             if (cpu_key == key) {
-                gdk_rgba_parse (&procdata->config.cpu_color[i], color);
+                cdk_rgba_parse (&procdata->config.cpu_color[i], color);
                 procdata->cpu_graph->colors.at(i) = procdata->config.cpu_color[i];
                 break;
             }
         }
     }
     else if (g_str_equal (key, "mem-color")) {
-        gdk_rgba_parse (&procdata->config.mem_color, color);
+        cdk_rgba_parse (&procdata->config.mem_color, color);
         procdata->mem_graph->colors.at(0) = procdata->config.mem_color;
     }
     else if (g_str_equal (key, "swap-color")) {
-        gdk_rgba_parse (&procdata->config.swap_color, color);
+        cdk_rgba_parse (&procdata->config.swap_color, color);
         procdata->mem_graph->colors.at(1) = procdata->config.swap_color;
     }
     else if (g_str_equal (key, "net-in-color")) {
-        gdk_rgba_parse (&procdata->config.net_in_color, color);
+        cdk_rgba_parse (&procdata->config.net_in_color, color);
         procdata->net_graph->colors.at(0) = procdata->config.net_in_color;
     }
     else if (g_str_equal (key, "net-out-color")) {
-        gdk_rgba_parse (&procdata->config.net_out_color, color);
+        cdk_rgba_parse (&procdata->config.net_out_color, color);
         procdata->net_graph->colors.at(1) = procdata->config.net_out_color;
     }
     else {
@@ -308,7 +308,7 @@ procman_data_new (GSettings *settings)
         detail_string = std::string("changed::") + std::string(key);
         g_signal_connect (G_OBJECT(settings), detail_string.c_str(),
                           G_CALLBACK(color_changed_cb), pd);
-        gdk_rgba_parse (&pd->config.cpu_color[i], color);
+        cdk_rgba_parse (&pd->config.cpu_color[i], color);
         g_free (color);
         g_free (key);
     }
@@ -318,7 +318,7 @@ procman_data_new (GSettings *settings)
         color = g_strdup ("#000000ff0082");
     g_signal_connect (G_OBJECT(settings), "changed::mem-color",
                       G_CALLBACK(color_changed_cb), pd);
-    gdk_rgba_parse (&pd->config.mem_color, color);
+    cdk_rgba_parse (&pd->config.mem_color, color);
 
     g_free (color);
 
@@ -327,7 +327,7 @@ procman_data_new (GSettings *settings)
         color = g_strdup ("#00b6000000ff");
     g_signal_connect (G_OBJECT(settings), "changed::swap-color",
                       G_CALLBACK(color_changed_cb), pd);
-    gdk_rgba_parse (&pd->config.swap_color, color);
+    cdk_rgba_parse (&pd->config.swap_color, color);
     g_free (color);
 
     color = g_settings_get_string (settings, "net-in-color");
@@ -335,7 +335,7 @@ procman_data_new (GSettings *settings)
         color = g_strdup ("#000000f200f2");
     g_signal_connect (G_OBJECT(settings), "changed::net-in-color",
                       G_CALLBACK(color_changed_cb), pd);
-    gdk_rgba_parse (&pd->config.net_in_color, color);
+    cdk_rgba_parse (&pd->config.net_in_color, color);
     g_free (color);
 
     color = g_settings_get_string (settings, "net-out-color");
@@ -343,12 +343,12 @@ procman_data_new (GSettings *settings)
         color = g_strdup ("#00f2000000c1");
     g_signal_connect (G_OBJECT(settings), "changed::net-out-color",
                       G_CALLBACK(color_changed_cb), pd);
-    gdk_rgba_parse (&pd->config.net_out_color, color);
+    cdk_rgba_parse (&pd->config.net_out_color, color);
     g_free (color);
 
     /* Sanity checks */
-    swidth = WidthOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ()));
-    sheight = HeightOfScreen (gdk_x11_screen_get_xscreen (gdk_screen_get_default ()));
+    swidth = WidthOfScreen (cdk_x11_screen_get_xscreen (cdk_screen_get_default ()));
+    sheight = HeightOfScreen (cdk_x11_screen_get_xscreen (cdk_screen_get_default ()));
     pd->config.width = CLAMP (pd->config.width, 50, swidth);
     pd->config.height = CLAMP (pd->config.height, 50, sheight);
     pd->config.update_interval = MAX (pd->config.update_interval, 1000);
@@ -517,11 +517,11 @@ procman_save_config (ProcData *data)
 
     g_assert(data);
 
-    data->config.maximized = gdk_window_get_state(ctk_widget_get_window (data->app)) & GDK_WINDOW_STATE_MAXIMIZED;
+    data->config.maximized = cdk_window_get_state(ctk_widget_get_window (data->app)) & GDK_WINDOW_STATE_MAXIMIZED;
     if (!data->config.maximized) {
         // we only want to store/overwrite size and position info with non-maximized state info
-        data->config.width = gdk_window_get_width(ctk_widget_get_window(data->app));
-        data->config.height = gdk_window_get_height(ctk_widget_get_window(data->app));
+        data->config.width = cdk_window_get_width(ctk_widget_get_window(data->app));
+        data->config.height = cdk_window_get_height(ctk_widget_get_window(data->app));
 
         ctk_window_get_position(CTK_WINDOW(data->app), &data->config.xpos, &data->config.ypos);
 
@@ -580,7 +580,7 @@ cb_server (const gchar *msg, gpointer user_data)
     ProcData *procdata;
     guint32 timestamp = 0;
 
-    window = gdk_get_default_root_window ();
+    window = cdk_get_default_root_window ();
 
     procdata = *(ProcData**)user_data;
     g_assert (procdata != NULL);
@@ -603,9 +603,9 @@ cb_server (const gchar *msg, gpointer user_data)
     }
 
     /* fall back to rountripping to X */
-    timestamp = gdk_x11_get_server_time (window);
+    timestamp = cdk_x11_get_server_time (window);
 
-    gdk_x11_window_set_user_time (window, timestamp);
+    cdk_x11_window_set_user_time (window, timestamp);
 
     ctk_window_present (CTK_WINDOW(procdata->app));
 }
@@ -701,7 +701,7 @@ main (int argc, char *argv[])
 
         bacon_message_connection_send (conn, timestamp);
 
-        gdk_notify_startup_complete ();
+        cdk_notify_startup_complete ();
 
         g_free (timestamp);
         bacon_message_connection_free (conn);
