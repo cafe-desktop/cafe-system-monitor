@@ -96,7 +96,7 @@ namespace
 }
 
 
-static Glib::RefPtr<Gdk::Pixbuf>
+static Glib::RefPtr<Cdk::Pixbuf>
 get_icon_for_device(const char *mountpoint)
 {
     procman::IconThemeWrapper icon_theme;
@@ -181,7 +181,7 @@ remove_old_disks(CtkTreeModel *model, const glibtop_mountentry *entries, guint n
 static void
 add_disk(CtkListStore *list, const glibtop_mountentry *entry, bool show_all_fs)
 {
-    Glib::RefPtr<Gdk::Pixbuf> pixbuf;
+    Glib::RefPtr<Cdk::Pixbuf> pixbuf;
     cairo_surface_t *surface;
     CtkTreeIter iter;
     glibtop_fsusage usage;

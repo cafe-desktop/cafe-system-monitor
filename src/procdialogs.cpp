@@ -331,7 +331,7 @@ public:
         : key(key)
     { }
 
-    static gboolean callback(CtkWidget *widget, GdkEventFocus *event, gpointer data)
+    static gboolean callback(CtkWidget *widget, CdkEventFocus *event, gpointer data)
     {
         SpinButtonUpdater* updater = static_cast<SpinButtonUpdater*>(data);
         ctk_spin_button_update(CTK_SPIN_BUTTON(widget));

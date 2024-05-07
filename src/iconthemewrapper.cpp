@@ -6,7 +6,7 @@
 #include "iconthemewrapper.h"
 
 
-Glib::RefPtr<Gdk::Pixbuf>
+Glib::RefPtr<Cdk::Pixbuf>
 procman::IconThemeWrapper::load_icon(const Glib::ustring& icon_name, int size) const
 {
     gint scale = cdk_window_get_scale_factor (cdk_get_default_root_window ());
@@ -18,12 +18,12 @@ procman::IconThemeWrapper::load_icon(const Glib::ustring& icon_name, int size) c
     {
         if (error.code() != Ctk::IconThemeError::ICON_THEME_NOT_FOUND)
             g_error("Cannot load icon '%s' from theme: %s", icon_name.c_str(), error.what().c_str());
-        return Glib::RefPtr<Gdk::Pixbuf>();
+        return Glib::RefPtr<Cdk::Pixbuf>();
     }
     catch (Gio::Error &error)
     {
         g_debug("Could not load icon '%s' : %s", icon_name.c_str(), error.what().c_str());
-        return Glib::RefPtr<Gdk::Pixbuf>();
+        return Glib::RefPtr<Cdk::Pixbuf>();
     }
 }
 

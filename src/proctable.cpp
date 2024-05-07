@@ -1160,7 +1160,7 @@ make_loadavg_string(void)
 
 
 void
-ProcInfo::set_icon(Glib::RefPtr<Gdk::Pixbuf> icon)
+ProcInfo::set_icon(Glib::RefPtr<Cdk::Pixbuf> icon)
 {
   this->surface = cdk_cairo_surface_create_from_pixbuf (icon->gobj(), 0, NULL);
 

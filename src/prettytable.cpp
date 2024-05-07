@@ -51,7 +51,7 @@ PrettyTable::on_application_opened(WnckScreen* screen, WnckApplication* app, gpo
     const char* icon_name = wnck_application_get_icon_name(app);
 
 
-    Glib::RefPtr<Gdk::Pixbuf> icon;
+    Glib::RefPtr<Cdk::Pixbuf> icon;
 
     // Make sure that icon_name is a valid symlink before loading.
     f = fopen (icon_name, "r");
@@ -62,7 +62,7 @@ PrettyTable::on_application_opened(WnckScreen* screen, WnckApplication* app, gpo
 
     if (not icon) {
         icon = Glib::wrap(wnck_application_get_icon(app), /* take_copy */ true);
-        icon = icon->scale_simple(APP_ICON_SIZE, APP_ICON_SIZE, Gdk::INTERP_HYPER);
+        icon = icon->scale_simple(APP_ICON_SIZE, APP_ICON_SIZE, Cdk::INTERP_HYPER);
     }
 
     if (not icon)
@@ -74,7 +74,7 @@ PrettyTable::on_application_opened(WnckScreen* screen, WnckApplication* app, gpo
 
 
 void
-PrettyTable::register_application(pid_t pid, Glib::RefPtr<Gdk::Pixbuf> icon)
+PrettyTable::register_application(pid_t pid, Glib::RefPtr<Cdk::Pixbuf> icon)
 {
   /* If process already exists then set the icon. Otherwise put into hash
   ** table to be added later */
@@ -113,7 +113,7 @@ PrettyTable::unregister_application(pid_t pid)
 
 
 
-Glib::RefPtr<Gdk::Pixbuf>
+Glib::RefPtr<Cdk::Pixbuf>
 PrettyTable::get_icon_from_theme(const ProcInfo &info)
 {
     return this->theme->load_icon(info.name, APP_ICON_SIZE);
@@ -139,10 +139,10 @@ bool PrettyTable::get_default_icon_name(const string &cmd, string &name)
   so we don't have to lookup again.
 */
 
-Glib::RefPtr<Gdk::Pixbuf>
+Glib::RefPtr<Cdk::Pixbuf>
 PrettyTable::get_icon_from_default(const ProcInfo &info)
 {
-    Glib::RefPtr<Gdk::Pixbuf> pix;
+    Glib::RefPtr<Cdk::Pixbuf> pix;
     string name;
 
     if (this->get_default_icon_name(info.name, name)) {
@@ -161,10 +161,10 @@ PrettyTable::get_icon_from_default(const ProcInfo &info)
 
 
 
-Glib::RefPtr<Gdk::Pixbuf>
+Glib::RefPtr<Cdk::Pixbuf>
 PrettyTable::get_icon_from_wnck(const ProcInfo &info)
 {
-    Glib::RefPtr<Gdk::Pixbuf> icon;
+    Glib::RefPtr<Cdk::Pixbuf> icon;
 
     IconsForPID::iterator it(this->apps.find(info.pid));
 
@@ -176,14 +176,14 @@ PrettyTable::get_icon_from_wnck(const ProcInfo &info)
 
 
 
-Glib::RefPtr<Gdk::Pixbuf>
+Glib::RefPtr<Cdk::Pixbuf>
 PrettyTable::get_icon_from_name(const ProcInfo &info)
 {
     return this->theme->load_icon(info.name, APP_ICON_SIZE);
 }
 
 
-Glib::RefPtr<Gdk::Pixbuf>
+Glib::RefPtr<Cdk::Pixbuf>
 PrettyTable::get_icon_dummy(const ProcInfo &)
 {
     return this->theme->load_icon("application-x-executable", APP_ICON_SIZE);
@@ -208,13 +208,13 @@ namespace
 }
 
 
-Glib::RefPtr<Gdk::Pixbuf>
+Glib::RefPtr<Cdk::Pixbuf>
 PrettyTable::get_icon_for_kernel(const ProcInfo &info)
 {
     if (is_kthread(info))
         return this->theme->load_icon("applications-system", APP_ICON_SIZE);
 
-    return Glib::RefPtr<Gdk::Pixbuf>();
+    return Glib::RefPtr<Cdk::Pixbuf>();
 }
 
 
@@ -222,7 +222,7 @@ PrettyTable::get_icon_for_kernel(const ProcInfo &info)
 void
 PrettyTable::set_icon(ProcInfo &info)
 {
-    typedef Glib::RefPtr<Gdk::Pixbuf>
+    typedef Glib::RefPtr<Cdk::Pixbuf>
         (PrettyTable::*Getter)(const ProcInfo &);
 
     static std::vector<Getter> getters;
@@ -241,7 +241,7 @@ PrettyTable::set_icon(ProcInfo &info)
         getters.push_back(&PrettyTable::get_icon_dummy);
     }
 
-    Glib::RefPtr<Gdk::Pixbuf> icon;
+    Glib::RefPtr<Cdk::Pixbuf> icon;
 
     for (size_t i = 0; not icon and i < getters.size(); ++i) {
         try {

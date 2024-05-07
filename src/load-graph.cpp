@@ -74,7 +74,7 @@ static void draw_background(LoadGraph *graph) {
     PangoFontDescription* font_desc;
     PangoRectangle extents;
     cairo_surface_t *surface;
-    GdkRGBA fg, bg;
+    CdkRGBA fg, bg;
 
     num_bars = graph->num_bars();
     graph->graph_dely = (graph->draw_height - 15) / num_bars; /* round to int to avoid AA blur */
@@ -202,7 +202,7 @@ static int load_graph_update (gpointer user_data); // predeclare load_graph_upda
 
 static gboolean
 load_graph_configure (CtkWidget *widget,
-                      GdkEventConfigure *event,
+                      CdkEventConfigure *event,
                       gpointer data_ptr)
 {
     CtkAllocation allocation;
@@ -222,7 +222,7 @@ load_graph_configure (CtkWidget *widget,
 static gboolean load_graph_draw (CtkWidget *widget, cairo_t *context, gpointer data_ptr)
 {
     LoadGraph * const graph = static_cast<LoadGraph*>(data_ptr);
-    GdkWindow *window;
+    CdkWindow *window;
 
     guint i, j;
     gdouble sample_width, x_offset;

@@ -624,9 +624,9 @@ create_main_window (ProcData *procdata)
     app = ctk_window_new(CTK_WINDOW_TOPLEVEL);
     ctk_window_set_title(CTK_WINDOW(app), _("System Monitor"));
 
-    GdkScreen* screen = ctk_widget_get_screen(app);
+    CdkScreen* screen = ctk_widget_get_screen(app);
     /* use visual, if available */
-    GdkVisual* visual = cdk_screen_get_rgba_visual(screen);
+    CdkVisual* visual = cdk_screen_get_rgba_visual(screen);
     if (visual)
         ctk_widget_set_visual(app, visual);
 
@@ -756,7 +756,7 @@ create_main_window (ProcData *procdata)
 }
 
 void
-do_popup_menu (ProcData *procdata, GdkEventButton *event)
+do_popup_menu (ProcData *procdata, CdkEventButton *event)
 {
     ctk_menu_popup_at_pointer (CTK_MENU (procdata->popup_menu), NULL);
 }

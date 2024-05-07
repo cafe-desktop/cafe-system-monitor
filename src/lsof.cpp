@@ -223,7 +223,7 @@ namespace
         }
 
 
-        static gboolean window_delete_event(CtkWidget *, GdkEvent *, gpointer data)
+        static gboolean window_delete_event(CtkWidget *, CdkEvent *, gpointer data)
         {
             delete static_cast<GUI*>(data);
             return FALSE;

@@ -59,11 +59,11 @@ struct _GSMColorButtonClass
     void (*_ctk_reserved4) (void);
 };
 
-CtkWidget *gsm_color_button_new (const GdkRGBA * color, guint type);
-void gsm_color_button_set_color (GSMColorButton * color_button, const GdkRGBA * color);
+CtkWidget *gsm_color_button_new (const CdkRGBA * color, guint type);
+void gsm_color_button_set_color (GSMColorButton * color_button, const CdkRGBA * color);
 void gsm_color_button_set_fraction (GSMColorButton * color_button, const gdouble fraction);
 void gsm_color_button_set_cbtype (GSMColorButton * color_button, guint type);
-void gsm_color_button_get_color (GSMColorButton * color_button, GdkRGBA * color);
+void gsm_color_button_get_color (GSMColorButton * color_button, CdkRGBA * color);
 gdouble gsm_color_button_get_fraction (GSMColorButton * color_button);
 guint gsm_color_button_get_cbtype (GSMColorButton * color_button);
 void gsm_color_button_set_title (GSMColorButton * color_button, const gchar * title);

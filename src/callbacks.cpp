@@ -268,7 +268,7 @@ cb_app_exit (CtkAction *action, gpointer data)
 
 
 gboolean
-cb_app_delete (CtkWidget *window, GdkEventAny *event, gpointer data)
+cb_app_delete (CtkWidget *window, CdkEventAny *event, gpointer data)
 {
     ProcData * const procdata = static_cast<ProcData*>(data);
 
@@ -295,7 +295,7 @@ cb_end_process_button_pressed (CtkButton *button, gpointer data)
 static void change_settings_color(GSettings *settings, const char *key,
                    GSMColorButton *cp)
 {
-    GdkRGBA c;
+    CdkRGBA c;
     char *color;
 
     gsm_color_button_get_color(cp, &c);
@@ -396,7 +396,7 @@ cb_row_selected (CtkTreeSelection *selection, gpointer data)
 
 gboolean
 cb_tree_button_pressed (CtkWidget *widget,
-            GdkEventButton *event,
+            CdkEventButton *event,
             gpointer data)
 {
     ProcData * const procdata = static_cast<ProcData*>(data);

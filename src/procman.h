@@ -98,13 +98,13 @@ struct ProcConfig
     int         disks_update_interval;
     gint        whose_process;
     gint        current_tab;
-    GdkRGBA     cpu_color[GLIBTOP_NCPU];
-    GdkRGBA     mem_color;
-    GdkRGBA     swap_color;
-    GdkRGBA     net_in_color;
-    GdkRGBA     net_out_color;
-    GdkRGBA     bg_color;
-    GdkRGBA     frame_color;
+    CdkRGBA     cpu_color[GLIBTOP_NCPU];
+    CdkRGBA     mem_color;
+    CdkRGBA     swap_color;
+    CdkRGBA     net_in_color;
+    CdkRGBA     net_out_color;
+    CdkRGBA     bg_color;
+    CdkRGBA     frame_color;
     gint        num_cpus;
     bool solaris_mode;
     bool network_in_bits;
@@ -187,7 +187,7 @@ class ProcInfo
     ProcInfo(pid_t pid);
     ~ProcInfo();
     // adds one more ref to icon
-    void set_icon(Glib::RefPtr<Gdk::Pixbuf> icon);
+    void set_icon(Glib::RefPtr<Cdk::Pixbuf> icon);
     void set_user(guint uid);
     std::string lookup_user(guint uid);
 

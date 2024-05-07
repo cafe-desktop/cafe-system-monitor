@@ -39,7 +39,7 @@ void            cb_help_contents (CtkAction *action, gpointer data);
 void            cb_about (CtkAction *action, gpointer data);
 
 void            cb_app_exit (CtkAction *action, gpointer data);
-gboolean        cb_app_delete (CtkWidget *window, GdkEventAny *event, gpointer data);
+gboolean        cb_app_delete (CtkWidget *window, CdkEventAny *event, gpointer data);
 
 void            cb_end_process_button_pressed (CtkButton *button, gpointer data);
 void            cb_logout (CtkButton *button, gpointer data);
@@ -55,7 +55,7 @@ void            cb_net_out_color_changed (GSMColorButton *widget, gpointer user_
 void            cb_row_selected (CtkTreeSelection *selection, gpointer data);
 
 gboolean        cb_tree_popup_menu (CtkWidget *widget, gpointer data);
-gboolean        cb_tree_button_pressed (CtkWidget *widget, GdkEventButton *event,
+gboolean        cb_tree_button_pressed (CtkWidget *widget, CdkEventButton *event,
                                         gpointer data);
 
 

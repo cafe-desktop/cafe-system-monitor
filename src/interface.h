@@ -27,7 +27,7 @@
 void            create_main_window (ProcData *data);
 void            update_sensitivity (ProcData *data);
 void            block_priority_changed_handlers(ProcData *data, bool block);
-void            do_popup_menu(ProcData *data, GdkEventButton *event);
+void            do_popup_menu(ProcData *data, CdkEventButton *event);
 CtkWidget *     make_title_label (const char *text);
 
 #endif /* _PROCMAN_INTERFACE_H_ */

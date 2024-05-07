@@ -12,7 +12,7 @@ namespace procman
     {
       public:
         // returns 0 instead of raising an exception
-        Glib::RefPtr<Gdk::Pixbuf>
+        Glib::RefPtr<Cdk::Pixbuf>
             load_icon(const Glib::ustring& icon_name, int size) const;
 
         const IconThemeWrapper* operator->() const

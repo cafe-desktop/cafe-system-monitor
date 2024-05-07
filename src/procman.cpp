@@ -576,7 +576,7 @@ set_tab(CtkNotebook* notebook, gint tab, ProcData* procdata)
 static void
 cb_server (const gchar *msg, gpointer user_data)
 {
-    GdkWindow *window;
+    CdkWindow *window;
     ProcData *procdata;
     guint32 timestamp = 0;
 
