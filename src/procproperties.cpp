@@ -145,11 +145,11 @@ fill_proc_properties (GtkWidget *tree, ProcInfo *info)
         { NULL, NULL}
     };
 
-    store = GTK_LIST_STORE(ctk_tree_view_get_model(GTK_TREE_VIEW(tree)));
+    store = CTK_LIST_STORE(ctk_tree_view_get_model(CTK_TREE_VIEW(tree)));
     for (i = 0; proc_props[i].prop; i++) {
         GtkTreeIter iter;
 
-        if (!ctk_tree_model_iter_nth_child (GTK_TREE_MODEL(store), &iter, NULL, i)) {
+        if (!ctk_tree_model_iter_nth_child (CTK_TREE_MODEL(store), &iter, NULL, i)) {
             ctk_list_store_append(store, &iter);
             ctk_list_store_set(store, &iter, COL_PROP, gettext(proc_props[i].prop), -1);
         }
@@ -179,7 +179,7 @@ close_procprop_dialog (GtkDialog *dialog, gint id, gpointer data)
     timer = GPOINTER_TO_UINT (g_object_get_data (G_OBJECT (tree), "timer"));
     g_source_remove (timer);
 
-    ctk_widget_destroy (GTK_WIDGET (dialog));
+    ctk_widget_destroy (CTK_WIDGET (dialog));
 }
 
 static GtkWidget *
@@ -196,7 +196,7 @@ create_procproperties_tree (ProcData *procdata)
                                 G_TYPE_STRING	/* Value */
         );
 
-    tree = ctk_tree_view_new_with_model (GTK_TREE_MODEL (model));
+    tree = ctk_tree_view_new_with_model (CTK_TREE_MODEL (model));
     g_object_unref (G_OBJECT (model));
 
     for (i = 0; i < NUM_COLS; i++) {
@@ -207,10 +207,10 @@ create_procproperties_tree (ProcData *procdata)
                                                            "text", i,
                                                            NULL);
         ctk_tree_view_column_set_resizable (column, TRUE);
-        ctk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
+        ctk_tree_view_append_column (CTK_TREE_VIEW (tree), column);
     }
 
-    ctk_tree_view_set_headers_visible (GTK_TREE_VIEW(tree), FALSE);
+    ctk_tree_view_set_headers_visible (CTK_TREE_VIEW(tree), FALSE);
     fill_proc_properties(tree, procdata->selected_process);
 
     return tree;
@@ -222,7 +222,7 @@ procprop_timer (gpointer data)
     GtkWidget *tree = static_cast<GtkWidget*>(data);
     GtkTreeModel *model;
 
-    model = ctk_tree_view_get_model (GTK_TREE_VIEW (tree));
+    model = ctk_tree_view_get_model (CTK_TREE_VIEW (tree));
     g_assert(model);
 
     update_procproperties_dialog (tree);
@@ -250,43 +250,43 @@ create_single_procproperties_dialog (GtkTreeModel *model, GtkTreePath *path,
         return;
 
     procpropdialog = ctk_dialog_new_with_buttons (_("Process Properties"), NULL,
-                                                  GTK_DIALOG_DESTROY_WITH_PARENT,
-                                                  "ctk-close", GTK_RESPONSE_CLOSE,
+                                                  CTK_DIALOG_DESTROY_WITH_PARENT,
+                                                  "ctk-close", CTK_RESPONSE_CLOSE,
                                                   NULL);
-    ctk_window_set_resizable (GTK_WINDOW (procpropdialog), TRUE);
-    ctk_window_set_default_size (GTK_WINDOW (procpropdialog), 575, 400);
-    ctk_container_set_border_width (GTK_CONTAINER (procpropdialog), 5);
+    ctk_window_set_resizable (CTK_WINDOW (procpropdialog), TRUE);
+    ctk_window_set_default_size (CTK_WINDOW (procpropdialog), 575, 400);
+    ctk_container_set_border_width (CTK_CONTAINER (procpropdialog), 5);
 
-    vbox = ctk_dialog_get_content_area (GTK_DIALOG (procpropdialog));
-    ctk_box_set_spacing (GTK_BOX (vbox), 2);
-    ctk_container_set_border_width (GTK_CONTAINER (vbox), 5);
+    vbox = ctk_dialog_get_content_area (CTK_DIALOG (procpropdialog));
+    ctk_box_set_spacing (CTK_BOX (vbox), 2);
+    ctk_container_set_border_width (CTK_CONTAINER (vbox), 5);
 
-    dialog_vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    ctk_container_set_border_width (GTK_CONTAINER (dialog_vbox), 5);
-    ctk_box_pack_start (GTK_BOX (vbox), dialog_vbox, TRUE, TRUE, 0);
+    dialog_vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
+    ctk_container_set_border_width (CTK_CONTAINER (dialog_vbox), 5);
+    ctk_box_pack_start (CTK_BOX (vbox), dialog_vbox, TRUE, TRUE, 0);
 
-    cmd_hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-    ctk_box_pack_start (GTK_BOX (dialog_vbox), cmd_hbox, FALSE, FALSE, 0);
+    cmd_hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 12);
+    ctk_box_pack_start (CTK_BOX (dialog_vbox), cmd_hbox, FALSE, FALSE, 0);
 
     label = procman_make_label_for_mmaps_or_ofiles (
         _("Properties of process \"%s\" (PID %u):"),
         info->name,
         info->pid);
 
-    ctk_box_pack_start (GTK_BOX (cmd_hbox),label, FALSE, FALSE, 0);
+    ctk_box_pack_start (CTK_BOX (cmd_hbox),label, FALSE, FALSE, 0);
 
     scrolled = ctk_scrolled_window_new (NULL, NULL);
-    ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled),
-                                    GTK_POLICY_AUTOMATIC,
-                                    GTK_POLICY_AUTOMATIC);
-    ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled),
-                                         GTK_SHADOW_IN);
+    ctk_scrolled_window_set_policy (CTK_SCROLLED_WINDOW (scrolled),
+                                    CTK_POLICY_AUTOMATIC,
+                                    CTK_POLICY_AUTOMATIC);
+    ctk_scrolled_window_set_shadow_type (CTK_SCROLLED_WINDOW (scrolled),
+                                         CTK_SHADOW_IN);
 
     tree = create_procproperties_tree (procdata);
-    ctk_container_add (GTK_CONTAINER (scrolled), tree);
+    ctk_container_add (CTK_CONTAINER (scrolled), tree);
     g_object_set_data (G_OBJECT (tree), "selected_info", GUINT_TO_POINTER (info->pid));
 
-    ctk_box_pack_start (GTK_BOX (dialog_vbox), scrolled, TRUE, TRUE, 0);
+    ctk_box_pack_start (CTK_BOX (dialog_vbox), scrolled, TRUE, TRUE, 0);
     ctk_widget_show_all (scrolled);
 
     g_signal_connect (G_OBJECT (procpropdialog), "response",

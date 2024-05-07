@@ -534,7 +534,7 @@ msgstr "PID"
 msgid "Filename"
 msgstr "ഫയലിന്റെ പേര്"
 
-#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(CTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr "തുറന്ന ഫയലുക്കള്‍ക്ക് തിരയുക"

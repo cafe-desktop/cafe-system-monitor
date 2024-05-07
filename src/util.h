@@ -110,7 +110,7 @@ namespace procman
         ctk_tree_model_get(model, iter, column, &current_value, -1);
 
         if (current_value != new_value)
-            ctk_tree_store_set(GTK_TREE_STORE(model), iter, column, new_value, -1);
+            ctk_tree_store_set(CTK_TREE_STORE(model), iter, column, new_value, -1);
     }
 
     // undefined

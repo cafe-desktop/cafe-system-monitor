@@ -532,7 +532,7 @@ msgstr "པི་ཨའི་ཌི་"
 msgid "Filename"
 msgstr "ཡིག་སྣོད་མིང་།"
 
-#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(CTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr "ཁ་ཕྱེ་ཡོད་པའི་ཡིག་སྣོད་ཚུ་གི་དོན་ལུ་ འཚོལ་ཞིབ་འབད་"

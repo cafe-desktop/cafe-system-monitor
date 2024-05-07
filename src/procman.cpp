@@ -390,18 +390,18 @@ procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child
 
     GSettings *pt_settings = g_settings_get_child (settings, child_schema);
 
-    model = ctk_tree_view_get_model (GTK_TREE_VIEW (tree));
+    model = ctk_tree_view_get_model (CTK_TREE_VIEW (tree));
 
     sort_col = g_settings_get_int (pt_settings, "sort-col");
 
     order = static_cast<GtkSortType>(g_settings_get_int (pt_settings, "sort-order"));
 
     if (sort_col != -1)
-        ctk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (model),
+        ctk_tree_sortable_set_sort_column_id (CTK_TREE_SORTABLE (model),
                                               sort_col,
                                               order);
 
-    columns = ctk_tree_view_get_columns (GTK_TREE_VIEW (tree));
+    columns = ctk_tree_view_get_columns (CTK_TREE_VIEW (tree));
 
     if (g_strcmp0(child_schema, "proctree") == 0 ||
         g_strcmp0(child_schema, "disktreenew") == 0)
@@ -425,7 +425,7 @@ procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child
             visible = g_settings_get_boolean (pt_settings, key);
             g_free (key);
 
-            column = ctk_tree_view_get_column (GTK_TREE_VIEW (tree), id);
+            column = ctk_tree_view_get_column (CTK_TREE_VIEW (tree), id);
             if (column == NULL)
                 continue;
 
@@ -449,7 +449,7 @@ procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child
         while (g_variant_iter_loop (&iter, "i", &sortIndex))
         order = g_slist_append(order, GINT_TO_POINTER(sortIndex));
 
-        proctable_set_columns_order(GTK_TREE_VIEW(tree), order);
+        proctable_set_columns_order(CTK_TREE_VIEW(tree), order);
 
         g_variant_unref(value);
         g_slist_free(order);
@@ -476,14 +476,14 @@ procman_save_tree_state (GSettings *settings, GtkWidget *tree, const gchar *chil
 
     GSettings *pt_settings = g_settings_get_child (settings, child_schema);
 
-    model = ctk_tree_view_get_model (GTK_TREE_VIEW (tree));
-    if (ctk_tree_sortable_get_sort_column_id (GTK_TREE_SORTABLE (model), &sort_col,
+    model = ctk_tree_view_get_model (CTK_TREE_VIEW (tree));
+    if (ctk_tree_sortable_get_sort_column_id (CTK_TREE_SORTABLE (model), &sort_col,
                                               &order)) {
         g_settings_set_int (pt_settings, "sort-col", sort_col);
         g_settings_set_int (pt_settings, "sort-order", order);
     }
 
-    columns = ctk_tree_view_get_columns (GTK_TREE_VIEW (tree));
+    columns = ctk_tree_view_get_columns (CTK_TREE_VIEW (tree));
 
     if (g_strcmp0(child_schema, "proctree") == 0 ||
         g_strcmp0(child_schema, "disktreenew") == 0)
@@ -493,7 +493,7 @@ procman_save_tree_state (GSettings *settings, GtkWidget *tree, const gchar *chil
         GVariantBuilder *builder;
         GVariant *order_variant;
 
-        order = proctable_get_columns_order(GTK_TREE_VIEW(tree));
+        order = proctable_get_columns_order(CTK_TREE_VIEW(tree));
 
         builder = g_variant_builder_new (G_VARIANT_TYPE ("ai"));
 
@@ -523,7 +523,7 @@ procman_save_config (ProcData *data)
         data->config.width = gdk_window_get_width(ctk_widget_get_window(data->app));
         data->config.height = gdk_window_get_height(ctk_widget_get_window(data->app));
 
-        ctk_window_get_position(GTK_WINDOW(data->app), &data->config.xpos, &data->config.ypos);
+        ctk_window_get_position(CTK_WINDOW(data->app), &data->config.xpos, &data->config.ypos);
 
         g_settings_set (settings, "window-state", "(iiii)",
                         data->config.width, data->config.height,
@@ -589,16 +589,16 @@ cb_server (const gchar *msg, gpointer user_data)
     if (msg != NULL) {
         if (procman::SHOW_SYSTEM_TAB_CMD == msg) {
             procman_debug("Changing to PROCMAN_TAB_SYSINFO via bacon message");
-            set_tab(GTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_SYSINFO, procdata);
+            set_tab(CTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_SYSINFO, procdata);
         } else if (procman::SHOW_PROCESSES_TAB_CMD == msg) {
             procman_debug("Changing to PROCMAN_TAB_PROCESSES via bacon message");
-            set_tab(GTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_PROCESSES, procdata);
+            set_tab(CTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_PROCESSES, procdata);
         } else if (procman::SHOW_RESOURCES_TAB_CMD == msg) {
             procman_debug("Changing to PROCMAN_TAB_RESOURCES via bacon message");
-            set_tab(GTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_RESOURCES, procdata);
+            set_tab(CTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_RESOURCES, procdata);
         } else if (procman::SHOW_FILE_SYSTEMS_TAB_CMD == msg) {
             procman_debug("Changing to PROCMAN_TAB_DISKS via bacon message");
-            set_tab(GTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_DISKS, procdata);
+            set_tab(CTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_DISKS, procdata);
         }
     }
 
@@ -607,7 +607,7 @@ cb_server (const gchar *msg, gpointer user_data)
 
     gdk_x11_window_set_user_time (window, timestamp);
 
-    ctk_window_present (GTK_WINDOW(procdata->app));
+    ctk_window_present (CTK_WINDOW(procdata->app));
 }
 
 
@@ -733,16 +733,16 @@ main (int argc, char *argv[])
 
     if (option_group.show_system_tab) {
         procman_debug("Starting with PROCMAN_TAB_SYSINFO by commandline request");
-        set_tab(GTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_SYSINFO, procdata);
+        set_tab(CTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_SYSINFO, procdata);
     } else if (option_group.show_processes_tab) {
         procman_debug("Starting with PROCMAN_TAB_PROCESSES by commandline request");
-        set_tab(GTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_PROCESSES, procdata);
+        set_tab(CTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_PROCESSES, procdata);
     } else if (option_group.show_resources_tab) {
         procman_debug("Starting with PROCMAN_TAB_RESOURCES by commandline request");
-        set_tab(GTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_RESOURCES, procdata);
+        set_tab(CTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_RESOURCES, procdata);
     } else if (option_group.show_file_systems_tab) {
         procman_debug("Starting with PROCMAN_TAB_DISKS by commandline request");
-        set_tab(GTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_DISKS, procdata);
+        set_tab(CTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_DISKS, procdata);
     }
 
     ctk_widget_set_name(procdata->app, "cafe-system-monitor");

@@ -114,8 +114,8 @@ add_new_files (gpointer key, gpointer value, gpointer data)
         object = g_strdup("");
     }
 
-    ctk_list_store_insert (GTK_LIST_STORE (model), &row, 0);
-    ctk_list_store_set (GTK_LIST_STORE (model), &row,
+    ctk_list_store_insert (CTK_LIST_STORE (model), &row, 0);
+    ctk_list_store_set (CTK_LIST_STORE (model), &row,
                         COL_FD, openfiles->fd,
                         COL_TYPE, get_type_name(static_cast<glibtop_file_type>(openfiles->type)),
                         COL_OBJECT, object,
@@ -180,7 +180,7 @@ update_openfiles_dialog (GtkWidget *tree)
     if (!info)
         return;
 
-    model = ctk_tree_view_get_model (GTK_TREE_VIEW (tree));
+    model = ctk_tree_view_get_model (CTK_TREE_VIEW (tree));
 
     openfiles = glibtop_get_proc_open_files (&procmap, info->pid);
 
@@ -204,7 +204,7 @@ update_openfiles_dialog (GtkWidget *tree)
                             COL_OPENFILE_STRUCT, &openfiles,
                             -1);
 
-        ctk_list_store_remove (GTK_LIST_STORE (model), iter);
+        ctk_list_store_remove (CTK_LIST_STORE (model), iter);
         ctk_tree_iter_free (iter);
         g_free (openfiles);
 
@@ -229,7 +229,7 @@ close_openfiles_dialog (GtkDialog *dialog, gint id, gpointer data)
     timer = GPOINTER_TO_UINT (g_object_get_data (G_OBJECT (tree), "timer"));
     g_source_remove (timer);
 
-    ctk_widget_destroy (GTK_WIDGET (dialog));
+    ctk_widget_destroy (CTK_WIDGET (dialog));
 
     return ;
 }
@@ -260,7 +260,7 @@ create_openfiles_tree (ProcData *procdata)
                                 G_TYPE_POINTER    /* open_files_entry */
         );
 
-    tree = ctk_tree_view_new_with_model (GTK_TREE_MODEL (model));
+    tree = ctk_tree_view_new_with_model (CTK_TREE_MODEL (model));
     g_object_unref (G_OBJECT (model));
 
     for (i = 0; i < NUM_OPENFILES_COL-1; i++) {
@@ -278,7 +278,7 @@ create_openfiles_tree (ProcData *procdata)
                                                            NULL);
         ctk_tree_view_column_set_sort_column_id (column, i);
         ctk_tree_view_column_set_resizable (column, TRUE);
-        ctk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
+        ctk_tree_view_append_column (CTK_TREE_VIEW (tree), column);
     }
 
     procman_get_tree_state (procdata->settings, tree, procman::settings::open_files_tree_prefix.c_str());
@@ -293,7 +293,7 @@ openfiles_timer (gpointer data)
     GtkWidget *tree = static_cast<GtkWidget*>(data);
     GtkTreeModel *model;
 
-    model = ctk_tree_view_get_model (GTK_TREE_VIEW (tree));
+    model = ctk_tree_view_get_model (CTK_TREE_VIEW (tree));
     g_assert(model);
 
     update_openfiles_dialog (tree);
@@ -322,23 +322,23 @@ create_single_openfiles_dialog (GtkTreeModel *model, GtkTreePath *path,
         return;
 
     openfilesdialog = ctk_dialog_new_with_buttons (_("Open Files"), NULL,
-                                                   GTK_DIALOG_DESTROY_WITH_PARENT,
-                                                   "ctk-close", GTK_RESPONSE_CLOSE,
+                                                   CTK_DIALOG_DESTROY_WITH_PARENT,
+                                                   "ctk-close", CTK_RESPONSE_CLOSE,
                                                    NULL);
-    ctk_window_set_resizable (GTK_WINDOW (openfilesdialog), TRUE);
-    ctk_window_set_default_size (GTK_WINDOW (openfilesdialog), 575, 400);
-    ctk_container_set_border_width (GTK_CONTAINER (openfilesdialog), 5);
+    ctk_window_set_resizable (CTK_WINDOW (openfilesdialog), TRUE);
+    ctk_window_set_default_size (CTK_WINDOW (openfilesdialog), 575, 400);
+    ctk_container_set_border_width (CTK_CONTAINER (openfilesdialog), 5);
 
-    vbox = ctk_dialog_get_content_area (GTK_DIALOG (openfilesdialog));
-    ctk_box_set_spacing (GTK_BOX (vbox), 2);
-    ctk_container_set_border_width (GTK_CONTAINER (vbox), 5);
+    vbox = ctk_dialog_get_content_area (CTK_DIALOG (openfilesdialog));
+    ctk_box_set_spacing (CTK_BOX (vbox), 2);
+    ctk_container_set_border_width (CTK_CONTAINER (vbox), 5);
 
-    dialog_vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    ctk_container_set_border_width (GTK_CONTAINER (dialog_vbox), 5);
-    ctk_box_pack_start (GTK_BOX (vbox), dialog_vbox, TRUE, TRUE, 0);
+    dialog_vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
+    ctk_container_set_border_width (CTK_CONTAINER (dialog_vbox), 5);
+    ctk_box_pack_start (CTK_BOX (vbox), dialog_vbox, TRUE, TRUE, 0);
 
-    cmd_hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-    ctk_box_pack_start (GTK_BOX (dialog_vbox), cmd_hbox, FALSE, FALSE, 0);
+    cmd_hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 12);
+    ctk_box_pack_start (CTK_BOX (dialog_vbox), cmd_hbox, FALSE, FALSE, 0);
 
 
     label = procman_make_label_for_mmaps_or_ofiles (
@@ -346,22 +346,22 @@ create_single_openfiles_dialog (GtkTreeModel *model, GtkTreePath *path,
         info->name,
         info->pid);
 
-    ctk_box_pack_start (GTK_BOX (cmd_hbox),label, FALSE, FALSE, 0);
+    ctk_box_pack_start (CTK_BOX (cmd_hbox),label, FALSE, FALSE, 0);
 
 
     scrolled = ctk_scrolled_window_new (NULL, NULL);
-    ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled),
-                    GTK_POLICY_AUTOMATIC,
-                    GTK_POLICY_AUTOMATIC);
-    ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled),
-                                         GTK_SHADOW_IN);
+    ctk_scrolled_window_set_policy (CTK_SCROLLED_WINDOW (scrolled),
+                    CTK_POLICY_AUTOMATIC,
+                    CTK_POLICY_AUTOMATIC);
+    ctk_scrolled_window_set_shadow_type (CTK_SCROLLED_WINDOW (scrolled),
+                                         CTK_SHADOW_IN);
 
     tree = create_openfiles_tree (procdata);
-    ctk_container_add (GTK_CONTAINER (scrolled), tree);
+    ctk_container_add (CTK_CONTAINER (scrolled), tree);
     g_object_set_data (G_OBJECT (tree), "selected_info", GUINT_TO_POINTER (info->pid));
     g_object_set_data (G_OBJECT (tree), "settings", procdata->settings);
 
-    ctk_box_pack_start (GTK_BOX (dialog_vbox), scrolled, TRUE, TRUE, 0);
+    ctk_box_pack_start (CTK_BOX (dialog_vbox), scrolled, TRUE, TRUE, 0);
     ctk_widget_show_all (scrolled);
 
     g_signal_connect (G_OBJECT (openfilesdialog), "response",

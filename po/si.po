@@ -530,7 +530,7 @@ msgstr "PID"
 msgid "Filename"
 msgstr "ගොනු නම"
 
-#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(CTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr "විවෘත කළ ගොනු සඳහා සොයන්න"

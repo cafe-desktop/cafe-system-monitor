@@ -152,7 +152,7 @@ procman_make_label_for_mmaps_or_ofiles(const char *format,
     name = mnemonic_safe_process_name (process_name);
     title = g_strdup_printf(format, name, pid);
     label = ctk_label_new_with_mnemonic (title);
-    ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+    ctk_label_set_xalign (CTK_LABEL (label), 0.0);
 
     g_free (title);
     g_free (name);
@@ -632,7 +632,7 @@ namespace procman
         ctk_tree_model_get(model, iter, column, &current_value, -1);
 
         if (g_strcmp0(current_value, new_value) != 0)
-            ctk_tree_store_set(GTK_TREE_STORE(model), iter, column, new_value, -1);
+            ctk_tree_store_set(CTK_TREE_STORE(model), iter, column, new_value, -1);
 
         g_free(current_value);
     }

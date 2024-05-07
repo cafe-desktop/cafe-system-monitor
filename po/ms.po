@@ -550,7 +550,7 @@ msgstr "PID"
 msgid "Filename"
 msgstr "Nama fail"
 
-#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(CTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr "Gelintar untuk Fail Terbuka"

@@ -224,7 +224,7 @@ cb_about (GtkAction *action, gpointer data)
     license_trans = g_strjoin ("\n\n", _(license[0]), _(license[1]), _(license[2]), NULL);
 
     ctk_show_about_dialog (
-        GTK_WINDOW (procdata->app),
+        CTK_WINDOW (procdata->app),
         "program-name",       _("System Monitor"),
         "version",            VERSION,
         "title",              _("About System Monitor"),
@@ -384,7 +384,7 @@ cb_row_selected (GtkTreeSelection *selection, gpointer data)
         else
             value = VERY_LOW_PRIORITY;
 
-        GtkRadioAction* normal = GTK_RADIO_ACTION(ctk_action_group_get_action(procdata->action_group, "Normal"));
+        GtkRadioAction* normal = CTK_RADIO_ACTION(ctk_action_group_get_action(procdata->action_group, "Normal"));
         block_priority_changed_handlers(procdata, TRUE);
         ctk_radio_action_set_current_value(normal, value);
         block_priority_changed_handlers(procdata, FALSE);

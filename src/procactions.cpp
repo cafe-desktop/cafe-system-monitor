@@ -79,12 +79,12 @@ renice_single_process (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter
 
     dialog = ctk_message_dialog_new (
         NULL,
-        GTK_DIALOG_DESTROY_WITH_PARENT,
-        GTK_MESSAGE_ERROR,
-        GTK_BUTTONS_OK,
+        CTK_DIALOG_DESTROY_WITH_PARENT,
+        CTK_MESSAGE_ERROR,
+        CTK_BUTTONS_OK,
         "%s", error_msg);
 
-    ctk_dialog_run (GTK_DIALOG (dialog));
+    ctk_dialog_run (CTK_DIALOG (dialog));
     ctk_widget_destroy (dialog);
     g_free (error_msg);
 }
@@ -159,12 +159,12 @@ kill_single_process (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, 
 
     dialog = ctk_message_dialog_new (
         NULL,
-        GTK_DIALOG_DESTROY_WITH_PARENT,
-        GTK_MESSAGE_ERROR,
-        GTK_BUTTONS_OK,
+        CTK_DIALOG_DESTROY_WITH_PARENT,
+        CTK_MESSAGE_ERROR,
+        CTK_BUTTONS_OK,
         "%s", error_msg);
 
-    ctk_dialog_run (GTK_DIALOG (dialog));
+    ctk_dialog_run (CTK_DIALOG (dialog));
     ctk_widget_destroy (dialog);
     g_free (error_msg);
 }

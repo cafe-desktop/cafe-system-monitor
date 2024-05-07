@@ -165,7 +165,7 @@ remove_old_disks(GtkTreeModel *model, const glibtop_mountentry *entries, guint n
         g_free(dir);
 
         if (!found) {
-            if (!ctk_list_store_remove(GTK_LIST_STORE(model), &iter))
+            if (!ctk_list_store_remove(CTK_LIST_STORE(model), &iter))
                 break;
             else
                 continue;
@@ -191,7 +191,7 @@ add_disk(GtkListStore *list, const glibtop_mountentry *entry, bool show_all_fs)
     glibtop_get_fsusage(&usage, entry->mountdir);
 
     if (not show_all_fs and usage.blocks == 0) {
-        if (find_disk_in_model(GTK_TREE_MODEL(list), entry->mountdir, &iter))
+        if (find_disk_in_model(CTK_TREE_MODEL(list), entry->mountdir, &iter))
             ctk_list_store_remove(list, &iter);
         return;
     }
@@ -204,7 +204,7 @@ add_disk(GtkListStore *list, const glibtop_mountentry *entry, bool show_all_fs)
        still need to update all the fields.
        This makes selection persistent.
     */
-    if (!find_disk_in_model(GTK_TREE_MODEL(list), entry->mountdir, &iter))
+    if (!find_disk_in_model(CTK_TREE_MODEL(list), entry->mountdir, &iter))
         ctk_list_store_append(list, &iter);
 
     ctk_list_store_set(list, &iter,
@@ -232,11 +232,11 @@ cb_update_disks(gpointer data)
     glibtop_mountlist mountlist;
     guint i;
 
-    list = GTK_LIST_STORE(ctk_tree_view_get_model(GTK_TREE_VIEW(procdata->disk_list)));
+    list = CTK_LIST_STORE(ctk_tree_view_get_model(CTK_TREE_VIEW(procdata->disk_list)));
 
     entries = glibtop_get_mountlist(&mountlist, procdata->config.show_all_fs);
 
-    remove_old_disks(GTK_TREE_MODEL(list), entries, mountlist.number);
+    remove_old_disks(CTK_TREE_MODEL(list), entries, mountlist.number);
 
     for (i = 0; i < mountlist.number; i++)
         add_disk(list, &entries[i], procdata->config.show_all_fs);
@@ -253,7 +253,7 @@ cb_disk_columns_changed(GtkTreeView *treeview, gpointer user_data)
     ProcData * const procdata = static_cast<ProcData*>(user_data);
 
     procman_save_tree_state(procdata->settings,
-                            GTK_WIDGET(treeview),
+                            CTK_WIDGET(treeview),
                             "disktreenew");
 }
 
@@ -322,7 +322,7 @@ save_column_width (gpointer data)
 static void
 cb_disks_column_resized(GtkWidget *widget, GParamSpec *pspec, gpointer data)
 {
-    current_column = GTK_TREE_VIEW_COLUMN(widget);
+    current_column = CTK_TREE_VIEW_COLUMN(widget);
 
     if (timeout_id)
         g_source_remove (timeout_id);
@@ -351,18 +351,18 @@ create_disk_view(ProcData *procdata)
         N_("Used")
     };
 
-    disk_box = ctk_box_new(GTK_ORIENTATION_VERTICAL, 6);
+    disk_box = ctk_box_new(CTK_ORIENTATION_VERTICAL, 6);
 
-    ctk_container_set_border_width(GTK_CONTAINER(disk_box), 12);
+    ctk_container_set_border_width(CTK_CONTAINER(disk_box), 12);
 
     scrolled = ctk_scrolled_window_new(NULL, NULL);
-    ctk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled),
-                                   GTK_POLICY_AUTOMATIC,
-                                   GTK_POLICY_AUTOMATIC);
-    ctk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(scrolled),
-                                        GTK_SHADOW_IN);
+    ctk_scrolled_window_set_policy(CTK_SCROLLED_WINDOW(scrolled),
+                                   CTK_POLICY_AUTOMATIC,
+                                   CTK_POLICY_AUTOMATIC);
+    ctk_scrolled_window_set_shadow_type(CTK_SCROLLED_WINDOW(scrolled),
+                                        CTK_SHADOW_IN);
 
-    ctk_box_pack_start(GTK_BOX(disk_box), scrolled, TRUE, TRUE, 0);
+    ctk_box_pack_start(CTK_BOX(disk_box), scrolled, TRUE, TRUE, 0);
 
     model = ctk_list_store_new(DISK_N_COLUMNS,             /* n columns */
                                G_TYPE_STRING,              /* DISK_DEVICE */
@@ -376,10 +376,10 @@ create_disk_view(ProcData *procdata)
                                G_TYPE_INT                  /* DISK_USED_PERCENTAGE */
         );
 
-    disk_tree = ctk_tree_view_new_with_model(GTK_TREE_MODEL(model));
+    disk_tree = ctk_tree_view_new_with_model(CTK_TREE_MODEL(model));
     g_signal_connect(G_OBJECT(disk_tree), "row-activated", G_CALLBACK(open_dir), NULL);
     procdata->disk_list = disk_tree;
-    ctk_container_add(GTK_CONTAINER(scrolled), disk_tree);
+    ctk_container_add(CTK_CONTAINER(scrolled), disk_tree);
     g_object_unref(G_OBJECT(model));
 
     /* icon + device */
@@ -399,9 +399,9 @@ create_disk_view(ProcData *procdata)
     ctk_tree_view_column_set_reorderable(col, TRUE);
     ctk_tree_view_column_set_resizable(col, TRUE);
     ctk_tree_view_column_set_min_width (col, 30);
-    ctk_tree_view_column_set_sizing(col, GTK_TREE_VIEW_COLUMN_FIXED);
+    ctk_tree_view_column_set_sizing(col, CTK_TREE_VIEW_COLUMN_FIXED);
     g_signal_connect(G_OBJECT(col), "notify::fixed-width", G_CALLBACK(cb_disks_column_resized), procdata->settings);
-    ctk_tree_view_append_column(GTK_TREE_VIEW(disk_tree), col);
+    ctk_tree_view_append_column(CTK_TREE_VIEW(disk_tree), col);
 
     /* sizes - used */
 
@@ -414,9 +414,9 @@ create_disk_view(ProcData *procdata)
         ctk_tree_view_column_set_reorderable(col, TRUE);
         ctk_tree_view_column_set_resizable(col, TRUE);
         ctk_tree_view_column_set_min_width (col, 30);
-        ctk_tree_view_column_set_sizing(col, GTK_TREE_VIEW_COLUMN_FIXED);
+        ctk_tree_view_column_set_sizing(col, CTK_TREE_VIEW_COLUMN_FIXED);
         g_signal_connect(G_OBJECT(col), "notify::fixed-width", G_CALLBACK(cb_disks_column_resized), procdata->settings);
-        ctk_tree_view_append_column(GTK_TREE_VIEW(disk_tree), col);
+        ctk_tree_view_append_column(CTK_TREE_VIEW(disk_tree), col);
 
         switch (i) {
             case DISK_TOTAL:
@@ -457,9 +457,9 @@ create_disk_view(ProcData *procdata)
     ctk_tree_view_column_set_reorderable(col, TRUE);
     ctk_tree_view_column_set_resizable(col, TRUE);
     ctk_tree_view_column_set_min_width (col, 150);
-    ctk_tree_view_column_set_sizing(col, GTK_TREE_VIEW_COLUMN_FIXED);
+    ctk_tree_view_column_set_sizing(col, CTK_TREE_VIEW_COLUMN_FIXED);
     g_signal_connect(G_OBJECT(col), "notify::fixed-width", G_CALLBACK(cb_disks_column_resized), procdata->settings);
-    ctk_tree_view_append_column(GTK_TREE_VIEW(disk_tree), col);
+    ctk_tree_view_append_column(CTK_TREE_VIEW(disk_tree), col);
 
     /* numeric sort */
 

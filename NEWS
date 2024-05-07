@@ -81,7 +81,7 @@
 ### cafe-system-monitor 1.20.0
 
   * Translations update
-  * require GTK+ 3.22 and GLib 2.50
+  * require CTK+ 3.22 and GLib 2.50
   * Fix typo in NEWS: alignment instead aligment
   * update copyright year to 2018
   * procman.cpp: Fix build warning: argument 1 null where non-null expected
@@ -110,7 +110,7 @@
     to make generating release announcements easier
   * Add pkexec support for using kill and renice on other users'
     processes, and try using it before trying gksu
-  * Fix some GTK+ deprecations
+  * Fix some CTK+ deprecations
   * Translations update
 
 ### cafe-system-monitor 1.16.0
@@ -124,10 +124,10 @@
 
 ### cafe-system-monitor 1.14.0
 
-  * Move to GTK+3, drop GTK+2 code and --with-ctk build option
-  * Set minimum required GTK+ version to 3.14, drop some deprecated
+  * Move to CTK+3, drop CTK+2 code and --with-ctk build option
+  * Set minimum required CTK+ version to 3.14, drop some deprecated
     code
-  * Run gksu binary instead of loading libgksu2.so (which is GTK+2
+  * Run gksu binary instead of loading libgksu2.so (which is CTK+2
     only)
   * Drop CafeConf migration script
   * Main window: save maximized state in gsettings on exit and load
@@ -138,7 +138,7 @@
   * Process table: show running state when CPU time changes
   * Change graph grid line colors and pattern
   * Draw the background of graphs explicitly to avoid issues with
-    GTK+ 3.20
+    CTK+ 3.20
   * Fix incorrect icons for some known apps like marco or vino
   * Some more fixes and cleanups
   * Translations update
@@ -157,9 +157,9 @@
   * Process table: delay saving column widths (avoids eating CPU
     and slowdowns when resizing columns)
   * Process table: force icon size (fixes huge cafe-sensors-applet
-    icon with recent GTK+3 versions)
+    icon with recent CTK+3 versions)
   * Disks: set minimum width for device column (fixes crash when
-    resizing it to zero with recent GTK+3 versions)
+    resizing it to zero with recent CTK+3 versions)
   * Some fixes and adjustments
 
 ### cafe-system-monitor 1.12.0
@@ -187,6 +187,6 @@
 
 ### cafe-system-monitor 1.8.0
 
-  * Add GTK3 support
+  * Add CTK3 support
   * Use libwnck instead of libcafewnck
   * Use yelp-tools instead of cafe-doc-utils

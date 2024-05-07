@@ -529,7 +529,7 @@ msgstr ""
 msgid "Filename"
 msgstr "Birem adı"
 
-#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(CTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr ""

@@ -531,7 +531,7 @@ msgstr "పిఐడి"
 msgid "Filename"
 msgstr "దస్త్రనామము"
 
-#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(CTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr "తెరచిన దస్త్రముల కొరకు వెతుకు"

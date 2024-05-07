@@ -558,7 +558,7 @@ msgstr "PID"
 msgid "Filename"
 msgstr "Filnavn"
 
-#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(CTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr "Søg efter åbne filer"

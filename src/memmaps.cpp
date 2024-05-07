@@ -183,7 +183,7 @@ update_row(GtkTreeModel *model, GtkTreeIter &row, const MemMapsData &mm, const g
     vmoffset = mm.format(memmaps->offset);
     device   = mm.devices.get(memmaps->device);
 
-    ctk_list_store_set (GTK_LIST_STORE (model), &row,
+    ctk_list_store_set (CTK_LIST_STORE (model), &row,
                         MMAP_COL_FILENAME, filename.c_str(),
                         MMAP_COL_VMSTART, vmstart.c_str(),
                         MMAP_COL_VMEND, vmend.c_str(),
@@ -215,7 +215,7 @@ update_memmaps_dialog (MemMapsData *mmdata)
 
     mmdata->format.set(memmaps[procmap.number - 1]);
 
-    model = ctk_tree_view_get_model (GTK_TREE_VIEW (mmdata->tree));
+    model = ctk_tree_view_get_model (CTK_TREE_VIEW (mmdata->tree));
 
     GtkTreeIter iter;
 
@@ -253,7 +253,7 @@ update_memmaps_dialog (MemMapsData *mmdata)
                 if (!ctk_tree_model_iter_next(model, &iter))
                     break;
             } else {
-                if (!ctk_list_store_remove(GTK_LIST_STORE(model), &iter))
+                if (!ctk_list_store_remove(CTK_LIST_STORE(model), &iter))
                     break;
             }
         }
@@ -272,7 +272,7 @@ update_memmaps_dialog (MemMapsData *mmdata)
         if (it != iter_cache.end())
             iter = it->second;
         else
-            ctk_list_store_prepend(GTK_LIST_STORE(model), &iter);
+            ctk_list_store_prepend(CTK_LIST_STORE(model), &iter);
 
         update_row(model, iter, *mmdata, &memmaps[i]);
     }
@@ -290,7 +290,7 @@ dialog_response (GtkDialog * dialog, gint response_id, gpointer data)
     g_source_remove (mmdata->timer);
 
     delete mmdata;
-    ctk_widget_destroy (GTK_WIDGET (dialog));
+    ctk_widget_destroy (CTK_WIDGET (dialog));
 }
 
 
@@ -343,7 +343,7 @@ create_memmapsdata (ProcData *procdata)
                                 G_TYPE_UINT64 /* MMAP_COL_INODE     */
                                 );
 
-    tree = ctk_tree_view_new_with_model (GTK_TREE_MODEL (model));
+    tree = ctk_tree_view_new_with_model (CTK_TREE_MODEL (model));
     g_object_unref (G_OBJECT (model));
 
     for (i = 0; i < MMAP_COL_MAX; i++) {
@@ -357,7 +357,7 @@ create_memmapsdata (ProcData *procdata)
         ctk_tree_view_column_set_resizable(col, TRUE);
         ctk_tree_view_column_set_sort_column_id(col, i);
         ctk_tree_view_column_set_reorderable(col, TRUE);
-        ctk_tree_view_append_column(GTK_TREE_VIEW(tree), col);
+        ctk_tree_view_append_column(CTK_TREE_VIEW(tree), col);
 
         switch (i) {
             case MMAP_COL_PRIVATE_CLEAN:
@@ -400,7 +400,7 @@ memmaps_timer (gpointer data)
     MemMapsData * const mmdata = static_cast<MemMapsData*>(data);
     GtkTreeModel *model;
 
-    model = ctk_tree_view_get_model (GTK_TREE_VIEW (mmdata->tree));
+    model = ctk_tree_view_get_model (CTK_TREE_VIEW (mmdata->tree));
     g_assert(model);
 
     update_memmaps_dialog (mmdata);
@@ -429,36 +429,36 @@ create_single_memmaps_dialog (GtkTreeModel *model, GtkTreePath *path,
     mmdata = create_memmapsdata (procdata);
     mmdata->info = info;
 
-    memmapsdialog = ctk_dialog_new_with_buttons (_("Memory Maps"), GTK_WINDOW (procdata->app),
-                                                 GTK_DIALOG_DESTROY_WITH_PARENT,
-                                                 "ctk-close", GTK_RESPONSE_CLOSE,
+    memmapsdialog = ctk_dialog_new_with_buttons (_("Memory Maps"), CTK_WINDOW (procdata->app),
+                                                 CTK_DIALOG_DESTROY_WITH_PARENT,
+                                                 "ctk-close", CTK_RESPONSE_CLOSE,
                                                  NULL);
-    ctk_window_set_resizable(GTK_WINDOW(memmapsdialog), TRUE);
-    ctk_window_set_default_size(GTK_WINDOW(memmapsdialog), 620, 400);
-    ctk_container_set_border_width(GTK_CONTAINER(memmapsdialog), 5);
+    ctk_window_set_resizable(CTK_WINDOW(memmapsdialog), TRUE);
+    ctk_window_set_default_size(CTK_WINDOW(memmapsdialog), 620, 400);
+    ctk_container_set_border_width(CTK_CONTAINER(memmapsdialog), 5);
 
-    dialog_vbox = ctk_dialog_get_content_area (GTK_DIALOG(memmapsdialog));
-    ctk_container_set_border_width (GTK_CONTAINER (dialog_vbox), 5);
+    dialog_vbox = ctk_dialog_get_content_area (CTK_DIALOG(memmapsdialog));
+    ctk_container_set_border_width (CTK_CONTAINER (dialog_vbox), 5);
 
     label = procman_make_label_for_mmaps_or_ofiles (
         _("_Memory maps for process \"%s\" (PID %u):"),
         info->name,
         info->pid);
 
-    ctk_box_pack_start (GTK_BOX (dialog_vbox), label, FALSE, TRUE, 0);
+    ctk_box_pack_start (CTK_BOX (dialog_vbox), label, FALSE, TRUE, 0);
 
 
     scrolled = ctk_scrolled_window_new (NULL, NULL);
-    ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled),
-                                    GTK_POLICY_AUTOMATIC,
-                                    GTK_POLICY_AUTOMATIC);
-    ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled),
-                                         GTK_SHADOW_IN);
+    ctk_scrolled_window_set_policy (CTK_SCROLLED_WINDOW (scrolled),
+                                    CTK_POLICY_AUTOMATIC,
+                                    CTK_POLICY_AUTOMATIC);
+    ctk_scrolled_window_set_shadow_type (CTK_SCROLLED_WINDOW (scrolled),
+                                         CTK_SHADOW_IN);
 
-    ctk_container_add (GTK_CONTAINER (scrolled), mmdata->tree);
-    ctk_label_set_mnemonic_widget (GTK_LABEL (label), mmdata->tree);
+    ctk_container_add (CTK_CONTAINER (scrolled), mmdata->tree);
+    ctk_label_set_mnemonic_widget (CTK_LABEL (label), mmdata->tree);
 
-    ctk_box_pack_start (GTK_BOX (dialog_vbox), scrolled, TRUE, TRUE, 0);
+    ctk_box_pack_start (CTK_BOX (dialog_vbox), scrolled, TRUE, TRUE, 0);
 
     g_signal_connect(G_OBJECT(memmapsdialog), "response",
                               G_CALLBACK(dialog_response), mmdata);

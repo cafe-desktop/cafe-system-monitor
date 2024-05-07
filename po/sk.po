@@ -547,7 +547,7 @@ msgstr "PID"
 msgid "Filename"
 msgstr "Názov súboru"
 
-#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(CTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr "Hľadať otvorené súbory"

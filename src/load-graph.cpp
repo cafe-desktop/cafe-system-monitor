@@ -88,7 +88,7 @@ static void draw_background(LoadGraph *graph) {
 
     GtkStyleContext *context = ctk_widget_get_style_context (ProcData::get_instance()->notebook);
     ctk_style_context_save (context);
-    ctk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
+    ctk_style_context_set_state (context, CTK_STATE_FLAG_NORMAL);
     ctk_style_context_get_background_color (context, ctk_style_context_get_state (context), &bg);
     ctk_style_context_get_color (context, ctk_style_context_get_state (context), &fg);
     ctk_style_context_restore (context);
@@ -99,10 +99,10 @@ static void draw_background(LoadGraph *graph) {
 
     layout = pango_cairo_create_layout (cr);
     ctk_style_context_save (context);
-    ctk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
+    ctk_style_context_set_state (context, CTK_STATE_FLAG_NORMAL);
     ctk_style_context_get (context,
                            ctk_style_context_get_state (context),
-                           GTK_STYLE_PROPERTY_FONT,
+                           CTK_STYLE_PROPERTY_FONT,
                            &font_desc, NULL);
     ctk_style_context_restore (context);
     pango_font_description_set_size (font_desc, 0.8 * graph->fontsize * PANGO_SCALE);
@@ -322,7 +322,7 @@ get_load (LoadGraph *graph)
 
         /* Update label */
         text = g_strdup_printf("%.1f%%", load * 100.0f);
-        ctk_label_set_text(GTK_LABEL(graph->labels.cpu[i]), text);
+        ctk_label_set_text(CTK_LABEL(graph->labels.cpu[i]), text);
         g_free(text);
     }
 
@@ -376,11 +376,11 @@ get_memory (LoadGraph *graph)
     swappercent = (swap.total ? (float)swap.used / (float)swap.total : 0.0f);
     mempercent  = (float)mem.user  / (float)mem.total;
 
-    set_memory_label_and_picker(GTK_LABEL(graph->labels.memory),
+    set_memory_label_and_picker(CTK_LABEL(graph->labels.memory),
                                 GSM_COLOR_BUTTON(graph->mem_color_picker),
                                 mem.user, mem.total, mempercent);
 
-    set_memory_label_and_picker(GTK_LABEL(graph->labels.swap),
+    set_memory_label_and_picker(CTK_LABEL(graph->labels.swap),
                                 GSM_COLOR_BUTTON(graph->swap_color_picker),
                                 swap.used, swap.total, swappercent);
 
@@ -590,17 +590,17 @@ get_net (LoadGraph *graph)
 
     str = g_format_size_full (network_in_bits ? din*8 : din, network_in_bits ? G_FORMAT_SIZE_BITS : G_FORMAT_SIZE_DEFAULT);
     formatted_str = g_strdup_printf(_("%s/s"), str);
-    ctk_label_set_text (GTK_LABEL (graph->labels.net_in), formatted_str);
+    ctk_label_set_text (CTK_LABEL (graph->labels.net_in), formatted_str);
 
     str = g_format_size_full (network_in_bits ? in*8 : in, network_in_bits ? G_FORMAT_SIZE_BITS : G_FORMAT_SIZE_DEFAULT);
-    ctk_label_set_text (GTK_LABEL (graph->labels.net_in_total), str);
+    ctk_label_set_text (CTK_LABEL (graph->labels.net_in_total), str);
 
     str = g_format_size_full (network_in_bits ? dout*8 : dout, network_in_bits ? G_FORMAT_SIZE_BITS : G_FORMAT_SIZE_DEFAULT);
     formatted_str = g_strdup_printf(_("%s/s"), str);
-    ctk_label_set_text (GTK_LABEL (graph->labels.net_out), formatted_str);
+    ctk_label_set_text (CTK_LABEL (graph->labels.net_out), formatted_str);
 
     str = g_format_size_full (network_in_bits ? out*8 : out, network_in_bits ? G_FORMAT_SIZE_BITS : G_FORMAT_SIZE_DEFAULT);
-    ctk_label_set_text (GTK_LABEL (graph->labels.net_out_total), str);
+    ctk_label_set_text (CTK_LABEL (graph->labels.net_out_total), str);
 }
 
 
@@ -747,7 +747,7 @@ LoadGraph::LoadGraph(guint type)
     render_counter = (frames_per_unit - 1);
     draw = FALSE;
 
-    main_widget = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+    main_widget = ctk_box_new (CTK_ORIENTATION_VERTICAL, 0);
     ctk_widget_set_size_request(main_widget, -1, LoadGraph::GRAPH_MIN_HEIGHT);
     ctk_widget_show (main_widget);
 
@@ -761,7 +761,7 @@ LoadGraph::LoadGraph(guint type)
 
     ctk_widget_set_events (disp, GDK_EXPOSURE_MASK);
 
-    ctk_box_pack_start (GTK_BOX (main_widget), disp, TRUE, TRUE, 0);
+    ctk_box_pack_start (CTK_BOX (main_widget), disp, TRUE, TRUE, 0);
 
 
     /* Allocate data in a contiguous block */

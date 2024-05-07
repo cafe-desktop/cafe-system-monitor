@@ -820,14 +820,14 @@ static gboolean sysinfo_logo_draw (GtkWidget *widget, cairo_t *context, gpointer
     cp = cairo_pattern_create_linear(0, Y_PAD, 0, Y_PAD + LOGO_H);
     style = ctk_widget_get_style (widget);
     cairo_pattern_add_color_stop_rgba(cp, 0.0,
-                                      style->base[GTK_STATE_SELECTED].red / 65535.0,
-                                      style->base[GTK_STATE_SELECTED].green / 65535.0,
-                                      style->base[GTK_STATE_SELECTED].blue / 65535.0,
+                                      style->base[CTK_STATE_SELECTED].red / 65535.0,
+                                      style->base[CTK_STATE_SELECTED].green / 65535.0,
+                                      style->base[CTK_STATE_SELECTED].blue / 65535.0,
                                       1.0);
     cairo_pattern_add_color_stop_rgba(cp, 1.0,
-                                      style->base[GTK_STATE_SELECTED].red / 65535.0,
-                                      style->base[GTK_STATE_SELECTED].green / 65535.0,
-                                      style->base[GTK_STATE_SELECTED].blue / 65535.0,
+                                      style->base[CTK_STATE_SELECTED].red / 65535.0,
+                                      style->base[CTK_STATE_SELECTED].green / 65535.0,
+                                      style->base[CTK_STATE_SELECTED].blue / 65535.0,
                                       0.0);
     cairo_set_source(cr, cp);
     cairo_fill(cr);
@@ -844,20 +844,20 @@ add_section(GtkBox *vbox , const char * title, int num_row, int num_col, GtkWidg
     GtkWidget *table;
 
     GtkWidget *frame = ctk_frame_new(title);
-    ctk_frame_set_label_align(GTK_FRAME(frame), 0.0, 0.5);
+    ctk_frame_set_label_align(CTK_FRAME(frame), 0.0, 0.5);
     ctk_label_set_use_markup(
-        GTK_LABEL(ctk_frame_get_label_widget(GTK_FRAME(frame))),
+        CTK_LABEL(ctk_frame_get_label_widget(CTK_FRAME(frame))),
         TRUE
         );
-    ctk_frame_set_shadow_type(GTK_FRAME(frame), GTK_SHADOW_NONE);
-    ctk_box_pack_start(GTK_BOX(vbox), frame, FALSE, FALSE, 0);
+    ctk_frame_set_shadow_type(CTK_FRAME(frame), CTK_SHADOW_NONE);
+    ctk_box_pack_start(CTK_BOX(vbox), frame, FALSE, FALSE, 0);
 
     table = ctk_grid_new();
-    ctk_grid_set_row_spacing(GTK_GRID(table), 6);
-    ctk_grid_set_column_spacing(GTK_GRID(table), 6);
-    ctk_widget_set_margin_start (GTK_WIDGET(table), 12);
-    ctk_container_set_border_width(GTK_CONTAINER(table), 6);
-    ctk_container_add(GTK_CONTAINER(frame), table);
+    ctk_grid_set_row_spacing(CTK_GRID(table), 6);
+    ctk_grid_set_column_spacing(CTK_GRID(table), 6);
+    ctk_widget_set_margin_start (CTK_WIDGET(table), 12);
+    ctk_container_set_border_width(CTK_CONTAINER(table), 6);
+    ctk_container_add(CTK_CONTAINER(frame), table);
 
     if(out_frame)
         *out_frame = frame;
@@ -870,18 +870,18 @@ static GtkWidget*
 add_row(GtkGrid * table, const char * label, const char * value, int row)
 {
     GtkWidget *header = ctk_label_new(NULL);
-    ctk_label_set_markup(GTK_LABEL(header), label);
-    ctk_label_set_selectable(GTK_LABEL(header), TRUE);
+    ctk_label_set_markup(CTK_LABEL(header), label);
+    ctk_label_set_selectable(CTK_LABEL(header), TRUE);
     ctk_widget_set_can_focus(header, FALSE);
-    ctk_label_set_xalign (GTK_LABEL (header), 0.0);
+    ctk_label_set_xalign (CTK_LABEL (header), 0.0);
     ctk_grid_attach(
         table, header,
         0, row, 1, 1);
 
     GtkWidget *label_widget = ctk_label_new(value);
-    ctk_label_set_selectable(GTK_LABEL(label_widget), TRUE);
+    ctk_label_set_selectable(CTK_LABEL(label_widget), TRUE);
     ctk_widget_set_can_focus(label_widget, FALSE);
-    ctk_label_set_xalign (GTK_LABEL (label_widget), 0.0);
+    ctk_label_set_xalign (CTK_LABEL (label_widget), 0.0);
     ctk_grid_attach(
         table, label_widget,
         1, row, 1, 1);
@@ -911,8 +911,8 @@ procman_create_sysinfo_view(void)
 
     gchar *markup;
 
-    hbox = ctk_box_new(GTK_ORIENTATION_HORIZONTAL, 12);
-    ctk_container_set_border_width(GTK_CONTAINER(hbox), 6);
+    hbox = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
+    ctk_container_set_border_width(CTK_CONTAINER(hbox), 6);
 
     /* left-side logo */
     if (g_file_test (DATADIR "/pixmaps/cafe-system-monitor/distribution/side.png", G_FILE_TEST_EXISTS)) {
@@ -921,18 +921,18 @@ procman_create_sysinfo_view(void)
     else {
         logo = ctk_image_new_from_file(DATADIR "/pixmaps/cafe-system-monitor/side.png");
     }
-    ctk_widget_set_valign (logo, GTK_ALIGN_START);
+    ctk_widget_set_valign (logo, CTK_ALIGN_START);
     ctk_widget_set_margin_start (logo, 5);
     ctk_widget_set_margin_end (logo, 5);
     ctk_widget_set_margin_top (logo, 12);
     ctk_widget_set_margin_bottom (logo, 12);
-    ctk_box_pack_start(GTK_BOX(hbox), logo, FALSE, FALSE, 0);
+    ctk_box_pack_start(CTK_BOX(hbox), logo, FALSE, FALSE, 0);
 
     g_signal_connect(G_OBJECT(logo), "draw", G_CALLBACK(sysinfo_logo_draw), NULL);
 
-    vbox = ctk_box_new(GTK_ORIENTATION_VERTICAL, 12);
-    ctk_container_set_border_width(GTK_CONTAINER(vbox), 12);
-    ctk_box_pack_start(GTK_BOX(hbox), vbox, TRUE, TRUE, 0);
+    vbox = ctk_box_new(CTK_ORIENTATION_VERTICAL, 12);
+    ctk_container_set_border_width(CTK_CONTAINER(vbox), 12);
+    ctk_box_pack_start(CTK_BOX(hbox), vbox, TRUE, TRUE, 0);
 
     // hostname
 
@@ -940,13 +940,13 @@ procman_create_sysinfo_view(void)
                              data->hostname.c_str());
     GtkWidget *hostname_frame = ctk_frame_new(markup);
     g_free(markup);
-    ctk_frame_set_label_align(GTK_FRAME(hostname_frame), 0.0, 0.5);
+    ctk_frame_set_label_align(CTK_FRAME(hostname_frame), 0.0, 0.5);
     ctk_label_set_use_markup(
-        GTK_LABEL(ctk_frame_get_label_widget(GTK_FRAME(hostname_frame))),
+        CTK_LABEL(ctk_frame_get_label_widget(CTK_FRAME(hostname_frame))),
         TRUE
         );
-    ctk_frame_set_shadow_type(GTK_FRAME(hostname_frame), GTK_SHADOW_NONE);
-    ctk_box_pack_start(GTK_BOX(vbox), hostname_frame, FALSE, FALSE, 0);
+    ctk_frame_set_shadow_type(CTK_FRAME(hostname_frame), CTK_SHADOW_NONE);
+    ctk_box_pack_start(CTK_BOX(vbox), hostname_frame, FALSE, FALSE, 0);
 
 
     /* distro section */
@@ -954,28 +954,28 @@ procman_create_sysinfo_view(void)
     unsigned table_size = 2;
     if (data->cafe_version != "")
         table_size++;
-    distro_table = add_section(GTK_BOX(vbox), "???", table_size, 1, &distro_frame);
+    distro_table = add_section(CTK_BOX(vbox), "???", table_size, 1, &distro_frame);
 
     unsigned table_count = 0;
 
     distro_release_label = ctk_label_new("???");
-    ctk_label_set_selectable(GTK_LABEL(distro_release_label), TRUE);
+    ctk_label_set_selectable(CTK_LABEL(distro_release_label), TRUE);
     ctk_widget_set_can_focus(distro_release_label, FALSE);
-    ctk_label_set_xalign (GTK_LABEL (distro_release_label), 0.0);
+    ctk_label_set_xalign (CTK_LABEL (distro_release_label), 0.0);
     ctk_grid_attach(
-        GTK_GRID(distro_table), distro_release_label,
+        CTK_GRID(distro_table), distro_release_label,
         0, table_count, 1, 1);
     table_count++;
-    data->set_distro_labels(ctk_frame_get_label_widget(GTK_FRAME(distro_frame)), distro_release_label);
+    data->set_distro_labels(ctk_frame_get_label_widget(CTK_FRAME(distro_frame)), distro_release_label);
 
     markup = g_strdup_printf(_("Kernel %s"), data->kernel.c_str());
     header = ctk_label_new(markup);
-    ctk_label_set_selectable(GTK_LABEL(header), TRUE);
+    ctk_label_set_selectable(CTK_LABEL(header), TRUE);
     ctk_widget_set_can_focus(header, FALSE);
     g_free(markup);
-    ctk_label_set_xalign (GTK_LABEL (header), 0.0);
+    ctk_label_set_xalign (CTK_LABEL (header), 0.0);
     ctk_grid_attach(
-        GTK_GRID(distro_table), header,
+        CTK_GRID(distro_table), header,
         0, table_count, 1, 1);
     table_count++;
 
@@ -983,12 +983,12 @@ procman_create_sysinfo_view(void)
     {
         markup = g_strdup_printf(_("CAFE %s"), data->cafe_version.c_str());
         header = ctk_label_new(markup);
-        ctk_label_set_selectable(GTK_LABEL(header), TRUE);
+        ctk_label_set_selectable(CTK_LABEL(header), TRUE);
         ctk_widget_set_can_focus(header, FALSE);
         g_free(markup);
-        ctk_label_set_xalign (GTK_LABEL (header), 0.0);
+        ctk_label_set_xalign (CTK_LABEL (header), 0.0);
         ctk_grid_attach(
-            GTK_GRID(distro_table), header,
+            CTK_GRID(distro_table), header,
             0, table_count, 1, 1);
         table_count++;
     }
@@ -996,26 +996,26 @@ procman_create_sysinfo_view(void)
     /* hardware section */
 
     markup = g_strdup_printf("<b>%s</b>", _("Hardware"));
-    hardware_table = add_section(GTK_BOX(vbox), markup, 1, 3, NULL);
+    hardware_table = add_section(CTK_BOX(vbox), markup, 1, 3, NULL);
     g_free(markup);
 
     markup = g_format_size_full(data->memory_bytes, G_FORMAT_SIZE_IEC_UNITS);
-    add_row(GTK_GRID(hardware_table), _("Memory:"), markup, 0);
+    add_row(CTK_GRID(hardware_table), _("Memory:"), markup, 0);
     g_free(markup);
 
-    add_row(GTK_GRID(hardware_table), _("Processor:"),
+    add_row(CTK_GRID(hardware_table), _("Processor:"),
             data->processors.c_str(), 1);
-    add_row(GTK_GRID(hardware_table), _("Graphics:"),
+    add_row(CTK_GRID(hardware_table), _("Graphics:"),
             data->graphics.c_str(), 2);
 
     /* disk space section */
 
     markup = g_strdup_printf("<b>%s</b>", _("System Status"));
-    disk_space_table = add_section(GTK_BOX(vbox), markup, 1, 2, NULL);
+    disk_space_table = add_section(CTK_BOX(vbox), markup, 1, 2, NULL);
     g_free(markup);
 
     markup = g_format_size(data->free_space_bytes);
-    add_row(GTK_GRID(disk_space_table), _("Available disk space:"), markup, 0);
+    add_row(CTK_GRID(disk_space_table), _("Available disk space:"), markup, 0);
     g_free(markup);
 
     return hbox;
@@ -1032,7 +1032,7 @@ namespace procman
         if (!ui) {
             ProcData* procdata = ProcData::get_instance();
             ui = procman_create_sysinfo_view();
-            GtkBox* box = GTK_BOX(ctk_notebook_get_nth_page(GTK_NOTEBOOK(procdata->notebook),
+            GtkBox* box = CTK_BOX(ctk_notebook_get_nth_page(CTK_NOTEBOOK(procdata->notebook),
                                                             PROCMAN_TAB_SYSINFO));
             ctk_box_pack_start(box, ui, TRUE, TRUE, 0);
             ctk_widget_show_all(ui);
