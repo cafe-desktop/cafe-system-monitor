@@ -759,7 +759,7 @@ LoadGraph::LoadGraph(guint type)
     g_signal_connect (G_OBJECT(disp), "destroy",
                       G_CALLBACK (load_graph_destroy), graph);
 
-    ctk_widget_set_events (disp, GDK_EXPOSURE_MASK);
+    ctk_widget_set_events (disp, CDK_EXPOSURE_MASK);
 
     ctk_box_pack_start (CTK_BOX (main_widget), disp, TRUE, TRUE, 0);
 

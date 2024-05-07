@@ -171,7 +171,7 @@ gsm_color_button_class_init (GSMColorButtonClass * klass)
                                      g_param_spec_boxed ("color",
                                                          _("Current Color"),
                                                          _("The selected color"),
-                                                         GDK_TYPE_RGBA,
+                                                         CDK_TYPE_RGBA,
                                                          G_PARAM_READWRITE));
 
     g_object_class_install_property (gobject_class,
@@ -528,7 +528,7 @@ set_color_icon (GdkDragContext * context, GdkRGBA * color)
     GdkPixbuf *pixbuf;
     guint32 pixel;
 
-    pixbuf = cdk_pixbuf_new (GDK_COLORSPACE_RGB, FALSE, 8, 48, 32);
+    pixbuf = cdk_pixbuf_new (CDK_COLORSPACE_RGB, FALSE, 8, 48, 32);
 
     pixel = ((guint32)(color->red * 0xff) << 24) |
             ((guint32)(color->green * 0xff) << 16) |
@@ -594,10 +594,10 @@ gsm_color_button_init (GSMColorButton * color_button)
     ctk_drag_dest_set (CTK_WIDGET (color_button),
                        CTK_DEST_DEFAULT_MOTION |
                        CTK_DEST_DEFAULT_HIGHLIGHT |
-                       CTK_DEST_DEFAULT_DROP, drop_types, 1, GDK_ACTION_COPY);
+                       CTK_DEST_DEFAULT_DROP, drop_types, 1, CDK_ACTION_COPY);
     ctk_drag_source_set (CTK_WIDGET (color_button),
-                         GDK_BUTTON1_MASK | GDK_BUTTON3_MASK,
-                         drop_types, 1, GDK_ACTION_COPY);
+                         CDK_BUTTON1_MASK | CDK_BUTTON3_MASK,
+                         drop_types, 1, CDK_ACTION_COPY);
     g_signal_connect (color_button, "drag_begin",
                       G_CALLBACK (gsm_color_button_drag_begin), color_button);
     g_signal_connect (color_button, "drag_data_received",
@@ -607,8 +607,8 @@ gsm_color_button_init (GSMColorButton * color_button)
                       G_CALLBACK (gsm_color_button_drag_data_get),
                       color_button);
 
-    ctk_widget_add_events (CTK_WIDGET(color_button), GDK_ENTER_NOTIFY_MASK
-                              | GDK_LEAVE_NOTIFY_MASK);
+    ctk_widget_add_events (CTK_WIDGET(color_button), CDK_ENTER_NOTIFY_MASK
+                              | CDK_LEAVE_NOTIFY_MASK);
 
     ctk_widget_set_tooltip_text (CTK_WIDGET(color_button), _("Click to set graph colors"));
 
@@ -727,7 +727,7 @@ gsm_color_button_clicked (CtkWidget * widget, GdkEventButton * event)
 static gint
 gsm_color_button_pressed (CtkWidget * widget, GdkEventButton * event)
 {
-    if ( (event->type == GDK_BUTTON_PRESS) && (event->button == 1) )
+    if ( (event->type == CDK_BUTTON_PRESS) && (event->button == 1) )
     {
 	GSMColorButtonPrivate *priv;
         GSMColorButton *color_button = GSM_COLOR_BUTTON (widget);

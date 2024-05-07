@@ -517,7 +517,7 @@ procman_save_config (ProcData *data)
 
     g_assert(data);
 
-    data->config.maximized = cdk_window_get_state(ctk_widget_get_window (data->app)) & GDK_WINDOW_STATE_MAXIMIZED;
+    data->config.maximized = cdk_window_get_state(ctk_widget_get_window (data->app)) & CDK_WINDOW_STATE_MAXIMIZED;
     if (!data->config.maximized) {
         // we only want to store/overwrite size and position info with non-maximized state info
         data->config.width = cdk_window_get_width(ctk_widget_get_window(data->app));

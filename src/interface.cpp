@@ -737,7 +737,7 @@ create_main_window (ProcData *procdata)
         goto_tab_closure[i] = g_cclosure_new_swap (G_CALLBACK (cb_proc_goto_tab),
                                                    GINT_TO_POINTER (i), NULL);
         ctk_accel_group_connect (accel_group, '0'+(i+1),
-                                 GDK_MOD1_MASK, CTK_ACCEL_VISIBLE,
+                                 CDK_MOD1_MASK, CTK_ACCEL_VISIBLE,
                                  goto_tab_closure[i]);
     }
 

@@ -401,7 +401,7 @@ cb_tree_button_pressed (CtkWidget *widget,
 {
     ProcData * const procdata = static_cast<ProcData*>(data);
 
-    if (event->button == 3 && event->type == GDK_BUTTON_PRESS)
+    if (event->button == 3 && event->type == CDK_BUTTON_PRESS)
         do_popup_menu (procdata, event);
 
     return FALSE;
