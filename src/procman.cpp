@@ -377,12 +377,12 @@ procman_free_data (ProcData *procdata)
 
 
 gboolean
-procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child_schema)
+procman_get_tree_state (GSettings *settings, CtkWidget *tree, const gchar *child_schema)
 {
-    GtkTreeModel *model;
+    CtkTreeModel *model;
     GList *columns, *it;
     gint sort_col;
-    GtkSortType order;
+    CtkSortType order;
 
 
     g_assert(tree);
@@ -394,7 +394,7 @@ procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child
 
     sort_col = g_settings_get_int (pt_settings, "sort-col");
 
-    order = static_cast<GtkSortType>(g_settings_get_int (pt_settings, "sort-order"));
+    order = static_cast<CtkSortType>(g_settings_get_int (pt_settings, "sort-order"));
 
     if (sort_col != -1)
         ctk_tree_sortable_set_sort_column_id (CTK_TREE_SORTABLE (model),
@@ -408,13 +408,13 @@ procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child
     {
         for (it = columns; it; it = it->next)
         {
-            GtkTreeViewColumn *column;
+            CtkTreeViewColumn *column;
             gint width;
             gboolean visible;
             int id;
             gchar *key;
 
-            column = static_cast<GtkTreeViewColumn*>(it->data);
+            column = static_cast<CtkTreeViewColumn*>(it->data);
             id = ctk_tree_view_column_get_sort_column_id (column);
 
             key = g_strdup_printf ("col-%d-width", id);
@@ -464,12 +464,12 @@ procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child
 }
 
 void
-procman_save_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child_schema)
+procman_save_tree_state (GSettings *settings, CtkWidget *tree, const gchar *child_schema)
 {
-    GtkTreeModel *model;
+    CtkTreeModel *model;
     GList *columns;
     gint sort_col;
-    GtkSortType order;
+    CtkSortType order;
 
     g_assert(tree);
     g_assert(child_schema);
@@ -567,7 +567,7 @@ get_startup_timestamp ()
 }
 
 static void
-set_tab(GtkNotebook* notebook, gint tab, ProcData* procdata)
+set_tab(CtkNotebook* notebook, gint tab, ProcData* procdata)
 {
     ctk_notebook_set_current_page(notebook, tab);
     cb_change_current_page(notebook, tab, procdata);
@@ -671,7 +671,7 @@ main (int argc, char *argv[])
     }
 
     Gio::init();
-    Gtk::Main kit(&argc, &argv);
+    Ctk::Main kit(&argc, &argv);
     procman_debug("post ctk_init");
 
     conn = bacon_message_connection_new ("cafe-system-monitor");

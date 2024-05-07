@@ -89,8 +89,8 @@ add_new_files (gpointer key, gpointer value, gpointer data)
 {
     glibtop_open_files_entry *openfiles = static_cast<glibtop_open_files_entry*>(value);
 
-    GtkTreeModel *model = static_cast<GtkTreeModel*>(data);
-    GtkTreeIter row;
+    CtkTreeModel *model = static_cast<CtkTreeModel*>(data);
+    CtkTreeIter row;
 
     char *object;
 
@@ -128,10 +128,10 @@ add_new_files (gpointer key, gpointer value, gpointer data)
 static GList *old_maps = NULL;
 
 static gboolean
-classify_openfiles (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer data)
+classify_openfiles (CtkTreeModel *model, CtkTreePath *path, CtkTreeIter *iter, gpointer data)
 {
     GHashTable *new_maps = static_cast<GHashTable*>(data);
-    GtkTreeIter *old_iter;
+    CtkTreeIter *old_iter;
     glibtop_open_files_entry *openfiles;
     gchar *old_name;
 
@@ -165,10 +165,10 @@ compare_open_files(gconstpointer a, gconstpointer b)
 
 
 static void
-update_openfiles_dialog (GtkWidget *tree)
+update_openfiles_dialog (CtkWidget *tree)
 {
     ProcInfo *info;
-    GtkTreeModel *model;
+    CtkTreeModel *model;
     glibtop_open_files_entry *openfiles;
     glibtop_proc_open_files procmap;
     GHashTable *new_maps;
@@ -197,7 +197,7 @@ update_openfiles_dialog (GtkWidget *tree)
     g_hash_table_foreach (new_maps, add_new_files, model);
 
     while (old_maps) {
-        GtkTreeIter *iter = static_cast<GtkTreeIter*>(old_maps->data);
+        CtkTreeIter *iter = static_cast<CtkTreeIter*>(old_maps->data);
         glibtop_open_files_entry *openfiles = NULL;
 
         ctk_tree_model_get (model, iter,
@@ -217,9 +217,9 @@ update_openfiles_dialog (GtkWidget *tree)
 }
 
 static void
-close_openfiles_dialog (GtkDialog *dialog, gint id, gpointer data)
+close_openfiles_dialog (CtkDialog *dialog, gint id, gpointer data)
 {
-    GtkWidget *tree = static_cast<GtkWidget*>(data);
+    CtkWidget *tree = static_cast<CtkWidget*>(data);
     GSettings *settings;
     guint timer;
 
@@ -235,13 +235,13 @@ close_openfiles_dialog (GtkDialog *dialog, gint id, gpointer data)
 }
 
 
-static GtkWidget *
+static CtkWidget *
 create_openfiles_tree (ProcData *procdata)
 {
-    GtkWidget *tree;
-    GtkListStore *model;
-    GtkTreeViewColumn *column;
-    GtkCellRenderer *cell;
+    CtkWidget *tree;
+    CtkListStore *model;
+    CtkTreeViewColumn *column;
+    CtkCellRenderer *cell;
     gint i;
 
     const gchar * const titles[] = {
@@ -290,8 +290,8 @@ create_openfiles_tree (ProcData *procdata)
 static gboolean
 openfiles_timer (gpointer data)
 {
-    GtkWidget *tree = static_cast<GtkWidget*>(data);
-    GtkTreeModel *model;
+    CtkWidget *tree = static_cast<CtkWidget*>(data);
+    CtkTreeModel *model;
 
     model = ctk_tree_view_get_model (CTK_TREE_VIEW (tree));
     g_assert(model);
@@ -303,16 +303,16 @@ openfiles_timer (gpointer data)
 
 
 static void
-create_single_openfiles_dialog (GtkTreeModel *model, GtkTreePath *path,
-                                GtkTreeIter *iter, gpointer data)
+create_single_openfiles_dialog (CtkTreeModel *model, CtkTreePath *path,
+                                CtkTreeIter *iter, gpointer data)
 {
     ProcData *procdata = static_cast<ProcData*>(data);
-    GtkWidget *openfilesdialog;
-    GtkWidget *dialog_vbox, *vbox;
-    GtkWidget *cmd_hbox;
-    GtkWidget *label;
-    GtkWidget *scrolled;
-    GtkWidget *tree;
+    CtkWidget *openfilesdialog;
+    CtkWidget *dialog_vbox, *vbox;
+    CtkWidget *cmd_hbox;
+    CtkWidget *label;
+    CtkWidget *scrolled;
+    CtkWidget *tree;
     ProcInfo *info;
     guint timer;
 

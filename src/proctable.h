@@ -60,14 +60,14 @@ enum
 };
 
 
-GtkWidget*      proctable_new (ProcData *data);
+CtkWidget*      proctable_new (ProcData *data);
 void            proctable_update_table (ProcData *data);
 void            proctable_update (ProcData *data);
 void            proctable_clear_tree (ProcData *data);
 void            proctable_free_table (ProcData *data);
 
-GSList*         proctable_get_columns_order(GtkTreeView *treeview);
-void            proctable_set_columns_order(GtkTreeView *treeview, GSList *order);
+GSList*         proctable_get_columns_order(CtkTreeView *treeview);
+void            proctable_set_columns_order(CtkTreeView *treeview, GSList *order);
 
 char*           make_loadavg_string(void);
 

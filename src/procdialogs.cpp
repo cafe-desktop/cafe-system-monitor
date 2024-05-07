@@ -38,13 +38,13 @@
 #include "cgroups.h"
 
 
-static GtkWidget *renice_dialog = NULL;
-static GtkWidget *prefs_dialog = NULL;
+static CtkWidget *renice_dialog = NULL;
+static CtkWidget *prefs_dialog = NULL;
 static gint new_nice_value = 0;
 
 
 static void
-kill_dialog_button_pressed (GtkDialog *dialog, gint id, gpointer data)
+kill_dialog_button_pressed (CtkDialog *dialog, gint id, gpointer data)
 {
     struct KillArgs *kargs = static_cast<KillArgs*>(data);
 
@@ -59,7 +59,7 @@ kill_dialog_button_pressed (GtkDialog *dialog, gint id, gpointer data)
 void
 procdialog_create_kill_dialog (ProcData *procdata, int signal)
 {
-    GtkWidget *kill_alert_dialog;
+    CtkWidget *kill_alert_dialog;
     gchar *primary, *secondary, *button_text;
     struct KillArgs *kargs;
 
@@ -92,7 +92,7 @@ procdialog_create_kill_dialog (ProcData *procdata, int signal)
     }
 
     kill_alert_dialog = ctk_message_dialog_new (CTK_WINDOW (procdata->app),
-                                                static_cast<GtkDialogFlags>(CTK_DIALOG_MODAL | CTK_DIALOG_DESTROY_WITH_PARENT),
+                                                static_cast<CtkDialogFlags>(CTK_DIALOG_MODAL | CTK_DIALOG_DESTROY_WITH_PARENT),
                                                 CTK_MESSAGE_WARNING,
                                                 CTK_BUTTONS_NONE,
                                                 "%s",
@@ -118,9 +118,9 @@ procdialog_create_kill_dialog (ProcData *procdata, int signal)
 }
 
 static void
-renice_scale_changed (GtkAdjustment *adj, gpointer data)
+renice_scale_changed (CtkAdjustment *adj, gpointer data)
 {
-    GtkWidget *label = CTK_WIDGET (data);
+    CtkWidget *label = CTK_WIDGET (data);
 
     new_nice_value = int(ctk_adjustment_get_value (adj));
     gchar* text = g_strdup_printf(_("(%s Priority)"), procman::get_nice_level (new_nice_value));
@@ -130,7 +130,7 @@ renice_scale_changed (GtkAdjustment *adj, gpointer data)
 }
 
 static void
-renice_dialog_button_pressed (GtkDialog *dialog, gint id, gpointer data)
+renice_dialog_button_pressed (CtkDialog *dialog, gint id, gpointer data)
 {
     ProcData *procdata = static_cast<ProcData*>(data);
 
@@ -148,16 +148,16 @@ void
 procdialog_create_renice_dialog (ProcData *procdata)
 {
     ProcInfo  *info = procdata->selected_process;
-    GtkWidget *dialog = NULL;
-    GtkWidget *dialog_vbox;
-    GtkWidget *vbox;
-    GtkWidget *label;
-    GtkWidget *priority_label;
-    GtkWidget *grid;
-    GtkAdjustment *renice_adj;
-    GtkWidget *hscale;
-    GtkWidget *button;
-    GtkWidget *icon;
+    CtkWidget *dialog = NULL;
+    CtkWidget *dialog_vbox;
+    CtkWidget *vbox;
+    CtkWidget *label;
+    CtkWidget *priority_label;
+    CtkWidget *grid;
+    CtkAdjustment *renice_adj;
+    CtkWidget *hscale;
+    CtkWidget *button;
+    CtkWidget *icon;
     gchar     *text;
     gchar     *dialog_title;
 
@@ -237,7 +237,7 @@ procdialog_create_renice_dialog (ProcData *procdata)
 }
 
 static void
-prefs_dialog_button_pressed (GtkDialog *dialog, gint id, gpointer data)
+prefs_dialog_button_pressed (CtkDialog *dialog, gint id, gpointer data)
 {
     if (id == CTK_RESPONSE_HELP)
     {
@@ -257,7 +257,7 @@ prefs_dialog_button_pressed (GtkDialog *dialog, gint id, gpointer data)
 
 
 static void
-show_kill_dialog_toggled (GtkToggleButton *button, gpointer data)
+show_kill_dialog_toggled (CtkToggleButton *button, gpointer data)
 {
     ProcData *procdata = static_cast<ProcData*>(data);
     GSettings *settings = procdata->settings;
@@ -273,7 +273,7 @@ show_kill_dialog_toggled (GtkToggleButton *button, gpointer data)
 
 
 static void
-solaris_mode_toggled(GtkToggleButton *button, gpointer data)
+solaris_mode_toggled(CtkToggleButton *button, gpointer data)
 {
     ProcData *procdata = static_cast<ProcData*>(data);
     GSettings *settings = procdata->settings;
@@ -284,7 +284,7 @@ solaris_mode_toggled(GtkToggleButton *button, gpointer data)
 
 
 static void
-network_in_bits_toggled(GtkToggleButton *button, gpointer data)
+network_in_bits_toggled(CtkToggleButton *button, gpointer data)
 {
     ProcData *procdata = static_cast<ProcData*>(data);
     GSettings *settings = procdata->settings;
@@ -296,7 +296,7 @@ network_in_bits_toggled(GtkToggleButton *button, gpointer data)
 
 
 static void
-smooth_refresh_toggled(GtkToggleButton *button, gpointer data)
+smooth_refresh_toggled(CtkToggleButton *button, gpointer data)
 {
     ProcData *procdata = static_cast<ProcData*>(data);
     GSettings *settings = procdata->settings;
@@ -311,7 +311,7 @@ smooth_refresh_toggled(GtkToggleButton *button, gpointer data)
 
 
 static void
-show_all_fs_toggled (GtkToggleButton *button, gpointer data)
+show_all_fs_toggled (CtkToggleButton *button, gpointer data)
 {
     ProcData *procdata = static_cast<ProcData*>(data);
     GSettings *settings = procdata->settings;
@@ -331,7 +331,7 @@ public:
         : key(key)
     { }
 
-    static gboolean callback(GtkWidget *widget, GdkEventFocus *event, gpointer data)
+    static gboolean callback(CtkWidget *widget, GdkEventFocus *event, gpointer data)
     {
         SpinButtonUpdater* updater = static_cast<SpinButtonUpdater*>(data);
         ctk_spin_button_update(CTK_SPIN_BUTTON(widget));
@@ -341,7 +341,7 @@ public:
 
 private:
 
-    void update(GtkSpinButton* spin)
+    void update(CtkSpinButton* spin)
     {
         int new_value = int(1000 * ctk_spin_button_get_value(spin));
         g_settings_set_int(ProcData::get_instance()->settings,
@@ -355,12 +355,12 @@ private:
 
 
 static void
-field_toggled (const gchar *child_schema, GtkCellRendererToggle *cell, gchar *path_str, gpointer data)
+field_toggled (const gchar *child_schema, CtkCellRendererToggle *cell, gchar *path_str, gpointer data)
 {
-    GtkTreeModel *model = static_cast<GtkTreeModel*>(data);
-    GtkTreePath *path = ctk_tree_path_new_from_string (path_str);
-    GtkTreeIter iter;
-    GtkTreeViewColumn *column;
+    CtkTreeModel *model = static_cast<CtkTreeModel*>(data);
+    CtkTreePath *path = ctk_tree_path_new_from_string (path_str);
+    CtkTreeIter iter;
+    CtkTreeViewColumn *column;
     gboolean toggled;
     GSettings *settings = g_settings_get_child (ProcData::get_instance()->settings, child_schema);
     gchar *key;
@@ -387,28 +387,28 @@ field_toggled (const gchar *child_schema, GtkCellRendererToggle *cell, gchar *pa
 }
 
 static void
-proc_field_toggled (GtkCellRendererToggle *cell, gchar *path_str, gpointer data)
+proc_field_toggled (CtkCellRendererToggle *cell, gchar *path_str, gpointer data)
 {
     field_toggled ("proctree", cell, path_str, data);
 }
 
 static void
-disk_field_toggled (GtkCellRendererToggle *cell, gchar *path_str, gpointer data)
+disk_field_toggled (CtkCellRendererToggle *cell, gchar *path_str, gpointer data)
 {
     field_toggled ("disktreenew", cell, path_str, data);
 }
 
-static GtkWidget *
-create_field_page(GtkWidget *tree, const gchar *child_schema, const gchar *text)
+static CtkWidget *
+create_field_page(CtkWidget *tree, const gchar *child_schema, const gchar *text)
 {
-    GtkWidget *vbox;
-    GtkWidget *scrolled;
-    GtkWidget *label;
-    GtkWidget *treeview;
+    CtkWidget *vbox;
+    CtkWidget *scrolled;
+    CtkWidget *label;
+    CtkWidget *treeview;
     GList *it, *columns;
-    GtkListStore *model;
-    GtkTreeViewColumn *column;
-    GtkCellRenderer *cell;
+    CtkListStore *model;
+    CtkTreeViewColumn *column;
+    CtkCellRenderer *cell;
 
     vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 6);
 
@@ -461,8 +461,8 @@ create_field_page(GtkWidget *tree, const gchar *child_schema, const gchar *text)
 
     for(it = columns; it; it = it->next)
     {
-        GtkTreeViewColumn *column = static_cast<GtkTreeViewColumn*>(it->data);
-        GtkTreeIter iter;
+        CtkTreeViewColumn *column = static_cast<CtkTreeViewColumn*>(it->data);
+        CtkTreeIter iter;
         const gchar *title;
         gboolean visible;
         gint column_id;
@@ -499,7 +499,7 @@ create_field_page(GtkWidget *tree, const gchar *child_schema, const gchar *text)
 void
 procdialog_create_preferences_dialog (ProcData *procdata)
 {
-    static GtkWidget *dialog = NULL;
+    static CtkWidget *dialog = NULL;
 
     typedef SpinButtonUpdater SBU;
 
@@ -507,19 +507,19 @@ procdialog_create_preferences_dialog (ProcData *procdata)
     static SBU graph_interval_updater("graph-update-interval");
     static SBU disks_interval_updater("disks-interval");
 
-    GtkWidget *notebook;
-    GtkWidget *proc_box;
-    GtkWidget *sys_box;
-    GtkWidget *main_vbox;
-    GtkWidget *vbox, *vbox2, *vbox3;
-    GtkWidget *hbox, *hbox2, *hbox3;
-    GtkWidget *label;
-    GtkAdjustment *adjustment;
-    GtkWidget *spin_button;
-    GtkWidget *check_button;
-    GtkWidget *tab_label;
-    GtkWidget *smooth_button;
-    GtkSizeGroup *size;
+    CtkWidget *notebook;
+    CtkWidget *proc_box;
+    CtkWidget *sys_box;
+    CtkWidget *main_vbox;
+    CtkWidget *vbox, *vbox2, *vbox3;
+    CtkWidget *hbox, *hbox2, *hbox3;
+    CtkWidget *label;
+    CtkAdjustment *adjustment;
+    CtkWidget *spin_button;
+    CtkWidget *check_button;
+    CtkWidget *tab_label;
+    CtkWidget *smooth_button;
+    CtkSizeGroup *size;
     gfloat update;
     gchar *tmp;
 
@@ -585,7 +585,7 @@ procdialog_create_preferences_dialog (ProcData *procdata)
     ctk_box_pack_start (CTK_BOX (hbox2), hbox3, TRUE, TRUE, 0);
 
     update = (gfloat) procdata->config.update_interval;
-    adjustment = (GtkAdjustment *) ctk_adjustment_new(update / 1000.0,
+    adjustment = (CtkAdjustment *) ctk_adjustment_new(update / 1000.0,
                                    MIN_UPDATE_INTERVAL / 1000,
                                    MAX_UPDATE_INTERVAL / 1000,
                                    0.25,
@@ -628,7 +628,7 @@ procdialog_create_preferences_dialog (ProcData *procdata)
     hbox2 = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 6);
     ctk_box_pack_start(CTK_BOX(vbox2), hbox2, FALSE, FALSE, 0);
 
-    GtkWidget *solaris_button = ctk_check_button_new_with_mnemonic(_("Divide CPU usage by CPU count"));
+    CtkWidget *solaris_button = ctk_check_button_new_with_mnemonic(_("Divide CPU usage by CPU count"));
     ctk_widget_set_tooltip_text(solaris_button, _("Solaris mode"));
     ctk_toggle_button_set_active(CTK_TOGGLE_BUTTON(solaris_button),
                                  g_settings_get_boolean(procdata->settings,
@@ -699,7 +699,7 @@ procdialog_create_preferences_dialog (ProcData *procdata)
     ctk_box_pack_start (CTK_BOX (hbox2), hbox3, TRUE, TRUE, 0);
 
     update = (gfloat) procdata->config.graph_update_interval;
-    adjustment = (GtkAdjustment *) ctk_adjustment_new(update / 1000.0, 0.25,
+    adjustment = (CtkAdjustment *) ctk_adjustment_new(update / 1000.0, 0.25,
                                                       100.0, 0.25, 1.0, 0);
     spin_button = ctk_spin_button_new (adjustment, 1.0, 2);
     g_signal_connect (G_OBJECT (spin_button), "focus_out_event",
@@ -709,7 +709,7 @@ procdialog_create_preferences_dialog (ProcData *procdata)
     ctk_label_set_mnemonic_widget (CTK_LABEL (label), spin_button);
 
 
-    GtkWidget *bits_button;
+    CtkWidget *bits_button;
     bits_button = ctk_check_button_new_with_mnemonic(_("Show network speed in bits"));
     ctk_toggle_button_set_active(CTK_TOGGLE_BUTTON(bits_button),
                                  g_settings_get_boolean(procdata->settings,
@@ -760,7 +760,7 @@ procdialog_create_preferences_dialog (ProcData *procdata)
     ctk_box_pack_start (CTK_BOX (hbox2), hbox3, TRUE, TRUE, 0);
 
     update = (gfloat) procdata->config.disks_update_interval;
-    adjustment = (GtkAdjustment *) ctk_adjustment_new (update / 1000.0, 1.0,
+    adjustment = (CtkAdjustment *) ctk_adjustment_new (update / 1000.0, 1.0,
                                                        100.0, 1.0, 1.0, 0);
     spin_button = ctk_spin_button_new (adjustment, 1.0, 0);
     ctk_box_pack_start (CTK_BOX (hbox3), spin_button, FALSE, FALSE, 0);

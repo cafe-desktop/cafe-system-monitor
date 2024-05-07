@@ -6,7 +6,7 @@
 
 namespace procman
 {
-    void SelectionMemento::add_to_selected(GtkTreeModel* model, GtkTreePath*, GtkTreeIter* iter, gpointer data)
+    void SelectionMemento::add_to_selected(CtkTreeModel* model, CtkTreePath*, CtkTreeIter* iter, gpointer data)
     {
         guint pid = 0;
         ctk_tree_model_get(model, iter, COL_PID, &pid, -1);
@@ -15,18 +15,18 @@ namespace procman
     }
 
 
-    void SelectionMemento::save(GtkWidget* tree)
+    void SelectionMemento::save(CtkWidget* tree)
     {
-        GtkTreeSelection* selection = ctk_tree_view_get_selection(CTK_TREE_VIEW(tree));
+        CtkTreeSelection* selection = ctk_tree_view_get_selection(CTK_TREE_VIEW(tree));
         ctk_tree_selection_selected_foreach(selection, &SelectionMemento::add_to_selected, this);
     }
 
 
-    void SelectionMemento::restore(GtkWidget* tree)
+    void SelectionMemento::restore(CtkWidget* tree)
     {
         if (not this->pids.empty())
         {
-            GtkTreeSelection* selection = ctk_tree_view_get_selection(CTK_TREE_VIEW(tree));
+            CtkTreeSelection* selection = ctk_tree_view_get_selection(CTK_TREE_VIEW(tree));
             typedef std::vector<pid_t>::iterator iterator;
             for (iterator it(this->pids.begin()); it != this->pids.end(); ++it)
             {

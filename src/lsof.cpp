@@ -83,10 +83,10 @@ namespace
 
     struct GUI {
 
-        GtkListStore *model;
-        GtkEntry *entry;
-        GtkWindow *window;
-        GtkLabel *count;
+        CtkListStore *model;
+        CtkEntry *entry;
+        CtkWindow *window;
+        CtkLabel *count;
         ProcData *procdata;
         bool case_insensitive;
 
@@ -126,10 +126,10 @@ namespace
             std::string message = make_string(g_strdup_printf(msg, this->pattern().c_str(), error.what().c_str()));
             g_free(msg);
 
-            Gtk::MessageDialog dialog(message,
+            Ctk::MessageDialog dialog(message,
                                       true, // use markup
-                                      Gtk::MESSAGE_ERROR,
-                                      Gtk::BUTTONS_OK,
+                                      Ctk::MESSAGE_ERROR,
+                                      Ctk::BUTTONS_OK,
                                       true); // modal
             dialog.run();
         }
@@ -171,7 +171,7 @@ namespace
                     count += matches.size();
 
                     for (iterator it(matches.begin()), end(matches.end()); it != end; ++it) {
-                        GtkTreeIter file;
+                        CtkTreeIter file;
                         ctk_list_store_append(this->model, &file);
                         ctk_list_store_set(this->model, &file,
                                            PROCMAN_LSOF_COL_SURFACE, info.surface,
@@ -190,25 +190,25 @@ namespace
         }
 
 
-        static void search_button_clicked(GtkButton *, gpointer data)
+        static void search_button_clicked(CtkButton *, gpointer data)
         {
             static_cast<GUI*>(data)->search();
         }
 
 
-        static void search_entry_activate(GtkEntry *, gpointer data)
+        static void search_entry_activate(CtkEntry *, gpointer data)
         {
             static_cast<GUI*>(data)->search();
         }
 
 
-        static void clear_button_clicked(GtkButton *, gpointer data)
+        static void clear_button_clicked(CtkButton *, gpointer data)
         {
             static_cast<GUI*>(data)->clear();
         }
 
 
-        static void close_button_clicked(GtkButton *, gpointer data)
+        static void close_button_clicked(CtkButton *, gpointer data)
         {
             GUI *gui = static_cast<GUI*>(data);
             ctk_widget_destroy(CTK_WIDGET(gui->window));
@@ -216,14 +216,14 @@ namespace
         }
 
 
-        static void case_button_toggled(GtkToggleButton *button, gpointer data)
+        static void case_button_toggled(CtkToggleButton *button, gpointer data)
         {
             bool state = ctk_toggle_button_get_active(button);
             static_cast<GUI*>(data)->case_insensitive = state;
         }
 
 
-        static gboolean window_delete_event(GtkWidget *, GdkEvent *, gpointer data)
+        static gboolean window_delete_event(CtkWidget *, GdkEvent *, gpointer data)
         {
             delete static_cast<GUI*>(data);
             return FALSE;
@@ -237,7 +237,7 @@ namespace
 
 void procman_lsof(ProcData *procdata)
 {
-    GtkListStore *model = \
+    CtkListStore *model = \
         ctk_list_store_new(PROCMAN_LSOF_NCOLS,
                            CAIRO_GOBJECT_TYPE_SURFACE, // PROCMAN_LSOF_COL_SURFACE
                            G_TYPE_STRING,              // PROCMAN_LSOF_COL_PROCESS
@@ -245,11 +245,11 @@ void procman_lsof(ProcData *procdata)
                            G_TYPE_STRING               // PROCMAN_LSOF_COL_FILENAME
         );
 
-    GtkWidget *tree = ctk_tree_view_new_with_model(CTK_TREE_MODEL(model));
+    CtkWidget *tree = ctk_tree_view_new_with_model(CTK_TREE_MODEL(model));
     g_object_unref(model);
 
-    GtkTreeViewColumn *column;
-    GtkCellRenderer *renderer;
+    CtkTreeViewColumn *column;
+    CtkCellRenderer *renderer;
 
     // SURFACE / PROCESS
 
@@ -298,7 +298,7 @@ void procman_lsof(ProcData *procdata)
     ctk_tree_view_append_column(CTK_TREE_VIEW(tree), column);
 
 
-    GtkWidget *dialog; /* = ctk_dialog_new_with_buttons(_("Search for Open Files"), NULL,
+    CtkWidget *dialog; /* = ctk_dialog_new_with_buttons(_("Search for Open Files"), NULL,
                                                         CTK_DIALOG_DESTROY_WITH_PARENT,
                                                         CTK_STOCK_CLOSE, CTK_RESPONSE_CLOSE,
                                                         NULL); */
@@ -313,33 +313,33 @@ void procman_lsof(ProcData *procdata)
     ctk_window_set_resizable(CTK_WINDOW(dialog), TRUE);
     ctk_window_set_default_size(CTK_WINDOW(dialog), 575, 400);
     ctk_container_set_border_width(CTK_CONTAINER(dialog), 12);
-    GtkWidget *mainbox = ctk_box_new(CTK_ORIENTATION_VERTICAL, 12);
+    CtkWidget *mainbox = ctk_box_new(CTK_ORIENTATION_VERTICAL, 12);
     ctk_container_add(CTK_CONTAINER(dialog), mainbox);
     ctk_box_set_spacing(CTK_BOX(mainbox), 6);
 
 
     // Label, entry and search button
 
-    GtkWidget *hbox1 = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
+    CtkWidget *hbox1 = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
     ctk_box_pack_start(CTK_BOX(mainbox), hbox1, FALSE, FALSE, 0);
 
-    GtkWidget *image = ctk_image_new_from_icon_name("edit-find", CTK_ICON_SIZE_DIALOG);
+    CtkWidget *image = ctk_image_new_from_icon_name("edit-find", CTK_ICON_SIZE_DIALOG);
     ctk_box_pack_start(CTK_BOX(hbox1), image, FALSE, FALSE, 0);
 
 
-    GtkWidget *vbox2 = ctk_box_new(CTK_ORIENTATION_VERTICAL, 12);
+    CtkWidget *vbox2 = ctk_box_new(CTK_ORIENTATION_VERTICAL, 12);
     ctk_box_pack_start(CTK_BOX(hbox1), vbox2, TRUE, TRUE, 0);
 
 
-    GtkWidget *hbox = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
+    CtkWidget *hbox = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
     ctk_box_pack_start(CTK_BOX(vbox2), hbox, TRUE, TRUE, 0);
-    GtkWidget *label = ctk_label_new_with_mnemonic(_("_Name contains:"));
+    CtkWidget *label = ctk_label_new_with_mnemonic(_("_Name contains:"));
     ctk_box_pack_start(CTK_BOX(hbox), label, FALSE, FALSE, 0);
-    GtkWidget *entry = ctk_entry_new();
+    CtkWidget *entry = ctk_entry_new();
 
     ctk_box_pack_start(CTK_BOX(hbox), entry, TRUE, TRUE, 0);
 
-    GtkWidget *search_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
+    CtkWidget *search_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
                                                          "label", "ctk-find",
                                                          "use-stock", TRUE,
                                                          "use-underline", TRUE,
@@ -347,7 +347,7 @@ void procman_lsof(ProcData *procdata)
 
     ctk_box_pack_start(CTK_BOX(hbox), search_button, FALSE, FALSE, 0);
 
-    GtkWidget *clear_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
+    CtkWidget *clear_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
                                                         "label", "ctk-clear",
                                                         "use-stock", TRUE,
                                                         "use-underline", TRUE,
@@ -358,21 +358,21 @@ void procman_lsof(ProcData *procdata)
     ctk_box_pack_start(CTK_BOX(hbox), clear_button, FALSE, FALSE, 0);
 
 
-    GtkWidget *case_button = ctk_check_button_new_with_mnemonic(_("Case insensitive matching"));
-    GtkWidget *hbox3 = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
+    CtkWidget *case_button = ctk_check_button_new_with_mnemonic(_("Case insensitive matching"));
+    CtkWidget *hbox3 = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
     ctk_box_pack_start(CTK_BOX(hbox3), case_button, FALSE, FALSE, 0);
     ctk_box_pack_start(CTK_BOX(vbox2), hbox3, FALSE, FALSE, 0);
 
 
-    GtkWidget *results_box = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
+    CtkWidget *results_box = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
     ctk_box_pack_start(CTK_BOX(mainbox), results_box, FALSE, FALSE, 0);
-    GtkWidget *results_label = ctk_label_new_with_mnemonic(_("S_earch results:"));
+    CtkWidget *results_label = ctk_label_new_with_mnemonic(_("S_earch results:"));
     ctk_box_pack_start(CTK_BOX(results_box), results_label, FALSE, FALSE, 0);
-    GtkWidget *count_label = ctk_label_new(NULL);
+    CtkWidget *count_label = ctk_label_new(NULL);
     ctk_box_pack_end(CTK_BOX(results_box), count_label, FALSE, FALSE, 0);
 
     // Scrolled TreeView
-    GtkWidget *scrolled = ctk_scrolled_window_new(NULL, NULL);
+    CtkWidget *scrolled = ctk_scrolled_window_new(NULL, NULL);
     ctk_scrolled_window_set_policy(CTK_SCROLLED_WINDOW(scrolled),
                                    CTK_POLICY_AUTOMATIC,
                                    CTK_POLICY_AUTOMATIC);
@@ -381,9 +381,9 @@ void procman_lsof(ProcData *procdata)
     ctk_container_add(CTK_CONTAINER(scrolled), tree);
     ctk_box_pack_start(CTK_BOX(mainbox), scrolled, TRUE, TRUE, 0);
 
-    GtkWidget *bottom_box = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
+    CtkWidget *bottom_box = ctk_box_new(CTK_ORIENTATION_HORIZONTAL, 12);
 
-    GtkWidget *close_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
+    CtkWidget *close_button = CTK_WIDGET (g_object_new (CTK_TYPE_BUTTON,
                                                         "label", "ctk-close",
                                                         "use-stock", TRUE,
                                                         "use-underline", TRUE,

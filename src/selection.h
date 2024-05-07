@@ -10,11 +10,11 @@ namespace procman
     class SelectionMemento
     {
         std::vector<pid_t> pids;
-        static void add_to_selected(GtkTreeModel* model, GtkTreePath* path, GtkTreeIter* iter, gpointer data);
+        static void add_to_selected(CtkTreeModel* model, CtkTreePath* path, CtkTreeIter* iter, gpointer data);
 
     public:
-        void save(GtkWidget* tree);
-        void restore(GtkWidget* tree);
+        void save(CtkWidget* tree);
+        void restore(CtkWidget* tree);
     };
 }
 

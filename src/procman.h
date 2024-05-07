@@ -191,7 +191,7 @@ class ProcInfo
     void set_user(guint uid);
     std::string lookup_user(guint uid);
 
-    GtkTreeIter      node;
+    CtkTreeIter      node;
     cairo_surface_t *surface;
     gchar           *tooltip;
     gchar           *name;
@@ -216,16 +216,16 @@ struct ProcData
     // lazy initialization
     static ProcData* get_instance();
 
-    GtkUIManager    *uimanager;
-    GtkActionGroup    *action_group;
-    GtkWidget    *statusbar;
+    CtkUIManager    *uimanager;
+    CtkActionGroup    *action_group;
+    CtkWidget    *statusbar;
     gint        tip_message_cid;
-    GtkWidget    *tree;
-    GtkWidget    *loadavg;
-    GtkWidget    *endprocessbutton;
-    GtkWidget    *popup_menu;
-    GtkWidget    *disk_list;
-    GtkWidget    *notebook;
+    CtkWidget    *tree;
+    CtkWidget    *loadavg;
+    CtkWidget    *endprocessbutton;
+    CtkWidget    *popup_menu;
+    CtkWidget    *disk_list;
+    CtkWidget    *notebook;
     ProcConfig    config;
     LoadGraph    *cpu_graph;
     LoadGraph    *mem_graph;
@@ -233,15 +233,15 @@ struct ProcData
     gint        cpu_label_fixed_width;
     gint        net_label_fixed_width;
     ProcInfo    *selected_process;
-    GtkTreeSelection *selection;
+    CtkTreeSelection *selection;
     guint        timeout;
     guint        disk_timeout;
 
     PrettyTable    pretty_table;
 
     GSettings       *settings;
-    GtkWidget        *app;
-    GtkUIManager    *menu;
+    CtkWidget        *app;
+    CtkUIManager    *menu;
 
     unsigned    frequency;
 
@@ -257,8 +257,8 @@ private:
 };
 
 void        procman_save_config (ProcData *data);
-void        procman_save_tree_state (GSettings *settings, GtkWidget *tree, const gchar *prefix);
-gboolean    procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *prefix);
+void        procman_save_tree_state (GSettings *settings, CtkWidget *tree, const gchar *prefix);
+gboolean    procman_get_tree_state (GSettings *settings, CtkWidget *tree, const gchar *prefix);
 
 
 

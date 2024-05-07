@@ -13,7 +13,7 @@ using std::string;
 /* check if logind is running */
 #define LOGIND_RUNNING() (access("/run/systemd/seats/", F_OK) >= 0)
 
-GtkWidget*
+CtkWidget*
 procman_make_label_for_mmaps_or_ofiles(const char *format,
                                        const char *process_name,
                                        unsigned pid);
@@ -50,44 +50,44 @@ namespace procman
 {
     gchar* format_duration_for_display(unsigned centiseconds);
 
-    void memory_size_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                                    GtkTreeModel *model, GtkTreeIter *iter,
+    void memory_size_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                                    CtkTreeModel *model, CtkTreeIter *iter,
                                     gpointer user_data);
 
-    void io_rate_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                                GtkTreeModel *model, GtkTreeIter *iter,
+    void io_rate_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                                CtkTreeModel *model, CtkTreeIter *iter,
                                 gpointer user_data);
 
-    void memory_size_na_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                                       GtkTreeModel *model, GtkTreeIter *iter,
+    void memory_size_na_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                                       CtkTreeModel *model, CtkTreeIter *iter,
                                        gpointer user_data);
 
-    void storage_size_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                                     GtkTreeModel *model, GtkTreeIter *iter,
+    void storage_size_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                                     CtkTreeModel *model, CtkTreeIter *iter,
                                      gpointer user_data);
 
-    void storage_size_na_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                                        GtkTreeModel *model, GtkTreeIter *iter,
+    void storage_size_na_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                                        CtkTreeModel *model, CtkTreeIter *iter,
                                         gpointer user_data);
 
-    void duration_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                   GtkTreeModel *model, GtkTreeIter *iter,
+    void duration_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                   CtkTreeModel *model, CtkTreeIter *iter,
                    gpointer user_data);
 
-    void time_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                             GtkTreeModel *model, GtkTreeIter *iter,
+    void time_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                             CtkTreeModel *model, CtkTreeIter *iter,
                              gpointer user_data);
 
-    void status_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                               GtkTreeModel *model, GtkTreeIter *iter,
+    void status_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                               CtkTreeModel *model, CtkTreeIter *iter,
                                gpointer user_data);
-    void priority_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                               GtkTreeModel *model, GtkTreeIter *iter,
+    void priority_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                               CtkTreeModel *model, CtkTreeIter *iter,
                                gpointer user_data);
-    gint priority_compare_func(GtkTreeModel* model, GtkTreeIter* first,
-                            GtkTreeIter* second, gpointer user_data);
-    gint number_compare_func(GtkTreeModel* model, GtkTreeIter* first,
-                            GtkTreeIter* second, gpointer user_data);
+    gint priority_compare_func(CtkTreeModel* model, CtkTreeIter* first,
+                            CtkTreeIter* second, gpointer user_data);
+    gint number_compare_func(CtkTreeModel* model, CtkTreeIter* first,
+                            CtkTreeIter* second, gpointer user_data);
 
 
     template<typename T>
@@ -103,7 +103,7 @@ namespace procman
     //
 
     template<typename T>
-    void tree_store_update(GtkTreeModel* model, GtkTreeIter* iter, int column, const T& new_value)
+    void tree_store_update(CtkTreeModel* model, CtkTreeIter* iter, int column, const T& new_value)
     {
         T current_value;
 
@@ -117,14 +117,14 @@ namespace procman
     // catch every thing about pointers
     // just to make sure i'm not doing anything wrong
     template<typename T>
-    void tree_store_update(GtkTreeModel* model, GtkTreeIter* iter, int column, T* new_value);
+    void tree_store_update(CtkTreeModel* model, CtkTreeIter* iter, int column, T* new_value);
 
     // specialized versions for strings
     template<>
-    void tree_store_update<const char>(GtkTreeModel* model, GtkTreeIter* iter, int column, const char* new_value);
+    void tree_store_update<const char>(CtkTreeModel* model, CtkTreeIter* iter, int column, const char* new_value);
 
     template<>
-    inline void tree_store_update<char>(GtkTreeModel* model, GtkTreeIter* iter, int column, char* new_value)
+    inline void tree_store_update<char>(CtkTreeModel* model, CtkTreeIter* iter, int column, char* new_value)
     {
          tree_store_update<const char>(model, iter, column, new_value);
     }

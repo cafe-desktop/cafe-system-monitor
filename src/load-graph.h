@@ -21,13 +21,13 @@ enum {
 
 struct LoadGraphLabels
 {
-    GtkWidget *cpu[GLIBTOP_NCPU];
-    GtkWidget *memory;
-    GtkWidget *swap;
-    GtkWidget *net_in;
-    GtkWidget *net_in_total;
-    GtkWidget *net_out;
-    GtkWidget *net_out_total;
+    CtkWidget *cpu[GLIBTOP_NCPU];
+    CtkWidget *memory;
+    CtkWidget *swap;
+    CtkWidget *net_in;
+    CtkWidget *net_in_total;
+    CtkWidget *net_out;
+    CtkWidget *net_out_total;
 };
 
 
@@ -63,8 +63,8 @@ struct LoadGraph {
     std::vector<float> data_block;
     gfloat* data[NUM_POINTS];
 
-    GtkWidget *main_widget;
-    GtkWidget *disp;
+    CtkWidget *main_widget;
+    CtkWidget *disp;
 
     cairo_pattern_t *background;
 
@@ -73,8 +73,8 @@ struct LoadGraph {
     gboolean draw;
 
     LoadGraphLabels labels;
-    GtkWidget *mem_color_picker;
-    GtkWidget *swap_color_picker;
+    CtkWidget *mem_color_picker;
+    CtkWidget *swap_color_picker;
 
     /* union { */
         struct {
@@ -117,13 +117,13 @@ LoadGraphLabels*
 load_graph_get_labels (LoadGraph *g) G_GNUC_CONST;
 
 
-GtkWidget*
+CtkWidget*
 load_graph_get_widget (LoadGraph *g) G_GNUC_CONST;
 
-GtkWidget*
+CtkWidget*
 load_graph_get_mem_color_picker(LoadGraph *g) G_GNUC_CONST;
 
-GtkWidget*
+CtkWidget*
 load_graph_get_swap_color_picker(LoadGraph *g) G_GNUC_CONST;
 
 

@@ -141,12 +141,12 @@ procman::format_duration_for_display(unsigned centiseconds)
 
 
 
-GtkWidget*
+CtkWidget*
 procman_make_label_for_mmaps_or_ofiles(const char *format,
                                        const char *process_name,
                                        unsigned pid)
 {
-    GtkWidget *label;
+    CtkWidget *label;
     char *name, *title;
 
     name = mnemonic_safe_process_name (process_name);
@@ -257,7 +257,7 @@ get_relative_time(void)
 }
 
 static guint64
-get_size_from_column(GtkTreeModel* model, GtkTreeIter* first,
+get_size_from_column(CtkTreeModel* model, CtkTreeIter* first,
                              const guint index)
 {
     GValue value = { 0 };
@@ -305,8 +305,8 @@ procman_debug_real(const char *file, int line, const char *func,
 
 namespace procman
 {
-    void memory_size_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                                    GtkTreeModel *model, GtkTreeIter *iter,
+    void memory_size_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                                    CtkTreeModel *model, CtkTreeIter *iter,
                                     gpointer user_data)
     {
         const guint index = GPOINTER_TO_UINT(user_data);
@@ -339,8 +339,8 @@ namespace procman
     /*
       Same as above but handles size == 0 as not available
      */
-    void memory_size_na_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                                       GtkTreeModel *model, GtkTreeIter *iter,
+    void memory_size_na_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                                       CtkTreeModel *model, CtkTreeIter *iter,
                                        gpointer user_data)
     {
      	const guint index = GPOINTER_TO_UINT(user_data);
@@ -377,8 +377,8 @@ namespace procman
         }
     }
 
-    void storage_size_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                                     GtkTreeModel *model, GtkTreeIter *iter,
+    void storage_size_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                                     CtkTreeModel *model, CtkTreeIter *iter,
                                      gpointer user_data)
     {
         const guint index = GPOINTER_TO_UINT(user_data);
@@ -411,8 +411,8 @@ namespace procman
     /*
       Same as above but handles size == 0 as not available
      */
-    void storage_size_na_cell_data_func(GtkTreeViewColumn *col, GtkCellRenderer *renderer,
-                                        GtkTreeModel *model, GtkTreeIter *iter,
+    void storage_size_na_cell_data_func(CtkTreeViewColumn *col, CtkCellRenderer *renderer,
+                                        CtkTreeModel *model, CtkTreeIter *iter,
                                         gpointer user_data)
     {
      	const guint index = GPOINTER_TO_UINT(user_data);
@@ -449,8 +449,8 @@ namespace procman
         }
     }
 
-    void io_rate_cell_data_func(GtkTreeViewColumn *, GtkCellRenderer *renderer,
-                                GtkTreeModel *model, GtkTreeIter *iter,
+    void io_rate_cell_data_func(CtkTreeViewColumn *, CtkCellRenderer *renderer,
+                                CtkTreeModel *model, CtkTreeIter *iter,
                                 gpointer user_data)
     {
         const guint index = GPOINTER_TO_UINT(user_data);
@@ -490,8 +490,8 @@ namespace procman
 
     }
 
-    void duration_cell_data_func(GtkTreeViewColumn *, GtkCellRenderer *renderer,
-                                 GtkTreeModel *model, GtkTreeIter *iter,
+    void duration_cell_data_func(CtkTreeViewColumn *, CtkCellRenderer *renderer,
+                                 CtkTreeModel *model, CtkTreeIter *iter,
                                  gpointer user_data)
     {
         const guint index = GPOINTER_TO_UINT(user_data);
@@ -523,8 +523,8 @@ namespace procman
     }
 
 
-    void time_cell_data_func(GtkTreeViewColumn *, GtkCellRenderer *renderer,
-                             GtkTreeModel *model, GtkTreeIter *iter,
+    void time_cell_data_func(CtkTreeViewColumn *, CtkCellRenderer *renderer,
+                             CtkTreeModel *model, CtkTreeIter *iter,
                              gpointer user_data)
     {
         const guint index = GPOINTER_TO_UINT(user_data);
@@ -550,8 +550,8 @@ namespace procman
         g_free(str);
     }
 
-    void status_cell_data_func(GtkTreeViewColumn *, GtkCellRenderer *renderer,
-                               GtkTreeModel *model, GtkTreeIter *iter,
+    void status_cell_data_func(CtkTreeViewColumn *, CtkCellRenderer *renderer,
+                               CtkTreeModel *model, CtkTreeIter *iter,
                                gpointer user_data)
     {
         const guint index = GPOINTER_TO_UINT(user_data);
@@ -576,8 +576,8 @@ namespace procman
         g_object_set(renderer, "text", str, NULL);
     }
 
-    void priority_cell_data_func(GtkTreeViewColumn *, GtkCellRenderer *renderer,
-                             GtkTreeModel *model, GtkTreeIter *iter,
+    void priority_cell_data_func(CtkTreeViewColumn *, CtkCellRenderer *renderer,
+                             CtkTreeModel *model, CtkTreeIter *iter,
                              gpointer user_data)
     {
         const guint index = GPOINTER_TO_UINT(user_data);
@@ -594,8 +594,8 @@ namespace procman
 
     }
 
-    gint priority_compare_func(GtkTreeModel* model, GtkTreeIter* first,
-                            GtkTreeIter* second, gpointer user_data)
+    gint priority_compare_func(CtkTreeModel* model, CtkTreeIter* first,
+                            CtkTreeIter* second, gpointer user_data)
     {
         const guint index = GPOINTER_TO_UINT(user_data);
         GValue value1 = { 0 };
@@ -608,8 +608,8 @@ namespace procman
         return result;
     }
 
-    gint number_compare_func(GtkTreeModel* model, GtkTreeIter* first,
-                            GtkTreeIter* second, gpointer user_data)
+    gint number_compare_func(CtkTreeModel* model, CtkTreeIter* first,
+                            CtkTreeIter* second, gpointer user_data)
     {
         const guint index = GPOINTER_TO_UINT(user_data);
 
@@ -625,7 +625,7 @@ namespace procman
     }
 
     template<>
-    void tree_store_update<const char>(GtkTreeModel* model, GtkTreeIter* iter, int column, const char* new_value)
+    void tree_store_update<const char>(CtkTreeModel* model, CtkTreeIter* iter, int column, const char* new_value)
     {
         char* current_value;
 

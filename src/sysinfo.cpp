@@ -66,7 +66,7 @@ namespace {
         virtual ~SysInfo()
         { }
 
-        virtual void set_distro_labels(GtkWidget* name, GtkWidget* release)
+        virtual void set_distro_labels(CtkWidget* name, CtkWidget* release)
         {
             g_object_set(G_OBJECT(name),
                         "label",
@@ -504,7 +504,7 @@ namespace {
             // start();
         }
 
-        virtual void set_distro_labels(GtkWidget* name, GtkWidget* release)
+        virtual void set_distro_labels(CtkWidget* name, CtkWidget* release)
         {
             this->name = name;
             this->release = release;
@@ -517,8 +517,8 @@ namespace {
 
         sigc::connection child_watch;
         int lsb_fd;
-        GtkWidget* name;
-        GtkWidget* release;
+        CtkWidget* name;
+        CtkWidget* release;
 
         void strip_description(string &s) const
         {
@@ -795,10 +795,10 @@ namespace {
 #define LOGO_H 351
 #define RADIUS 5
 
-static gboolean sysinfo_logo_draw (GtkWidget *widget, cairo_t *context, gpointer data_ptr)
+static gboolean sysinfo_logo_draw (CtkWidget *widget, cairo_t *context, gpointer data_ptr)
 {
-    GtkAllocation allocation;
-    GtkStyle *style;
+    CtkAllocation allocation;
+    CtkStyle *style;
     cairo_t *cr;
     cairo_pattern_t *cp;
 
@@ -838,12 +838,12 @@ static gboolean sysinfo_logo_draw (GtkWidget *widget, cairo_t *context, gpointer
     return FALSE;
 }
 
-static GtkWidget*
-add_section(GtkBox *vbox , const char * title, int num_row, int num_col, GtkWidget **out_frame)
+static CtkWidget*
+add_section(CtkBox *vbox , const char * title, int num_row, int num_col, CtkWidget **out_frame)
 {
-    GtkWidget *table;
+    CtkWidget *table;
 
-    GtkWidget *frame = ctk_frame_new(title);
+    CtkWidget *frame = ctk_frame_new(title);
     ctk_frame_set_label_align(CTK_FRAME(frame), 0.0, 0.5);
     ctk_label_set_use_markup(
         CTK_LABEL(ctk_frame_get_label_widget(CTK_FRAME(frame))),
@@ -866,10 +866,10 @@ add_section(GtkBox *vbox , const char * title, int num_row, int num_col, GtkWidg
 }
 
 
-static GtkWidget*
-add_row(GtkGrid * table, const char * label, const char * value, int row)
+static CtkWidget*
+add_row(CtkGrid * table, const char * label, const char * value, int row)
 {
-    GtkWidget *header = ctk_label_new(NULL);
+    CtkWidget *header = ctk_label_new(NULL);
     ctk_label_set_markup(CTK_LABEL(header), label);
     ctk_label_set_selectable(CTK_LABEL(header), TRUE);
     ctk_widget_set_can_focus(header, FALSE);
@@ -878,7 +878,7 @@ add_row(GtkGrid * table, const char * label, const char * value, int row)
         table, header,
         0, row, 1, 1);
 
-    GtkWidget *label_widget = ctk_label_new(value);
+    CtkWidget *label_widget = ctk_label_new(value);
     ctk_label_set_selectable(CTK_LABEL(label_widget), TRUE);
     ctk_widget_set_can_focus(label_widget, FALSE);
     ctk_label_set_xalign (CTK_LABEL (label_widget), 0.0);
@@ -890,24 +890,24 @@ add_row(GtkGrid * table, const char * label, const char * value, int row)
 }
 
 
-static GtkWidget *
+static CtkWidget *
 procman_create_sysinfo_view(void)
 {
-    GtkWidget *hbox;
-    GtkWidget *vbox;
+    CtkWidget *hbox;
+    CtkWidget *vbox;
 
     SysInfo *data = get_sysinfo();;
 
-    GtkWidget * logo;
+    CtkWidget * logo;
 
-    GtkWidget *distro_frame;
-    GtkWidget *distro_release_label;
-    GtkWidget *distro_table;
+    CtkWidget *distro_frame;
+    CtkWidget *distro_release_label;
+    CtkWidget *distro_table;
 
-    GtkWidget *hardware_table;
-    GtkWidget *disk_space_table;
+    CtkWidget *hardware_table;
+    CtkWidget *disk_space_table;
 
-    GtkWidget *header;
+    CtkWidget *header;
 
     gchar *markup;
 
@@ -938,7 +938,7 @@ procman_create_sysinfo_view(void)
 
     markup = g_strdup_printf("<big><big><b><u>%s</u></b></big></big>",
                              data->hostname.c_str());
-    GtkWidget *hostname_frame = ctk_frame_new(markup);
+    CtkWidget *hostname_frame = ctk_frame_new(markup);
     g_free(markup);
     ctk_frame_set_label_align(CTK_FRAME(hostname_frame), 0.0, 0.5);
     ctk_label_set_use_markup(
@@ -1027,12 +1027,12 @@ namespace procman
 {
     void build_sysinfo_ui()
     {
-        static GtkWidget* ui;
+        static CtkWidget* ui;
 
         if (!ui) {
             ProcData* procdata = ProcData::get_instance();
             ui = procman_create_sysinfo_view();
-            GtkBox* box = CTK_BOX(ctk_notebook_get_nth_page(CTK_NOTEBOOK(procdata->notebook),
+            CtkBox* box = CTK_BOX(ctk_notebook_get_nth_page(CTK_NOTEBOOK(procdata->notebook),
                                                             PROCMAN_TAB_SYSINFO));
             ctk_box_pack_start(box, ui, TRUE, TRUE, 0);
             ctk_widget_show_all(ui);

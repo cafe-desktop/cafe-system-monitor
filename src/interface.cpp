@@ -41,10 +41,10 @@
 #include "sysinfo.h"
 #include "gsm_color_button.h"
 
-static void    cb_toggle_tree (GtkAction *action, gpointer data);
+static void    cb_toggle_tree (CtkAction *action, gpointer data);
 static void    cb_proc_goto_tab (gint tab);
 
-static const GtkActionEntry menu_entries[] =
+static const CtkActionEntry menu_entries[] =
 {
     // xgettext: noun, top level menu.
     // "File" did not make sense for system-monitor
@@ -91,7 +91,7 @@ static const GtkActionEntry menu_entries[] =
       N_("About this application"), G_CALLBACK (cb_about) }
 };
 
-static const GtkToggleActionEntry toggle_menu_entries[] =
+static const CtkToggleActionEntry toggle_menu_entries[] =
 {
     { "ShowDependencies", NULL, N_("_Dependencies"), "<control>D",
       N_("Show parent/child relationship between processes"),
@@ -99,7 +99,7 @@ static const GtkToggleActionEntry toggle_menu_entries[] =
 };
 
 
-static const GtkRadioActionEntry radio_menu_entries[] =
+static const CtkRadioActionEntry radio_menu_entries[] =
 {
   { "ShowActiveProcesses", NULL, N_("_Active Processes"), NULL,
     N_("Show active processes"), ACTIVE_PROCESSES },
@@ -109,7 +109,7 @@ static const GtkRadioActionEntry radio_menu_entries[] =
     N_("Show only user-owned processes"), MY_PROCESSES }
 };
 
-static const GtkRadioActionEntry priority_menu_entries[] =
+static const CtkRadioActionEntry priority_menu_entries[] =
 {
     { "VeryHigh", NULL, N_("Very High"), NULL,
       N_("Set process priority to very high"), VERY_HIGH_PRIORITY },
@@ -195,13 +195,13 @@ static const char ui_info[] =
     "  </popup>";
 
 
-static GtkWidget *
+static CtkWidget *
 create_proc_view (ProcData *procdata)
 {
-    GtkWidget *vbox1;
-    GtkWidget *hbox1;
-    GtkWidget *scrolled;
-    GtkWidget *hbox2;
+    CtkWidget *vbox1;
+    CtkWidget *hbox1;
+    CtkWidget *scrolled;
+    CtkWidget *hbox2;
     char* string;
 
     vbox1 = ctk_box_new (CTK_ORIENTATION_VERTICAL, 18);
@@ -241,10 +241,10 @@ create_proc_view (ProcData *procdata)
 }
 
 
-GtkWidget *
+CtkWidget *
 make_title_label (const char *text)
 {
-    GtkWidget *label;
+    CtkWidget *label;
     char *full;
 
     full = g_strdup_printf ("<span weight=\"bold\">%s</span>", text);
@@ -258,16 +258,16 @@ make_title_label (const char *text)
 }
 
 
-static GtkWidget *
+static CtkWidget *
 create_sys_view (ProcData *procdata)
 {
-    GtkWidget *vbox, *hbox;
-    GtkWidget *cpu_box, *mem_box, *net_box;
-    GtkWidget *cpu_graph_box, *mem_graph_box, *net_graph_box;
-    GtkWidget *label,*cpu_label, *spacer;
-    GtkWidget *grid;
-    GtkWidget *color_picker;
-    GtkWidget *mem_legend_box, *net_legend_box;
+    CtkWidget *vbox, *hbox;
+    CtkWidget *cpu_box, *mem_box, *net_box;
+    CtkWidget *cpu_graph_box, *mem_graph_box, *net_graph_box;
+    CtkWidget *label,*cpu_label, *spacer;
+    CtkWidget *grid;
+    CtkWidget *color_picker;
+    CtkWidget *mem_legend_box, *net_legend_box;
     LoadGraph *cpu_graph, *mem_graph, *net_graph;
 
     gint i;
@@ -310,14 +310,14 @@ create_sys_view (ProcData *procdata)
     ctk_box_pack_start (CTK_BOX (cpu_graph_box), hbox,
                         FALSE, FALSE, 0);
 
-    GtkWidget* cpu_grid = ctk_grid_new();
+    CtkWidget* cpu_grid = ctk_grid_new();
     ctk_grid_set_row_spacing(CTK_GRID(cpu_grid), 6);
     ctk_grid_set_column_spacing(CTK_GRID(cpu_grid), 6);
     ctk_grid_set_column_homogeneous(CTK_GRID(cpu_grid), TRUE);
     ctk_box_pack_start(CTK_BOX(hbox), cpu_grid, TRUE, TRUE, 0);
 
     for (i=0;i<procdata->config.num_cpus; i++) {
-        GtkWidget *temp_hbox;
+        CtkWidget *temp_hbox;
 
         temp_hbox = ctk_box_new (CTK_ORIENTATION_HORIZONTAL, 0);
         ctk_widget_set_hexpand (temp_hbox, TRUE);
@@ -552,10 +552,10 @@ create_sys_view (ProcData *procdata)
 }
 
 static void
-menu_item_select_cb (GtkMenuItem *proxy,
+menu_item_select_cb (CtkMenuItem *proxy,
                      ProcData *procdata)
 {
-    GtkAction *action;
+    CtkAction *action;
     char *message;
 
     action = ctk_activatable_get_related_action (CTK_ACTIVATABLE(proxy));
@@ -571,7 +571,7 @@ menu_item_select_cb (GtkMenuItem *proxy,
 }
 
 static void
-menu_item_deselect_cb (GtkMenuItem *proxy,
+menu_item_deselect_cb (CtkMenuItem *proxy,
                        ProcData *procdata)
 {
     ctk_statusbar_pop (CTK_STATUSBAR (procdata->statusbar),
@@ -579,9 +579,9 @@ menu_item_deselect_cb (GtkMenuItem *proxy,
 }
 
 static void
-connect_proxy_cb (GtkUIManager *manager,
-                  GtkAction *action,
-                  GtkWidget *proxy,
+connect_proxy_cb (CtkUIManager *manager,
+                  CtkAction *action,
+                  CtkWidget *proxy,
                   ProcData *procdata)
 {
     if (CTK_IS_MENU_ITEM (proxy)) {
@@ -593,9 +593,9 @@ connect_proxy_cb (GtkUIManager *manager,
 }
 
 static void
-disconnect_proxy_cb (GtkUIManager *manager,
-                     GtkAction *action,
-                     GtkWidget *proxy,
+disconnect_proxy_cb (CtkUIManager *manager,
+                     CtkAction *action,
+                     CtkWidget *proxy,
                      ProcData *procdata)
 {
     if (CTK_IS_MENU_ITEM (proxy)) {
@@ -611,15 +611,15 @@ create_main_window (ProcData *procdata)
 {
     gint i;
     gint width, height, xpos, ypos;
-    GtkWidget *app;
-    GtkAction *action;
-    GtkWidget *menubar;
-    GtkWidget *main_box;
-    GtkWidget *notebook;
-    GtkWidget *tab_label1, *tab_label2, *tab_label3;
-    GtkWidget *vbox1;
-    GtkWidget *sys_box, *devices_box;
-    GtkWidget *sysinfo_box, *sysinfo_label;
+    CtkWidget *app;
+    CtkAction *action;
+    CtkWidget *menubar;
+    CtkWidget *main_box;
+    CtkWidget *notebook;
+    CtkWidget *tab_label1, *tab_label2, *tab_label3;
+    CtkWidget *vbox1;
+    CtkWidget *sys_box, *devices_box;
+    CtkWidget *sysinfo_box, *sysinfo_label;
 
     app = ctk_window_new(CTK_WINDOW_TOPLEVEL);
     ctk_window_set_title(CTK_WINDOW(app), _("System Monitor"));
@@ -729,7 +729,7 @@ create_main_window (ProcData *procdata)
                       G_CALLBACK (cb_app_delete),
                       procdata);
 
-    GtkAccelGroup *accel_group;
+    CtkAccelGroup *accel_group;
     GClosure *goto_tab_closure[4];
     accel_group = ctk_accel_group_new ();
     ctk_window_add_accel_group (CTK_WINDOW(app), accel_group);
@@ -782,7 +782,7 @@ update_sensitivity(ProcData *data)
 
     size_t i;
     gboolean processes_sensitivity, selected_sensitivity;
-    GtkAction *action;
+    CtkAction *action;
 
     processes_sensitivity = (data->config.current_tab == PROCMAN_TAB_PROCESSES);
     selected_sensitivity = (processes_sensitivity && data->selected_process != NULL);
@@ -812,13 +812,13 @@ block_priority_changed_handlers(ProcData *data, bool block)
     gint i;
     if (block) {
         for (i = 0; i != G_N_ELEMENTS(priority_menu_entries); ++i) {
-            GtkRadioAction *action = CTK_RADIO_ACTION(ctk_action_group_get_action(data->action_group,
+            CtkRadioAction *action = CTK_RADIO_ACTION(ctk_action_group_get_action(data->action_group,
                                              priority_menu_entries[i].name));
             g_signal_handlers_block_by_func(action, (gpointer)cb_renice, data);
         }
     } else {
         for (i = 0; i != G_N_ELEMENTS(priority_menu_entries); ++i) {
-            GtkRadioAction *action = CTK_RADIO_ACTION(ctk_action_group_get_action(data->action_group,
+            CtkRadioAction *action = CTK_RADIO_ACTION(ctk_action_group_get_action(data->action_group,
                                              priority_menu_entries[i].name));
             g_signal_handlers_unblock_by_func(action, (gpointer)cb_renice, data);
         }
@@ -826,7 +826,7 @@ block_priority_changed_handlers(ProcData *data, bool block)
 }
 
 static void
-cb_toggle_tree (GtkAction *action, gpointer data)
+cb_toggle_tree (CtkAction *action, gpointer data)
 {
     ProcData *procdata = static_cast<ProcData*>(data);
     GSettings *settings = procdata->settings;

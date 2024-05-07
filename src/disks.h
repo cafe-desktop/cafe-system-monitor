@@ -3,7 +3,7 @@
 
 #include "procman.h"
 
-GtkWidget *
+CtkWidget *
 create_disk_view(ProcData *procdata);
 
 int

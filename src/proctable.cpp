@@ -73,7 +73,7 @@ ProcInfo* ProcInfo::find(pid_t pid)
 
 
 static void
-cb_columns_changed(GtkTreeView *treeview, gpointer user_data)
+cb_columns_changed(CtkTreeView *treeview, gpointer user_data)
 {
     ProcData * const procdata = static_cast<ProcData*>(user_data);
 
@@ -83,7 +83,7 @@ cb_columns_changed(GtkTreeView *treeview, gpointer user_data)
 }
 
 static void
-cb_sort_changed (GtkTreeSortable *model, gpointer user_data)
+cb_sort_changed (CtkTreeSortable *model, gpointer user_data)
 {
     ProcData * const procdata = static_cast<ProcData*>(user_data);
 
@@ -93,19 +93,19 @@ cb_sort_changed (GtkTreeSortable *model, gpointer user_data)
 }
 
 
-static GtkTreeViewColumn*
-my_ctk_tree_view_get_column_with_sort_column_id(GtkTreeView *treeview, int id)
+static CtkTreeViewColumn*
+my_ctk_tree_view_get_column_with_sort_column_id(CtkTreeView *treeview, int id)
 {
     GList *columns, *it;
-    GtkTreeViewColumn *col = NULL;
+    CtkTreeViewColumn *col = NULL;
 
     columns = ctk_tree_view_get_columns(treeview);
 
     for(it = columns; it; it = it->next)
     {
-        if(ctk_tree_view_column_get_sort_column_id(static_cast<GtkTreeViewColumn*>(it->data)) == id)
+        if(ctk_tree_view_column_get_sort_column_id(static_cast<CtkTreeViewColumn*>(it->data)) == id)
         {
-            col = static_cast<GtkTreeViewColumn*>(it->data);
+            col = static_cast<CtkTreeViewColumn*>(it->data);
             break;
         }
     }
@@ -117,15 +117,15 @@ my_ctk_tree_view_get_column_with_sort_column_id(GtkTreeView *treeview, int id)
 
 
 void
-proctable_set_columns_order(GtkTreeView *treeview, GSList *order)
+proctable_set_columns_order(CtkTreeView *treeview, GSList *order)
 {
-    GtkTreeViewColumn* last = NULL;
+    CtkTreeViewColumn* last = NULL;
     GSList *it;
 
     for(it = order; it; it = it->next)
     {
         int id;
-        GtkTreeViewColumn *cur;
+        CtkTreeViewColumn *cur;
 
         id = GPOINTER_TO_INT(it->data);
 
@@ -141,7 +141,7 @@ proctable_set_columns_order(GtkTreeView *treeview, GSList *order)
 
 
 GSList*
-proctable_get_columns_order(GtkTreeView *treeview)
+proctable_get_columns_order(CtkTreeView *treeview)
 {
     GList *columns, *col;
     GSList *order = NULL;
@@ -152,7 +152,7 @@ proctable_get_columns_order(GtkTreeView *treeview)
     {
         int id;
 
-        id = ctk_tree_view_column_get_sort_column_id(static_cast<GtkTreeViewColumn*>(col->data));
+        id = ctk_tree_view_column_get_sort_column_id(static_cast<CtkTreeViewColumn*>(col->data));
         order = g_slist_prepend(order, GINT_TO_POINTER(id));
     }
 
@@ -164,7 +164,7 @@ proctable_get_columns_order(GtkTreeView *treeview)
 }
 
 static guint timeout_id = 0;
-static GtkTreeViewColumn *current_column;
+static CtkTreeViewColumn *current_column;
 
 static gboolean
 save_column_width (gpointer data)
@@ -191,7 +191,7 @@ save_column_width (gpointer data)
 }
 
 static void
-cb_proctable_column_resized(GtkWidget *widget, GParamSpec *pspec, gpointer data)
+cb_proctable_column_resized(CtkWidget *widget, GParamSpec *pspec, gpointer data)
 {
     current_column = CTK_TREE_VIEW_COLUMN(widget);
 
@@ -202,10 +202,10 @@ cb_proctable_column_resized(GtkWidget *widget, GParamSpec *pspec, gpointer data)
 }
 
 static gboolean
-search_equal_func(GtkTreeModel *model,
+search_equal_func(CtkTreeModel *model,
                   gint column,
                   const gchar *key,
-                  GtkTreeIter *iter,
+                  CtkTreeIter *iter,
                   gpointer search_data)
 {
     char* name;
@@ -228,15 +228,15 @@ search_equal_func(GtkTreeModel *model,
 
 
 
-GtkWidget *
+CtkWidget *
 proctable_new (ProcData * const procdata)
 {
-    GtkWidget *proctree;
-    GtkWidget *scrolled;
-    GtkTreeStore *model;
-    GtkTreeSelection *selection;
-    GtkTreeViewColumn *column;
-    GtkCellRenderer *cell_renderer;
+    CtkWidget *proctree;
+    CtkWidget *scrolled;
+    CtkTreeStore *model;
+    CtkTreeSelection *selection;
+    CtkTreeViewColumn *column;
+    CtkCellRenderer *cell_renderer;
 
     const gchar *titles[] = {
         N_("Process Name"),
@@ -353,8 +353,8 @@ proctable_new (ProcData * const procdata)
 
     for (i = COL_USER; i <= COL_PRIORITY; i++) {
 
-        GtkCellRenderer *cell;
-        GtkTreeViewColumn *col;
+        CtkCellRenderer *cell;
+        CtkTreeViewColumn *col;
 
         cell = ctk_cell_renderer_text_new();
         col = ctk_tree_view_column_new();
@@ -666,7 +666,7 @@ static void
 update_info_mutable_cols(ProcInfo *info)
 {
     ProcData * const procdata = ProcData::get_instance();
-    GtkTreeModel *model;
+    CtkTreeModel *model;
     model = ctk_tree_view_get_model(CTK_TREE_VIEW(procdata->tree));
 
     using procman::tree_store_update;
@@ -700,7 +700,7 @@ update_info_mutable_cols(ProcInfo *info)
 static void
 insert_info_to_tree (ProcInfo *info, ProcData *procdata, bool forced = false)
 {
-    GtkTreeModel *model;
+    CtkTreeModel *model;
 
     model = ctk_tree_view_get_model (CTK_TREE_VIEW (procdata->tree));
 
@@ -712,7 +712,7 @@ insert_info_to_tree (ProcInfo *info, ProcData *procdata, bool forced = false)
             parent = ProcInfo::find(info->ppid);
 
         if (parent) {
-            GtkTreePath *parent_node = ctk_tree_model_get_path(model, &parent->node);
+            CtkTreePath *parent_node = ctk_tree_model_get_path(model, &parent->node);
             ctk_tree_store_insert(CTK_TREE_STORE(model), &info->node, &parent->node, 0);
 
             if (!ctk_tree_view_row_expanded(CTK_TREE_VIEW(procdata->tree), parent_node)
@@ -749,10 +749,10 @@ insert_info_to_tree (ProcInfo *info, ProcData *procdata, bool forced = false)
 */
 template<typename List>
 static void
-remove_info_from_tree (ProcData *procdata, GtkTreeModel *model,
+remove_info_from_tree (ProcData *procdata, CtkTreeModel *model,
                        ProcInfo *current, List &orphans, unsigned lvl = 0)
 {
-    GtkTreeIter child_node;
+    CtkTreeIter child_node;
 
     if (std::find(orphans.begin(), orphans.end(), current) != orphans.end()) {
         procman_debug("[%u] %d already removed from tree", lvl, int(current->pid));
@@ -931,7 +931,7 @@ refresh_list (ProcData *procdata, const pid_t* pid_list, const guint n)
     typedef std::list<ProcInfo*> ProcList;
     ProcList addition;
 
-    GtkTreeModel *model = ctk_tree_view_get_model (CTK_TREE_VIEW (procdata->tree));
+    CtkTreeModel *model = ctk_tree_view_get_model (CTK_TREE_VIEW (procdata->tree));
     guint i;
 
     // Add or update processes in the process list
@@ -1119,7 +1119,7 @@ proctable_update (ProcData * const procdata)
 void
 proctable_clear_tree (ProcData * const procdata)
 {
-    GtkTreeModel *model;
+    CtkTreeModel *model;
 
     model = ctk_tree_view_get_model (CTK_TREE_VIEW (procdata->tree));
 
@@ -1164,7 +1164,7 @@ ProcInfo::set_icon(Glib::RefPtr<Gdk::Pixbuf> icon)
 {
   this->surface = gdk_cairo_surface_create_from_pixbuf (icon->gobj(), 0, NULL);
 
-  GtkTreeModel *model;
+  CtkTreeModel *model;
   model = ctk_tree_view_get_model(CTK_TREE_VIEW(ProcData::get_instance()->tree));
   ctk_tree_store_set(CTK_TREE_STORE(model), &this->node,
                      COL_SURFACE, this->surface,

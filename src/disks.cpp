@@ -109,10 +109,10 @@ get_icon_for_device(const char *mountpoint)
 
 
 static gboolean
-find_disk_in_model(GtkTreeModel *model, const char *mountpoint,
-                   GtkTreeIter *result)
+find_disk_in_model(CtkTreeModel *model, const char *mountpoint,
+                   CtkTreeIter *result)
 {
-    GtkTreeIter iter;
+    CtkTreeIter iter;
     gboolean found = FALSE;
 
     if (ctk_tree_model_get_iter_first(model, &iter)) {
@@ -139,9 +139,9 @@ find_disk_in_model(GtkTreeModel *model, const char *mountpoint,
 
 
 static void
-remove_old_disks(GtkTreeModel *model, const glibtop_mountentry *entries, guint n)
+remove_old_disks(CtkTreeModel *model, const glibtop_mountentry *entries, guint n)
 {
-    GtkTreeIter iter;
+    CtkTreeIter iter;
 
     if (!ctk_tree_model_get_iter_first(model, &iter))
         return;
@@ -179,11 +179,11 @@ remove_old_disks(GtkTreeModel *model, const glibtop_mountentry *entries, guint n
 
 
 static void
-add_disk(GtkListStore *list, const glibtop_mountentry *entry, bool show_all_fs)
+add_disk(CtkListStore *list, const glibtop_mountentry *entry, bool show_all_fs)
 {
     Glib::RefPtr<Gdk::Pixbuf> pixbuf;
     cairo_surface_t *surface;
-    GtkTreeIter iter;
+    CtkTreeIter iter;
     glibtop_fsusage usage;
     guint64 bused, bfree, bavail, btotal;
     gint percentage;
@@ -227,7 +227,7 @@ cb_update_disks(gpointer data)
 {
     ProcData *const procdata = static_cast<ProcData*>(data);
 
-    GtkListStore *list;
+    CtkListStore *list;
     glibtop_mountentry * entries;
     glibtop_mountlist mountlist;
     guint i;
@@ -248,7 +248,7 @@ cb_update_disks(gpointer data)
 
 
 static void
-cb_disk_columns_changed(GtkTreeView *treeview, gpointer user_data)
+cb_disk_columns_changed(CtkTreeView *treeview, gpointer user_data)
 {
     ProcData * const procdata = static_cast<ProcData*>(user_data);
 
@@ -259,13 +259,13 @@ cb_disk_columns_changed(GtkTreeView *treeview, gpointer user_data)
 
 
 static void
-open_dir(GtkTreeView       *tree_view,
-         GtkTreePath       *path,
-         GtkTreeViewColumn *column,
+open_dir(CtkTreeView       *tree_view,
+         CtkTreePath       *path,
+         CtkTreeViewColumn *column,
          gpointer           user_data)
 {
-    GtkTreeIter iter;
-    GtkTreeModel *model;
+    CtkTreeIter iter;
+    CtkTreeModel *model;
     char *dir, *url;
 
     model = ctk_tree_view_get_model(tree_view);
@@ -293,7 +293,7 @@ open_dir(GtkTreeView       *tree_view,
 }
 
 static guint timeout_id = 0;
-static GtkTreeViewColumn *current_column;
+static CtkTreeViewColumn *current_column;
 
 static gboolean
 save_column_width (gpointer data)
@@ -320,7 +320,7 @@ save_column_width (gpointer data)
 }
 
 static void
-cb_disks_column_resized(GtkWidget *widget, GParamSpec *pspec, gpointer data)
+cb_disks_column_resized(CtkWidget *widget, GParamSpec *pspec, gpointer data)
 {
     current_column = CTK_TREE_VIEW_COLUMN(widget);
 
@@ -330,15 +330,15 @@ cb_disks_column_resized(GtkWidget *widget, GParamSpec *pspec, gpointer data)
     timeout_id = g_timeout_add (250, save_column_width, data);
 }
 
-GtkWidget *
+CtkWidget *
 create_disk_view(ProcData *procdata)
 {
-    GtkWidget *disk_box;
-    GtkWidget *scrolled;
-    GtkWidget *disk_tree;
-    GtkListStore *model;
-    GtkTreeViewColumn *col;
-    GtkCellRenderer *cell;
+    CtkWidget *disk_box;
+    CtkWidget *scrolled;
+    CtkWidget *disk_tree;
+    CtkListStore *model;
+    CtkTreeViewColumn *col;
+    CtkCellRenderer *cell;
     guint i;
 
     const gchar * const titles[] = {

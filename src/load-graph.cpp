@@ -65,7 +65,7 @@ unsigned LoadGraph::num_bars() const
 
 #define FRAME_WIDTH 4
 static void draw_background(LoadGraph *graph) {
-    GtkAllocation allocation;
+    CtkAllocation allocation;
     cairo_t *cr;
     guint i;
     unsigned num_bars;
@@ -86,7 +86,7 @@ static void draw_background(LoadGraph *graph) {
     surface = gdk_window_create_similar_surface (ctk_widget_get_window (graph->disp), CAIRO_CONTENT_COLOR_ALPHA, allocation.width, allocation.height);
     cr = cairo_create (surface);
 
-    GtkStyleContext *context = ctk_widget_get_style_context (ProcData::get_instance()->notebook);
+    CtkStyleContext *context = ctk_widget_get_style_context (ProcData::get_instance()->notebook);
     ctk_style_context_save (context);
     ctk_style_context_set_state (context, CTK_STATE_FLAG_NORMAL);
     ctk_style_context_get_background_color (context, ctk_style_context_get_state (context), &bg);
@@ -201,11 +201,11 @@ load_graph_queue_draw (LoadGraph *graph)
 static int load_graph_update (gpointer user_data); // predeclare load_graph_update so we can compile ;)
 
 static gboolean
-load_graph_configure (GtkWidget *widget,
+load_graph_configure (CtkWidget *widget,
                       GdkEventConfigure *event,
                       gpointer data_ptr)
 {
-    GtkAllocation allocation;
+    CtkAllocation allocation;
     LoadGraph * const graph = static_cast<LoadGraph*>(data_ptr);
 
     ctk_widget_get_allocation (widget, &allocation);
@@ -219,7 +219,7 @@ load_graph_configure (GtkWidget *widget,
     return TRUE;
 }
 
-static gboolean load_graph_draw (GtkWidget *widget, cairo_t *context, gpointer data_ptr)
+static gboolean load_graph_draw (CtkWidget *widget, cairo_t *context, gpointer data_ptr)
 {
     LoadGraph * const graph = static_cast<LoadGraph*>(data_ptr);
     GdkWindow *window;
@@ -336,7 +336,7 @@ get_load (LoadGraph *graph)
 namespace
 {
 
-    void set_memory_label_and_picker(GtkLabel* label, GSMColorButton* picker,
+    void set_memory_label_and_picker(CtkLabel* label, GSMColorButton* picker,
                                    guint64 used, guint64 total, double percent)
     {
         char* used_text;
@@ -654,7 +654,7 @@ LoadGraph::~LoadGraph()
 
 
 static gboolean
-load_graph_destroy (GtkWidget *widget, gpointer data_ptr)
+load_graph_destroy (CtkWidget *widget, gpointer data_ptr)
 {
     LoadGraph * const graph = static_cast<LoadGraph*>(data_ptr);
 
@@ -821,19 +821,19 @@ load_graph_get_labels (LoadGraph *graph)
     return &graph->labels;
 }
 
-GtkWidget*
+CtkWidget*
 load_graph_get_widget (LoadGraph *graph)
 {
     return graph->main_widget;
 }
 
-GtkWidget*
+CtkWidget*
 load_graph_get_mem_color_picker(LoadGraph *graph)
 {
     return graph->mem_color_picker;
 }
 
-GtkWidget*
+CtkWidget*
 load_graph_get_swap_color_picker(LoadGraph *graph)
 {
     return graph->swap_color_picker;

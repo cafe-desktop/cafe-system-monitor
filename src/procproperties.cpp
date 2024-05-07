@@ -110,10 +110,10 @@ format_size(guint64 size)
 }
 
 static void
-fill_proc_properties (GtkWidget *tree, ProcInfo *info)
+fill_proc_properties (CtkWidget *tree, ProcInfo *info)
 {
     guint i;
-    GtkListStore *store;
+    CtkListStore *store;
 
     if (!info)
         return;
@@ -147,7 +147,7 @@ fill_proc_properties (GtkWidget *tree, ProcInfo *info)
 
     store = CTK_LIST_STORE(ctk_tree_view_get_model(CTK_TREE_VIEW(tree)));
     for (i = 0; proc_props[i].prop; i++) {
-        GtkTreeIter iter;
+        CtkTreeIter iter;
 
         if (!ctk_tree_model_iter_nth_child (CTK_TREE_MODEL(store), &iter, NULL, i)) {
             ctk_list_store_append(store, &iter);
@@ -160,7 +160,7 @@ fill_proc_properties (GtkWidget *tree, ProcInfo *info)
 }
 
 static void
-update_procproperties_dialog (GtkWidget *tree)
+update_procproperties_dialog (CtkWidget *tree)
 {
     ProcInfo *info;
 
@@ -171,9 +171,9 @@ update_procproperties_dialog (GtkWidget *tree)
 }
 
 static void
-close_procprop_dialog (GtkDialog *dialog, gint id, gpointer data)
+close_procprop_dialog (CtkDialog *dialog, gint id, gpointer data)
 {
-    GtkWidget *tree = static_cast<GtkWidget*>(data);
+    CtkWidget *tree = static_cast<CtkWidget*>(data);
     guint timer;
 
     timer = GPOINTER_TO_UINT (g_object_get_data (G_OBJECT (tree), "timer"));
@@ -182,13 +182,13 @@ close_procprop_dialog (GtkDialog *dialog, gint id, gpointer data)
     ctk_widget_destroy (CTK_WIDGET (dialog));
 }
 
-static GtkWidget *
+static CtkWidget *
 create_procproperties_tree (ProcData *procdata)
 {
-    GtkWidget *tree;
-    GtkListStore *model;
-    GtkTreeViewColumn *column;
-    GtkCellRenderer *cell;
+    CtkWidget *tree;
+    CtkListStore *model;
+    CtkTreeViewColumn *column;
+    CtkCellRenderer *cell;
     gint i;
 
     model = ctk_list_store_new (NUM_COLS,
@@ -219,8 +219,8 @@ create_procproperties_tree (ProcData *procdata)
 static gboolean
 procprop_timer (gpointer data)
 {
-    GtkWidget *tree = static_cast<GtkWidget*>(data);
-    GtkTreeModel *model;
+    CtkWidget *tree = static_cast<CtkWidget*>(data);
+    CtkTreeModel *model;
 
     model = ctk_tree_view_get_model (CTK_TREE_VIEW (tree));
     g_assert(model);
@@ -231,16 +231,16 @@ procprop_timer (gpointer data)
 }
 
 static void
-create_single_procproperties_dialog (GtkTreeModel *model, GtkTreePath *path,
-                                     GtkTreeIter *iter, gpointer data)
+create_single_procproperties_dialog (CtkTreeModel *model, CtkTreePath *path,
+                                     CtkTreeIter *iter, gpointer data)
 {
     ProcData *procdata = static_cast<ProcData*>(data);
-    GtkWidget *procpropdialog;
-    GtkWidget *dialog_vbox, *vbox;
-    GtkWidget *cmd_hbox;
-    GtkWidget *label;
-    GtkWidget *scrolled;
-    GtkWidget *tree;
+    CtkWidget *procpropdialog;
+    CtkWidget *dialog_vbox, *vbox;
+    CtkWidget *cmd_hbox;
+    CtkWidget *label;
+    CtkWidget *scrolled;
+    CtkWidget *tree;
     ProcInfo *info;
     guint timer;
 

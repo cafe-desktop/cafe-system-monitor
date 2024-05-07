@@ -28,13 +28,13 @@
 
 G_BEGIN_DECLS
 
-/* The GtkColorSelectionButton widget is a simple color picker in a button.
+/* The CtkColorSelectionButton widget is a simple color picker in a button.
  * The button displays a sample of the currently selected color. When
  * the user clicks on the button, a color selection dialog pops up.
  * The color picker emits the "color_set" signal when the color is set.
  */
 #define GSM_TYPE_COLOR_BUTTON            (gsm_color_button_get_type ())
-G_DECLARE_DERIVABLE_TYPE (GSMColorButton, gsm_color_button, GSM, COLOR_BUTTON, GtkDrawingArea)
+G_DECLARE_DERIVABLE_TYPE (GSMColorButton, gsm_color_button, GSM, COLOR_BUTTON, CtkDrawingArea)
 
 /* Widget types */
 enum
@@ -48,7 +48,7 @@ enum
 
 struct _GSMColorButtonClass
 {
-    GtkWidgetClass parent_class;
+    CtkWidgetClass parent_class;
 
     void (*color_set) (GSMColorButton * cp);
 
@@ -59,7 +59,7 @@ struct _GSMColorButtonClass
     void (*_ctk_reserved4) (void);
 };
 
-GtkWidget *gsm_color_button_new (const GdkRGBA * color, guint type);
+CtkWidget *gsm_color_button_new (const GdkRGBA * color, guint type);
 void gsm_color_button_set_color (GSMColorButton * color_button, const GdkRGBA * color);
 void gsm_color_button_set_fraction (GSMColorButton * color_button, const gdouble fraction);
 void gsm_color_button_set_cbtype (GSMColorButton * color_button, guint type);

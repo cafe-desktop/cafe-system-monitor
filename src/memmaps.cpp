@@ -121,14 +121,14 @@ namespace
     {
     public:
         guint timer;
-        GtkWidget *tree;
+        CtkWidget *tree;
         GSettings *settings;
         ProcInfo *info;
         OffsetForcafer format;
         mutable InodeDevices devices;
         const char * const schema;
 
-        MemMapsData(GtkWidget *a_tree, GSettings *a_settings)
+        MemMapsData(CtkWidget *a_tree, GSettings *a_settings)
             : tree(a_tree),
             settings(a_settings),
             schema("memmapstree")
@@ -160,7 +160,7 @@ struct glibtop_map_entry_cmp
 
 
 static void
-update_row(GtkTreeModel *model, GtkTreeIter &row, const MemMapsData &mm, const glibtop_map_entry *memmaps)
+update_row(CtkTreeModel *model, CtkTreeIter &row, const MemMapsData &mm, const glibtop_map_entry *memmaps)
 {
     guint64 size;
     string filename, device;
@@ -205,7 +205,7 @@ update_row(GtkTreeModel *model, GtkTreeIter &row, const MemMapsData &mm, const g
 static void
 update_memmaps_dialog (MemMapsData *mmdata)
 {
-    GtkTreeModel *model;
+    CtkTreeModel *model;
     glibtop_map_entry *memmaps;
     glibtop_proc_map procmap;
 
@@ -217,9 +217,9 @@ update_memmaps_dialog (MemMapsData *mmdata)
 
     model = ctk_tree_view_get_model (CTK_TREE_VIEW (mmdata->tree));
 
-    GtkTreeIter iter;
+    CtkTreeIter iter;
 
-    typedef std::map<guint64, GtkTreeIter> IterCache;
+    typedef std::map<guint64, CtkTreeIter> IterCache;
     IterCache iter_cache;
 
     /*
@@ -266,7 +266,7 @@ update_memmaps_dialog (MemMapsData *mmdata)
     */
 
     for (guint i = 0; i != procmap.number; i++) {
-        GtkTreeIter iter;
+        CtkTreeIter iter;
         IterCache::iterator it(iter_cache.find(memmaps[i].start));
 
         if (it != iter_cache.end())
@@ -283,7 +283,7 @@ update_memmaps_dialog (MemMapsData *mmdata)
 
 
 static void
-dialog_response (GtkDialog * dialog, gint response_id, gpointer data)
+dialog_response (CtkDialog * dialog, gint response_id, gpointer data)
 {
     MemMapsData * const mmdata = static_cast<MemMapsData*>(data);
 
@@ -297,8 +297,8 @@ dialog_response (GtkDialog * dialog, gint response_id, gpointer data)
 static MemMapsData*
 create_memmapsdata (ProcData *procdata)
 {
-    GtkWidget *tree;
-    GtkListStore *model;
+    CtkWidget *tree;
+    CtkListStore *model;
     guint i;
 
     const gchar * const titles[] = {
@@ -347,8 +347,8 @@ create_memmapsdata (ProcData *procdata)
     g_object_unref (G_OBJECT (model));
 
     for (i = 0; i < MMAP_COL_MAX; i++) {
-        GtkCellRenderer *cell;
-        GtkTreeViewColumn *col;
+        CtkCellRenderer *cell;
+        CtkTreeViewColumn *col;
 
         cell = ctk_cell_renderer_text_new();
         col = ctk_tree_view_column_new();
@@ -398,7 +398,7 @@ static gboolean
 memmaps_timer (gpointer data)
 {
     MemMapsData * const mmdata = static_cast<MemMapsData*>(data);
-    GtkTreeModel *model;
+    CtkTreeModel *model;
 
     model = ctk_tree_view_get_model (CTK_TREE_VIEW (mmdata->tree));
     g_assert(model);
@@ -410,15 +410,15 @@ memmaps_timer (gpointer data)
 
 
 static void
-create_single_memmaps_dialog (GtkTreeModel *model, GtkTreePath *path,
-                              GtkTreeIter *iter, gpointer data)
+create_single_memmaps_dialog (CtkTreeModel *model, CtkTreePath *path,
+                              CtkTreeIter *iter, gpointer data)
 {
     ProcData * const procdata = static_cast<ProcData*>(data);
     MemMapsData *mmdata;
-    GtkWidget *memmapsdialog;
-    GtkWidget *dialog_vbox;
-    GtkWidget *label;
-    GtkWidget *scrolled;
+    CtkWidget *memmapsdialog;
+    CtkWidget *dialog_vbox;
+    CtkWidget *label;
+    CtkWidget *scrolled;
     ProcInfo *info;
 
     ctk_tree_model_get (model, iter, COL_POINTER, &info, -1);

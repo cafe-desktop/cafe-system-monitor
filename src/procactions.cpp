@@ -33,7 +33,7 @@
 
 
 static void
-renice_single_process (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer data)
+renice_single_process (CtkTreeModel *model, CtkTreePath *path, CtkTreeIter *iter, gpointer data)
 {
     const struct ReniceArgs * const args = static_cast<ReniceArgs*>(data);
 
@@ -41,7 +41,7 @@ renice_single_process (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter
     gint error;
     int saved_errno;
     gchar *error_msg;
-    GtkWidget *dialog;
+    CtkWidget *dialog;
 
     ctk_tree_model_get (model, iter, COL_POINTER, &info, -1);
 
@@ -115,14 +115,14 @@ renice (ProcData *procdata, int nice)
 
 
 static void
-kill_single_process (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer data)
+kill_single_process (CtkTreeModel *model, CtkTreePath *path, CtkTreeIter *iter, gpointer data)
 {
     const struct KillArgs * const args = static_cast<KillArgs*>(data);
     char *error_msg;
     ProcInfo *info;
     int error;
     int saved_errno;
-    GtkWidget *dialog;
+    CtkWidget *dialog;
 
     ctk_tree_model_get (model, iter, COL_POINTER, &info, -1);
 

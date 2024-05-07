@@ -76,7 +76,7 @@
   * Translations update
   * fix crash on systems with pid 0
   * Update interval text in resources tab corrected
-  * avoid deprecated GtkStock
+  * avoid deprecated CtkStock
 
 ### cafe-system-monitor 1.20.0
 
@@ -102,7 +102,7 @@
   * update copyright year
   * avoid deprecated gdk_screen_width/height
   * Restore Polish translation credits from GNOME
-  * sysinfo: avoid deprecated GtkAlignment
+  * sysinfo: avoid deprecated CtkAlignment
 
 ### cafe-system-monitor 1.18.0
 
