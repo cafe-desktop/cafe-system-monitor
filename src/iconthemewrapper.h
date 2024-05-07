@@ -3,7 +3,7 @@
 
 #include <glibmm/refptr.h>
 #include <glibmm/ustring.h>
-#include <gtkmm/icontheme.h>
+#include <ctkmm/icontheme.h>
 #include <gdkmm/pixbuf.h>
 
 namespace procman

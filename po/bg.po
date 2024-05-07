@@ -543,7 +543,7 @@ msgstr "ИдПр"
 msgid "Filename"
 msgstr "Име на файл"
 
-#. gtk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr "Търсене за отворени файлове"

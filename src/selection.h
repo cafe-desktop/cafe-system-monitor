@@ -2,7 +2,7 @@
 #define H_CAFE_SYSTEM_MONITOR_SELECTION_H_1183113337
 
 #include <sys/types.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <vector>
 
 namespace procman

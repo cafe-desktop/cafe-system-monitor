@@ -94,16 +94,16 @@ cb_sort_changed (GtkTreeSortable *model, gpointer user_data)
 
 
 static GtkTreeViewColumn*
-my_gtk_tree_view_get_column_with_sort_column_id(GtkTreeView *treeview, int id)
+my_ctk_tree_view_get_column_with_sort_column_id(GtkTreeView *treeview, int id)
 {
     GList *columns, *it;
     GtkTreeViewColumn *col = NULL;
 
-    columns = gtk_tree_view_get_columns(treeview);
+    columns = ctk_tree_view_get_columns(treeview);
 
     for(it = columns; it; it = it->next)
     {
-        if(gtk_tree_view_column_get_sort_column_id(static_cast<GtkTreeViewColumn*>(it->data)) == id)
+        if(ctk_tree_view_column_get_sort_column_id(static_cast<GtkTreeViewColumn*>(it->data)) == id)
         {
             col = static_cast<GtkTreeViewColumn*>(it->data);
             break;
@@ -129,11 +129,11 @@ proctable_set_columns_order(GtkTreeView *treeview, GSList *order)
 
         id = GPOINTER_TO_INT(it->data);
 
-        cur = my_gtk_tree_view_get_column_with_sort_column_id(treeview, id);
+        cur = my_ctk_tree_view_get_column_with_sort_column_id(treeview, id);
 
         if(cur && cur != last)
         {
-            gtk_tree_view_move_column_after(treeview, cur, last);
+            ctk_tree_view_move_column_after(treeview, cur, last);
             last = cur;
         }
     }
@@ -146,13 +146,13 @@ proctable_get_columns_order(GtkTreeView *treeview)
     GList *columns, *col;
     GSList *order = NULL;
 
-    columns = gtk_tree_view_get_columns(treeview);
+    columns = ctk_tree_view_get_columns(treeview);
 
     for(col = columns; col; col = col->next)
     {
         int id;
 
-        id = gtk_tree_view_column_get_sort_column_id(static_cast<GtkTreeViewColumn*>(col->data));
+        id = ctk_tree_view_column_get_sort_column_id(static_cast<GtkTreeViewColumn*>(col->data));
         order = g_slist_prepend(order, GINT_TO_POINTER(id));
     }
 
@@ -175,8 +175,8 @@ save_column_width (gpointer data)
     GSettings *settings;
 
     settings = g_settings_get_child (G_SETTINGS (data), "proctree");
-    id = gtk_tree_view_column_get_sort_column_id (current_column);
-    width = gtk_tree_view_column_get_width (current_column);
+    id = ctk_tree_view_column_get_sort_column_id (current_column);
+    width = ctk_tree_view_column_get_width (current_column);
 
     key = g_strdup_printf ("col-%d-width", id);
     g_settings_set_int(settings, key, width);
@@ -212,7 +212,7 @@ search_equal_func(GtkTreeModel *model,
     char* user;
     gboolean found;
 
-    gtk_tree_model_get(model, iter,
+    ctk_tree_model_get(model, iter,
                        COL_NAME, &name,
                        COL_USER, &user,
                        -1);
@@ -275,12 +275,12 @@ proctable_new (ProcData * const procdata)
 
     gint i;
 
-    scrolled = gtk_scrolled_window_new (NULL, NULL);
-    gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled),
+    scrolled = ctk_scrolled_window_new (NULL, NULL);
+    ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled),
                                     GTK_POLICY_AUTOMATIC,
                                     GTK_POLICY_AUTOMATIC);
 
-    model = gtk_tree_store_new (NUM_COLUMNS,
+    model = ctk_tree_store_new (NUM_COLUMNS,
                                 G_TYPE_STRING,              /* Process Name */
                                 G_TYPE_STRING,              /* User         */
                                 G_TYPE_UINT,                /* Status       */
@@ -313,42 +313,42 @@ proctable_new (ProcData * const procdata)
                                 G_TYPE_STRING               /* Sexy tooltip */
         );
 
-    proctree = gtk_tree_view_new_with_model (GTK_TREE_MODEL (model));
-    gtk_tree_view_set_tooltip_column (GTK_TREE_VIEW (proctree), COL_TOOLTIP);
+    proctree = ctk_tree_view_new_with_model (GTK_TREE_MODEL (model));
+    ctk_tree_view_set_tooltip_column (GTK_TREE_VIEW (proctree), COL_TOOLTIP);
     g_object_set(G_OBJECT(proctree),
                  "show-expanders", procdata->config.show_tree,
                  NULL);
-    gtk_tree_view_set_search_equal_func (GTK_TREE_VIEW (proctree),
+    ctk_tree_view_set_search_equal_func (GTK_TREE_VIEW (proctree),
                                          search_equal_func,
                                          NULL,
                                          NULL);
     g_object_unref (G_OBJECT (model));
 
-    selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (proctree));
-    gtk_tree_selection_set_mode (selection, GTK_SELECTION_MULTIPLE);
+    selection = ctk_tree_view_get_selection (GTK_TREE_VIEW (proctree));
+    ctk_tree_selection_set_mode (selection, GTK_SELECTION_MULTIPLE);
 
-    column = gtk_tree_view_column_new ();
+    column = ctk_tree_view_column_new ();
 
-    cell_renderer = gtk_cell_renderer_pixbuf_new ();
-    gtk_tree_view_column_pack_start (column, cell_renderer, FALSE);
-    gtk_tree_view_column_set_attributes (column, cell_renderer,
+    cell_renderer = ctk_cell_renderer_pixbuf_new ();
+    ctk_tree_view_column_pack_start (column, cell_renderer, FALSE);
+    ctk_tree_view_column_set_attributes (column, cell_renderer,
                                          "surface", COL_SURFACE,
                                          NULL);
 
-    cell_renderer = gtk_cell_renderer_text_new ();
-    gtk_tree_view_column_pack_start (column, cell_renderer, FALSE);
-    gtk_tree_view_column_set_attributes (column, cell_renderer,
+    cell_renderer = ctk_cell_renderer_text_new ();
+    ctk_tree_view_column_pack_start (column, cell_renderer, FALSE);
+    ctk_tree_view_column_set_attributes (column, cell_renderer,
                                          "text", COL_NAME,
                                          NULL);
-    gtk_tree_view_column_set_title (column, _(titles[0]));
-    gtk_tree_view_column_set_sort_column_id (column, COL_NAME);
-    gtk_tree_view_column_set_resizable (column, TRUE);
-    gtk_tree_view_column_set_sizing(column, GTK_TREE_VIEW_COLUMN_FIXED);
-    gtk_tree_view_column_set_min_width (column, 20);
-    gtk_tree_view_column_set_reorderable (column, TRUE);
+    ctk_tree_view_column_set_title (column, _(titles[0]));
+    ctk_tree_view_column_set_sort_column_id (column, COL_NAME);
+    ctk_tree_view_column_set_resizable (column, TRUE);
+    ctk_tree_view_column_set_sizing(column, GTK_TREE_VIEW_COLUMN_FIXED);
+    ctk_tree_view_column_set_min_width (column, 20);
+    ctk_tree_view_column_set_reorderable (column, TRUE);
     g_signal_connect(G_OBJECT(column), "notify::fixed-width", G_CALLBACK(cb_proctable_column_resized), procdata->settings);
-    gtk_tree_view_append_column (GTK_TREE_VIEW (proctree), column);
-    gtk_tree_view_set_expander_column (GTK_TREE_VIEW (proctree), column);
+    ctk_tree_view_append_column (GTK_TREE_VIEW (proctree), column);
+    ctk_tree_view_set_expander_column (GTK_TREE_VIEW (proctree), column);
 
 
     for (i = COL_USER; i <= COL_PRIORITY; i++) {
@@ -356,21 +356,21 @@ proctable_new (ProcData * const procdata)
         GtkCellRenderer *cell;
         GtkTreeViewColumn *col;
 
-        cell = gtk_cell_renderer_text_new();
-        col = gtk_tree_view_column_new();
-        gtk_tree_view_column_pack_start(col, cell, TRUE);
-        gtk_tree_view_column_set_title(col, _(titles[i]));
-        gtk_tree_view_column_set_sort_column_id(col, i);
-        gtk_tree_view_column_set_resizable(col, TRUE);
-        gtk_tree_view_column_set_sizing(col, GTK_TREE_VIEW_COLUMN_FIXED);
+        cell = ctk_cell_renderer_text_new();
+        col = ctk_tree_view_column_new();
+        ctk_tree_view_column_pack_start(col, cell, TRUE);
+        ctk_tree_view_column_set_title(col, _(titles[i]));
+        ctk_tree_view_column_set_sort_column_id(col, i);
+        ctk_tree_view_column_set_resizable(col, TRUE);
+        ctk_tree_view_column_set_sizing(col, GTK_TREE_VIEW_COLUMN_FIXED);
         g_signal_connect(G_OBJECT(col), "notify::fixed-width", G_CALLBACK(cb_proctable_column_resized), procdata->settings);
-        gtk_tree_view_column_set_reorderable(col, TRUE);
-        gtk_tree_view_append_column(GTK_TREE_VIEW(proctree), col);
+        ctk_tree_view_column_set_reorderable(col, TRUE);
+        ctk_tree_view_append_column(GTK_TREE_VIEW(proctree), col);
 
         // type
         switch (i) {
             case COL_MEMXSERVER:
-                gtk_tree_view_column_set_cell_data_func(col, cell,
+                ctk_tree_view_column_set_cell_data_func(col, cell,
                                                         &procman::memory_size_cell_data_func,
                                                         GUINT_TO_POINTER(i),
                                                         NULL);
@@ -380,28 +380,28 @@ proctable_new (ProcData * const procdata)
             case COL_MEMSHARED:
             case COL_MEM:
             case COL_MEMWRITABLE:
-                gtk_tree_view_column_set_cell_data_func(col, cell,
+                ctk_tree_view_column_set_cell_data_func(col, cell,
                                                         &procman::memory_size_na_cell_data_func,
                                                         GUINT_TO_POINTER(i),
                                                         NULL);
                 break;
 
             case COL_CPU_TIME:
-                gtk_tree_view_column_set_cell_data_func(col, cell,
+                ctk_tree_view_column_set_cell_data_func(col, cell,
                                                         &procman::duration_cell_data_func,
                                                         GUINT_TO_POINTER(i),
                                                         NULL);
                 break;
 
             case COL_START_TIME:
-                gtk_tree_view_column_set_cell_data_func(col, cell,
+                ctk_tree_view_column_set_cell_data_func(col, cell,
                                                         &procman::time_cell_data_func,
                                                         GUINT_TO_POINTER(i),
                                                         NULL);
                 break;
 
             case COL_STATUS:
-                gtk_tree_view_column_set_cell_data_func(col, cell,
+                ctk_tree_view_column_set_cell_data_func(col, cell,
                                                         &procman::status_cell_data_func,
                                                         GUINT_TO_POINTER(i),
                                                         NULL);
@@ -409,7 +409,7 @@ proctable_new (ProcData * const procdata)
 
             case COL_DISK_READ_TOTAL:
             case COL_DISK_WRITE_TOTAL:
-                gtk_tree_view_column_set_cell_data_func(col, cell,
+                ctk_tree_view_column_set_cell_data_func(col, cell,
                                                         &procman::storage_size_na_cell_data_func,
                                                         GUINT_TO_POINTER(i),
                                                         NULL);
@@ -417,21 +417,21 @@ proctable_new (ProcData * const procdata)
 
             case COL_DISK_READ_CURRENT:
             case COL_DISK_WRITE_CURRENT:
-                gtk_tree_view_column_set_cell_data_func(col, cell,
+                ctk_tree_view_column_set_cell_data_func(col, cell,
                                                         &procman::io_rate_cell_data_func,
                                                         GUINT_TO_POINTER(i),
                                                         NULL);
                 break;
 
             case COL_PRIORITY:
-                gtk_tree_view_column_set_cell_data_func(col, cell,
+                ctk_tree_view_column_set_cell_data_func(col, cell,
                                                         &procman::priority_cell_data_func,
                                                         GUINT_TO_POINTER(COL_NICE),
                                                         NULL);
                 break;
 
             default:
-                gtk_tree_view_column_set_attributes(col, cell, "text", i, NULL);
+                ctk_tree_view_column_set_attributes(col, cell, "text", i, NULL);
         }
 
         // sorting
@@ -449,12 +449,12 @@ proctable_new (ProcData * const procdata)
             case COL_DISK_READ_CURRENT:
             case COL_DISK_WRITE_CURRENT:
             case COL_START_TIME:
-                gtk_tree_sortable_set_sort_func(GTK_TREE_SORTABLE(model), i,
+                ctk_tree_sortable_set_sort_func(GTK_TREE_SORTABLE(model), i,
                                                 procman::number_compare_func, GUINT_TO_POINTER(i),
                                                 NULL);
                 break;
             case COL_PRIORITY:
-                gtk_tree_sortable_set_sort_func(GTK_TREE_SORTABLE(model), i,
+                ctk_tree_sortable_set_sort_func(GTK_TREE_SORTABLE(model), i,
                                                 procman::priority_compare_func,
                                                 GUINT_TO_POINTER(COL_NICE), NULL);
                 break;
@@ -486,15 +486,15 @@ proctable_new (ProcData * const procdata)
         // sizing
         switch (i) {
             case COL_ARGS:
-                gtk_tree_view_column_set_min_width(col, 150);
+                ctk_tree_view_column_set_min_width(col, 150);
                 break;
             default:
-                gtk_tree_view_column_set_min_width(col, 20);
+                ctk_tree_view_column_set_min_width(col, 20);
                 break;
         }
     }
 
-    gtk_container_add (GTK_CONTAINER (scrolled), proctree);
+    ctk_container_add (GTK_CONTAINER (scrolled), proctree);
 
     procdata->tree = proctree;
 
@@ -502,13 +502,13 @@ proctable_new (ProcData * const procdata)
 
     /* Override column settings by hiding this column if it's meaningless: */
     if (!can_show_security_context_column ()) {
-        column = my_gtk_tree_view_get_column_with_sort_column_id (GTK_TREE_VIEW (proctree), COL_SECURITYCONTEXT);
-        gtk_tree_view_column_set_visible (column, FALSE);
+        column = my_ctk_tree_view_get_column_with_sort_column_id (GTK_TREE_VIEW (proctree), COL_SECURITYCONTEXT);
+        ctk_tree_view_column_set_visible (column, FALSE);
     }
 
     if (!cgroups_enabled()) {
-        column = my_gtk_tree_view_get_column_with_sort_column_id(GTK_TREE_VIEW(proctree), COL_CGROUP);
-        gtk_tree_view_column_set_visible(column, FALSE);
+        column = my_ctk_tree_view_get_column_with_sort_column_id(GTK_TREE_VIEW(proctree), COL_CGROUP);
+        ctk_tree_view_column_set_visible(column, FALSE);
     }
 
 #ifdef HAVE_SYSTEMD
@@ -516,12 +516,12 @@ proctable_new (ProcData * const procdata)
 #endif
     {
         for (i = COL_UNIT; i <= COL_OWNER; i++) {
-            column = my_gtk_tree_view_get_column_with_sort_column_id(GTK_TREE_VIEW(proctree), i);
-            gtk_tree_view_column_set_visible(column, FALSE);
+            column = my_ctk_tree_view_get_column_with_sort_column_id(GTK_TREE_VIEW(proctree), i);
+            ctk_tree_view_column_set_visible(column, FALSE);
         }
     }
 
-    g_signal_connect (G_OBJECT (gtk_tree_view_get_selection (GTK_TREE_VIEW (proctree))),
+    g_signal_connect (G_OBJECT (ctk_tree_view_get_selection (GTK_TREE_VIEW (proctree))),
                       "changed",
                       G_CALLBACK (cb_row_selected), procdata);
     g_signal_connect (G_OBJECT (proctree), "popup_menu",
@@ -667,7 +667,7 @@ update_info_mutable_cols(ProcInfo *info)
 {
     ProcData * const procdata = ProcData::get_instance();
     GtkTreeModel *model;
-    model = gtk_tree_view_get_model(GTK_TREE_VIEW(procdata->tree));
+    model = ctk_tree_view_get_model(GTK_TREE_VIEW(procdata->tree));
 
     using procman::tree_store_update;
 
@@ -702,7 +702,7 @@ insert_info_to_tree (ProcInfo *info, ProcData *procdata, bool forced = false)
 {
     GtkTreeModel *model;
 
-    model = gtk_tree_view_get_model (GTK_TREE_VIEW (procdata->tree));
+    model = ctk_tree_view_get_model (GTK_TREE_VIEW (procdata->tree));
 
     if (procdata->config.show_tree) {
 
@@ -712,24 +712,24 @@ insert_info_to_tree (ProcInfo *info, ProcData *procdata, bool forced = false)
             parent = ProcInfo::find(info->ppid);
 
         if (parent) {
-            GtkTreePath *parent_node = gtk_tree_model_get_path(model, &parent->node);
-            gtk_tree_store_insert(GTK_TREE_STORE(model), &info->node, &parent->node, 0);
+            GtkTreePath *parent_node = ctk_tree_model_get_path(model, &parent->node);
+            ctk_tree_store_insert(GTK_TREE_STORE(model), &info->node, &parent->node, 0);
 
-            if (!gtk_tree_view_row_expanded(GTK_TREE_VIEW(procdata->tree), parent_node)
+            if (!ctk_tree_view_row_expanded(GTK_TREE_VIEW(procdata->tree), parent_node)
 #ifdef __linux__
                 // on linuxes we don't want to expand kthreadd by default (always has pid 2)
                 && (parent->pid != 2)
 #endif
             )
-                gtk_tree_view_expand_row(GTK_TREE_VIEW(procdata->tree), parent_node, FALSE);
-            gtk_tree_path_free(parent_node);
+                ctk_tree_view_expand_row(GTK_TREE_VIEW(procdata->tree), parent_node, FALSE);
+            ctk_tree_path_free(parent_node);
         } else
-            gtk_tree_store_insert(GTK_TREE_STORE(model), &info->node, NULL, 0);
+            ctk_tree_store_insert(GTK_TREE_STORE(model), &info->node, NULL, 0);
     }
     else
-        gtk_tree_store_insert (GTK_TREE_STORE (model), &info->node, NULL, 0);
+        ctk_tree_store_insert (GTK_TREE_STORE (model), &info->node, NULL, 0);
 
-    gtk_tree_store_set (GTK_TREE_STORE (model), &info->node,
+    ctk_tree_store_set (GTK_TREE_STORE (model), &info->node,
                         COL_POINTER, info,
                         COL_NAME, info->name,
                         COL_ARGS, info->arguments,
@@ -760,25 +760,25 @@ remove_info_from_tree (ProcData *procdata, GtkTreeModel *model,
     }
 
     procman_debug("[%u] pid %d, %d children", lvl, int(current->pid),
-                  gtk_tree_model_iter_n_children(model, &current->node));
+                  ctk_tree_model_iter_n_children(model, &current->node));
 
     // it is not possible to iterate&erase over a treeview so instead we
     // just pop one child after another and recursively remove it and
     // its children
 
-    while (gtk_tree_model_iter_children(model, &child_node, &current->node)) {
+    while (ctk_tree_model_iter_children(model, &child_node, &current->node)) {
         ProcInfo *child = 0;
-        gtk_tree_model_get(model, &child_node, COL_POINTER, &child, -1);
+        ctk_tree_model_get(model, &child_node, COL_POINTER, &child, -1);
         remove_info_from_tree(procdata, model, child, orphans, lvl + 1);
     }
 
-    g_assert(not gtk_tree_model_iter_has_child(model, &current->node));
+    g_assert(not ctk_tree_model_iter_has_child(model, &current->node));
 
     if (procdata->selected_process == current)
         procdata->selected_process = NULL;
 
     orphans.push_back(current);
-    gtk_tree_store_remove(GTK_TREE_STORE(model), &current->node);
+    ctk_tree_store_remove(GTK_TREE_STORE(model), &current->node);
     procman::poison(current->node, 0x69);
 }
 
@@ -931,7 +931,7 @@ refresh_list (ProcData *procdata, const pid_t* pid_list, const guint n)
     typedef std::list<ProcInfo*> ProcList;
     ProcList addition;
 
-    GtkTreeModel *model = gtk_tree_view_get_model (GTK_TREE_VIEW (procdata->tree));
+    GtkTreeModel *model = ctk_tree_view_get_model (GTK_TREE_VIEW (procdata->tree));
     guint i;
 
     // Add or update processes in the process list
@@ -1109,7 +1109,7 @@ proctable_update (ProcData * const procdata)
     char* string;
 
     string = make_loadavg_string();
-    gtk_label_set_text (GTK_LABEL(procdata->loadavg), string);
+    ctk_label_set_text (GTK_LABEL(procdata->loadavg), string);
     g_free (string);
 
     proctable_update_list (procdata);
@@ -1121,9 +1121,9 @@ proctable_clear_tree (ProcData * const procdata)
 {
     GtkTreeModel *model;
 
-    model = gtk_tree_view_get_model (GTK_TREE_VIEW (procdata->tree));
+    model = ctk_tree_view_get_model (GTK_TREE_VIEW (procdata->tree));
 
-    gtk_tree_store_clear (GTK_TREE_STORE (model));
+    ctk_tree_store_clear (GTK_TREE_STORE (model));
 
     proctable_free_table (procdata);
 
@@ -1165,8 +1165,8 @@ ProcInfo::set_icon(Glib::RefPtr<Gdk::Pixbuf> icon)
   this->surface = gdk_cairo_surface_create_from_pixbuf (icon->gobj(), 0, NULL);
 
   GtkTreeModel *model;
-  model = gtk_tree_view_get_model(GTK_TREE_VIEW(ProcData::get_instance()->tree));
-  gtk_tree_store_set(GTK_TREE_STORE(model), &this->node,
+  model = ctk_tree_view_get_model(GTK_TREE_VIEW(ProcData::get_instance()->tree));
+  ctk_tree_store_set(GTK_TREE_STORE(model), &this->node,
                      COL_SURFACE, this->surface,
                     -1);
 }

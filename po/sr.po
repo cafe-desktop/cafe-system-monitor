@@ -553,7 +553,7 @@ msgstr "ПИБ"
 msgid "Filename"
 msgstr "Датотека"
 
-#. gtk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr "Потражи отворене датотеке"

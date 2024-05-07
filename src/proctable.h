@@ -21,7 +21,7 @@
 #define _PROCMAN_PROCTABLE_H_
 
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include "procman.h"
 
 enum

@@ -21,7 +21,7 @@
 #include <config.h>
 
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -204,38 +204,38 @@ create_proc_view (ProcData *procdata)
     GtkWidget *hbox2;
     char* string;
 
-    vbox1 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 18);
-    gtk_container_set_border_width (GTK_CONTAINER (vbox1), 12);
+    vbox1 = ctk_box_new (GTK_ORIENTATION_VERTICAL, 18);
+    ctk_container_set_border_width (GTK_CONTAINER (vbox1), 12);
 
-    hbox1 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-    gtk_box_pack_start (GTK_BOX (vbox1), hbox1, FALSE, FALSE, 0);
+    hbox1 = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+    ctk_box_pack_start (GTK_BOX (vbox1), hbox1, FALSE, FALSE, 0);
 
     string = make_loadavg_string ();
-    procdata->loadavg = gtk_label_new (string);
+    procdata->loadavg = ctk_label_new (string);
     g_free (string);
-    gtk_box_pack_start (GTK_BOX (hbox1), procdata->loadavg, FALSE, FALSE, 0);
+    ctk_box_pack_start (GTK_BOX (hbox1), procdata->loadavg, FALSE, FALSE, 0);
 
 
     scrolled = proctable_new (procdata);
     if (!scrolled)
         return NULL;
-    gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled),
+    ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled),
                                          GTK_SHADOW_IN);
 
-    gtk_box_pack_start (GTK_BOX (vbox1), scrolled, TRUE, TRUE, 0);
+    ctk_box_pack_start (GTK_BOX (vbox1), scrolled, TRUE, TRUE, 0);
 
 
-    hbox2 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-    gtk_box_pack_start (GTK_BOX (vbox1), hbox2, FALSE, FALSE, 0);
+    hbox2 = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+    ctk_box_pack_start (GTK_BOX (vbox1), hbox2, FALSE, FALSE, 0);
 
-    procdata->endprocessbutton = gtk_button_new_with_mnemonic (_("End _Process"));
-    gtk_box_pack_end (GTK_BOX (hbox2), procdata->endprocessbutton, FALSE, FALSE, 0);
+    procdata->endprocessbutton = ctk_button_new_with_mnemonic (_("End _Process"));
+    ctk_box_pack_end (GTK_BOX (hbox2), procdata->endprocessbutton, FALSE, FALSE, 0);
     g_signal_connect (G_OBJECT (procdata->endprocessbutton), "clicked",
                       G_CALLBACK (cb_end_process_button_pressed), procdata);
 
 
     /* create popup_menu */
-     procdata->popup_menu = gtk_ui_manager_get_widget (procdata->uimanager, "/PopupMenu");
+     procdata->popup_menu = ctk_ui_manager_get_widget (procdata->uimanager, "/PopupMenu");
 
     return vbox1;
 }
@@ -248,11 +248,11 @@ make_title_label (const char *text)
     char *full;
 
     full = g_strdup_printf ("<span weight=\"bold\">%s</span>", text);
-    label = gtk_label_new (full);
+    label = ctk_label_new (full);
     g_free (full);
 
-    gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-    gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
+    ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+    ctk_label_set_use_markup (GTK_LABEL (label), TRUE);
 
     return label;
 }
@@ -278,114 +278,114 @@ create_sys_view (ProcData *procdata)
     // Translators: color picker title, %s is CPU, Memory, Swap, Receiving, Sending
     title_template = g_strdup(_("Pick a Color for '%s'"));
 
-    vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 18);
+    vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 18);
 
-    gtk_container_set_border_width (GTK_CONTAINER (vbox), 12);
+    ctk_container_set_border_width (GTK_CONTAINER (vbox), 12);
 
     /* The CPU BOX */
 
-    cpu_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    gtk_box_pack_start (GTK_BOX (vbox), cpu_box, TRUE, TRUE, 0);
+    cpu_box = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+    ctk_box_pack_start (GTK_BOX (vbox), cpu_box, TRUE, TRUE, 0);
 
     label = make_title_label (_("CPU History"));
-    gtk_box_pack_start (GTK_BOX (cpu_box), label, FALSE, FALSE, 0);
+    ctk_box_pack_start (GTK_BOX (cpu_box), label, FALSE, FALSE, 0);
 
-    cpu_graph_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    gtk_box_pack_start (GTK_BOX (cpu_box), cpu_graph_box, TRUE, TRUE, 0);
+    cpu_graph_box = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+    ctk_box_pack_start (GTK_BOX (cpu_box), cpu_graph_box, TRUE, TRUE, 0);
 
     cpu_graph = new LoadGraph(LOAD_GRAPH_CPU);
-    gtk_box_pack_start (GTK_BOX (cpu_graph_box),
+    ctk_box_pack_start (GTK_BOX (cpu_graph_box),
                         load_graph_get_widget(cpu_graph),
                         TRUE,
                         TRUE,
                          0);
 
-    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
-    spacer = gtk_label_new ("");
-    gtk_widget_set_size_request(GTK_WIDGET(spacer), 57, -1);
-    gtk_box_pack_start (GTK_BOX (hbox), spacer,
+    hbox = ctk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    spacer = ctk_label_new ("");
+    ctk_widget_set_size_request(GTK_WIDGET(spacer), 57, -1);
+    ctk_box_pack_start (GTK_BOX (hbox), spacer,
                         FALSE, FALSE, 0);
 
 
-    gtk_box_pack_start (GTK_BOX (cpu_graph_box), hbox,
+    ctk_box_pack_start (GTK_BOX (cpu_graph_box), hbox,
                         FALSE, FALSE, 0);
 
-    GtkWidget* cpu_grid = gtk_grid_new();
-    gtk_grid_set_row_spacing(GTK_GRID(cpu_grid), 6);
-    gtk_grid_set_column_spacing(GTK_GRID(cpu_grid), 6);
-    gtk_grid_set_column_homogeneous(GTK_GRID(cpu_grid), TRUE);
-    gtk_box_pack_start(GTK_BOX(hbox), cpu_grid, TRUE, TRUE, 0);
+    GtkWidget* cpu_grid = ctk_grid_new();
+    ctk_grid_set_row_spacing(GTK_GRID(cpu_grid), 6);
+    ctk_grid_set_column_spacing(GTK_GRID(cpu_grid), 6);
+    ctk_grid_set_column_homogeneous(GTK_GRID(cpu_grid), TRUE);
+    ctk_box_pack_start(GTK_BOX(hbox), cpu_grid, TRUE, TRUE, 0);
 
     for (i=0;i<procdata->config.num_cpus; i++) {
         GtkWidget *temp_hbox;
 
-        temp_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-        gtk_widget_set_hexpand (temp_hbox, TRUE);
-        gtk_grid_attach(GTK_GRID(cpu_grid), temp_hbox,
+        temp_hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+        ctk_widget_set_hexpand (temp_hbox, TRUE);
+        ctk_grid_attach(GTK_GRID(cpu_grid), temp_hbox,
                         i % 4, i / 4, 1, 1);
 
         color_picker = gsm_color_button_new (&cpu_graph->colors.at(i), GSMCP_TYPE_CPU);
         g_signal_connect (G_OBJECT (color_picker), "color_set",
                           G_CALLBACK (cb_cpu_color_changed), GINT_TO_POINTER (i));
-        gtk_box_pack_start (GTK_BOX (temp_hbox), color_picker, FALSE, TRUE, 0);
-        gtk_widget_set_size_request(GTK_WIDGET(color_picker), 32, -1);
+        ctk_box_pack_start (GTK_BOX (temp_hbox), color_picker, FALSE, TRUE, 0);
+        ctk_widget_set_size_request(GTK_WIDGET(color_picker), 32, -1);
         if(procdata->config.num_cpus == 1) {
             label_text = g_strdup (_("CPU"));
         } else {
             label_text = g_strdup_printf (_("CPU%d"), i+1);
         }
         title_text = g_strdup_printf(title_template, label_text);
-        label = gtk_label_new (label_text);
+        label = ctk_label_new (label_text);
         gsm_color_button_set_title(GSM_COLOR_BUTTON(color_picker), title_text);
         g_free(title_text);
-        gtk_box_pack_start (GTK_BOX (temp_hbox), label, FALSE, FALSE, 6);
+        ctk_box_pack_start (GTK_BOX (temp_hbox), label, FALSE, FALSE, 6);
         g_free (label_text);
 
-        cpu_label = gtk_label_new (NULL);
-        gtk_label_set_xalign (GTK_LABEL (cpu_label), 0.0);
+        cpu_label = ctk_label_new (NULL);
+        ctk_label_set_xalign (GTK_LABEL (cpu_label), 0.0);
 
-        gtk_box_pack_start (GTK_BOX (temp_hbox), cpu_label, TRUE, TRUE, 0);
+        ctk_box_pack_start (GTK_BOX (temp_hbox), cpu_label, TRUE, TRUE, 0);
         load_graph_get_labels(cpu_graph)->cpu[i] = cpu_label;
 
     }
 
     procdata->cpu_graph = cpu_graph;
 
-    mem_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    gtk_box_pack_start (GTK_BOX (vbox), mem_box, TRUE, TRUE, 0);
+    mem_box = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+    ctk_box_pack_start (GTK_BOX (vbox), mem_box, TRUE, TRUE, 0);
 
     label = make_title_label (_("Memory and Swap History"));
-    gtk_box_pack_start (GTK_BOX (mem_box), label, FALSE, FALSE, 0);
+    ctk_box_pack_start (GTK_BOX (mem_box), label, FALSE, FALSE, 0);
 
-    mem_graph_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    gtk_box_pack_start (GTK_BOX (mem_box), mem_graph_box, TRUE, TRUE, 0);
+    mem_graph_box = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+    ctk_box_pack_start (GTK_BOX (mem_box), mem_graph_box, TRUE, TRUE, 0);
 
 
     mem_graph = new LoadGraph(LOAD_GRAPH_MEM);
-    gtk_box_pack_start (GTK_BOX (mem_graph_box),
+    ctk_box_pack_start (GTK_BOX (mem_graph_box),
                         load_graph_get_widget(mem_graph),
                         TRUE,
                         TRUE,
                         0);
 
-    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
-    spacer = gtk_label_new ("");
-    gtk_widget_set_size_request(GTK_WIDGET(spacer), 54, -1);
-    gtk_box_pack_start (GTK_BOX (hbox), spacer,
+    hbox = ctk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    spacer = ctk_label_new ("");
+    ctk_widget_set_size_request(GTK_WIDGET(spacer), 54, -1);
+    ctk_box_pack_start (GTK_BOX (hbox), spacer,
                         FALSE, FALSE, 0);
 
 
-    gtk_box_pack_start (GTK_BOX (mem_graph_box), hbox,
+    ctk_box_pack_start (GTK_BOX (mem_graph_box), hbox,
                         FALSE, FALSE, 0);
 
-    mem_legend_box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
-    gtk_box_pack_start (GTK_BOX (hbox), mem_legend_box,
+    mem_legend_box = ctk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
+    ctk_box_pack_start (GTK_BOX (hbox), mem_legend_box,
                         TRUE, TRUE, 0);
 
-    grid = gtk_grid_new ();
-    gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
-    gtk_grid_set_column_spacing (GTK_GRID (grid), 6);
-    gtk_box_pack_start (GTK_BOX (mem_legend_box), grid,
+    grid = ctk_grid_new ();
+    ctk_grid_set_row_spacing (GTK_GRID (grid), 6);
+    ctk_grid_set_column_spacing (GTK_GRID (grid), 6);
+    ctk_box_pack_start (GTK_BOX (mem_legend_box), grid,
                         TRUE, TRUE, 0);
 
     label_text = g_strdup(_("Memory"));
@@ -395,21 +395,21 @@ create_sys_view (ProcData *procdata)
     title_text = g_strdup_printf(title_template, label_text);
     gsm_color_button_set_title(GSM_COLOR_BUTTON(color_picker), title_text);
     g_free(title_text);
-    gtk_grid_attach (GTK_GRID (grid), color_picker, 0, 0, 1, 2);
+    ctk_grid_attach (GTK_GRID (grid), color_picker, 0, 0, 1, 2);
 
-    label = gtk_label_new (label_text);
+    label = ctk_label_new (label_text);
     g_free(label_text);
-    gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-    gtk_grid_attach (GTK_GRID (grid), label, 1, 0, 7, 1);
+    ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+    ctk_grid_attach (GTK_GRID (grid), label, 1, 0, 7, 1);
 
-    gtk_grid_attach (GTK_GRID (grid),
+    ctk_grid_attach (GTK_GRID (grid),
                       load_graph_get_labels(mem_graph)->memory,
                       1, 1, 1, 1);
 
-    grid = gtk_grid_new ();
-    gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
-    gtk_grid_set_column_spacing (GTK_GRID (grid), 6);
-    gtk_box_pack_start (GTK_BOX (mem_legend_box), grid,
+    grid = ctk_grid_new ();
+    ctk_grid_set_row_spacing (GTK_GRID (grid), 6);
+    ctk_grid_set_column_spacing (GTK_GRID (grid), 6);
+    ctk_box_pack_start (GTK_BOX (mem_legend_box), grid,
                         TRUE, TRUE, 0);
 
     label_text = g_strdup(_("Swap"));
@@ -419,54 +419,54 @@ create_sys_view (ProcData *procdata)
     title_text = g_strdup_printf(title_template, label_text);
     gsm_color_button_set_title(GSM_COLOR_BUTTON(color_picker), title_text);
     g_free(title_text);
-    gtk_grid_attach (GTK_GRID (grid), color_picker, 0, 0, 1, 2);
+    ctk_grid_attach (GTK_GRID (grid), color_picker, 0, 0, 1, 2);
 
-    label = gtk_label_new (label_text);
+    label = ctk_label_new (label_text);
     g_free(label_text);
-    gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-    gtk_grid_attach (GTK_GRID (grid), label, 1, 0, 7, 1);
+    ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+    ctk_grid_attach (GTK_GRID (grid), label, 1, 0, 7, 1);
 
-    gtk_grid_attach (GTK_GRID (grid),
+    ctk_grid_attach (GTK_GRID (grid),
                       load_graph_get_labels(mem_graph)->swap,
                       1, 1, 1, 1);
 
     procdata->mem_graph = mem_graph;
 
     /* The net box */
-    net_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    gtk_box_pack_start (GTK_BOX (vbox), net_box, TRUE, TRUE, 0);
+    net_box = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+    ctk_box_pack_start (GTK_BOX (vbox), net_box, TRUE, TRUE, 0);
 
     label = make_title_label (_("Network History"));
-    gtk_box_pack_start (GTK_BOX (net_box), label, FALSE, FALSE, 0);
+    ctk_box_pack_start (GTK_BOX (net_box), label, FALSE, FALSE, 0);
 
-    net_graph_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    gtk_box_pack_start (GTK_BOX (net_box), net_graph_box, TRUE, TRUE, 0);
+    net_graph_box = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+    ctk_box_pack_start (GTK_BOX (net_box), net_graph_box, TRUE, TRUE, 0);
 
     net_graph = new LoadGraph(LOAD_GRAPH_NET);
-    gtk_box_pack_start (GTK_BOX (net_graph_box),
+    ctk_box_pack_start (GTK_BOX (net_graph_box),
                         load_graph_get_widget(net_graph),
                         TRUE,
                         TRUE,
                         0);
 
-    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
-    spacer = gtk_label_new ("");
-    gtk_widget_set_size_request(GTK_WIDGET(spacer), 54, -1);
-    gtk_box_pack_start (GTK_BOX (hbox), spacer,
+    hbox = ctk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    spacer = ctk_label_new ("");
+    ctk_widget_set_size_request(GTK_WIDGET(spacer), 54, -1);
+    ctk_box_pack_start (GTK_BOX (hbox), spacer,
                         FALSE, FALSE, 0);
 
 
-    gtk_box_pack_start (GTK_BOX (net_graph_box), hbox,
+    ctk_box_pack_start (GTK_BOX (net_graph_box), hbox,
                         FALSE, FALSE, 0);
 
-    net_legend_box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
-    gtk_box_pack_start (GTK_BOX (hbox), net_legend_box,
+    net_legend_box = ctk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
+    ctk_box_pack_start (GTK_BOX (hbox), net_legend_box,
                         TRUE, TRUE, 0);
 
-    grid = gtk_grid_new ();
-    gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
-    gtk_grid_set_column_spacing (GTK_GRID (grid), 6);
-    gtk_box_pack_start (GTK_BOX (net_legend_box), grid,
+    grid = ctk_grid_new ();
+    ctk_grid_set_row_spacing (GTK_GRID (grid), 6);
+    ctk_grid_set_column_spacing (GTK_GRID (grid), 6);
+    ctk_box_pack_start (GTK_BOX (net_legend_box), grid,
                         TRUE, TRUE, 0);
 
     label_text = g_strdup(_("Receiving"));
@@ -478,36 +478,36 @@ create_sys_view (ProcData *procdata)
     title_text = g_strdup_printf(title_template, label_text);
     gsm_color_button_set_title(GSM_COLOR_BUTTON(color_picker), title_text);
     g_free(title_text);
-    gtk_grid_attach (GTK_GRID (grid), color_picker, 0, 0, 1, 2);
+    ctk_grid_attach (GTK_GRID (grid), color_picker, 0, 0, 1, 2);
 
-    label = gtk_label_new (label_text);
+    label = ctk_label_new (label_text);
     g_free(label_text);
-    gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-    gtk_grid_attach (GTK_GRID (grid), label, 1, 0, 1, 1);
+    ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+    ctk_grid_attach (GTK_GRID (grid), label, 1, 0, 1, 1);
 
-    gtk_label_set_xalign (GTK_LABEL (load_graph_get_labels(net_graph)->net_in), 1.0);
+    ctk_label_set_xalign (GTK_LABEL (load_graph_get_labels(net_graph)->net_in), 1.0);
 
-    gtk_widget_set_size_request(GTK_WIDGET(load_graph_get_labels(net_graph)->net_in), 100, -1);
-    gtk_widget_set_hexpand (load_graph_get_labels(net_graph)->net_in, TRUE);
-    gtk_grid_attach (GTK_GRID (grid), load_graph_get_labels(net_graph)->net_in, 2, 0, 1, 1);
+    ctk_widget_set_size_request(GTK_WIDGET(load_graph_get_labels(net_graph)->net_in), 100, -1);
+    ctk_widget_set_hexpand (load_graph_get_labels(net_graph)->net_in, TRUE);
+    ctk_grid_attach (GTK_GRID (grid), load_graph_get_labels(net_graph)->net_in, 2, 0, 1, 1);
 
-    label = gtk_label_new (_("Total Received"));
-    gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-    gtk_grid_attach (GTK_GRID (grid), label, 1, 1, 1, 1);
+    label = ctk_label_new (_("Total Received"));
+    ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+    ctk_grid_attach (GTK_GRID (grid), label, 1, 1, 1, 1);
 
-    gtk_label_set_xalign (GTK_LABEL (load_graph_get_labels(net_graph)->net_in_total), 1.0);
-    gtk_grid_attach (GTK_GRID (grid),
+    ctk_label_set_xalign (GTK_LABEL (load_graph_get_labels(net_graph)->net_in_total), 1.0);
+    ctk_grid_attach (GTK_GRID (grid),
                      load_graph_get_labels(net_graph)->net_in_total,
                      2, 1, 1, 1);
 
-    spacer = gtk_label_new ("");
-    gtk_widget_set_size_request(GTK_WIDGET(spacer), 38, -1);
-    gtk_grid_attach (GTK_GRID (grid), spacer, 3, 0, 1, 1);
+    spacer = ctk_label_new ("");
+    ctk_widget_set_size_request(GTK_WIDGET(spacer), 38, -1);
+    ctk_grid_attach (GTK_GRID (grid), spacer, 3, 0, 1, 1);
 
-    grid = gtk_grid_new ();
-    gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
-    gtk_grid_set_column_spacing (GTK_GRID (grid), 6);
-    gtk_box_pack_start (GTK_BOX (net_legend_box), grid,
+    grid = ctk_grid_new ();
+    ctk_grid_set_row_spacing (GTK_GRID (grid), 6);
+    ctk_grid_set_column_spacing (GTK_GRID (grid), 6);
+    ctk_box_pack_start (GTK_BOX (net_legend_box), grid,
                         TRUE, TRUE, 0);
 
     label_text = g_strdup(_("Sending"));
@@ -519,31 +519,31 @@ create_sys_view (ProcData *procdata)
     title_text = g_strdup_printf(title_template, label_text);
     gsm_color_button_set_title(GSM_COLOR_BUTTON(color_picker), title_text);
     g_free(title_text);
-    gtk_grid_attach (GTK_GRID (grid), color_picker, 0, 0, 1, 2);
+    ctk_grid_attach (GTK_GRID (grid), color_picker, 0, 0, 1, 2);
 
-    label = gtk_label_new (label_text);
+    label = ctk_label_new (label_text);
     g_free(label_text);
-    gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-    gtk_grid_attach (GTK_GRID (grid), label, 1, 0, 1, 1);
+    ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+    ctk_grid_attach (GTK_GRID (grid), label, 1, 0, 1, 1);
 
-    gtk_label_set_xalign (GTK_LABEL (load_graph_get_labels(net_graph)->net_out), 1.0);
+    ctk_label_set_xalign (GTK_LABEL (load_graph_get_labels(net_graph)->net_out), 1.0);
 
-    gtk_widget_set_size_request(GTK_WIDGET(load_graph_get_labels(net_graph)->net_out), 100, -1);
-    gtk_widget_set_hexpand (load_graph_get_labels(net_graph)->net_out, TRUE);
-    gtk_grid_attach (GTK_GRID (grid), load_graph_get_labels(net_graph)->net_out, 2, 0, 1, 1);
+    ctk_widget_set_size_request(GTK_WIDGET(load_graph_get_labels(net_graph)->net_out), 100, -1);
+    ctk_widget_set_hexpand (load_graph_get_labels(net_graph)->net_out, TRUE);
+    ctk_grid_attach (GTK_GRID (grid), load_graph_get_labels(net_graph)->net_out, 2, 0, 1, 1);
 
-    label = gtk_label_new (_("Total Sent"));
-    gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-    gtk_grid_attach (GTK_GRID (grid), label, 1, 1, 1, 1);
+    label = ctk_label_new (_("Total Sent"));
+    ctk_label_set_xalign (GTK_LABEL (label), 0.0);
+    ctk_grid_attach (GTK_GRID (grid), label, 1, 1, 1, 1);
 
-    gtk_label_set_xalign (GTK_LABEL (load_graph_get_labels(net_graph)->net_out_total), 1.0);
-    gtk_grid_attach (GTK_GRID (grid),
+    ctk_label_set_xalign (GTK_LABEL (load_graph_get_labels(net_graph)->net_out_total), 1.0);
+    ctk_grid_attach (GTK_GRID (grid),
                       load_graph_get_labels(net_graph)->net_out_total,
                       2, 1, 1, 1);
 
-    spacer = gtk_label_new ("");
-    gtk_widget_set_size_request(GTK_WIDGET(spacer), 38, -1);
-    gtk_grid_attach (GTK_GRID (grid), spacer, 3, 0, 1, 1);
+    spacer = ctk_label_new ("");
+    ctk_widget_set_size_request(GTK_WIDGET(spacer), 38, -1);
+    ctk_grid_attach (GTK_GRID (grid), spacer, 3, 0, 1, 1);
 
     procdata->net_graph = net_graph;
     g_free(title_template);
@@ -558,13 +558,13 @@ menu_item_select_cb (GtkMenuItem *proxy,
     GtkAction *action;
     char *message;
 
-    action = gtk_activatable_get_related_action (GTK_ACTIVATABLE(proxy));
+    action = ctk_activatable_get_related_action (GTK_ACTIVATABLE(proxy));
     g_assert(action);
 
     g_object_get (G_OBJECT (action), "tooltip", &message, NULL);
     if (message)
     {
-        gtk_statusbar_push (GTK_STATUSBAR (procdata->statusbar),
+        ctk_statusbar_push (GTK_STATUSBAR (procdata->statusbar),
                     procdata->tip_message_cid, message);
         g_free (message);
     }
@@ -574,7 +574,7 @@ static void
 menu_item_deselect_cb (GtkMenuItem *proxy,
                        ProcData *procdata)
 {
-    gtk_statusbar_pop (GTK_STATUSBAR (procdata->statusbar),
+    ctk_statusbar_pop (GTK_STATUSBAR (procdata->statusbar),
                procdata->tip_message_cid);
 }
 
@@ -621,31 +621,31 @@ create_main_window (ProcData *procdata)
     GtkWidget *sys_box, *devices_box;
     GtkWidget *sysinfo_box, *sysinfo_label;
 
-    app = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    gtk_window_set_title(GTK_WINDOW(app), _("System Monitor"));
+    app = ctk_window_new(GTK_WINDOW_TOPLEVEL);
+    ctk_window_set_title(GTK_WINDOW(app), _("System Monitor"));
 
-    GdkScreen* screen = gtk_widget_get_screen(app);
+    GdkScreen* screen = ctk_widget_get_screen(app);
     /* use visual, if available */
     GdkVisual* visual = gdk_screen_get_rgba_visual(screen);
     if (visual)
-        gtk_widget_set_visual(app, visual);
+        ctk_widget_set_visual(app, visual);
 
-    main_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-    gtk_container_add(GTK_CONTAINER(app), main_box);
+    main_box = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+    ctk_container_add(GTK_CONTAINER(app), main_box);
 
     width = procdata->config.width;
     height = procdata->config.height;
     xpos = procdata->config.xpos;
     ypos = procdata->config.ypos;
-    gtk_window_set_default_size (GTK_WINDOW (app), width, height);
-    gtk_window_move(GTK_WINDOW (app), xpos, ypos);
-    gtk_window_set_resizable (GTK_WINDOW (app), TRUE);
+    ctk_window_set_default_size (GTK_WINDOW (app), width, height);
+    ctk_window_move(GTK_WINDOW (app), xpos, ypos);
+    ctk_window_set_resizable (GTK_WINDOW (app), TRUE);
     if (procdata->config.maximized) {
-        gtk_window_maximize(GTK_WINDOW(app));
+        ctk_window_maximize(GTK_WINDOW(app));
     }
 
     /* create the menubar */
-    procdata->uimanager = gtk_ui_manager_new ();
+    procdata->uimanager = ctk_ui_manager_new ();
 
     /* show tooltips in the statusbar */
     g_signal_connect (procdata->uimanager, "connect_proxy",
@@ -653,77 +653,77 @@ create_main_window (ProcData *procdata)
     g_signal_connect (procdata->uimanager, "disconnect_proxy",
                       G_CALLBACK (disconnect_proxy_cb), procdata);
 
-    gtk_window_add_accel_group (GTK_WINDOW (app),
-                                gtk_ui_manager_get_accel_group (procdata->uimanager));
+    ctk_window_add_accel_group (GTK_WINDOW (app),
+                                ctk_ui_manager_get_accel_group (procdata->uimanager));
 
-    if (!gtk_ui_manager_add_ui_from_string (procdata->uimanager,
+    if (!ctk_ui_manager_add_ui_from_string (procdata->uimanager,
                                             ui_info,
                                             -1,
                                             NULL)) {
         g_error("building menus failed");
     }
 
-    procdata->action_group = gtk_action_group_new ("ProcmanActions");
-    gtk_action_group_set_translation_domain (procdata->action_group, NULL);
-    gtk_action_group_add_actions (procdata->action_group,
+    procdata->action_group = ctk_action_group_new ("ProcmanActions");
+    ctk_action_group_set_translation_domain (procdata->action_group, NULL);
+    ctk_action_group_add_actions (procdata->action_group,
                                   menu_entries,
                                   G_N_ELEMENTS (menu_entries),
                                   procdata);
-    gtk_action_group_add_toggle_actions (procdata->action_group,
+    ctk_action_group_add_toggle_actions (procdata->action_group,
                                          toggle_menu_entries,
                                          G_N_ELEMENTS (toggle_menu_entries),
                                          procdata);
 
-    gtk_action_group_add_radio_actions (procdata->action_group,
+    ctk_action_group_add_radio_actions (procdata->action_group,
                         radio_menu_entries,
                         G_N_ELEMENTS (radio_menu_entries),
                         procdata->config.whose_process,
                         G_CALLBACK(cb_radio_processes),
                         procdata);
 
-    gtk_action_group_add_radio_actions (procdata->action_group,
+    ctk_action_group_add_radio_actions (procdata->action_group,
                                         priority_menu_entries,
                                         G_N_ELEMENTS (priority_menu_entries),
                                         NORMAL_PRIORITY,
                                         G_CALLBACK(cb_renice),
                                         procdata);
 
-    gtk_ui_manager_insert_action_group (procdata->uimanager,
+    ctk_ui_manager_insert_action_group (procdata->uimanager,
                                         procdata->action_group,
                                         0);
 
-    menubar = gtk_ui_manager_get_widget (procdata->uimanager, "/MenuBar");
-    gtk_box_pack_start (GTK_BOX (main_box), menubar, FALSE, FALSE, 0);
+    menubar = ctk_ui_manager_get_widget (procdata->uimanager, "/MenuBar");
+    ctk_box_pack_start (GTK_BOX (main_box), menubar, FALSE, FALSE, 0);
 
 
     /* create the main notebook */
-    procdata->notebook = notebook = gtk_notebook_new ();
-    gtk_box_pack_start (GTK_BOX (main_box), notebook, TRUE, TRUE, 0);
-    gtk_container_set_border_width (GTK_CONTAINER (notebook), 12);
+    procdata->notebook = notebook = ctk_notebook_new ();
+    ctk_box_pack_start (GTK_BOX (main_box), notebook, TRUE, TRUE, 0);
+    ctk_container_set_border_width (GTK_CONTAINER (notebook), 12);
 
-    sysinfo_box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0); // procman_create_sysinfo_view();
-    sysinfo_label = gtk_label_new(_("System"));
-    gtk_notebook_append_page(GTK_NOTEBOOK(notebook), sysinfo_box, sysinfo_label);
+    sysinfo_box = ctk_box_new(GTK_ORIENTATION_HORIZONTAL, 0); // procman_create_sysinfo_view();
+    sysinfo_label = ctk_label_new(_("System"));
+    ctk_notebook_append_page(GTK_NOTEBOOK(notebook), sysinfo_box, sysinfo_label);
 
     vbox1 = create_proc_view (procdata);
-    tab_label1 = gtk_label_new (_("Processes"));
-    gtk_notebook_append_page (GTK_NOTEBOOK (notebook), vbox1, tab_label1);
+    tab_label1 = ctk_label_new (_("Processes"));
+    ctk_notebook_append_page (GTK_NOTEBOOK (notebook), vbox1, tab_label1);
 
     sys_box = create_sys_view (procdata);
-    tab_label2 = gtk_label_new (_("Resources"));
-    gtk_notebook_append_page (GTK_NOTEBOOK (notebook), sys_box, tab_label2);
+    tab_label2 = ctk_label_new (_("Resources"));
+    ctk_notebook_append_page (GTK_NOTEBOOK (notebook), sys_box, tab_label2);
 
     devices_box = create_disk_view (procdata);
-    tab_label3 = gtk_label_new (_("File Systems"));
-    gtk_notebook_append_page (GTK_NOTEBOOK (notebook), devices_box, tab_label3);
+    tab_label3 = ctk_label_new (_("File Systems"));
+    ctk_notebook_append_page (GTK_NOTEBOOK (notebook), devices_box, tab_label3);
 
     g_signal_connect (G_OBJECT (notebook), "switch-page",
               G_CALLBACK (cb_switch_page), procdata);
     g_signal_connect (G_OBJECT (notebook), "change-current-page",
               G_CALLBACK (cb_change_current_page), procdata);
 
-    gtk_widget_show_all(notebook); // need to make page switch work
-    gtk_notebook_set_current_page (GTK_NOTEBOOK (notebook), procdata->config.current_tab);
+    ctk_widget_show_all(notebook); // need to make page switch work
+    ctk_notebook_set_current_page (GTK_NOTEBOOK (notebook), procdata->config.current_tab);
     cb_change_current_page (GTK_NOTEBOOK (notebook), procdata->config.current_tab, procdata);
     g_signal_connect (G_OBJECT (app), "delete_event",
                       G_CALLBACK (cb_app_delete),
@@ -731,34 +731,34 @@ create_main_window (ProcData *procdata)
 
     GtkAccelGroup *accel_group;
     GClosure *goto_tab_closure[4];
-    accel_group = gtk_accel_group_new ();
-    gtk_window_add_accel_group (GTK_WINDOW(app), accel_group);
+    accel_group = ctk_accel_group_new ();
+    ctk_window_add_accel_group (GTK_WINDOW(app), accel_group);
     for (i = 0; i < 4; ++i) {
         goto_tab_closure[i] = g_cclosure_new_swap (G_CALLBACK (cb_proc_goto_tab),
                                                    GINT_TO_POINTER (i), NULL);
-        gtk_accel_group_connect (accel_group, '0'+(i+1),
+        ctk_accel_group_connect (accel_group, '0'+(i+1),
                                  GDK_MOD1_MASK, GTK_ACCEL_VISIBLE,
                                  goto_tab_closure[i]);
     }
 
     /* create the statusbar */
-    procdata->statusbar = gtk_statusbar_new();
-    gtk_box_pack_start(GTK_BOX(main_box), procdata->statusbar, FALSE, FALSE, 0);
-    procdata->tip_message_cid = gtk_statusbar_get_context_id
+    procdata->statusbar = ctk_statusbar_new();
+    ctk_box_pack_start(GTK_BOX(main_box), procdata->statusbar, FALSE, FALSE, 0);
+    procdata->tip_message_cid = ctk_statusbar_get_context_id
         (GTK_STATUSBAR (procdata->statusbar), "tip_message");
 
-    action = gtk_action_group_get_action (procdata->action_group, "ShowDependencies");
-    gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
+    action = ctk_action_group_get_action (procdata->action_group, "ShowDependencies");
+    ctk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
                       procdata->config.show_tree);
 
-    gtk_widget_show_all(app);
+    ctk_widget_show_all(app);
     procdata->app = app;
 }
 
 void
 do_popup_menu (ProcData *procdata, GdkEventButton *event)
 {
-    gtk_menu_popup_at_pointer (GTK_MENU (procdata->popup_menu), NULL);
+    ctk_menu_popup_at_pointer (GTK_MENU (procdata->popup_menu), NULL);
 }
 
 void
@@ -790,19 +790,19 @@ update_sensitivity(ProcData *data)
     if(data->endprocessbutton) {
         /* avoid error on startup if endprocessbutton
            has not been built yet */
-        gtk_widget_set_sensitive(data->endprocessbutton, selected_sensitivity);
+        ctk_widget_set_sensitive(data->endprocessbutton, selected_sensitivity);
     }
 
     for (i = 0; i != G_N_ELEMENTS(processes_actions); ++i) {
-        action = gtk_action_group_get_action(data->action_group,
+        action = ctk_action_group_get_action(data->action_group,
                                              processes_actions[i]);
-        gtk_action_set_sensitive(action, processes_sensitivity);
+        ctk_action_set_sensitive(action, processes_sensitivity);
     }
 
     for (i = 0; i != G_N_ELEMENTS(selected_actions); ++i) {
-        action = gtk_action_group_get_action(data->action_group,
+        action = ctk_action_group_get_action(data->action_group,
                                              selected_actions[i]);
-        gtk_action_set_sensitive(action, selected_sensitivity);
+        ctk_action_set_sensitive(action, selected_sensitivity);
     }
 }
 
@@ -812,13 +812,13 @@ block_priority_changed_handlers(ProcData *data, bool block)
     gint i;
     if (block) {
         for (i = 0; i != G_N_ELEMENTS(priority_menu_entries); ++i) {
-            GtkRadioAction *action = GTK_RADIO_ACTION(gtk_action_group_get_action(data->action_group,
+            GtkRadioAction *action = GTK_RADIO_ACTION(ctk_action_group_get_action(data->action_group,
                                              priority_menu_entries[i].name));
             g_signal_handlers_block_by_func(action, (gpointer)cb_renice, data);
         }
     } else {
         for (i = 0; i != G_N_ELEMENTS(priority_menu_entries); ++i) {
-            GtkRadioAction *action = GTK_RADIO_ACTION(gtk_action_group_get_action(data->action_group,
+            GtkRadioAction *action = GTK_RADIO_ACTION(ctk_action_group_get_action(data->action_group,
                                              priority_menu_entries[i].name));
             g_signal_handlers_unblock_by_func(action, (gpointer)cb_renice, data);
         }
@@ -832,7 +832,7 @@ cb_toggle_tree (GtkAction *action, gpointer data)
     GSettings *settings = procdata->settings;
     gboolean show;
 
-    show = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
+    show = ctk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
     if (show == procdata->config.show_tree)
         return;
 
@@ -843,5 +843,5 @@ static void
 cb_proc_goto_tab (gint tab)
 {
     ProcData *data = ProcData::get_instance ();
-    gtk_notebook_set_current_page (GTK_NOTEBOOK (data->notebook), tab);
+    ctk_notebook_set_current_page (GTK_NOTEBOOK (data->notebook), tab);
 }

@@ -24,7 +24,7 @@
 
 #include <glib.h>
 #include <gdk/gdk.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 G_BEGIN_DECLS
 
@@ -53,10 +53,10 @@ struct _GSMColorButtonClass
     void (*color_set) (GSMColorButton * cp);
 
     /* Padding for future expansion */
-    void (*_gtk_reserved1) (void);
-    void (*_gtk_reserved2) (void);
-    void (*_gtk_reserved3) (void);
-    void (*_gtk_reserved4) (void);
+    void (*_ctk_reserved1) (void);
+    void (*_ctk_reserved2) (void);
+    void (*_ctk_reserved3) (void);
+    void (*_ctk_reserved4) (void);
 };
 
 GtkWidget *gsm_color_button_new (const GdkRGBA * color, guint type);

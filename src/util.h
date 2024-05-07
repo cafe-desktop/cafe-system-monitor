@@ -4,7 +4,7 @@
 #define H_CAFE_SYSTEM_MONITOR_UTIL_1123178725
 
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <time.h>
 #include <string>
 
@@ -107,10 +107,10 @@ namespace procman
     {
         T current_value;
 
-        gtk_tree_model_get(model, iter, column, &current_value, -1);
+        ctk_tree_model_get(model, iter, column, &current_value, -1);
 
         if (current_value != new_value)
-            gtk_tree_store_set(GTK_TREE_STORE(model), iter, column, new_value, -1);
+            ctk_tree_store_set(GTK_TREE_STORE(model), iter, column, new_value, -1);
     }
 
     // undefined

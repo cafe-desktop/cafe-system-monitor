@@ -21,7 +21,7 @@
 #ifndef _PROCMAN_CALLBACKS_H_
 #define _PROCMAN_CALLBACKS_H_
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include "procman.h"
 #include "gsm_color_button.h"
 

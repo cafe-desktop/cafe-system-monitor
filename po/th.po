@@ -553,7 +553,7 @@ msgstr "PID"
 msgid "Filename"
 msgstr "ชื่อแฟ้ม"
 
-#. gtk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+#. ctk_window_set_modal(GTK_WINDOW(dialog), TRUE);
 #: src/lsof.cpp:309
 msgid "Search for Open Files"
 msgstr "ค้นหาแฟ้มที่เปิด"

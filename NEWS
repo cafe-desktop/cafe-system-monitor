@@ -43,7 +43,7 @@
   * Show 32/64-bit Version intead of release for Arch Linux in System tab
   * Show OpenIndiana release and kernel info in System tab
   * Show FreeBSD sysname, release, version in System tab
-  * gtk3: use “program-name” property in gtk_show_about_dialog
+  * ctk3: use “program-name” property in ctk_show_about_dialog
   * update some instructions after review
   * update help with more information and some corrections
   * help: update copyright
@@ -65,7 +65,7 @@
   * Translations update
   * disable deprecation warnings for distcheck
   * move appdata to metainfo directory
-  * interface: avoid deprecated gtk_menu_popup
+  * interface: avoid deprecated ctk_menu_popup
   * Avoid compile warning for g_type_class_add_private
   * Fix grammar mistake & gui label
   * Use make functions for HELP_LINGUAS
@@ -124,7 +124,7 @@
 
 ### cafe-system-monitor 1.14.0
 
-  * Move to GTK+3, drop GTK+2 code and --with-gtk build option
+  * Move to GTK+3, drop GTK+2 code and --with-ctk build option
   * Set minimum required GTK+ version to 3.14, drop some deprecated
     code
   * Run gksu binary instead of loading libgksu2.so (which is GTK+2

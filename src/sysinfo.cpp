@@ -1,7 +1,7 @@
 #include <config.h>
 
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glibmm.h>
 #include <glib/gi18n.h>
 
@@ -802,9 +802,9 @@ static gboolean sysinfo_logo_draw (GtkWidget *widget, cairo_t *context, gpointer
     cairo_t *cr;
     cairo_pattern_t *cp;
 
-    cr = gdk_cairo_create(gtk_widget_get_window(widget));
+    cr = gdk_cairo_create(ctk_widget_get_window(widget));
 
-    gtk_widget_get_allocation (widget, &allocation);
+    ctk_widget_get_allocation (widget, &allocation);
     cairo_translate(cr, allocation.x, allocation.y);
 
     cairo_move_to(cr, X_PAD + RADIUS, Y_PAD);
@@ -818,7 +818,7 @@ static gboolean sysinfo_logo_draw (GtkWidget *widget, cairo_t *context, gpointer
     cairo_arc(cr,  X_PAD + RADIUS, Y_PAD + RADIUS, RADIUS, -1.0 * M_PI, -0.5 * M_PI);
 
     cp = cairo_pattern_create_linear(0, Y_PAD, 0, Y_PAD + LOGO_H);
-    style = gtk_widget_get_style (widget);
+    style = ctk_widget_get_style (widget);
     cairo_pattern_add_color_stop_rgba(cp, 0.0,
                                       style->base[GTK_STATE_SELECTED].red / 65535.0,
                                       style->base[GTK_STATE_SELECTED].green / 65535.0,
@@ -843,21 +843,21 @@ add_section(GtkBox *vbox , const char * title, int num_row, int num_col, GtkWidg
 {
     GtkWidget *table;
 
-    GtkWidget *frame = gtk_frame_new(title);
-    gtk_frame_set_label_align(GTK_FRAME(frame), 0.0, 0.5);
-    gtk_label_set_use_markup(
-        GTK_LABEL(gtk_frame_get_label_widget(GTK_FRAME(frame))),
+    GtkWidget *frame = ctk_frame_new(title);
+    ctk_frame_set_label_align(GTK_FRAME(frame), 0.0, 0.5);
+    ctk_label_set_use_markup(
+        GTK_LABEL(ctk_frame_get_label_widget(GTK_FRAME(frame))),
         TRUE
         );
-    gtk_frame_set_shadow_type(GTK_FRAME(frame), GTK_SHADOW_NONE);
-    gtk_box_pack_start(GTK_BOX(vbox), frame, FALSE, FALSE, 0);
+    ctk_frame_set_shadow_type(GTK_FRAME(frame), GTK_SHADOW_NONE);
+    ctk_box_pack_start(GTK_BOX(vbox), frame, FALSE, FALSE, 0);
 
-    table = gtk_grid_new();
-    gtk_grid_set_row_spacing(GTK_GRID(table), 6);
-    gtk_grid_set_column_spacing(GTK_GRID(table), 6);
-    gtk_widget_set_margin_start (GTK_WIDGET(table), 12);
-    gtk_container_set_border_width(GTK_CONTAINER(table), 6);
-    gtk_container_add(GTK_CONTAINER(frame), table);
+    table = ctk_grid_new();
+    ctk_grid_set_row_spacing(GTK_GRID(table), 6);
+    ctk_grid_set_column_spacing(GTK_GRID(table), 6);
+    ctk_widget_set_margin_start (GTK_WIDGET(table), 12);
+    ctk_container_set_border_width(GTK_CONTAINER(table), 6);
+    ctk_container_add(GTK_CONTAINER(frame), table);
 
     if(out_frame)
         *out_frame = frame;
@@ -869,20 +869,20 @@ add_section(GtkBox *vbox , const char * title, int num_row, int num_col, GtkWidg
 static GtkWidget*
 add_row(GtkGrid * table, const char * label, const char * value, int row)
 {
-    GtkWidget *header = gtk_label_new(NULL);
-    gtk_label_set_markup(GTK_LABEL(header), label);
-    gtk_label_set_selectable(GTK_LABEL(header), TRUE);
-    gtk_widget_set_can_focus(header, FALSE);
-    gtk_label_set_xalign (GTK_LABEL (header), 0.0);
-    gtk_grid_attach(
+    GtkWidget *header = ctk_label_new(NULL);
+    ctk_label_set_markup(GTK_LABEL(header), label);
+    ctk_label_set_selectable(GTK_LABEL(header), TRUE);
+    ctk_widget_set_can_focus(header, FALSE);
+    ctk_label_set_xalign (GTK_LABEL (header), 0.0);
+    ctk_grid_attach(
         table, header,
         0, row, 1, 1);
 
-    GtkWidget *label_widget = gtk_label_new(value);
-    gtk_label_set_selectable(GTK_LABEL(label_widget), TRUE);
-    gtk_widget_set_can_focus(label_widget, FALSE);
-    gtk_label_set_xalign (GTK_LABEL (label_widget), 0.0);
-    gtk_grid_attach(
+    GtkWidget *label_widget = ctk_label_new(value);
+    ctk_label_set_selectable(GTK_LABEL(label_widget), TRUE);
+    ctk_widget_set_can_focus(label_widget, FALSE);
+    ctk_label_set_xalign (GTK_LABEL (label_widget), 0.0);
+    ctk_grid_attach(
         table, label_widget,
         1, row, 1, 1);
 
@@ -911,42 +911,42 @@ procman_create_sysinfo_view(void)
 
     gchar *markup;
 
-    hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 12);
-    gtk_container_set_border_width(GTK_CONTAINER(hbox), 6);
+    hbox = ctk_box_new(GTK_ORIENTATION_HORIZONTAL, 12);
+    ctk_container_set_border_width(GTK_CONTAINER(hbox), 6);
 
     /* left-side logo */
     if (g_file_test (DATADIR "/pixmaps/cafe-system-monitor/distribution/side.png", G_FILE_TEST_EXISTS)) {
-        logo = gtk_image_new_from_file(DATADIR "/pixmaps/cafe-system-monitor/distribution/side.png");
+        logo = ctk_image_new_from_file(DATADIR "/pixmaps/cafe-system-monitor/distribution/side.png");
     }
     else {
-        logo = gtk_image_new_from_file(DATADIR "/pixmaps/cafe-system-monitor/side.png");
+        logo = ctk_image_new_from_file(DATADIR "/pixmaps/cafe-system-monitor/side.png");
     }
-    gtk_widget_set_valign (logo, GTK_ALIGN_START);
-    gtk_widget_set_margin_start (logo, 5);
-    gtk_widget_set_margin_end (logo, 5);
-    gtk_widget_set_margin_top (logo, 12);
-    gtk_widget_set_margin_bottom (logo, 12);
-    gtk_box_pack_start(GTK_BOX(hbox), logo, FALSE, FALSE, 0);
+    ctk_widget_set_valign (logo, GTK_ALIGN_START);
+    ctk_widget_set_margin_start (logo, 5);
+    ctk_widget_set_margin_end (logo, 5);
+    ctk_widget_set_margin_top (logo, 12);
+    ctk_widget_set_margin_bottom (logo, 12);
+    ctk_box_pack_start(GTK_BOX(hbox), logo, FALSE, FALSE, 0);
 
     g_signal_connect(G_OBJECT(logo), "draw", G_CALLBACK(sysinfo_logo_draw), NULL);
 
-    vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 12);
-    gtk_container_set_border_width(GTK_CONTAINER(vbox), 12);
-    gtk_box_pack_start(GTK_BOX(hbox), vbox, TRUE, TRUE, 0);
+    vbox = ctk_box_new(GTK_ORIENTATION_VERTICAL, 12);
+    ctk_container_set_border_width(GTK_CONTAINER(vbox), 12);
+    ctk_box_pack_start(GTK_BOX(hbox), vbox, TRUE, TRUE, 0);
 
     // hostname
 
     markup = g_strdup_printf("<big><big><b><u>%s</u></b></big></big>",
                              data->hostname.c_str());
-    GtkWidget *hostname_frame = gtk_frame_new(markup);
+    GtkWidget *hostname_frame = ctk_frame_new(markup);
     g_free(markup);
-    gtk_frame_set_label_align(GTK_FRAME(hostname_frame), 0.0, 0.5);
-    gtk_label_set_use_markup(
-        GTK_LABEL(gtk_frame_get_label_widget(GTK_FRAME(hostname_frame))),
+    ctk_frame_set_label_align(GTK_FRAME(hostname_frame), 0.0, 0.5);
+    ctk_label_set_use_markup(
+        GTK_LABEL(ctk_frame_get_label_widget(GTK_FRAME(hostname_frame))),
         TRUE
         );
-    gtk_frame_set_shadow_type(GTK_FRAME(hostname_frame), GTK_SHADOW_NONE);
-    gtk_box_pack_start(GTK_BOX(vbox), hostname_frame, FALSE, FALSE, 0);
+    ctk_frame_set_shadow_type(GTK_FRAME(hostname_frame), GTK_SHADOW_NONE);
+    ctk_box_pack_start(GTK_BOX(vbox), hostname_frame, FALSE, FALSE, 0);
 
 
     /* distro section */
@@ -958,23 +958,23 @@ procman_create_sysinfo_view(void)
 
     unsigned table_count = 0;
 
-    distro_release_label = gtk_label_new("???");
-    gtk_label_set_selectable(GTK_LABEL(distro_release_label), TRUE);
-    gtk_widget_set_can_focus(distro_release_label, FALSE);
-    gtk_label_set_xalign (GTK_LABEL (distro_release_label), 0.0);
-    gtk_grid_attach(
+    distro_release_label = ctk_label_new("???");
+    ctk_label_set_selectable(GTK_LABEL(distro_release_label), TRUE);
+    ctk_widget_set_can_focus(distro_release_label, FALSE);
+    ctk_label_set_xalign (GTK_LABEL (distro_release_label), 0.0);
+    ctk_grid_attach(
         GTK_GRID(distro_table), distro_release_label,
         0, table_count, 1, 1);
     table_count++;
-    data->set_distro_labels(gtk_frame_get_label_widget(GTK_FRAME(distro_frame)), distro_release_label);
+    data->set_distro_labels(ctk_frame_get_label_widget(GTK_FRAME(distro_frame)), distro_release_label);
 
     markup = g_strdup_printf(_("Kernel %s"), data->kernel.c_str());
-    header = gtk_label_new(markup);
-    gtk_label_set_selectable(GTK_LABEL(header), TRUE);
-    gtk_widget_set_can_focus(header, FALSE);
+    header = ctk_label_new(markup);
+    ctk_label_set_selectable(GTK_LABEL(header), TRUE);
+    ctk_widget_set_can_focus(header, FALSE);
     g_free(markup);
-    gtk_label_set_xalign (GTK_LABEL (header), 0.0);
-    gtk_grid_attach(
+    ctk_label_set_xalign (GTK_LABEL (header), 0.0);
+    ctk_grid_attach(
         GTK_GRID(distro_table), header,
         0, table_count, 1, 1);
     table_count++;
@@ -982,12 +982,12 @@ procman_create_sysinfo_view(void)
     if (data->cafe_version != "")
     {
         markup = g_strdup_printf(_("CAFE %s"), data->cafe_version.c_str());
-        header = gtk_label_new(markup);
-        gtk_label_set_selectable(GTK_LABEL(header), TRUE);
-        gtk_widget_set_can_focus(header, FALSE);
+        header = ctk_label_new(markup);
+        ctk_label_set_selectable(GTK_LABEL(header), TRUE);
+        ctk_widget_set_can_focus(header, FALSE);
         g_free(markup);
-        gtk_label_set_xalign (GTK_LABEL (header), 0.0);
-        gtk_grid_attach(
+        ctk_label_set_xalign (GTK_LABEL (header), 0.0);
+        ctk_grid_attach(
             GTK_GRID(distro_table), header,
             0, table_count, 1, 1);
         table_count++;
@@ -1032,10 +1032,10 @@ namespace procman
         if (!ui) {
             ProcData* procdata = ProcData::get_instance();
             ui = procman_create_sysinfo_view();
-            GtkBox* box = GTK_BOX(gtk_notebook_get_nth_page(GTK_NOTEBOOK(procdata->notebook),
+            GtkBox* box = GTK_BOX(ctk_notebook_get_nth_page(GTK_NOTEBOOK(procdata->notebook),
                                                             PROCMAN_TAB_SYSINFO));
-            gtk_box_pack_start(box, ui, TRUE, TRUE, 0);
-            gtk_widget_show_all(ui);
+            ctk_box_pack_start(box, ui, TRUE, TRUE, 0);
+            ctk_widget_show_all(ui);
         }
     }
 }

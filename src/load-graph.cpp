@@ -82,29 +82,29 @@ static void draw_background(LoadGraph *graph) {
     graph->graph_delx = (graph->draw_width - 2.0 - graph->rmargin - graph->indent) / (LoadGraph::NUM_POINTS - 3);
     graph->graph_buffer_offset = (int) (1.5 * graph->graph_delx) + FRAME_WIDTH ;
 
-    gtk_widget_get_allocation (graph->disp, &allocation);
-    surface = gdk_window_create_similar_surface (gtk_widget_get_window (graph->disp), CAIRO_CONTENT_COLOR_ALPHA, allocation.width, allocation.height);
+    ctk_widget_get_allocation (graph->disp, &allocation);
+    surface = gdk_window_create_similar_surface (ctk_widget_get_window (graph->disp), CAIRO_CONTENT_COLOR_ALPHA, allocation.width, allocation.height);
     cr = cairo_create (surface);
 
-    GtkStyleContext *context = gtk_widget_get_style_context (ProcData::get_instance()->notebook);
-    gtk_style_context_save (context);
-    gtk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
-    gtk_style_context_get_background_color (context, gtk_style_context_get_state (context), &bg);
-    gtk_style_context_get_color (context, gtk_style_context_get_state (context), &fg);
-    gtk_style_context_restore (context);
+    GtkStyleContext *context = ctk_widget_get_style_context (ProcData::get_instance()->notebook);
+    ctk_style_context_save (context);
+    ctk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
+    ctk_style_context_get_background_color (context, ctk_style_context_get_state (context), &bg);
+    ctk_style_context_get_color (context, ctk_style_context_get_state (context), &fg);
+    ctk_style_context_restore (context);
 
     // set the background color
     gdk_cairo_set_source_rgba (cr, &bg);
     cairo_paint (cr);
 
     layout = pango_cairo_create_layout (cr);
-    gtk_style_context_save (context);
-    gtk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
-    gtk_style_context_get (context,
-                           gtk_style_context_get_state (context),
+    ctk_style_context_save (context);
+    ctk_style_context_set_state (context, GTK_STATE_FLAG_NORMAL);
+    ctk_style_context_get (context,
+                           ctk_style_context_get_state (context),
                            GTK_STYLE_PROPERTY_FONT,
                            &font_desc, NULL);
-    gtk_style_context_restore (context);
+    ctk_style_context_restore (context);
     pango_font_description_set_size (font_desc, 0.8 * graph->fontsize * PANGO_SCALE);
     pango_layout_set_font_description (layout, font_desc);
     pango_font_description_free (font_desc);
@@ -195,7 +195,7 @@ void
 load_graph_queue_draw (LoadGraph *graph)
 {
     /* repaint */
-    gtk_widget_queue_draw (graph->disp);
+    ctk_widget_queue_draw (graph->disp);
 }
 
 static int load_graph_update (gpointer user_data); // predeclare load_graph_update so we can compile ;)
@@ -208,7 +208,7 @@ load_graph_configure (GtkWidget *widget,
     GtkAllocation allocation;
     LoadGraph * const graph = static_cast<LoadGraph*>(data_ptr);
 
-    gtk_widget_get_allocation (widget, &allocation);
+    ctk_widget_get_allocation (widget, &allocation);
     graph->draw_width = allocation.width - 2 * FRAME_WIDTH;
     graph->draw_height = allocation.height - 2 * FRAME_WIDTH;
 
@@ -227,7 +227,7 @@ static gboolean load_graph_draw (GtkWidget *widget, cairo_t *context, gpointer d
     guint i, j;
     gdouble sample_width, x_offset;
 
-    window = gtk_widget_get_window (graph->disp);
+    window = ctk_widget_get_window (graph->disp);
 
     /* Number of pixels wide for one graph point */
     sample_width = (float)(graph->draw_width - graph->rmargin - graph->indent) / (float)LoadGraph::NUM_POINTS;
@@ -322,7 +322,7 @@ get_load (LoadGraph *graph)
 
         /* Update label */
         text = g_strdup_printf("%.1f%%", load * 100.0f);
-        gtk_label_set_text(GTK_LABEL(graph->labels.cpu[i]), text);
+        ctk_label_set_text(GTK_LABEL(graph->labels.cpu[i]), text);
         g_free(text);
     }
 
@@ -351,7 +351,7 @@ namespace
             // xgettext: 540MiB (53 %) of 1.0 GiB
             text = g_strdup_printf(_("%s (%.1f%%) of %s"), used_text, 100.0 * percent, total_text);
         }
-        gtk_label_set_text(label, text);
+        ctk_label_set_text(label, text);
         g_free(used_text);
         g_free(total_text);
         g_free(text);
@@ -590,17 +590,17 @@ get_net (LoadGraph *graph)
 
     str = g_format_size_full (network_in_bits ? din*8 : din, network_in_bits ? G_FORMAT_SIZE_BITS : G_FORMAT_SIZE_DEFAULT);
     formatted_str = g_strdup_printf(_("%s/s"), str);
-    gtk_label_set_text (GTK_LABEL (graph->labels.net_in), formatted_str);
+    ctk_label_set_text (GTK_LABEL (graph->labels.net_in), formatted_str);
 
     str = g_format_size_full (network_in_bits ? in*8 : in, network_in_bits ? G_FORMAT_SIZE_BITS : G_FORMAT_SIZE_DEFAULT);
-    gtk_label_set_text (GTK_LABEL (graph->labels.net_in_total), str);
+    ctk_label_set_text (GTK_LABEL (graph->labels.net_in_total), str);
 
     str = g_format_size_full (network_in_bits ? dout*8 : dout, network_in_bits ? G_FORMAT_SIZE_BITS : G_FORMAT_SIZE_DEFAULT);
     formatted_str = g_strdup_printf(_("%s/s"), str);
-    gtk_label_set_text (GTK_LABEL (graph->labels.net_out), formatted_str);
+    ctk_label_set_text (GTK_LABEL (graph->labels.net_out), formatted_str);
 
     str = g_format_size_full (network_in_bits ? out*8 : out, network_in_bits ? G_FORMAT_SIZE_BITS : G_FORMAT_SIZE_DEFAULT);
-    gtk_label_set_text (GTK_LABEL (graph->labels.net_out_total), str);
+    ctk_label_set_text (GTK_LABEL (graph->labels.net_out_total), str);
 }
 
 
@@ -699,24 +699,24 @@ LoadGraph::LoadGraph(guint type)
         n = ProcData::get_instance()->config.num_cpus;
 
         for(guint i = 0; i < G_N_ELEMENTS(labels.cpu); ++i)
-            labels.cpu[i] = gtk_label_new(NULL);
+            labels.cpu[i] = ctk_label_new(NULL);
 
         break;
 
     case LOAD_GRAPH_MEM:
         n = 2;
-        labels.memory = gtk_label_new(NULL);
-        labels.swap = gtk_label_new(NULL);
+        labels.memory = ctk_label_new(NULL);
+        labels.swap = ctk_label_new(NULL);
         break;
 
     case LOAD_GRAPH_NET:
         memset(&net, 0, sizeof net);
         n = 2;
         net.max = 1;
-        labels.net_in = gtk_label_new(NULL);
-        labels.net_in_total = gtk_label_new(NULL);
-        labels.net_out = gtk_label_new(NULL);
-        labels.net_out_total = gtk_label_new(NULL);
+        labels.net_in = ctk_label_new(NULL);
+        labels.net_in_total = ctk_label_new(NULL);
+        labels.net_out = ctk_label_new(NULL);
+        labels.net_out_total = ctk_label_new(NULL);
         break;
     }
 
@@ -747,21 +747,21 @@ LoadGraph::LoadGraph(guint type)
     render_counter = (frames_per_unit - 1);
     draw = FALSE;
 
-    main_widget = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-    gtk_widget_set_size_request(main_widget, -1, LoadGraph::GRAPH_MIN_HEIGHT);
-    gtk_widget_show (main_widget);
+    main_widget = ctk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+    ctk_widget_set_size_request(main_widget, -1, LoadGraph::GRAPH_MIN_HEIGHT);
+    ctk_widget_show (main_widget);
 
-    disp = gtk_drawing_area_new ();
-    gtk_widget_show (disp);
+    disp = ctk_drawing_area_new ();
+    ctk_widget_show (disp);
     g_signal_connect (G_OBJECT (disp), "draw", G_CALLBACK (load_graph_draw), graph);
     g_signal_connect (G_OBJECT(disp), "configure_event",
                       G_CALLBACK (load_graph_configure), graph);
     g_signal_connect (G_OBJECT(disp), "destroy",
                       G_CALLBACK (load_graph_destroy), graph);
 
-    gtk_widget_set_events (disp, GDK_EXPOSURE_MASK);
+    ctk_widget_set_events (disp, GDK_EXPOSURE_MASK);
 
-    gtk_box_pack_start (GTK_BOX (main_widget), disp, TRUE, TRUE, 0);
+    ctk_box_pack_start (GTK_BOX (main_widget), disp, TRUE, TRUE, 0);
 
 
     /* Allocate data in a contiguous block */
@@ -770,7 +770,7 @@ LoadGraph::LoadGraph(guint type)
     for (guint i = 0; i < LoadGraph::NUM_POINTS; ++i)
         data[i] = &data_block[0] + i * n;
 
-    gtk_widget_show_all (main_widget);
+    ctk_widget_show_all (main_widget);
 }
 
 void

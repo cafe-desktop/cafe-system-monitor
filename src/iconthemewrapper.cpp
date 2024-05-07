@@ -1,6 +1,6 @@
 #include <config.h>
 
-#include <gtkmm/icontheme.h>
+#include <ctkmm/icontheme.h>
 #include <giomm/error.h>
 
 #include "iconthemewrapper.h"

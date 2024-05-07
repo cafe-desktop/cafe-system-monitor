@@ -21,7 +21,7 @@
 #define _PROCMAN_INTERFACE_H_
 
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include "procman.h"
 
 void            create_main_window (ProcData *data);

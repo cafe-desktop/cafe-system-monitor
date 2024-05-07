@@ -3,7 +3,7 @@
 #include <glib/gprintf.h>
 #include <glib/gi18n.h>
 #include <glib.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 
 #include <glibtop/proctime.h>
 #include <glibtop/procstate.h>
@@ -151,8 +151,8 @@ procman_make_label_for_mmaps_or_ofiles(const char *format,
 
     name = mnemonic_safe_process_name (process_name);
     title = g_strdup_printf(format, name, pid);
-    label = gtk_label_new_with_mnemonic (title);
-    gtk_label_set_xalign (GTK_LABEL (label), 0.0);
+    label = ctk_label_new_with_mnemonic (title);
+    ctk_label_set_xalign (GTK_LABEL (label), 0.0);
 
     g_free (title);
     g_free (name);
@@ -261,7 +261,7 @@ get_size_from_column(GtkTreeModel* model, GtkTreeIter* first,
                              const guint index)
 {
     GValue value = { 0 };
-    gtk_tree_model_get_value(model, first, index, &value);
+    ctk_tree_model_get_value(model, first, index, &value);
 
     guint64 size;
     switch (G_VALUE_TYPE(&value)) {
@@ -314,7 +314,7 @@ namespace procman
         guint64 size;
         GValue value = { 0 };
 
-        gtk_tree_model_get_value(model, iter, index, &value);
+        ctk_tree_model_get_value(model, iter, index, &value);
 
         switch (G_VALUE_TYPE(&value)) {
             case G_TYPE_ULONG:
@@ -348,7 +348,7 @@ namespace procman
         guint64 size;
         GValue value = { 0 };
 
-        gtk_tree_model_get_value(model, iter, index, &value);
+        ctk_tree_model_get_value(model, iter, index, &value);
 
         switch (G_VALUE_TYPE(&value)) {
             case G_TYPE_ULONG:
@@ -386,7 +386,7 @@ namespace procman
         guint64 size;
         GValue value = { 0 };
 
-        gtk_tree_model_get_value(model, iter, index, &value);
+        ctk_tree_model_get_value(model, iter, index, &value);
 
         switch (G_VALUE_TYPE(&value)) {
             case G_TYPE_ULONG:
@@ -420,7 +420,7 @@ namespace procman
         guint64 size;
         GValue value = { 0 };
 
-        gtk_tree_model_get_value(model, iter, index, &value);
+        ctk_tree_model_get_value(model, iter, index, &value);
 
         switch (G_VALUE_TYPE(&value)) {
             case G_TYPE_ULONG:
@@ -458,7 +458,7 @@ namespace procman
         guint64 size;
         GValue value = { 0 };
 
-        gtk_tree_model_get_value(model, iter, index, &value);
+        ctk_tree_model_get_value(model, iter, index, &value);
 
         switch (G_VALUE_TYPE(&value)) {
             case G_TYPE_ULONG:
@@ -499,7 +499,7 @@ namespace procman
         unsigned time;
         GValue value = { 0 };
 
-        gtk_tree_model_get_value(model, iter, index, &value);
+        ctk_tree_model_get_value(model, iter, index, &value);
 
         switch (G_VALUE_TYPE(&value)) {
             case G_TYPE_ULONG:
@@ -532,7 +532,7 @@ namespace procman
         time_t time;
         GValue value = { 0 };
 
-        gtk_tree_model_get_value(model, iter, index, &value);
+        ctk_tree_model_get_value(model, iter, index, &value);
 
         switch (G_VALUE_TYPE(&value)) {
             case G_TYPE_ULONG:
@@ -559,7 +559,7 @@ namespace procman
         guint state;
         GValue value = { 0 };
 
-        gtk_tree_model_get_value(model, iter, index, &value);
+        ctk_tree_model_get_value(model, iter, index, &value);
 
         switch (G_VALUE_TYPE(&value)) {
             case G_TYPE_UINT:
@@ -584,7 +584,7 @@ namespace procman
 
         GValue value = { 0 };
 
-        gtk_tree_model_get_value(model, iter, index, &value);
+        ctk_tree_model_get_value(model, iter, index, &value);
 
         gint priority = g_value_get_int(&value);
 
@@ -600,8 +600,8 @@ namespace procman
         const guint index = GPOINTER_TO_UINT(user_data);
         GValue value1 = { 0 };
         GValue value2 = { 0 };
-        gtk_tree_model_get_value(model, first, index, &value1);
-        gtk_tree_model_get_value(model, second, index, &value2);
+        ctk_tree_model_get_value(model, first, index, &value1);
+        ctk_tree_model_get_value(model, second, index, &value2);
         gint result = g_value_get_int(&value1) - g_value_get_int(&value2);
         g_value_unset(&value1);
         g_value_unset(&value2);
@@ -629,10 +629,10 @@ namespace procman
     {
         char* current_value;
 
-        gtk_tree_model_get(model, iter, column, &current_value, -1);
+        ctk_tree_model_get(model, iter, column, &current_value, -1);
 
         if (g_strcmp0(current_value, new_value) != 0)
-            gtk_tree_store_set(GTK_TREE_STORE(model), iter, column, new_value, -1);
+            ctk_tree_store_set(GTK_TREE_STORE(model), iter, column, new_value, -1);
 
         g_free(current_value);
     }

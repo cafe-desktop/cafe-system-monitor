@@ -114,8 +114,8 @@ add_new_files (gpointer key, gpointer value, gpointer data)
         object = g_strdup("");
     }
 
-    gtk_list_store_insert (GTK_LIST_STORE (model), &row, 0);
-    gtk_list_store_set (GTK_LIST_STORE (model), &row,
+    ctk_list_store_insert (GTK_LIST_STORE (model), &row, 0);
+    ctk_list_store_set (GTK_LIST_STORE (model), &row,
                         COL_FD, openfiles->fd,
                         COL_TYPE, get_type_name(static_cast<glibtop_file_type>(openfiles->type)),
                         COL_OBJECT, object,
@@ -135,7 +135,7 @@ classify_openfiles (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, g
     glibtop_open_files_entry *openfiles;
     gchar *old_name;
 
-    gtk_tree_model_get (model, iter, 1, &old_name, -1);
+    ctk_tree_model_get (model, iter, 1, &old_name, -1);
 
     openfiles = static_cast<glibtop_open_files_entry*>(g_hash_table_lookup (new_maps, old_name));
     if (openfiles) {
@@ -145,7 +145,7 @@ classify_openfiles (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, g
 
     }
 
-    old_iter = gtk_tree_iter_copy (iter);
+    old_iter = ctk_tree_iter_copy (iter);
     old_maps = g_list_append (old_maps, old_iter);
     g_free (old_name);
     return FALSE;
@@ -180,7 +180,7 @@ update_openfiles_dialog (GtkWidget *tree)
     if (!info)
         return;
 
-    model = gtk_tree_view_get_model (GTK_TREE_VIEW (tree));
+    model = ctk_tree_view_get_model (GTK_TREE_VIEW (tree));
 
     openfiles = glibtop_get_proc_open_files (&procmap, info->pid);
 
@@ -192,7 +192,7 @@ update_openfiles_dialog (GtkWidget *tree)
     for (i=0; i < procmap.number; i++)
         g_hash_table_insert (new_maps, openfiles + i, openfiles + i);
 
-    gtk_tree_model_foreach (model, classify_openfiles, new_maps);
+    ctk_tree_model_foreach (model, classify_openfiles, new_maps);
 
     g_hash_table_foreach (new_maps, add_new_files, model);
 
@@ -200,12 +200,12 @@ update_openfiles_dialog (GtkWidget *tree)
         GtkTreeIter *iter = static_cast<GtkTreeIter*>(old_maps->data);
         glibtop_open_files_entry *openfiles = NULL;
 
-        gtk_tree_model_get (model, iter,
+        ctk_tree_model_get (model, iter,
                             COL_OPENFILE_STRUCT, &openfiles,
                             -1);
 
-        gtk_list_store_remove (GTK_LIST_STORE (model), iter);
-        gtk_tree_iter_free (iter);
+        ctk_list_store_remove (GTK_LIST_STORE (model), iter);
+        ctk_tree_iter_free (iter);
         g_free (openfiles);
 
         old_maps = g_list_next (old_maps);
@@ -229,7 +229,7 @@ close_openfiles_dialog (GtkDialog *dialog, gint id, gpointer data)
     timer = GPOINTER_TO_UINT (g_object_get_data (G_OBJECT (tree), "timer"));
     g_source_remove (timer);
 
-    gtk_widget_destroy (GTK_WIDGET (dialog));
+    ctk_widget_destroy (GTK_WIDGET (dialog));
 
     return ;
 }
@@ -253,18 +253,18 @@ create_openfiles_tree (ProcData *procdata)
         N_("Object")
     };
 
-    model = gtk_list_store_new (NUM_OPENFILES_COL,
+    model = ctk_list_store_new (NUM_OPENFILES_COL,
                                 G_TYPE_INT,        /* FD */
                                 G_TYPE_STRING,    /* Type */
                                 G_TYPE_STRING,    /* Object */
                                 G_TYPE_POINTER    /* open_files_entry */
         );
 
-    tree = gtk_tree_view_new_with_model (GTK_TREE_MODEL (model));
+    tree = ctk_tree_view_new_with_model (GTK_TREE_MODEL (model));
     g_object_unref (G_OBJECT (model));
 
     for (i = 0; i < NUM_OPENFILES_COL-1; i++) {
-        cell = gtk_cell_renderer_text_new ();
+        cell = ctk_cell_renderer_text_new ();
 
         switch (i) {
         case COL_FD:
@@ -272,13 +272,13 @@ create_openfiles_tree (ProcData *procdata)
             break;
         }
 
-        column = gtk_tree_view_column_new_with_attributes (_(titles[i]),
+        column = ctk_tree_view_column_new_with_attributes (_(titles[i]),
                                                            cell,
                                                            "text", i,
                                                            NULL);
-        gtk_tree_view_column_set_sort_column_id (column, i);
-        gtk_tree_view_column_set_resizable (column, TRUE);
-        gtk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
+        ctk_tree_view_column_set_sort_column_id (column, i);
+        ctk_tree_view_column_set_resizable (column, TRUE);
+        ctk_tree_view_append_column (GTK_TREE_VIEW (tree), column);
     }
 
     procman_get_tree_state (procdata->settings, tree, procman::settings::open_files_tree_prefix.c_str());
@@ -293,7 +293,7 @@ openfiles_timer (gpointer data)
     GtkWidget *tree = static_cast<GtkWidget*>(data);
     GtkTreeModel *model;
 
-    model = gtk_tree_view_get_model (GTK_TREE_VIEW (tree));
+    model = ctk_tree_view_get_model (GTK_TREE_VIEW (tree));
     g_assert(model);
 
     update_openfiles_dialog (tree);
@@ -316,29 +316,29 @@ create_single_openfiles_dialog (GtkTreeModel *model, GtkTreePath *path,
     ProcInfo *info;
     guint timer;
 
-    gtk_tree_model_get (model, iter, COL_POINTER, &info, -1);
+    ctk_tree_model_get (model, iter, COL_POINTER, &info, -1);
 
     if (!info)
         return;
 
-    openfilesdialog = gtk_dialog_new_with_buttons (_("Open Files"), NULL,
+    openfilesdialog = ctk_dialog_new_with_buttons (_("Open Files"), NULL,
                                                    GTK_DIALOG_DESTROY_WITH_PARENT,
-                                                   "gtk-close", GTK_RESPONSE_CLOSE,
+                                                   "ctk-close", GTK_RESPONSE_CLOSE,
                                                    NULL);
-    gtk_window_set_resizable (GTK_WINDOW (openfilesdialog), TRUE);
-    gtk_window_set_default_size (GTK_WINDOW (openfilesdialog), 575, 400);
-    gtk_container_set_border_width (GTK_CONTAINER (openfilesdialog), 5);
+    ctk_window_set_resizable (GTK_WINDOW (openfilesdialog), TRUE);
+    ctk_window_set_default_size (GTK_WINDOW (openfilesdialog), 575, 400);
+    ctk_container_set_border_width (GTK_CONTAINER (openfilesdialog), 5);
 
-    vbox = gtk_dialog_get_content_area (GTK_DIALOG (openfilesdialog));
-    gtk_box_set_spacing (GTK_BOX (vbox), 2);
-    gtk_container_set_border_width (GTK_CONTAINER (vbox), 5);
+    vbox = ctk_dialog_get_content_area (GTK_DIALOG (openfilesdialog));
+    ctk_box_set_spacing (GTK_BOX (vbox), 2);
+    ctk_container_set_border_width (GTK_CONTAINER (vbox), 5);
 
-    dialog_vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    gtk_container_set_border_width (GTK_CONTAINER (dialog_vbox), 5);
-    gtk_box_pack_start (GTK_BOX (vbox), dialog_vbox, TRUE, TRUE, 0);
+    dialog_vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+    ctk_container_set_border_width (GTK_CONTAINER (dialog_vbox), 5);
+    ctk_box_pack_start (GTK_BOX (vbox), dialog_vbox, TRUE, TRUE, 0);
 
-    cmd_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-    gtk_box_pack_start (GTK_BOX (dialog_vbox), cmd_hbox, FALSE, FALSE, 0);
+    cmd_hbox = ctk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+    ctk_box_pack_start (GTK_BOX (dialog_vbox), cmd_hbox, FALSE, FALSE, 0);
 
 
     label = procman_make_label_for_mmaps_or_ofiles (
@@ -346,28 +346,28 @@ create_single_openfiles_dialog (GtkTreeModel *model, GtkTreePath *path,
         info->name,
         info->pid);
 
-    gtk_box_pack_start (GTK_BOX (cmd_hbox),label, FALSE, FALSE, 0);
+    ctk_box_pack_start (GTK_BOX (cmd_hbox),label, FALSE, FALSE, 0);
 
 
-    scrolled = gtk_scrolled_window_new (NULL, NULL);
-    gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled),
+    scrolled = ctk_scrolled_window_new (NULL, NULL);
+    ctk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled),
                     GTK_POLICY_AUTOMATIC,
                     GTK_POLICY_AUTOMATIC);
-    gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled),
+    ctk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled),
                                          GTK_SHADOW_IN);
 
     tree = create_openfiles_tree (procdata);
-    gtk_container_add (GTK_CONTAINER (scrolled), tree);
+    ctk_container_add (GTK_CONTAINER (scrolled), tree);
     g_object_set_data (G_OBJECT (tree), "selected_info", GUINT_TO_POINTER (info->pid));
     g_object_set_data (G_OBJECT (tree), "settings", procdata->settings);
 
-    gtk_box_pack_start (GTK_BOX (dialog_vbox), scrolled, TRUE, TRUE, 0);
-    gtk_widget_show_all (scrolled);
+    ctk_box_pack_start (GTK_BOX (dialog_vbox), scrolled, TRUE, TRUE, 0);
+    ctk_widget_show_all (scrolled);
 
     g_signal_connect (G_OBJECT (openfilesdialog), "response",
                       G_CALLBACK (close_openfiles_dialog), tree);
 
-    gtk_widget_show_all (openfilesdialog);
+    ctk_widget_show_all (openfilesdialog);
 
     timer = g_timeout_add_seconds (5, openfiles_timer, tree);
     g_object_set_data (G_OBJECT (tree), "timer", GUINT_TO_POINTER (timer));
@@ -380,6 +380,6 @@ create_single_openfiles_dialog (GtkTreeModel *model, GtkTreePath *path,
 void
 create_openfiles_dialog (ProcData *procdata)
 {
-    gtk_tree_selection_selected_foreach (procdata->selection, create_single_openfiles_dialog,
+    ctk_tree_selection_selected_foreach (procdata->selection, create_single_openfiles_dialog,
                          procdata);
 }

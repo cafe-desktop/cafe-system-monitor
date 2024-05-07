@@ -23,12 +23,12 @@
 
 #include <locale.h>
 
-#include <gtkmm/main.h>
+#include <ctkmm/main.h>
 #include <giomm/volumemonitor.h>
 #include <giomm/init.h>
 #include <glib.h>
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <gdk/gdkx.h>
 #include <bacon-message-connection.h>
 #include <glibtop.h>
@@ -390,18 +390,18 @@ procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child
 
     GSettings *pt_settings = g_settings_get_child (settings, child_schema);
 
-    model = gtk_tree_view_get_model (GTK_TREE_VIEW (tree));
+    model = ctk_tree_view_get_model (GTK_TREE_VIEW (tree));
 
     sort_col = g_settings_get_int (pt_settings, "sort-col");
 
     order = static_cast<GtkSortType>(g_settings_get_int (pt_settings, "sort-order"));
 
     if (sort_col != -1)
-        gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (model),
+        ctk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (model),
                                               sort_col,
                                               order);
 
-    columns = gtk_tree_view_get_columns (GTK_TREE_VIEW (tree));
+    columns = ctk_tree_view_get_columns (GTK_TREE_VIEW (tree));
 
     if (g_strcmp0(child_schema, "proctree") == 0 ||
         g_strcmp0(child_schema, "disktreenew") == 0)
@@ -415,7 +415,7 @@ procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child
             gchar *key;
 
             column = static_cast<GtkTreeViewColumn*>(it->data);
-            id = gtk_tree_view_column_get_sort_column_id (column);
+            id = ctk_tree_view_column_get_sort_column_id (column);
 
             key = g_strdup_printf ("col-%d-width", id);
             g_settings_get (pt_settings, key, "i", &width);
@@ -425,15 +425,15 @@ procman_get_tree_state (GSettings *settings, GtkWidget *tree, const gchar *child
             visible = g_settings_get_boolean (pt_settings, key);
             g_free (key);
 
-            column = gtk_tree_view_get_column (GTK_TREE_VIEW (tree), id);
+            column = ctk_tree_view_get_column (GTK_TREE_VIEW (tree), id);
             if (column == NULL)
                 continue;
 
-            gtk_tree_view_column_set_visible (column, visible);
+            ctk_tree_view_column_set_visible (column, visible);
             if (visible) {
                 /* ensure column is really visible */
                 width = MAX(width, 20);
-                gtk_tree_view_column_set_fixed_width(column, width);
+                ctk_tree_view_column_set_fixed_width(column, width);
             }
         }
 
@@ -476,14 +476,14 @@ procman_save_tree_state (GSettings *settings, GtkWidget *tree, const gchar *chil
 
     GSettings *pt_settings = g_settings_get_child (settings, child_schema);
 
-    model = gtk_tree_view_get_model (GTK_TREE_VIEW (tree));
-    if (gtk_tree_sortable_get_sort_column_id (GTK_TREE_SORTABLE (model), &sort_col,
+    model = ctk_tree_view_get_model (GTK_TREE_VIEW (tree));
+    if (ctk_tree_sortable_get_sort_column_id (GTK_TREE_SORTABLE (model), &sort_col,
                                               &order)) {
         g_settings_set_int (pt_settings, "sort-col", sort_col);
         g_settings_set_int (pt_settings, "sort-order", order);
     }
 
-    columns = gtk_tree_view_get_columns (GTK_TREE_VIEW (tree));
+    columns = ctk_tree_view_get_columns (GTK_TREE_VIEW (tree));
 
     if (g_strcmp0(child_schema, "proctree") == 0 ||
         g_strcmp0(child_schema, "disktreenew") == 0)
@@ -517,13 +517,13 @@ procman_save_config (ProcData *data)
 
     g_assert(data);
 
-    data->config.maximized = gdk_window_get_state(gtk_widget_get_window (data->app)) & GDK_WINDOW_STATE_MAXIMIZED;
+    data->config.maximized = gdk_window_get_state(ctk_widget_get_window (data->app)) & GDK_WINDOW_STATE_MAXIMIZED;
     if (!data->config.maximized) {
         // we only want to store/overwrite size and position info with non-maximized state info
-        data->config.width = gdk_window_get_width(gtk_widget_get_window(data->app));
-        data->config.height = gdk_window_get_height(gtk_widget_get_window(data->app));
+        data->config.width = gdk_window_get_width(ctk_widget_get_window(data->app));
+        data->config.height = gdk_window_get_height(ctk_widget_get_window(data->app));
 
-        gtk_window_get_position(GTK_WINDOW(data->app), &data->config.xpos, &data->config.ypos);
+        ctk_window_get_position(GTK_WINDOW(data->app), &data->config.xpos, &data->config.ypos);
 
         g_settings_set (settings, "window-state", "(iiii)",
                         data->config.width, data->config.height,
@@ -569,7 +569,7 @@ get_startup_timestamp ()
 static void
 set_tab(GtkNotebook* notebook, gint tab, ProcData* procdata)
 {
-    gtk_notebook_set_current_page(notebook, tab);
+    ctk_notebook_set_current_page(notebook, tab);
     cb_change_current_page(notebook, tab, procdata);
 }
 
@@ -607,7 +607,7 @@ cb_server (const gchar *msg, gpointer user_data)
 
     gdk_x11_window_set_user_time (window, timestamp);
 
-    gtk_window_present (GTK_WINDOW(procdata->app));
+    ctk_window_present (GTK_WINDOW(procdata->app));
 }
 
 
@@ -672,7 +672,7 @@ main (int argc, char *argv[])
 
     Gio::init();
     Gtk::Main kit(&argc, &argv);
-    procman_debug("post gtk_init");
+    procman_debug("post ctk_init");
 
     conn = bacon_message_connection_new ("cafe-system-monitor");
     if (!conn) g_error("Couldn't connect to cafe-system-monitor");
@@ -709,7 +709,7 @@ main (int argc, char *argv[])
         exit (0);
     }
 
-    gtk_window_set_default_icon_name ("utilities-system-monitor");
+    ctk_window_set_default_icon_name ("utilities-system-monitor");
     g_set_application_name(_("System Monitor"));
 
     settings = g_settings_new (GSM_GSETTINGS_SCHEMA);
@@ -745,10 +745,10 @@ main (int argc, char *argv[])
         set_tab(GTK_NOTEBOOK(procdata->notebook), PROCMAN_TAB_DISKS, procdata);
     }
 
-    gtk_widget_set_name(procdata->app, "cafe-system-monitor");
-    gtk_widget_show(procdata->app);
+    ctk_widget_set_name(procdata->app, "cafe-system-monitor");
+    ctk_widget_show(procdata->app);
 
-    procman_debug("begin gtk_main");
+    procman_debug("begin ctk_main");
     kit.run();
 
     procman_free_data (procdata);

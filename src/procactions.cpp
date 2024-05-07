@@ -43,7 +43,7 @@ renice_single_process (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter
     gchar *error_msg;
     GtkWidget *dialog;
 
-    gtk_tree_model_get (model, iter, COL_POINTER, &info, -1);
+    ctk_tree_model_get (model, iter, COL_POINTER, &info, -1);
 
     if (!info)
         return;
@@ -77,15 +77,15 @@ renice_single_process (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter
           "%s"),
         info->pid, args->nice_value, g_strerror(saved_errno));
 
-    dialog = gtk_message_dialog_new (
+    dialog = ctk_message_dialog_new (
         NULL,
         GTK_DIALOG_DESTROY_WITH_PARENT,
         GTK_MESSAGE_ERROR,
         GTK_BUTTONS_OK,
         "%s", error_msg);
 
-    gtk_dialog_run (GTK_DIALOG (dialog));
-    gtk_widget_destroy (dialog);
+    ctk_dialog_run (GTK_DIALOG (dialog));
+    ctk_widget_destroy (dialog);
     g_free (error_msg);
 }
 
@@ -101,7 +101,7 @@ renice (ProcData *procdata, int nice)
     */
     g_source_remove(procdata->timeout);
 
-    gtk_tree_selection_selected_foreach(procdata->selection, renice_single_process,
+    ctk_tree_selection_selected_foreach(procdata->selection, renice_single_process,
                                         &args);
 
     procdata->timeout = g_timeout_add(procdata->config.update_interval,
@@ -124,7 +124,7 @@ kill_single_process (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, 
     int saved_errno;
     GtkWidget *dialog;
 
-    gtk_tree_model_get (model, iter, COL_POINTER, &info, -1);
+    ctk_tree_model_get (model, iter, COL_POINTER, &info, -1);
 
     if (!info)
         return;
@@ -157,15 +157,15 @@ kill_single_process (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, 
           "%s"),
         info->pid, args->signal, g_strerror(saved_errno));
 
-    dialog = gtk_message_dialog_new (
+    dialog = ctk_message_dialog_new (
         NULL,
         GTK_DIALOG_DESTROY_WITH_PARENT,
         GTK_MESSAGE_ERROR,
         GTK_BUTTONS_OK,
         "%s", error_msg);
 
-    gtk_dialog_run (GTK_DIALOG (dialog));
-    gtk_widget_destroy (dialog);
+    ctk_dialog_run (GTK_DIALOG (dialog));
+    ctk_widget_destroy (dialog);
     g_free (error_msg);
 }
 
@@ -181,7 +181,7 @@ kill_process (ProcData *procdata, int sig)
     */
     g_source_remove (procdata->timeout);
 
-    gtk_tree_selection_selected_foreach (procdata->selection, kill_single_process,
+    ctk_tree_selection_selected_foreach (procdata->selection, kill_single_process,
                                          &args);
 
     procdata->timeout = g_timeout_add (procdata->config.update_interval,

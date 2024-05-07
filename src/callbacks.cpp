@@ -21,7 +21,7 @@
 
 #include <giomm.h>
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <glib/gi18n.h>
 #include <signal.h>
 
@@ -88,7 +88,7 @@ cb_renice (GtkAction *action, GtkRadioAction *current, gpointer data)
 {
     ProcData * const procdata = static_cast<ProcData*>(data);
 
-    gint selected = gtk_radio_action_get_current_value(current);
+    gint selected = ctk_radio_action_get_current_value(current);
 
     if (selected == CUSTOM_PRIORITY)
     {
@@ -223,7 +223,7 @@ cb_about (GtkAction *action, gpointer data)
     gchar *license_trans;
     license_trans = g_strjoin ("\n\n", _(license[0]), _(license[1]), _(license[2]), NULL);
 
-    gtk_show_about_dialog (
+    ctk_show_about_dialog (
         GTK_WINDOW (procdata->app),
         "program-name",       _("System Monitor"),
         "version",            VERSION,
@@ -278,7 +278,7 @@ cb_app_delete (GtkWidget *window, GdkEventAny *event, gpointer data)
     if (procdata->disk_timeout)
         g_source_remove (procdata->disk_timeout);
 
-    gtk_main_quit ();
+    ctk_main_quit ();
 
     return TRUE;
 }
@@ -352,7 +352,7 @@ get_last_selected (GtkTreeModel *model, GtkTreePath *path,
 {
     ProcInfo **info = static_cast<ProcInfo**>(data);
 
-    gtk_tree_model_get (model, iter, COL_POINTER, info, -1);
+    ctk_tree_model_get (model, iter, COL_POINTER, info, -1);
 }
 
 
@@ -368,7 +368,7 @@ cb_row_selected (GtkTreeSelection *selection, gpointer data)
     /* get the most recent selected process and determine if there are
     ** no selected processes
     */
-    gtk_tree_selection_selected_foreach (procdata->selection, get_last_selected,
+    ctk_tree_selection_selected_foreach (procdata->selection, get_last_selected,
                          &procdata->selected_process);
     if (procdata->selected_process) {
         gint value;
@@ -384,9 +384,9 @@ cb_row_selected (GtkTreeSelection *selection, gpointer data)
         else
             value = VERY_LOW_PRIORITY;
 
-        GtkRadioAction* normal = GTK_RADIO_ACTION(gtk_action_group_get_action(procdata->action_group, "Normal"));
+        GtkRadioAction* normal = GTK_RADIO_ACTION(ctk_action_group_get_action(procdata->action_group, "Normal"));
         block_priority_changed_handlers(procdata, TRUE);
-        gtk_radio_action_set_current_value(normal, value);
+        ctk_radio_action_set_current_value(normal, value);
         block_priority_changed_handlers(procdata, FALSE);
 
     }
@@ -526,7 +526,7 @@ cb_radio_processes(GtkAction *action, GtkRadioAction *current, gpointer data)
 {
     ProcData * const procdata = static_cast<ProcData*>(data);
 
-    procdata->config.whose_process = gtk_radio_action_get_current_value(current);
+    procdata->config.whose_process = ctk_radio_action_get_current_value(current);
 
     g_settings_set_int (procdata->settings, "view-as",
                   procdata->config.whose_process);
